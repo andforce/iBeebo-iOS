@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A85C2241D44DAD000B0FB8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2231D44DAD000B0FB8E /* main.m */; };
+		3A85C2271D44DAD000B0FB8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2261D44DAD000B0FB8E /* AppDelegate.m */; };
+		3A85C22A1D44DAD000B0FB8E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2291D44DAD000B0FB8E /* ViewController.m */; };
+		3A85C22D1D44DAD000B0FB8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A85C22B1D44DAD000B0FB8E /* Main.storyboard */; };
+		3A85C2301D44DAD000B0FB8E /* iBeeboPro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C22E1D44DAD000B0FB8E /* iBeeboPro.xcdatamodeld */; };
+		3A85C2321D44DAD000B0FB8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A85C2311D44DAD000B0FB8E /* Assets.xcassets */; };
+		3A85C2351D44DAD000B0FB8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A85C2331D44DAD000B0FB8E /* LaunchScreen.storyboard */; };
+		3A85C2411D44FD7500B0FB8E /* CookiesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2401D44FD7500B0FB8E /* CookiesManager.m */; };
+		3A85C2441D45083700B0FB8E /* UIStoryboard+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2431D45083700B0FB8E /* UIStoryboard+Extensions.m */; };
+		3A85C2481D4511C700B0FB8E /* WeiboMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2471D4511C700B0FB8E /* WeiboMainTabBarController.m */; };
+		3A85C24D1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C24C1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.m */; };
+		3A85C2501D45213900B0FB8E /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C24F1D45213900B0FB8E /* NSString+Extensions.m */; };
+		86DB1E24D784EF834E4B7B20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B092B96E0712E05392D54B18 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A85C21F1D44DAD000B0FB8E /* iBeeboPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBeeboPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A85C2231D44DAD000B0FB8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3A85C2251D44DAD000B0FB8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3A85C2261D44DAD000B0FB8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3A85C2281D44DAD000B0FB8E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3A85C2291D44DAD000B0FB8E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3A85C22C1D44DAD000B0FB8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A85C22F1D44DAD000B0FB8E /* iBeeboPro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iBeeboPro.xcdatamodel; sourceTree = "<group>"; };
+		3A85C2311D44DAD000B0FB8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A85C2341D44DAD000B0FB8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A85C2361D44DAD000B0FB8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A85C23F1D44FD7500B0FB8E /* CookiesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookiesManager.h; sourceTree = "<group>"; };
+		3A85C2401D44FD7500B0FB8E /* CookiesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookiesManager.m; sourceTree = "<group>"; };
+		3A85C2421D45083700B0FB8E /* UIStoryboard+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Extensions.h"; sourceTree = "<group>"; };
+		3A85C2431D45083700B0FB8E /* UIStoryboard+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Extensions.m"; sourceTree = "<group>"; };
+		3A85C2461D4511C700B0FB8E /* WeiboMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboMainTabBarController.h; sourceTree = "<group>"; };
+		3A85C2471D4511C700B0FB8E /* WeiboMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboMainTabBarController.m; sourceTree = "<group>"; };
+		3A85C24B1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPSessionManager+SimpleAction.h"; sourceTree = "<group>"; };
+		3A85C24C1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPSessionManager+SimpleAction.m"; sourceTree = "<group>"; };
+		3A85C24E1D45213900B0FB8E /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
+		3A85C24F1D45213900B0FB8E /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
+		A7DF75F4CCE1D564E4FFAC21 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B092B96E0712E05392D54B18 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFC00E599051CB0FA5E2D298 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A85C21C1D44DAD000B0FB8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86DB1E24D784EF834E4B7B20 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A85C2161D44DAD000B0FB8E = {
+			isa = PBXGroup;
+			children = (
+				3A85C2211D44DAD000B0FB8E /* iBeeboPro */,
+				3A85C2201D44DAD000B0FB8E /* Products */,
+				BA8C045310D8D84359C2E9F9 /* Pods */,
+				B0EEA6578314853E608FE4D5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3A85C2201D44DAD000B0FB8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A85C21F1D44DAD000B0FB8E /* iBeeboPro.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A85C2211D44DAD000B0FB8E /* iBeeboPro */ = {
+			isa = PBXGroup;
+			children = (
+				3A85C24E1D45213900B0FB8E /* NSString+Extensions.h */,
+				3A85C24F1D45213900B0FB8E /* NSString+Extensions.m */,
+				3A85C24B1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.h */,
+				3A85C24C1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.m */,
+				3A85C2451D45113F00B0FB8E /* Controllers */,
+				3A85C23C1D44FCB500B0FB8E /* NetWork */,
+				3A85C2251D44DAD000B0FB8E /* AppDelegate.h */,
+				3A85C2261D44DAD000B0FB8E /* AppDelegate.m */,
+				3A85C2281D44DAD000B0FB8E /* ViewController.h */,
+				3A85C2291D44DAD000B0FB8E /* ViewController.m */,
+				3A85C22B1D44DAD000B0FB8E /* Main.storyboard */,
+				3A85C2311D44DAD000B0FB8E /* Assets.xcassets */,
+				3A85C2331D44DAD000B0FB8E /* LaunchScreen.storyboard */,
+				3A85C2361D44DAD000B0FB8E /* Info.plist */,
+				3A85C22E1D44DAD000B0FB8E /* iBeeboPro.xcdatamodeld */,
+				3A85C2221D44DAD000B0FB8E /* Supporting Files */,
+				3A85C2421D45083700B0FB8E /* UIStoryboard+Extensions.h */,
+				3A85C2431D45083700B0FB8E /* UIStoryboard+Extensions.m */,
+			);
+			path = iBeeboPro;
+			sourceTree = "<group>";
+		};
+		3A85C2221D44DAD000B0FB8E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A85C2231D44DAD000B0FB8E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A85C23C1D44FCB500B0FB8E /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				3A85C23F1D44FD7500B0FB8E /* CookiesManager.h */,
+				3A85C2401D44FD7500B0FB8E /* CookiesManager.m */,
+			);
+			name = NetWork;
+			sourceTree = "<group>";
+		};
+		3A85C2451D45113F00B0FB8E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A85C2461D4511C700B0FB8E /* WeiboMainTabBarController.h */,
+				3A85C2471D4511C700B0FB8E /* WeiboMainTabBarController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B0EEA6578314853E608FE4D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B092B96E0712E05392D54B18 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA8C045310D8D84359C2E9F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFC00E599051CB0FA5E2D298 /* Pods.debug.xcconfig */,
+				A7DF75F4CCE1D564E4FFAC21 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A85C21E1D44DAD000B0FB8E /* iBeeboPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A85C2391D44DAD000B0FB8E /* Build configuration list for PBXNativeTarget "iBeeboPro" */;
+			buildPhases = (
+				3E78BEFB63BC1DA8DCCC6DB4 /* Check Pods Manifest.lock */,
+				3A85C21B1D44DAD000B0FB8E /* Sources */,
+				3A85C21C1D44DAD000B0FB8E /* Frameworks */,
+				3A85C21D1D44DAD000B0FB8E /* Resources */,
+				05585AB67D016988FE03E737 /* Embed Pods Frameworks */,
+				47989F12CC079B2DE277F4CC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iBeeboPro;
+			productName = iBeeboPro;
+			productReference = 3A85C21F1D44DAD000B0FB8E /* iBeeboPro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A85C2171D44DAD000B0FB8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = andforce;
+				TargetAttributes = {
+					3A85C21E1D44DAD000B0FB8E = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 3A85C21A1D44DAD000B0FB8E /* Build configuration list for PBXProject "iBeeboPro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A85C2161D44DAD000B0FB8E;
+			productRefGroup = 3A85C2201D44DAD000B0FB8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A85C21E1D44DAD000B0FB8E /* iBeeboPro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A85C21D1D44DAD000B0FB8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A85C2351D44DAD000B0FB8E /* LaunchScreen.storyboard in Resources */,
+				3A85C2321D44DAD000B0FB8E /* Assets.xcassets in Resources */,
+				3A85C22D1D44DAD000B0FB8E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05585AB67D016988FE03E737 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E78BEFB63BC1DA8DCCC6DB4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		47989F12CC079B2DE277F4CC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A85C21B1D44DAD000B0FB8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A85C2441D45083700B0FB8E /* UIStoryboard+Extensions.m in Sources */,
+				3A85C22A1D44DAD000B0FB8E /* ViewController.m in Sources */,
+				3A85C2301D44DAD000B0FB8E /* iBeeboPro.xcdatamodeld in Sources */,
+				3A85C2501D45213900B0FB8E /* NSString+Extensions.m in Sources */,
+				3A85C2271D44DAD000B0FB8E /* AppDelegate.m in Sources */,
+				3A85C2241D44DAD000B0FB8E /* main.m in Sources */,
+				3A85C2481D4511C700B0FB8E /* WeiboMainTabBarController.m in Sources */,
+				3A85C2411D44FD7500B0FB8E /* CookiesManager.m in Sources */,
+				3A85C24D1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3A85C22B1D44DAD000B0FB8E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A85C22C1D44DAD000B0FB8E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3A85C2331D44DAD000B0FB8E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A85C2341D44DAD000B0FB8E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A85C2371D44DAD000B0FB8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3A85C2381D44DAD000B0FB8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A85C23A1D44DAD000B0FB8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFC00E599051CB0FA5E2D298 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iBeeboPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andforce.iBeeboPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3A85C23B1D44DAD000B0FB8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7DF75F4CCE1D564E4FFAC21 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = iBeeboPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andforce.iBeeboPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A85C21A1D44DAD000B0FB8E /* Build configuration list for PBXProject "iBeeboPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A85C2371D44DAD000B0FB8E /* Debug */,
+				3A85C2381D44DAD000B0FB8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A85C2391D44DAD000B0FB8E /* Build configuration list for PBXNativeTarget "iBeeboPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A85C23A1D44DAD000B0FB8E /* Debug */,
+				3A85C23B1D44DAD000B0FB8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3A85C22E1D44DAD000B0FB8E /* iBeeboPro.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3A85C22F1D44DAD000B0FB8E /* iBeeboPro.xcdatamodel */,
+			);
+			currentVersion = 3A85C22F1D44DAD000B0FB8E /* iBeeboPro.xcdatamodel */;
+			path = iBeeboPro.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3A85C2171D44DAD000B0FB8E /* Project object */;
+}

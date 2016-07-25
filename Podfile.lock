@@ -1,0 +1,120 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.0.5)
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - AVOSCloud (3.2.7)
+  - AVOSCloudIM (3.2.7):
+    - AVOSCloud
+  - CocoaLumberjack (2.0.3):
+    - CocoaLumberjack/Default (= 2.0.3)
+    - CocoaLumberjack/Extensions (= 2.0.3)
+  - CocoaLumberjack/Core (2.0.3)
+  - CocoaLumberjack/Default (2.0.3):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.0.3):
+    - CocoaLumberjack/Default
+  - CSSSelectorConverter (1.2.3):
+    - CocoaLumberjack (~> 2.0.0)
+    - NUIParse
+  - DTCoreText (1.6.17):
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTFoundation/Core (1.7.10)
+  - DTFoundation/DTAnimatedGIF (1.7.10)
+  - DTFoundation/DTHTMLParser (1.7.10):
+    - DTFoundation/Core
+  - DTFoundation/UIKit (1.7.10):
+    - DTFoundation/Core
+  - FDFullscreenPopGesture (1.1)
+  - FLAnimatedImage (1.0.12)
+  - IGHTMLQuery (0.8.4):
+    - IGHTMLQuery/Core (= 0.8.4)
+  - IGHTMLQuery/Core (0.8.4):
+    - CSSSelectorConverter (>= 1.2.0)
+  - JSONModel (1.1.2)
+  - LCActionSheet (1.2.3)
+  - MGSwipeTableCell (1.5.5)
+  - MJRefresh (3.0.8)
+  - NUIParse (1.3)
+  - NYTPhotoViewer (1.1.0):
+    - NYTPhotoViewer/AnimatedGifSupport (= 1.1.0)
+    - NYTPhotoViewer/Core (= 1.1.0)
+  - NYTPhotoViewer/AnimatedGifSupport (1.1.0):
+    - FLAnimatedImage (~> 1.0.8)
+    - NYTPhotoViewer/Core
+  - NYTPhotoViewer/Core (1.1.0)
+  - SDVersion (2.6)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
+  - SVProgressHUD (1.1.3)
+  - UITableView+FDTemplateLayoutCell (1.4)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0
+  - AFNetworking (~> 3.1.0)
+  - AVOSCloud
+  - AVOSCloudIM
+  - DTCoreText (~> 1.6.17)
+  - FDFullscreenPopGesture (= 1.1)
+  - IGHTMLQuery (~> 0.8.4)
+  - JSONModel (~> 1.1.2)
+  - LCActionSheet
+  - MGSwipeTableCell
+  - MJRefresh (~> 3.0.8)
+  - NYTPhotoViewer (from `https://github.com/andforce/NYTPhotoViewer.git`, commit
+    `659d4ac`)
+  - SDVersion
+  - SDWebImage (~> 3.7.5)
+  - SVProgressHUD (~> 1.1.3)
+  - UITableView+FDTemplateLayoutCell (~> 1.4)
+
+EXTERNAL SOURCES:
+  NYTPhotoViewer:
+    :commit: 659d4ac
+    :git: https://github.com/andforce/NYTPhotoViewer.git
+
+CHECKOUT OPTIONS:
+  NYTPhotoViewer:
+    :commit: 659d4ac
+    :git: https://github.com/andforce/NYTPhotoViewer.git
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: 8312778b6815578e6a86d630fbcf31dc94c534e7
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AVOSCloud: 957d1508104d7c8ed501df9d9b734d7a98c2e047
+  AVOSCloudIM: ec08eaec4d27d732e3be93eadeb3bcf1355b5dcf
+  CocoaLumberjack: f58d8a19629f4d8379ae14bb3534def24161430e
+  CSSSelectorConverter: 00680dc04a48b74c7a8f792928b89e9f3def9970
+  DTCoreText: 3ea8bba23dd2141ba18adb227a7dd33a822df1c4
+  DTFoundation: 3b6b1b817d2a7fb02e7eaf2596c922a68145bd43
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  IGHTMLQuery: 6176bcb88ad36f80ee984dbfde5592bb3ccc921f
+  JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
+  LCActionSheet: 690882cd8b9a6713f1b2881c3bb2c7f11954d034
+  MGSwipeTableCell: bafeb5f351124544c9364ecbdf24c7b06a37d340
+  MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
+  NUIParse: 2e3885ba7807477266396292626bd387d34c2338
+  NYTPhotoViewer: e80e8767f3780d2df37c6f72cbab15d6c7232911
+  SDVersion: c036f7890279d188c17f5701b9feea0d93b9f8ee
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
+
+COCOAPODS: 0.39.0

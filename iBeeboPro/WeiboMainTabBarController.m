@@ -8,7 +8,7 @@
 
 #import "WeiboMainTabBarController.h"
 #import "AFHTTPSessionManager+SimpleAction.h"
-#import "CardGroup2.h"
+#import "WeiboPage.h"
 #import "Mblog.h"
 
 @interface WeiboMainTabBarController (){
@@ -32,12 +32,9 @@
         
         NSData *data = [debugStr dataUsingEncoding:NSUTF8StringEncoding];
         
-        NSArray *arr2 = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-        
-        
         NSArray *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
 
-        CardGroup2 * cardgroup = [CardGroup2 modelObjectWithDictionary:[dictionary firstObject]];
+        WeiboPage * cardgroup = [WeiboPage modelObjectWithDictionary:[dictionary firstObject]];
         
         NSArray *card_type = cardgroup.cardGroup;
     }];

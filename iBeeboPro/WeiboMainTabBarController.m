@@ -7,13 +7,9 @@
 //
 
 #import "WeiboMainTabBarController.h"
-#import "AFHTTPSessionManager+SimpleAction.h"
-#import "WeiboPage.h"
-#import "Mblog.h"
 
-@interface WeiboMainTabBarController (){
-    AFHTTPSessionManager *_browser;
-}
+
+@interface WeiboMainTabBarController ()
 
 @end
 
@@ -21,23 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _browser = [AFHTTPSessionManager manager];
-    _browser.responseSerializer = [AFHTTPResponseSerializer serializer];
-    _browser.responseSerializer.acceptableContentTypes = [_browser.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     
-    
-    
-    [_browser GETWithURLString:@"http://m.weibo.cn/index/feed?format=cards" requestCallback:^(BOOL isSuccess, NSString *html) {
-        NSString * debugStr = html;
-        
-        NSData *data = [debugStr dataUsingEncoding:NSUTF8StringEncoding];
-        
-        NSArray *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-
-        WeiboPage * cardgroup = [WeiboPage modelObjectWithDictionary:[dictionary firstObject]];
-        
-        NSArray *card_type = cardgroup.cardGroup;
-    }];
 }
 
 - (void)didReceiveMemoryWarning {

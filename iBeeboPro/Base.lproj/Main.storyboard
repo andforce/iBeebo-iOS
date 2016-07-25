@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="-2239" y="2184"/>
         </scene>
-        <!--Root View Controller-->
+        <!--TimeLine-->
         <scene sceneID="SpD-nr-4lh">
             <objects>
-                <tableViewController id="UVl-VY-cZX" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MainTimeLineTableViewController" id="UVl-VY-cZX" customClass="MainTimeLineTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ze7-4j-N09">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
                             <outlet property="delegate" destination="UVl-VY-cZX" id="EH9-8y-Vxv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="sxk-D9-yNU"/>
+                    <navigationItem key="navigationItem" title="TimeLine" id="sxk-D9-yNU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJ9-Gq-aDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

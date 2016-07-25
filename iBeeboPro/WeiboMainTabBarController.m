@@ -8,6 +8,8 @@
 
 #import "WeiboMainTabBarController.h"
 #import "AFHTTPSessionManager+SimpleAction.h"
+#import "CardGroup2.h"
+#import "Mblog.h"
 
 @interface WeiboMainTabBarController (){
     AFHTTPSessionManager *_browser;
@@ -27,6 +29,17 @@
     
     [_browser GETWithURLString:@"http://m.weibo.cn/index/feed?format=cards" requestCallback:^(BOOL isSuccess, NSString *html) {
         NSString * debugStr = html;
+        
+        NSData *data = [debugStr dataUsingEncoding:NSUTF8StringEncoding];
+        
+        NSArray *arr2 = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        
+        
+        NSArray *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+
+        CardGroup2 * cardgroup = [CardGroup2 modelObjectWithDictionary:[dictionary firstObject]];
+        
+        NSArray *card_type = cardgroup.cardGroup;
     }];
 }
 

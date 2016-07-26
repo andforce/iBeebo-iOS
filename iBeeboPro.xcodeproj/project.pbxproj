@@ -24,6 +24,7 @@
 		3A6410721D466B68000651E6 /* WeiboCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6410611D466B68000651E6 /* WeiboCamera.m */; };
 		3A6410731D466B68000651E6 /* WeiboPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6410631D466B68000651E6 /* WeiboPage.m */; };
 		3A6410761D466C51000651E6 /* MainTimeLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */; };
+		3A6559E41D47B9DD00776797 /* TimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6559E31D47B9DD00776797 /* TimeLineCell.m */; };
 		3A85C2241D44DAD000B0FB8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2231D44DAD000B0FB8E /* main.m */; };
 		3A85C2271D44DAD000B0FB8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2261D44DAD000B0FB8E /* AppDelegate.m */; };
 		3A85C22A1D44DAD000B0FB8E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2291D44DAD000B0FB8E /* ViewController.m */; };
@@ -75,6 +76,8 @@
 		3A6410631D466B68000651E6 /* WeiboPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboPage.m; sourceTree = "<group>"; };
 		3A6410741D466C51000651E6 /* MainTimeLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTimeLineTableViewController.h; sourceTree = "<group>"; };
 		3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTimeLineTableViewController.m; sourceTree = "<group>"; };
+		3A6559E21D47B9DD00776797 /* TimeLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineCell.h; sourceTree = "<group>"; };
+		3A6559E31D47B9DD00776797 /* TimeLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineCell.m; sourceTree = "<group>"; };
 		3A85C21F1D44DAD000B0FB8E /* iBeeboPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBeeboPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A85C2231D44DAD000B0FB8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A85C2251D44DAD000B0FB8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -161,6 +164,15 @@
 			name = CardGroup;
 			sourceTree = "<group>";
 		};
+		3A6559E11D47B9AC00776797 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				3A6559E21D47B9DD00776797 /* TimeLineCell.h */,
+				3A6559E31D47B9DD00776797 /* TimeLineCell.m */,
+			);
+			name = TableCell;
+			sourceTree = "<group>";
+		};
 		3A85C2161D44DAD000B0FB8E = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +237,7 @@
 		3A85C2451D45113F00B0FB8E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3A6559E11D47B9AC00776797 /* TableCell */,
 				3A85C2461D4511C700B0FB8E /* WeiboMainTabBarController.h */,
 				3A85C2471D4511C700B0FB8E /* WeiboMainTabBarController.m */,
 				3A6410741D466C51000651E6 /* MainTimeLineTableViewController.h */,
@@ -374,6 +387,7 @@
 				3A85C2441D45083700B0FB8E /* UIStoryboard+Extensions.m in Sources */,
 				3A6410671D466B68000651E6 /* Geo.m in Sources */,
 				3A85C22A1D44DAD000B0FB8E /* ViewController.m in Sources */,
+				3A6559E41D47B9DD00776797 /* TimeLineCell.m in Sources */,
 				3A64106D1D466B68000651E6 /* RetweetedStatus.m in Sources */,
 				3A64106A1D466B68000651E6 /* Mblog.m in Sources */,
 				3A6410641D466B68000651E6 /* Actionlog.m in Sources */,

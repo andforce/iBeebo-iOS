@@ -10,9 +10,13 @@
 #import "AFHTTPSessionManager+SimpleAction.h"
 #import "WeiboPage.h"
 #import "Mblog.h"
+#import "TimeLineCell.h"
+#import "CardGroup.h"
 
 @interface MainTimeLineTableViewController (){
     AFHTTPSessionManager *_browser;
+    
+    NSMutableArray * _mblogs;
 }
 
 @end
@@ -21,6 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _mblogs = [NSMutableArray array];
     
     _browser = [AFHTTPSessionManager manager];
     _browser.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -35,9 +41,14 @@
         
         NSArray *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
         
-        WeiboPage * cardgroup = [WeiboPage modelObjectWithDictionary:[dictionary firstObject]];
+        WeiboPage * page = [WeiboPage modelObjectWithDictionary:[dictionary firstObject]];
         
-        NSArray *card_type = cardgroup.cardGroup;
+        NSArray *cardGroup = page.cardGroup;
+        
+        [_mblogs addObjectsFromArray:cardGroup];
+        
+        [self.tableView reloadData];
+        
     }];
 }
 
@@ -49,67 +60,29 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    
+    return _mblogs.count;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    static NSString * Identifier = @"TimeLineCell";
+    TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
     
-    // Configure the cell...
+    CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
+    
+    cell.timeLineContent.text = cardGroup.mblog.text;
     
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

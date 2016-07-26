@@ -12,6 +12,8 @@
 #import "Mblog.h"
 #import "TimeLineCell.h"
 #import "CardGroup.h"
+#import "User.h"
+#import <UIImageView+WebCache.h>
 
 @interface MainTimeLineTableViewController (){
     AFHTTPSessionManager *_browser;
@@ -80,7 +82,11 @@
     
     CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
     
+    cell.timeLineTime.text = cardGroup.mblog.createdAt;
     cell.timeLineContent.text = cardGroup.mblog.text;
+    cell.timeLineName.text = cardGroup.mblog.user.screenName;
+    cell.timeLineSource.text = cardGroup.mblog.source;
+    [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
     
     return cell;
 }

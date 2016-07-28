@@ -13,6 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLineName;
 @property (weak, nonatomic) IBOutlet UILabel *timeLineTime;
 @property (weak, nonatomic) IBOutlet UILabel *timeLineSource;
-@property (weak, nonatomic) IBOutlet UILabel *timeLineContent;
+@property (weak, nonatomic) IBOutlet UITextView *timeLineContent;
 
 @end

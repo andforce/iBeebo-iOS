@@ -25,6 +25,15 @@
 		3A6410731D466B68000651E6 /* WeiboPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6410631D466B68000651E6 /* WeiboPage.m */; };
 		3A6410761D466C51000651E6 /* MainTimeLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */; };
 		3A6559E41D47B9DD00776797 /* TimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6559E31D47B9DD00776797 /* TimeLineCell.m */; };
+		3A6844C91D4A59E200655A17 /* LXStatusTextPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6844C61D4A59E200655A17 /* LXStatusTextPart.m */; };
+		3A6844CA1D4A59E200655A17 /* LXStatusTextLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6844C81D4A59E200655A17 /* LXStatusTextLink.m */; };
+		3A6844D21D4A5FF600655A17 /* default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A6844CD1D4A5FF600655A17 /* default.plist */; };
+		3A6844D31D4A5FF600655A17 /* emoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A6844CF1D4A5FF600655A17 /* emoji.plist */; };
+		3A6844D41D4A5FF600655A17 /* lxh.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A6844D11D4A5FF600655A17 /* lxh.plist */; };
+		3A6844D71D4A608000655A17 /* EmotionsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6844D61D4A608000655A17 /* EmotionsManager.m */; };
+		3A6844DC1D4A60CD00655A17 /* Emotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6844D91D4A60CD00655A17 /* Emotion.m */; };
+		3A6844DD1D4A60CD00655A17 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6844DB1D4A60CD00655A17 /* NSString+Emoji.m */; };
+		3A6844E31D4A646C00655A17 /* NSNotificationCenter+LXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6844E21D4A646C00655A17 /* NSNotificationCenter+LXAdditions.m */; };
 		3A85C2241D44DAD000B0FB8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2231D44DAD000B0FB8E /* main.m */; };
 		3A85C2271D44DAD000B0FB8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2261D44DAD000B0FB8E /* AppDelegate.m */; };
 		3A85C22A1D44DAD000B0FB8E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2291D44DAD000B0FB8E /* ViewController.m */; };
@@ -78,6 +87,21 @@
 		3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTimeLineTableViewController.m; sourceTree = "<group>"; };
 		3A6559E21D47B9DD00776797 /* TimeLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineCell.h; sourceTree = "<group>"; };
 		3A6559E31D47B9DD00776797 /* TimeLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineCell.m; sourceTree = "<group>"; };
+		3A6844C51D4A59E200655A17 /* LXStatusTextPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXStatusTextPart.h; sourceTree = "<group>"; };
+		3A6844C61D4A59E200655A17 /* LXStatusTextPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXStatusTextPart.m; sourceTree = "<group>"; };
+		3A6844C71D4A59E200655A17 /* LXStatusTextLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXStatusTextLink.h; sourceTree = "<group>"; };
+		3A6844C81D4A59E200655A17 /* LXStatusTextLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXStatusTextLink.m; sourceTree = "<group>"; };
+		3A6844CD1D4A5FF600655A17 /* default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = default.plist; path = EmotionIcons/default/default.plist; sourceTree = "<group>"; };
+		3A6844CF1D4A5FF600655A17 /* emoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = emoji.plist; path = EmotionIcons/emoji/emoji.plist; sourceTree = "<group>"; };
+		3A6844D11D4A5FF600655A17 /* lxh.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = lxh.plist; path = EmotionIcons/lxh/lxh.plist; sourceTree = "<group>"; };
+		3A6844D51D4A608000655A17 /* EmotionsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmotionsManager.h; sourceTree = "<group>"; };
+		3A6844D61D4A608000655A17 /* EmotionsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmotionsManager.m; sourceTree = "<group>"; };
+		3A6844D81D4A60CD00655A17 /* Emotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Emotion.h; sourceTree = "<group>"; };
+		3A6844D91D4A60CD00655A17 /* Emotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Emotion.m; sourceTree = "<group>"; };
+		3A6844DA1D4A60CD00655A17 /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		3A6844DB1D4A60CD00655A17 /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
+		3A6844E11D4A646C00655A17 /* NSNotificationCenter+LXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+LXAdditions.h"; sourceTree = "<group>"; };
+		3A6844E21D4A646C00655A17 /* NSNotificationCenter+LXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+LXAdditions.m"; sourceTree = "<group>"; };
 		3A85C21F1D44DAD000B0FB8E /* iBeeboPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBeeboPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A85C2231D44DAD000B0FB8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A85C2251D44DAD000B0FB8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,6 +143,7 @@
 		3A6410101D465EF1000651E6 /* Beans */ = {
 			isa = PBXGroup;
 			children = (
+				3A6844C41D4A59D300655A17 /* Home */,
 				3A6410111D465F00000651E6 /* CardGroup */,
 			);
 			name = Beans;
@@ -173,6 +198,17 @@
 			name = TableCell;
 			sourceTree = "<group>";
 		};
+		3A6844C41D4A59D300655A17 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3A6844C51D4A59E200655A17 /* LXStatusTextPart.h */,
+				3A6844C61D4A59E200655A17 /* LXStatusTextPart.m */,
+				3A6844C71D4A59E200655A17 /* LXStatusTextLink.h */,
+				3A6844C81D4A59E200655A17 /* LXStatusTextLink.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
 		3A85C2161D44DAD000B0FB8E = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +230,14 @@
 		3A85C2211D44DAD000B0FB8E /* iBeeboPro */ = {
 			isa = PBXGroup;
 			children = (
+				3A6844E11D4A646C00655A17 /* NSNotificationCenter+LXAdditions.h */,
+				3A6844E21D4A646C00655A17 /* NSNotificationCenter+LXAdditions.m */,
+				3A6844D81D4A60CD00655A17 /* Emotion.h */,
+				3A6844D91D4A60CD00655A17 /* Emotion.m */,
+				3A6844DA1D4A60CD00655A17 /* NSString+Emoji.h */,
+				3A6844DB1D4A60CD00655A17 /* NSString+Emoji.m */,
+				3A6844D51D4A608000655A17 /* EmotionsManager.h */,
+				3A6844D61D4A608000655A17 /* EmotionsManager.m */,
 				3A6410101D465EF1000651E6 /* Beans */,
 				3A85C24E1D45213900B0FB8E /* NSString+Extensions.h */,
 				3A85C24F1D45213900B0FB8E /* NSString+Extensions.m */,
@@ -209,6 +253,9 @@
 				3A85C2311D44DAD000B0FB8E /* Assets.xcassets */,
 				3A85C2331D44DAD000B0FB8E /* LaunchScreen.storyboard */,
 				3A85C2361D44DAD000B0FB8E /* Info.plist */,
+				3A6844CD1D4A5FF600655A17 /* default.plist */,
+				3A6844CF1D4A5FF600655A17 /* emoji.plist */,
+				3A6844D11D4A5FF600655A17 /* lxh.plist */,
 				3A85C22E1D44DAD000B0FB8E /* iBeeboPro.xcdatamodeld */,
 				3A85C2221D44DAD000B0FB8E /* Supporting Files */,
 				3A85C2421D45083700B0FB8E /* UIStoryboard+Extensions.h */,
@@ -323,6 +370,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6844D31D4A5FF600655A17 /* emoji.plist in Resources */,
+				3A6844D21D4A5FF600655A17 /* default.plist in Resources */,
+				3A6844D41D4A5FF600655A17 /* lxh.plist in Resources */,
 				3A85C2351D44DAD000B0FB8E /* LaunchScreen.storyboard in Resources */,
 				3A85C2321D44DAD000B0FB8E /* Assets.xcassets in Resources */,
 				3A85C22D1D44DAD000B0FB8E /* Main.storyboard in Resources */,
@@ -386,12 +436,15 @@
 			files = (
 				3A85C2441D45083700B0FB8E /* UIStoryboard+Extensions.m in Sources */,
 				3A6410671D466B68000651E6 /* Geo.m in Sources */,
+				3A6844DD1D4A60CD00655A17 /* NSString+Emoji.m in Sources */,
 				3A85C22A1D44DAD000B0FB8E /* ViewController.m in Sources */,
 				3A6559E41D47B9DD00776797 /* TimeLineCell.m in Sources */,
 				3A64106D1D466B68000651E6 /* RetweetedStatus.m in Sources */,
 				3A64106A1D466B68000651E6 /* Mblog.m in Sources */,
+				3A6844E31D4A646C00655A17 /* NSNotificationCenter+LXAdditions.m in Sources */,
 				3A6410641D466B68000651E6 /* Actionlog.m in Sources */,
 				3A6410701D466B68000651E6 /* User.m in Sources */,
+				3A6844CA1D4A59E200655A17 /* LXStatusTextLink.m in Sources */,
 				3A85C2301D44DAD000B0FB8E /* iBeeboPro.xcdatamodeld in Sources */,
 				3A85C2501D45213900B0FB8E /* NSString+Extensions.m in Sources */,
 				3A6410761D466C51000651E6 /* MainTimeLineTableViewController.m in Sources */,
@@ -400,7 +453,9 @@
 				3A85C2241D44DAD000B0FB8E /* main.m in Sources */,
 				3A6410731D466B68000651E6 /* WeiboPage.m in Sources */,
 				3A6410691D466B68000651E6 /* HotWeiboTags.m in Sources */,
+				3A6844DC1D4A60CD00655A17 /* Emotion.m in Sources */,
 				3A64106C1D466B68000651E6 /* Pics.m in Sources */,
+				3A6844C91D4A59E200655A17 /* LXStatusTextPart.m in Sources */,
 				3A85C2481D4511C700B0FB8E /* WeiboMainTabBarController.m in Sources */,
 				3A6410711D466B68000651E6 /* Visible.m in Sources */,
 				3A6410681D466B68000651E6 /* H5icon.m in Sources */,
@@ -411,6 +466,7 @@
 				3A6410661D466B68000651E6 /* ExtendInfo.m in Sources */,
 				3A64106B1D466B68000651E6 /* PageInfo.m in Sources */,
 				3A6410721D466B68000651E6 /* WeiboCamera.m in Sources */,
+				3A6844D71D4A608000655A17 /* EmotionsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,11 +579,13 @@
 			baseConfigurationReference = DFC00E599051CB0FA5E2D298 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = iBeeboPro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andforce.iBeeboPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "15cbe545-baf7-434e-8e21-d2335f951497";
 			};
 			name = Debug;
 		};
@@ -536,11 +594,13 @@
 			baseConfigurationReference = A7DF75F4CCE1D564E4FFAC21 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = iBeeboPro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andforce.iBeeboPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "15cbe545-baf7-434e-8e21-d2335f951497";
 			};
 			name = Release;
 		};

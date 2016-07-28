@@ -49,6 +49,7 @@ PODS:
   - JSONModel (1.1.2)
   - LCActionSheet (1.2.3)
   - MGSwipeTableCell (1.5.5)
+  - MJExtension (3.0.10)
   - MJRefresh (3.0.8)
   - NUIParse (1.3)
   - NYTPhotoViewer (1.1.0):
@@ -58,6 +59,7 @@ PODS:
     - FLAnimatedImage (~> 1.0.8)
     - NYTPhotoViewer/Core
   - NYTPhotoViewer/Core (1.1.0)
+  - RegexKitLite (4.0)
   - SDVersion (2.6)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
@@ -76,9 +78,11 @@ DEPENDENCIES:
   - JSONModel (~> 1.1.2)
   - LCActionSheet
   - MGSwipeTableCell
+  - MJExtension (~> 3.0.10)
   - MJRefresh (~> 3.0.8)
   - NYTPhotoViewer (from `https://github.com/andforce/NYTPhotoViewer.git`, commit
     `659d4ac`)
+  - RegexKitLite (~> 4.0)
   - SDVersion
   - SDWebImage (~> 3.7.5)
   - SVProgressHUD (~> 1.1.3)
@@ -109,9 +113,11 @@ SPEC CHECKSUMS:
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
   LCActionSheet: 690882cd8b9a6713f1b2881c3bb2c7f11954d034
   MGSwipeTableCell: bafeb5f351124544c9364ecbdf24c7b06a37d340
+  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
   NUIParse: 2e3885ba7807477266396292626bd387d34c2338
   NYTPhotoViewer: e80e8767f3780d2df37c6f72cbab15d6c7232911
+  RegexKitLite: c0e4c12e6e7de0769f3a3ed679f0f61604170661
   SDVersion: c036f7890279d188c17f5701b9feea0d93b9f8ee
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1

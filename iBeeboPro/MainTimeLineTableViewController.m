@@ -19,6 +19,8 @@
 #import "RegexKitLite.h"
 #import "EmotionsManager.h"
 #import "Emotion.h"
+#import "UITableView+FDTemplateLayoutCell.h"
+
 
 @interface MainTimeLineTableViewController (){
     AFHTTPSessionManager *_browser;
@@ -32,6 +34,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 180.0;
     
     sStatusTextFont = [UIFont systemFontOfSize:14];
     sSpecialAttributes = @{ NSForegroundColorAttributeName : [UIColor blueColor] };
@@ -87,14 +92,13 @@
 
     static NSString * Identifier = @"TimeLineCell";
     TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+    cell.fd_enforceFrameLayout = NO;
     
     CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
     
     cell.timeLineTime.text = cardGroup.mblog.createdAt;
     
     NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-    //cardGroup.mblog.text
-    
     cell.timeLineContent.attributedText = attrStr;
     cell.timeLineName.text = cardGroup.mblog.user.screenName;
     cell.timeLineSource.text = cardGroup.mblog.source;
@@ -102,6 +106,27 @@
     
     return cell;
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return 300;
+    
+    return [tableView fd_heightForCellWithIdentifier:@"TimeLineCell" configuration:^(TimeLineCell *cell) {
+        cell.fd_enforceFrameLayout = NO;
+        
+        CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
+        
+        cell.timeLineTime.text = cardGroup.mblog.createdAt;
+        
+        NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
+        cell.timeLineContent.attributedText = attrStr;
+        cell.timeLineContent.text = cardGroup.mblog.text;
+        cell.timeLineName.text = cardGroup.mblog.user.screenName;
+        cell.timeLineSource.text = cardGroup.mblog.source;
+        [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
+    }];
+}
+
+
 
 static NSString * const kRegexPattern = @"@[\\w-_]+|#[\\w]+#|\\[\\w+\\]|(https?)://(?:(\\S+?)(?::(\\S+?))?@)?([a-zA-Z0-9\\-.]+)(?::(\\d+))?((?:/[a-zA-Z0-9\\-._?,'+\\&%$=~*!():@\\\\]*)+)?";
 

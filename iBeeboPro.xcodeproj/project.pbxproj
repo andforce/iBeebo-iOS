@@ -34,6 +34,8 @@
 		3A6844DC1D4A60CD00655A17 /* Emotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6844D91D4A60CD00655A17 /* Emotion.m */; };
 		3A6844DD1D4A60CD00655A17 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6844DB1D4A60CD00655A17 /* NSString+Emoji.m */; };
 		3A6844E31D4A646C00655A17 /* NSNotificationCenter+LXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6844E21D4A646C00655A17 /* NSNotificationCenter+LXAdditions.m */; };
+		3A6E21F91D4C8F9C00ED92E6 /* UIWeiboTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E21F81D4C8F9C00ED92E6 /* UIWeiboTextView.m */; };
+		3A6E21FC1D4C972C00ED92E6 /* WeiboJsonCleanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E21FB1D4C972C00ED92E6 /* WeiboJsonCleanner.m */; };
 		3A85C2241D44DAD000B0FB8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2231D44DAD000B0FB8E /* main.m */; };
 		3A85C2271D44DAD000B0FB8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2261D44DAD000B0FB8E /* AppDelegate.m */; };
 		3A85C22A1D44DAD000B0FB8E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2291D44DAD000B0FB8E /* ViewController.m */; };
@@ -102,6 +104,10 @@
 		3A6844DB1D4A60CD00655A17 /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
 		3A6844E11D4A646C00655A17 /* NSNotificationCenter+LXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+LXAdditions.h"; sourceTree = "<group>"; };
 		3A6844E21D4A646C00655A17 /* NSNotificationCenter+LXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+LXAdditions.m"; sourceTree = "<group>"; };
+		3A6E21F71D4C8F9C00ED92E6 /* UIWeiboTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWeiboTextView.h; sourceTree = "<group>"; };
+		3A6E21F81D4C8F9C00ED92E6 /* UIWeiboTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWeiboTextView.m; sourceTree = "<group>"; };
+		3A6E21FA1D4C972C00ED92E6 /* WeiboJsonCleanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboJsonCleanner.h; sourceTree = "<group>"; };
+		3A6E21FB1D4C972C00ED92E6 /* WeiboJsonCleanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboJsonCleanner.m; sourceTree = "<group>"; };
 		3A85C21F1D44DAD000B0FB8E /* iBeeboPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBeeboPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A85C2231D44DAD000B0FB8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A85C2251D44DAD000B0FB8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -209,9 +215,19 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
+		3A6E21F61D4C8EFF00ED92E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A6E21F71D4C8F9C00ED92E6 /* UIWeiboTextView.h */,
+				3A6E21F81D4C8F9C00ED92E6 /* UIWeiboTextView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		3A85C2161D44DAD000B0FB8E = {
 			isa = PBXGroup;
 			children = (
+				3A6E21F61D4C8EFF00ED92E6 /* Views */,
 				3A85C2211D44DAD000B0FB8E /* iBeeboPro */,
 				3A85C2201D44DAD000B0FB8E /* Products */,
 				BA8C045310D8D84359C2E9F9 /* Pods */,
@@ -260,6 +276,8 @@
 				3A85C2221D44DAD000B0FB8E /* Supporting Files */,
 				3A85C2421D45083700B0FB8E /* UIStoryboard+Extensions.h */,
 				3A85C2431D45083700B0FB8E /* UIStoryboard+Extensions.m */,
+				3A6E21FA1D4C972C00ED92E6 /* WeiboJsonCleanner.h */,
+				3A6E21FB1D4C972C00ED92E6 /* WeiboJsonCleanner.m */,
 			);
 			path = iBeeboPro;
 			sourceTree = "<group>";
@@ -454,6 +472,7 @@
 				3A6410731D466B68000651E6 /* WeiboPage.m in Sources */,
 				3A6410691D466B68000651E6 /* HotWeiboTags.m in Sources */,
 				3A6844DC1D4A60CD00655A17 /* Emotion.m in Sources */,
+				3A6E21F91D4C8F9C00ED92E6 /* UIWeiboTextView.m in Sources */,
 				3A64106C1D466B68000651E6 /* Pics.m in Sources */,
 				3A6844C91D4A59E200655A17 /* LXStatusTextPart.m in Sources */,
 				3A85C2481D4511C700B0FB8E /* WeiboMainTabBarController.m in Sources */,
@@ -464,6 +483,7 @@
 				3A6410651D466B68000651E6 /* CardGroup.m in Sources */,
 				3A85C24D1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.m in Sources */,
 				3A6410661D466B68000651E6 /* ExtendInfo.m in Sources */,
+				3A6E21FC1D4C972C00ED92E6 /* WeiboJsonCleanner.m in Sources */,
 				3A64106B1D466B68000651E6 /* PageInfo.m in Sources */,
 				3A6410721D466B68000651E6 /* WeiboCamera.m in Sources */,
 				3A6844D71D4A608000655A17 /* EmotionsManager.m in Sources */,

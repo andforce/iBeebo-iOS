@@ -48,7 +48,20 @@
             
             NSString * miaopai = [NSString stringWithFormat:@"[位置]http://%@", location];
             cleanStr = [cleanStr stringByReplacingOccurrencesOfString:miaopaiTag withString:miaopai];
+        } else if ([miaopaiTag containsString:@"timeline_card_small_photo_default"]){
+            IGHTMLDocument * document = [[IGHTMLDocument alloc] initWithHTMLString:miaopaiTag error:nil];
+            NSString * location = [document text];
+            
+            NSString * miaopai = [NSString stringWithFormat:@"[图片]http://%@", location];
+            cleanStr = [cleanStr stringByReplacingOccurrencesOfString:miaopaiTag withString:miaopai];
+        } else if ([miaopaiTag containsString:@"timeline_card_small_music_default"]){
+            IGHTMLDocument * document = [[IGHTMLDocument alloc] initWithHTMLString:miaopaiTag error:nil];
+            NSString * location = [document text];
+            
+            NSString * miaopai = [NSString stringWithFormat:@"[音乐]http://%@", location];
+            cleanStr = [cleanStr stringByReplacingOccurrencesOfString:miaopaiTag withString:miaopai];
         }
+
     }
     
     // 转换表情 <i class=\\\\\".*?\\\\\">[.*?]</i>

@@ -22,8 +22,8 @@
 #import "UITableView+FDTemplateLayoutCell.h"
 #import "NSString+Extensions.h"
 #import "WeiboJsonCleanner.h"
-#import "TimeLineSingleImageCell.h"
-#import "TimeLineTwoImageCell.h"
+#import "TimeLine1ImagesCell.h"
+#import "TimeLine2ImagesCell.h"
 #import "Pics.h"
 
 
@@ -102,64 +102,64 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
-
-    if (cardGroup.mblog.picIds.count == 0) {
-        static NSString * Identifier = @"TimeLineCell";
-        TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
-        cell.fd_enforceFrameLayout = NO;
-        
-        cell.timeLineTime.text = cardGroup.mblog.createdAt;
-        
-        NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-        cell.timeLineContent.attributedText = attrStr;
-        cell.timeLineContent.delegate = self;
-        
-        cell.timeLineName.text = cardGroup.mblog.user.screenName;
-        cell.timeLineSource.text = cardGroup.mblog.source;
-        [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
-        
-        return cell;
-    } else if (cardGroup.mblog.picIds.count == 1){
-        static NSString * Identifier = @"TimeLineSingleImageCell";
-        TimeLineSingleImageCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
-        cell.fd_enforceFrameLayout = NO;
-        
-        cell.timeLineTime.text = cardGroup.mblog.createdAt;
-        
-        NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-        cell.timeLineContent.attributedText = attrStr;
-        cell.timeLineContent.delegate = self;
-        
-        cell.timeLineName.text = cardGroup.mblog.user.screenName;
-        cell.timeLineSource.text = cardGroup.mblog.source;
-        [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
-        Pics * pics = cardGroup.mblog.pics[0];
-        [cell.timeLineSigleImage sd_setImageWithURL:[NSURL URLWithString:pics.url]];
-         
-        return cell;
-    } else if (cardGroup.mblog.picIds.count == 2){
-
-        static NSString * Identifier = @"TimeLineTwoImageCell";
-        TimeLineTwoImageCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
-        cell.fd_enforceFrameLayout = NO;
-        
-        cell.timeLineTime.text = cardGroup.mblog.createdAt;
-        
-        NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-        cell.timeLineContent.attributedText = attrStr;
-        cell.timeLineContent.delegate = self;
-        
-        cell.timeLineName.text = cardGroup.mblog.user.screenName;
-        cell.timeLineSource.text = cardGroup.mblog.source;
-        [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
-        Pics * pics0 = cardGroup.mblog.pics[0];
-        [cell.timeLineImage0 sd_setImageWithURL:[NSURL URLWithString:pics0.url]];
-        Pics * pics1 = cardGroup.mblog.pics[1];
-        [cell.timeLineImage1 sd_setImageWithURL:[NSURL URLWithString:pics1.url]];
-        return cell;
-    }
+//
+//    if (cardGroup.mblog.picIds.count == 0) {
+//        static NSString * Identifier = @"TimeLineCell";
+//        TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+//        cell.fd_enforceFrameLayout = NO;
+//        
+//        cell.timeLineTime.text = cardGroup.mblog.createdAt;
+//        
+//        NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
+//        cell.timeLineContent.attributedText = attrStr;
+//        cell.timeLineContent.delegate = self;
+//        
+//        cell.timeLineName.text = cardGroup.mblog.user.screenName;
+//        cell.timeLineSource.text = cardGroup.mblog.source;
+//        [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
+//        
+//        return cell;
+//    } else if (cardGroup.mblog.picIds.count == 1){
+//        static NSString * Identifier = @"TimeLineSingleImageCell";
+//        TimeLine1ImagesCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+//        cell.fd_enforceFrameLayout = NO;
+//        
+//        cell.timeLineTime.text = cardGroup.mblog.createdAt;
+//        
+//        NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
+//        cell.timeLineContent.attributedText = attrStr;
+//        cell.timeLineContent.delegate = self;
+//        
+//        cell.timeLineName.text = cardGroup.mblog.user.screenName;
+//        cell.timeLineSource.text = cardGroup.mblog.source;
+//        [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
+//        Pics * pics = cardGroup.mblog.pics[0];
+//        [cell.timeLineSigleImage sd_setImageWithURL:[NSURL URLWithString:pics.url]];
+//         
+//        return cell;
+//    } else if (cardGroup.mblog.picIds.count == 2){
+//
+//        static NSString * Identifier = @"TimeLineTwoImageCell";
+//        TimeLineTwoImageCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+//        cell.fd_enforceFrameLayout = NO;
+//        
+//        cell.timeLineTime.text = cardGroup.mblog.createdAt;
+//        
+//        NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
+//        cell.timeLineContent.attributedText = attrStr;
+//        cell.timeLineContent.delegate = self;
+//        
+//        cell.timeLineName.text = cardGroup.mblog.user.screenName;
+//        cell.timeLineSource.text = cardGroup.mblog.source;
+//        [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
+//        Pics * pics0 = cardGroup.mblog.pics[0];
+//        [cell.timeLineImage0 sd_setImageWithURL:[NSURL URLWithString:pics0.url]];
+//        Pics * pics1 = cardGroup.mblog.pics[1];
+//        [cell.timeLineImage1 sd_setImageWithURL:[NSURL URLWithString:pics1.url]];
+//        return cell;
+//    }
     
-    static NSString * Identifier = @"TimeLineCell";
+    NSString * Identifier = [NSString stringWithFormat:@"TimeLine%ldImagesCell", cardGroup.mblog.pics.count];
     TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
     cell.fd_enforceFrameLayout = NO;
     
@@ -172,6 +172,7 @@
     cell.timeLineName.text = cardGroup.mblog.user.screenName;
     cell.timeLineSource.text = cardGroup.mblog.source;
     [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
+    [cell showImages:cardGroup.mblog.pics];
     return cell;
 }
 
@@ -183,79 +184,97 @@
 
     CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
     
-    if (cardGroup.mblog.picIds.count == 0) {
-        return [tableView fd_heightForCellWithIdentifier:@"TimeLineCell" configuration:^(TimeLineCell *cell) {
-            cell.fd_enforceFrameLayout = NO;
-            
-            CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
-            
-            cell.timeLineTime.text = cardGroup.mblog.createdAt;
-            
-            NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-            cell.timeLineContent.attributedText = attrStr;
-            cell.timeLineContent.delegate = self;
-            cell.timeLineContent.text = cardGroup.mblog.text;
-            cell.timeLineName.text = cardGroup.mblog.user.screenName;
-            cell.timeLineSource.text = cardGroup.mblog.source;
-            [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
-            
-        }];
-    } else if (cardGroup.mblog.picIds.count == 1){
-
-        return [tableView fd_heightForCellWithIdentifier:@"TimeLineSingleImageCell" configuration:^(TimeLineSingleImageCell *cell) {
-            cell.fd_enforceFrameLayout = NO;
-            
-            CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
-            
-            cell.timeLineTime.text = cardGroup.mblog.createdAt;
-            
-            NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-            cell.timeLineContent.attributedText = attrStr;
-            cell.timeLineContent.delegate = self;
-            cell.timeLineContent.text = cardGroup.mblog.text;
-            cell.timeLineName.text = cardGroup.mblog.user.screenName;
-            cell.timeLineSource.text = cardGroup.mblog.source;
-            [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
-            Pics * pics = cardGroup.mblog.pics[0];
-            [cell.timeLineSigleImage sd_setImageWithURL:[NSURL URLWithString:pics.url]];
-        }];
-    } else if (cardGroup.mblog.picIds.count == 2){
-        return [tableView fd_heightForCellWithIdentifier:@"TimeLineTwoImageCell" configuration:^(TimeLineTwoImageCell *cell) {
-            cell.fd_enforceFrameLayout = NO;
-            
-            CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
-            
-            cell.timeLineTime.text = cardGroup.mblog.createdAt;
-            
-            NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-            cell.timeLineContent.attributedText = attrStr;
-            cell.timeLineContent.delegate = self;
-            cell.timeLineContent.text = cardGroup.mblog.text;
-            cell.timeLineName.text = cardGroup.mblog.user.screenName;
-            cell.timeLineSource.text = cardGroup.mblog.source;
-            [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
-            Pics * pics0 = cardGroup.mblog.pics[0];
-            [cell.timeLineImage0 sd_setImageWithURL:[NSURL URLWithString:pics0.url]];
-            Pics * pics1 = cardGroup.mblog.pics[1];
-            [cell.timeLineImage1 sd_setImageWithURL:[NSURL URLWithString:pics1.url]];
-        }];
-    } else{
-        return [tableView fd_heightForCellWithIdentifier:@"TimeLineCell" configuration:^(TimeLineCell *cell) {
-            cell.fd_enforceFrameLayout = NO;
-            
-            CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
-            
-            cell.timeLineTime.text = cardGroup.mblog.createdAt;
-            
-            NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-            cell.timeLineContent.attributedText = attrStr;
-            cell.timeLineContent.delegate = self;
-            cell.timeLineContent.text = cardGroup.mblog.text;
-            cell.timeLineName.text = cardGroup.mblog.user.screenName;
-            cell.timeLineSource.text = cardGroup.mblog.source;
-            [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
-        }];
-    }
+    NSString * Identifier = [NSString stringWithFormat:@"TimeLine%ldImagesCell", cardGroup.mblog.pics.count];
+    return [tableView fd_heightForCellWithIdentifier:Identifier configuration:^(TimeLineCell *cell) {
+        cell.fd_enforceFrameLayout = NO;
+        
+        CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
+        
+        cell.timeLineTime.text = cardGroup.mblog.createdAt;
+        
+        NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
+        cell.timeLineContent.attributedText = attrStr;
+        cell.timeLineContent.delegate = self;
+        cell.timeLineContent.text = cardGroup.mblog.text;
+        cell.timeLineName.text = cardGroup.mblog.user.screenName;
+        cell.timeLineSource.text = cardGroup.mblog.source;
+        [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
+        [cell showImages:cardGroup.mblog.pics];
+        
+    }];
+//    if (cardGroup.mblog.picIds.count == 0) {
+//        return [tableView fd_heightForCellWithIdentifier:@"TimeLineCell" configuration:^(TimeLineCell *cell) {
+//            cell.fd_enforceFrameLayout = NO;
+//            
+//            CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
+//            
+//            cell.timeLineTime.text = cardGroup.mblog.createdAt;
+//            
+//            NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
+//            cell.timeLineContent.attributedText = attrStr;
+//            cell.timeLineContent.delegate = self;
+//            cell.timeLineContent.text = cardGroup.mblog.text;
+//            cell.timeLineName.text = cardGroup.mblog.user.screenName;
+//            cell.timeLineSource.text = cardGroup.mblog.source;
+//            [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
+//            
+//        }];
+//    } else if (cardGroup.mblog.picIds.count == 1){
+//
+//        return [tableView fd_heightForCellWithIdentifier:@"TimeLineSingleImageCell" configuration:^(TimeLineSingleImageCell *cell) {
+//            cell.fd_enforceFrameLayout = NO;
+//            
+//            CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
+//            
+//            cell.timeLineTime.text = cardGroup.mblog.createdAt;
+//            
+//            NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
+//            cell.timeLineContent.attributedText = attrStr;
+//            cell.timeLineContent.delegate = self;
+//            cell.timeLineContent.text = cardGroup.mblog.text;
+//            cell.timeLineName.text = cardGroup.mblog.user.screenName;
+//            cell.timeLineSource.text = cardGroup.mblog.source;
+//            [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
+//            Pics * pics = cardGroup.mblog.pics[0];
+//            [cell.timeLineSigleImage sd_setImageWithURL:[NSURL URLWithString:pics.url]];
+//        }];
+//    } else if (cardGroup.mblog.picIds.count == 2){
+//        return [tableView fd_heightForCellWithIdentifier:@"TimeLineTwoImageCell" configuration:^(TimeLineTwoImageCell *cell) {
+//            cell.fd_enforceFrameLayout = NO;
+//            
+//            CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
+//            
+//            cell.timeLineTime.text = cardGroup.mblog.createdAt;
+//            
+//            NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
+//            cell.timeLineContent.attributedText = attrStr;
+//            cell.timeLineContent.delegate = self;
+//            cell.timeLineContent.text = cardGroup.mblog.text;
+//            cell.timeLineName.text = cardGroup.mblog.user.screenName;
+//            cell.timeLineSource.text = cardGroup.mblog.source;
+//            [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
+//            Pics * pics0 = cardGroup.mblog.pics[0];
+//            [cell.timeLineImage0 sd_setImageWithURL:[NSURL URLWithString:pics0.url]];
+//            Pics * pics1 = cardGroup.mblog.pics[1];
+//            [cell.timeLineImage1 sd_setImageWithURL:[NSURL URLWithString:pics1.url]];
+//        }];
+//    } else{
+//        return [tableView fd_heightForCellWithIdentifier:@"TimeLineCell" configuration:^(TimeLineCell *cell) {
+//            cell.fd_enforceFrameLayout = NO;
+//            
+//            CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
+//            
+//            cell.timeLineTime.text = cardGroup.mblog.createdAt;
+//            
+//            NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
+//            cell.timeLineContent.attributedText = attrStr;
+//            cell.timeLineContent.delegate = self;
+//            cell.timeLineContent.text = cardGroup.mblog.text;
+//            cell.timeLineName.text = cardGroup.mblog.user.screenName;
+//            cell.timeLineSource.text = cardGroup.mblog.source;
+//            [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
+//        }];
+//    }
 }
 
 

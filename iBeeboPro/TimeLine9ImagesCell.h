@@ -1,21 +1,14 @@
 //
-//  TimeLineCell.h
+//  TimeLine9ImagesCell.h
 //  iBeeboPro
 //
-//  Created by 迪远 王 on 16/7/26.
+//  Created by 迪远 王 on 16/7/31.
 //  Copyright © 2016年 andforce. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "UIWeiboTextView.h"
-#import "Pics.h"
+#import "TimeLineCell.h"
 
-@interface TimeLineCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *timeLineAvatar;
-@property (weak, nonatomic) IBOutlet UILabel *timeLineName;
-@property (weak, nonatomic) IBOutlet UILabel *timeLineTime;
-@property (weak, nonatomic) IBOutlet UILabel *timeLineSource;
-@property (weak, nonatomic) IBOutlet UIWeiboTextView *timeLineContent;
+@interface TimeLine9ImagesCell : TimeLineCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *timeLineImage0;
 @property (weak, nonatomic) IBOutlet UIImageView *timeLineImage1;
@@ -26,7 +19,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *timeLineImage6;
 @property (weak, nonatomic) IBOutlet UIImageView *timeLineImage7;
 @property (weak, nonatomic) IBOutlet UIImageView *timeLineImage8;
-
--(void) showImages:(NSArray<Pics *> *) pics;
 
 @end

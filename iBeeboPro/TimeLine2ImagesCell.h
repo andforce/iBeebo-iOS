@@ -1,5 +1,5 @@
 //
-//  TimeLineSingleImageCell.h
+//  TimeLineTwoImageCell.h
 //  iBeeboPro
 //
 //  Created by 迪远 王 on 16/7/30.
@@ -8,7 +8,7 @@
 
 #import "TimeLineCell.h"
 
-@interface TimeLineSingleImageCell : TimeLineCell
-@property (weak, nonatomic) IBOutlet UIImageView *timeLineSigleImage;
+@interface TimeLine2ImagesCell : TimeLineCell
+
 
 @end

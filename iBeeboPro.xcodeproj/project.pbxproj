@@ -37,6 +37,7 @@
 		3A6E21F91D4C8F9C00ED92E6 /* UIWeiboTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E21F81D4C8F9C00ED92E6 /* UIWeiboTextView.m */; };
 		3A6E21FC1D4C972C00ED92E6 /* WeiboJsonCleanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E21FB1D4C972C00ED92E6 /* WeiboJsonCleanner.m */; };
 		3A6E21FF1D4CE79700ED92E6 /* TimeLineSingleImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E21FE1D4CE79700ED92E6 /* TimeLineSingleImageCell.m */; };
+		3A6E22021D4CFE4000ED92E6 /* TimeLineTwoImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E22011D4CFE4000ED92E6 /* TimeLineTwoImageCell.m */; };
 		3A85C2241D44DAD000B0FB8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2231D44DAD000B0FB8E /* main.m */; };
 		3A85C2271D44DAD000B0FB8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2261D44DAD000B0FB8E /* AppDelegate.m */; };
 		3A85C22A1D44DAD000B0FB8E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2291D44DAD000B0FB8E /* ViewController.m */; };
@@ -111,6 +112,8 @@
 		3A6E21FB1D4C972C00ED92E6 /* WeiboJsonCleanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboJsonCleanner.m; sourceTree = "<group>"; };
 		3A6E21FD1D4CE79700ED92E6 /* TimeLineSingleImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineSingleImageCell.h; sourceTree = "<group>"; };
 		3A6E21FE1D4CE79700ED92E6 /* TimeLineSingleImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineSingleImageCell.m; sourceTree = "<group>"; };
+		3A6E22001D4CFE4000ED92E6 /* TimeLineTwoImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineTwoImageCell.h; sourceTree = "<group>"; };
+		3A6E22011D4CFE4000ED92E6 /* TimeLineTwoImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineTwoImageCell.m; sourceTree = "<group>"; };
 		3A85C21F1D44DAD000B0FB8E /* iBeeboPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBeeboPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A85C2231D44DAD000B0FB8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A85C2251D44DAD000B0FB8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -205,6 +208,8 @@
 				3A6559E31D47B9DD00776797 /* TimeLineCell.m */,
 				3A6E21FD1D4CE79700ED92E6 /* TimeLineSingleImageCell.h */,
 				3A6E21FE1D4CE79700ED92E6 /* TimeLineSingleImageCell.m */,
+				3A6E22001D4CFE4000ED92E6 /* TimeLineTwoImageCell.h */,
+				3A6E22011D4CFE4000ED92E6 /* TimeLineTwoImageCell.m */,
 			);
 			name = TableCell;
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 				3A6E21FC1D4C972C00ED92E6 /* WeiboJsonCleanner.m in Sources */,
 				3A64106B1D466B68000651E6 /* PageInfo.m in Sources */,
 				3A6410721D466B68000651E6 /* WeiboCamera.m in Sources */,
+				3A6E22021D4CFE4000ED92E6 /* TimeLineTwoImageCell.m in Sources */,
 				3A6844D71D4A608000655A17 /* EmotionsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -183,6 +184,100 @@
                                     <outlet property="timeLineSigleImage" destination="TK6-Pm-mmG" id="Bcl-cy-tdJ"/>
                                     <outlet property="timeLineSource" destination="Xb5-DL-Ep7" id="SgT-yR-zcz"/>
                                     <outlet property="timeLineTime" destination="zFP-js-pt3" id="ehS-3C-ZTg"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLineTwoImageCell" rowHeight="391" id="2vD-6n-UXB" customClass="TimeLineTwoImageCell">
+                                <rect key="frame" x="0.0" y="627" width="600" height="391"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2vD-6n-UXB" id="85Z-GK-uP1">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="390.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OBC-my-6z2" userLabel="avatar">
+                                            <rect key="frame" x="8" y="8" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="CYL-6z-OkC"/>
+                                                <constraint firstAttribute="height" constant="40" id="xfZ-dS-dy2"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yn-kx-Ftb" userLabel="name">
+                                            <rect key="frame" x="56" y="8" width="43" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB5-Tg-w0v" userLabel="time">
+                                            <rect key="frame" x="56" y="27" width="34" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWK-QC-mIY" userLabel="source">
+                                            <rect key="frame" x="98" y="27" width="52" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KQ6-E7-GFT" customClass="UIWeiboTextView">
+                                            <rect key="frame" x="8" y="56" width="584" height="33"/>
+                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sqn-SM-Am6">
+                                            <rect key="frame" x="308" y="97" width="284" height="284"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="sqn-SM-Am6" secondAttribute="height" multiplier="1:1" id="UZi-HL-1zq"/>
+                                            </constraints>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NoO-My-NYB">
+                                            <rect key="frame" x="300" y="97" width="1" height="128"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="NoO-My-NYB" secondAttribute="height" multiplier="1:128" id="E48-Oi-8gI"/>
+                                                <constraint firstAttribute="width" constant="1" id="MRN-Uj-VH3"/>
+                                            </constraints>
+                                        </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KpA-QS-Xnl">
+                                            <rect key="frame" x="8" y="97" width="284" height="284"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="KpA-QS-Xnl" secondAttribute="height" multiplier="1:1" id="0Us-65-7JG"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="KQ6-E7-GFT" firstAttribute="top" secondItem="85Z-GK-uP1" secondAttribute="topMargin" constant="48" id="9hc-v5-Mps"/>
+                                        <constraint firstItem="fB5-Tg-w0v" firstAttribute="bottom" secondItem="OBC-my-6z2" secondAttribute="bottom" id="Acc-je-2If"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="KQ6-E7-GFT" secondAttribute="trailing" id="AqZ-PZ-GZR"/>
+                                        <constraint firstItem="0yn-kx-Ftb" firstAttribute="top" secondItem="OBC-my-6z2" secondAttribute="top" id="EEd-8c-Dsh"/>
+                                        <constraint firstItem="FWK-QC-mIY" firstAttribute="leading" secondItem="fB5-Tg-w0v" secondAttribute="trailing" constant="8" id="Ecc-ex-ya7"/>
+                                        <constraint firstItem="FWK-QC-mIY" firstAttribute="bottom" secondItem="OBC-my-6z2" secondAttribute="bottom" id="F1K-qY-aNt"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="KQ6-E7-GFT" secondAttribute="leading" id="F5b-zl-YDJ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="KpA-QS-Xnl" secondAttribute="bottom" constant="1.5" id="Feu-RN-gDt"/>
+                                        <constraint firstItem="sqn-SM-Am6" firstAttribute="top" secondItem="KQ6-E7-GFT" secondAttribute="bottom" constant="8" id="Gx2-xK-bU1"/>
+                                        <constraint firstAttribute="topMargin" secondItem="OBC-my-6z2" secondAttribute="top" id="IWv-IH-Qeo"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="sqn-SM-Am6" secondAttribute="trailing" id="TTD-oA-UbS"/>
+                                        <constraint firstItem="sqn-SM-Am6" firstAttribute="leading" secondItem="NoO-My-NYB" secondAttribute="trailing" constant="7" id="Up3-6a-LA7"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="KpA-QS-Xnl" secondAttribute="leading" id="WyE-to-ktR"/>
+                                        <constraint firstItem="KpA-QS-Xnl" firstAttribute="top" secondItem="85Z-GK-uP1" secondAttribute="topMargin" constant="89" id="cZI-wI-fza"/>
+                                        <constraint firstItem="NoO-My-NYB" firstAttribute="leading" secondItem="KpA-QS-Xnl" secondAttribute="trailing" constant="8" id="fXM-WQ-nB7"/>
+                                        <constraint firstItem="NoO-My-NYB" firstAttribute="centerX" secondItem="85Z-GK-uP1" secondAttribute="centerX" id="giN-X9-Kpx"/>
+                                        <constraint firstItem="NoO-My-NYB" firstAttribute="top" secondItem="85Z-GK-uP1" secondAttribute="topMargin" constant="89" id="mya-ZB-vRn"/>
+                                        <constraint firstItem="sqn-SM-Am6" firstAttribute="top" secondItem="85Z-GK-uP1" secondAttribute="topMargin" constant="89" id="nLR-G2-GG0"/>
+                                        <constraint firstItem="0yn-kx-Ftb" firstAttribute="leading" secondItem="OBC-my-6z2" secondAttribute="trailing" constant="8" id="rLh-xy-TX1"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="OBC-my-6z2" secondAttribute="leading" id="uF0-sW-9Pc"/>
+                                        <constraint firstItem="KpA-QS-Xnl" firstAttribute="top" secondItem="KQ6-E7-GFT" secondAttribute="bottom" constant="8" id="xps-7R-NkP"/>
+                                        <constraint firstItem="fB5-Tg-w0v" firstAttribute="leading" secondItem="OBC-my-6z2" secondAttribute="trailing" constant="8" id="zCh-fG-XUw"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="timeLineAvatar" destination="OBC-my-6z2" id="bkA-ue-ft6"/>
+                                    <outlet property="timeLineContent" destination="KQ6-E7-GFT" id="tDa-9O-JBC"/>
+                                    <outlet property="timeLineImage0" destination="KpA-QS-Xnl" id="1J4-Ti-wKO"/>
+                                    <outlet property="timeLineImage1" destination="sqn-SM-Am6" id="BH8-hM-N4L"/>
+                                    <outlet property="timeLineName" destination="0yn-kx-Ftb" id="DJY-OW-Jcw"/>
+                                    <outlet property="timeLineSource" destination="FWK-QC-mIY" id="f81-kJ-sIY"/>
+                                    <outlet property="timeLineTime" destination="fB5-Tg-w0v" id="50c-Wm-7LP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

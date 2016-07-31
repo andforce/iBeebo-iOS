@@ -51,7 +51,7 @@
     // Configure the view for the selected state
 }
 
--(void)showStatus:(Mblog *)status{
+-(void)showStatus:(Mblog *)status forRetweet:(BOOL)isRetweet{
     _timeLineTime.text = status.createdAt;
     
     NSAttributedString * attrStr = [self attributedTextWithText:status.text];
@@ -61,7 +61,12 @@
     _timeLineName.text = status.user.screenName;
     _timeLineSource.text = status.source;
     [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:status.user.profileImageUrl]];
-    [self showImages:status.pics];
+    if (isRetweet) {
+        [self showImages:status.retweetedStatus.pics];
+    } else{
+        [self showImages:status.pics];
+    }
+
 
 }
 

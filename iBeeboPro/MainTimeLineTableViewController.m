@@ -105,13 +105,14 @@
     
     RetweetedStatus * retweet = cardGroup.mblog.retweetedStatus;
     
-    NSString * retweetFlag = retweet.text == nil ? @"" : @"Retweet";
-    int count = retweet.text == nil ? (int)cardGroup.mblog.pics.count : 1;
+    BOOL isRetweet = retweet.text != nil;
+    NSString * retweetFlag = isRetweet ? @"Retweet" : @"";
+    int count = (int)cardGroup.mblog.retweetedStatus.pics.count;
     NSString * Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCell%@", count,retweetFlag];
     TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
     cell.fd_enforceFrameLayout = NO;
     
-    [cell showStatus:cardGroup.mblog];
+    [cell showStatus:cardGroup.mblog forRetweet:isRetweet];
     return cell;
 }
 
@@ -126,15 +127,16 @@
     
     RetweetedStatus * retweet = cardGroup.mblog.retweetedStatus;
     
-    NSString * retweetFlag = retweet.text == nil ? @"" : @"Retweet";
-    int count = retweet.text == nil ? (int)cardGroup.mblog.pics.count : 1;
+    BOOL isRetweet = retweet.text != nil;
+    NSString * retweetFlag = isRetweet ? @"Retweet" : @"";
+    int count = (int)cardGroup.mblog.retweetedStatus.pics.count;
     NSString * Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCell%@", count,retweetFlag];
     return [tableView fd_heightForCellWithIdentifier:Identifier configuration:^(TimeLineCell *cell) {
         cell.fd_enforceFrameLayout = NO;
         
         CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
 
-        [cell showStatus:cardGroup.mblog];
+        [cell showStatus:cardGroup.mblog forRetweet:isRetweet];
         
     }];
 }

@@ -353,6 +353,7 @@
                                 <connections>
                                     <outlet property="timeLineAvatar" destination="MWn-Ge-V07" id="uWs-6F-WoU"/>
                                     <outlet property="timeLineContent" destination="gmY-O6-UgS" id="tAG-DJ-6tl"/>
+                                    <outlet property="timeLineImage0" destination="Sjt-c8-lfz" id="XXz-S2-f8l"/>
                                     <outlet property="timeLineName" destination="niM-DH-VIY" id="ZZa-Zt-Wch"/>
                                     <outlet property="timeLineReTweetContent" destination="qEt-EL-E9V" id="bFr-Tz-GCc"/>
                                     <outlet property="timeLineSource" destination="5cB-yZ-2Wz" id="CKZ-NT-u8Y"/>
@@ -2503,7 +2504,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJ9-Gq-aDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-465" y="-1240"/>
+            <point key="canvasLocation" x="90" y="-1278"/>
         </scene>
         <!--Item-->
         <scene sceneID="IKC-RP-tFK">
@@ -2521,35 +2522,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brS-Cd-19t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1025" y="361"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="ZQj-3y-x1o">
-            <objects>
-                <tableViewController id="hzX-1K-zFd" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DCo-Kw-uUV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0z8-fP-81P">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0z8-fP-81P" id="Neh-Ci-SfE">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="hzX-1K-zFd" id="Xva-Fk-bNA"/>
-                            <outlet property="delegate" destination="hzX-1K-zFd" id="JSQ-M2-vMl"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="6ed-6S-fE9"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a3Z-eX-2Vo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-237" y="1084"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="R9Q-uP-kha">
@@ -2698,9 +2670,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="hzX-1K-zFd" kind="relationship" relationship="rootViewController" id="UgF-2e-RZA"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="299-20-09W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2726,110 +2695,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTo-8l-5BQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2239" y="2933"/>
-        </scene>
-        <!--TimeLine-->
-        <scene sceneID="wxb-Ob-EPP">
-            <objects>
-                <tableViewController storyboardIdentifier="MainTimeLineTableViewControllerRetweet" id="0Wh-0U-pKY" customClass="MainTimeLineTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="139" sectionHeaderHeight="28" sectionFooterHeight="28" id="xKu-Er-htd">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLine0ImagesCellRetweet" rowHeight="139" id="M2j-d6-7M6" customClass="TimeLineCell">
-                                <rect key="frame" x="0.0" y="28" width="600" height="139"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M2j-d6-7M6" id="5hN-Np-21I">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="138.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d3Q-cn-5xd" userLabel="avatar">
-                                            <rect key="frame" x="8" y="8" width="40" height="40"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="40" id="4n6-HB-YD5"/>
-                                                <constraint firstAttribute="height" constant="40" id="C7X-TN-Z7l"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5Y-Vf-weY" userLabel="name">
-                                            <rect key="frame" x="56" y="8" width="43" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpW-Wf-LeP" userLabel="time">
-                                            <rect key="frame" x="56" y="27" width="34" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhU-8u-z3h" userLabel="source">
-                                            <rect key="frame" x="98" y="27" width="52" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Abt-0d-DSK" customClass="UIWeiboTextView">
-                                            <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAm-8g-Yyi">
-                                            <rect key="frame" x="0.0" y="97.5" width="600" height="33"/>
-                                            <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u5b-LL-ysW" customClass="UIWeiboTextView">
-                                                    <rect key="frame" x="8" y="0.0" width="584" height="33"/>
-                                                    <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="u5b-LL-ysW" secondAttribute="bottom" id="PD1-Nq-Me5"/>
-                                                <constraint firstAttribute="trailing" secondItem="u5b-LL-ysW" secondAttribute="trailing" constant="8" id="ZrM-Fe-1WQ"/>
-                                                <constraint firstItem="u5b-LL-ysW" firstAttribute="leading" secondItem="bAm-8g-Yyi" secondAttribute="leading" constant="8" id="bQu-jL-aZ0"/>
-                                                <constraint firstItem="u5b-LL-ysW" firstAttribute="top" secondItem="bAm-8g-Yyi" secondAttribute="top" id="iGH-8Y-YnO"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="YhU-8u-z3h" firstAttribute="leading" secondItem="ZpW-Wf-LeP" secondAttribute="trailing" constant="8" id="31b-H2-4DF"/>
-                                        <constraint firstItem="x5Y-Vf-weY" firstAttribute="top" secondItem="d3Q-cn-5xd" secondAttribute="top" id="3DF-EH-ab6"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="bAm-8g-Yyi" secondAttribute="bottom" id="6Jh-FN-V4D"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Abt-0d-DSK" secondAttribute="trailing" id="79R-m3-ZWT"/>
-                                        <constraint firstItem="bAm-8g-Yyi" firstAttribute="top" secondItem="Abt-0d-DSK" secondAttribute="bottom" constant="8.5" id="BDB-E5-wh0"/>
-                                        <constraint firstItem="YhU-8u-z3h" firstAttribute="bottom" secondItem="d3Q-cn-5xd" secondAttribute="bottom" id="K6S-zW-bJx"/>
-                                        <constraint firstItem="Abt-0d-DSK" firstAttribute="top" secondItem="5hN-Np-21I" secondAttribute="topMargin" constant="48" id="SsZ-7v-lCZ"/>
-                                        <constraint firstItem="ZpW-Wf-LeP" firstAttribute="bottom" secondItem="d3Q-cn-5xd" secondAttribute="bottom" id="SzS-8t-biS"/>
-                                        <constraint firstAttribute="topMargin" secondItem="d3Q-cn-5xd" secondAttribute="top" id="Xod-YO-ifG"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="d3Q-cn-5xd" secondAttribute="leading" id="fH3-Df-bg1"/>
-                                        <constraint firstItem="ZpW-Wf-LeP" firstAttribute="leading" secondItem="d3Q-cn-5xd" secondAttribute="trailing" constant="8" id="nFk-k4-84y"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="bAm-8g-Yyi" secondAttribute="trailing" constant="-8" id="nmc-QC-fKB"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="Abt-0d-DSK" secondAttribute="leading" id="u4E-wJ-eZv"/>
-                                        <constraint firstItem="bAm-8g-Yyi" firstAttribute="leading" secondItem="5hN-Np-21I" secondAttribute="leadingMargin" constant="-8" id="wff-9Q-rJA"/>
-                                        <constraint firstItem="x5Y-Vf-weY" firstAttribute="leading" secondItem="d3Q-cn-5xd" secondAttribute="trailing" constant="8" id="xrn-1J-lOx"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="timeLineAvatar" destination="d3Q-cn-5xd" id="ugP-eE-bya"/>
-                                    <outlet property="timeLineContent" destination="Abt-0d-DSK" id="tHK-xg-Chg"/>
-                                    <outlet property="timeLineName" destination="x5Y-Vf-weY" id="fHd-Mr-mPB"/>
-                                    <outlet property="timeLineSource" destination="YhU-8u-z3h" id="lEd-B7-O8H"/>
-                                    <outlet property="timeLineTime" destination="ZpW-Wf-LeP" id="mll-U5-i55"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="0Wh-0U-pKY" id="Re2-wj-yKQ"/>
-                            <outlet property="delegate" destination="0Wh-0U-pKY" id="3Eh-eW-eXG"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="TimeLine" id="oQW-1W-fqg"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ull-Vj-P64" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="272" y="-3423"/>
         </scene>
     </scenes>
 </document>

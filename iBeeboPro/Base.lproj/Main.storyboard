@@ -2275,6 +2275,7 @@
                                         <constraint firstItem="QrP-Vt-418" firstAttribute="top" secondItem="O09-BE-2fU" secondAttribute="topMargin" constant="89" id="aMC-bb-kdL"/>
                                         <constraint firstAttribute="topMargin" secondItem="tSP-79-uOf" secondAttribute="top" id="cqV-ql-PWC"/>
                                         <constraint firstItem="gCR-Vh-LcS" firstAttribute="top" secondItem="X3A-wY-sGf" secondAttribute="bottom" constant="8" id="dx4-LT-Pn3"/>
+                                        <constraint firstItem="LYf-Da-WQD" firstAttribute="top" secondItem="tSP-79-uOf" secondAttribute="bottom" constant="8" id="fuf-l0-XNE"/>
                                         <constraint firstItem="X3A-wY-sGf" firstAttribute="top" secondItem="LYf-Da-WQD" secondAttribute="bottom" constant="8" id="gRF-bU-qfc"/>
                                         <constraint firstItem="h1B-yu-pF8" firstAttribute="leading" secondItem="gCR-Vh-LcS" secondAttribute="trailing" constant="5" id="mkZ-KD-zun"/>
                                         <constraint firstItem="WG3-iN-yiu" firstAttribute="leading" secondItem="hS0-P3-ezf" secondAttribute="trailing" constant="8" id="rrL-sf-HSn"/>
@@ -2289,6 +2290,13 @@
                                         <constraint firstItem="xlo-AH-2Zv" firstAttribute="leading" secondItem="X3A-wY-sGf" secondAttribute="trailing" constant="5" id="y6q-B3-pc7"/>
                                         <constraint firstItem="FZo-5z-EUc" firstAttribute="height" secondItem="QrP-Vt-418" secondAttribute="height" id="yCR-3P-Qw7"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="aMC-bb-kdL"/>
+                                            <exclude reference="sMH-5k-Koe"/>
+                                            <exclude reference="x04-Cr-DFq"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="SZ9-dy-Lax" secondAttribute="bottom" constant="14" id="cbn-s5-G2R"/>

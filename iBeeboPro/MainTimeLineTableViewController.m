@@ -107,7 +107,7 @@
     
     BOOL isRetweet = retweet.text != nil;
     NSString * retweetFlag = isRetweet ? @"Retweet" : @"";
-    int count = (int)cardGroup.mblog.retweetedStatus.pics.count;
+    int count = isRetweet ? (int)cardGroup.mblog.retweetedStatus.pics.count : (int)cardGroup.mblog.pics.count;
     NSString * Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCell%@", count,retweetFlag];
     TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
     cell.fd_enforceFrameLayout = NO;
@@ -129,7 +129,7 @@
     
     BOOL isRetweet = retweet.text != nil;
     NSString * retweetFlag = isRetweet ? @"Retweet" : @"";
-    int count = (int)cardGroup.mblog.retweetedStatus.pics.count;
+    int count = isRetweet ? (int)cardGroup.mblog.retweetedStatus.pics.count : (int)cardGroup.mblog.pics.count;
     NSString * Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCell%@", count,retweetFlag];
     return [tableView fd_heightForCellWithIdentifier:Identifier configuration:^(TimeLineCell *cell) {
         cell.fd_enforceFrameLayout = NO;

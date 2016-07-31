@@ -83,7 +83,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bCR-3l-cTU" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -145,7 +144,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XHV-Aw-TBP" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -154,7 +152,6 @@
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ein-iM-IzP" customClass="UIWeiboTextView">
                                                     <rect key="frame" x="8" y="0.0" width="584" height="33"/>
-                                                    <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -229,7 +226,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1bt-sa-2yl" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -304,7 +300,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gmY-O6-UgS" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -313,7 +308,6 @@
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qEt-EL-E9V" customClass="UIWeiboTextView">
                                                     <rect key="frame" x="8" y="0.0" width="584" height="33"/>
-                                                    <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -395,7 +389,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KQ6-E7-GFT" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -479,7 +472,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pPc-M6-JPz" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -488,7 +480,6 @@
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Z25-6E-NCe" customClass="UIWeiboTextView">
                                                     <rect key="frame" x="8" y="8" width="584" height="33"/>
-                                                    <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -585,7 +576,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CMq-Ph-ZEi" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -685,7 +675,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zrw-nd-2bp" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -694,7 +683,6 @@
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5pI-MZ-2Nu" customClass="UIWeiboTextView">
                                                     <rect key="frame" x="7" y="0.0" width="584" height="33"/>
-                                                    <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -803,7 +791,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jom-ao-qLd" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -908,7 +895,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zzv-Ak-3cA" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -917,7 +903,6 @@
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bGU-52-Vhr" customClass="UIWeiboTextView">
                                                     <rect key="frame" x="8" y="0.0" width="584" height="33"/>
-                                                    <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -1035,7 +1020,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9av-ZU-WLw" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -1148,7 +1132,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YI3-ff-dRJ" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -1157,7 +1140,6 @@
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4km-cE-nIZ" customClass="UIWeiboTextView">
                                                     <rect key="frame" x="8" y="0.0" width="584" height="33"/>
-                                                    <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -1291,7 +1273,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IZk-L3-cqv" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -1424,7 +1405,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jbJ-5i-qtv" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -1433,7 +1413,6 @@
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="y7E-ap-V9Y" customClass="UIWeiboTextView">
                                                     <rect key="frame" x="7" y="8" width="584" height="33"/>
-                                                    <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -1576,7 +1555,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4DS-zA-xhs" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -1720,7 +1698,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="egl-zU-6dp" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -1729,7 +1706,6 @@
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BPJ-1X-nzh" customClass="UIWeiboTextView">
                                                     <rect key="frame" x="7" y="0.0" width="584" height="33"/>
-                                                    <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -1880,7 +1856,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pdy-I6-cbL" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -2035,7 +2010,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9QR-F5-vI9" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -2044,7 +2018,6 @@
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u4N-wo-YRk" customClass="UIWeiboTextView">
                                                     <rect key="frame" x="7" y="0.0" width="584" height="33"/>
-                                                    <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -2207,7 +2180,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LYf-Da-WQD" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -2372,7 +2344,6 @@
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l6p-03-djB" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -2381,7 +2352,6 @@
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lqj-aM-4lU" customClass="UIWeiboTextView">
                                                     <rect key="frame" x="8" y="0.0" width="584" height="33"/>
-                                                    <color key="backgroundColor" red="0.90588235289999997" green="0.3294117647" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>

@@ -63,7 +63,8 @@
     [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:status.user.profileImageUrl]];
     if (isRetweet) {
         [self showImages:status.retweetedStatus.pics];
-        _timeLineReTweetContent.attributedText = [self attributedTextWithText:status.retweetedStatus.text];
+        NSString * retweet = [NSString stringWithFormat:@"@%@: %@",status.retweetedStatus.user.screenName, status.retweetedStatus.text];
+        _timeLineReTweetContent.attributedText = [self attributedTextWithText:retweet];
     } else{
         [self showImages:status.pics];
     }

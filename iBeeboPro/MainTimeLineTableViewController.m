@@ -25,6 +25,7 @@
 #import "TimeLine1ImagesCell.h"
 #import "TimeLine2ImagesCell.h"
 #import "Pics.h"
+#import "RetweetedStatus.h"
 
 
 @interface MainTimeLineTableViewController ()<UITextViewDelegate>{
@@ -47,8 +48,7 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 180.0;
     
-    sStatusTextFont = [UIFont systemFontOfSize:14];
-    sSpecialAttributes = @{ NSForegroundColorAttributeName : [UIColor blueColor] };
+
     
     _mblogs = [NSMutableArray array];
     
@@ -102,77 +102,16 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
-//
-//    if (cardGroup.mblog.picIds.count == 0) {
-//        static NSString * Identifier = @"TimeLineCell";
-//        TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
-//        cell.fd_enforceFrameLayout = NO;
-//        
-//        cell.timeLineTime.text = cardGroup.mblog.createdAt;
-//        
-//        NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-//        cell.timeLineContent.attributedText = attrStr;
-//        cell.timeLineContent.delegate = self;
-//        
-//        cell.timeLineName.text = cardGroup.mblog.user.screenName;
-//        cell.timeLineSource.text = cardGroup.mblog.source;
-//        [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
-//        
-//        return cell;
-//    } else if (cardGroup.mblog.picIds.count == 1){
-//        static NSString * Identifier = @"TimeLineSingleImageCell";
-//        TimeLine1ImagesCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
-//        cell.fd_enforceFrameLayout = NO;
-//        
-//        cell.timeLineTime.text = cardGroup.mblog.createdAt;
-//        
-//        NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-//        cell.timeLineContent.attributedText = attrStr;
-//        cell.timeLineContent.delegate = self;
-//        
-//        cell.timeLineName.text = cardGroup.mblog.user.screenName;
-//        cell.timeLineSource.text = cardGroup.mblog.source;
-//        [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
-//        Pics * pics = cardGroup.mblog.pics[0];
-//        [cell.timeLineSigleImage sd_setImageWithURL:[NSURL URLWithString:pics.url]];
-//         
-//        return cell;
-//    } else if (cardGroup.mblog.picIds.count == 2){
-//
-//        static NSString * Identifier = @"TimeLineTwoImageCell";
-//        TimeLineTwoImageCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
-//        cell.fd_enforceFrameLayout = NO;
-//        
-//        cell.timeLineTime.text = cardGroup.mblog.createdAt;
-//        
-//        NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-//        cell.timeLineContent.attributedText = attrStr;
-//        cell.timeLineContent.delegate = self;
-//        
-//        cell.timeLineName.text = cardGroup.mblog.user.screenName;
-//        cell.timeLineSource.text = cardGroup.mblog.source;
-//        [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
-//        Pics * pics0 = cardGroup.mblog.pics[0];
-//        [cell.timeLineImage0 sd_setImageWithURL:[NSURL URLWithString:pics0.url]];
-//        Pics * pics1 = cardGroup.mblog.pics[1];
-//        [cell.timeLineImage1 sd_setImageWithURL:[NSURL URLWithString:pics1.url]];
-//        return cell;
-//    }
     
-    NSString * Identifier = [NSString stringWithFormat:@"TimeLine%ldImagesCell", cardGroup.mblog.pics.count];
+    RetweetedStatus * retweet = cardGroup.mblog.retweetedStatus;
+    
+    NSString * retweetFlag = retweet.text == nil ? @"" : @"Retweet";
+    int count = retweet.text == nil ? (int)cardGroup.mblog.pics.count : 1;
+    NSString * Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCell%@", count,retweetFlag];
     TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
     cell.fd_enforceFrameLayout = NO;
     
-    cell.timeLineTime.text = cardGroup.mblog.createdAt;
-    
-    NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-    cell.timeLineContent.attributedText = attrStr;
-    cell.timeLineContent.delegate = self;
-    
-    cell.timeLineName.text = cardGroup.mblog.user.screenName;
-    cell.timeLineSource.text = cardGroup.mblog.source;
-    [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
-    [cell showImages:cardGroup.mblog.pics];
+    [cell showStatus:cardGroup.mblog];
     return cell;
 }
 
@@ -184,193 +123,24 @@
 
     CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
     
-    NSString * Identifier = [NSString stringWithFormat:@"TimeLine%ldImagesCell", cardGroup.mblog.pics.count];
+    
+    RetweetedStatus * retweet = cardGroup.mblog.retweetedStatus;
+    
+    NSString * retweetFlag = retweet.text == nil ? @"" : @"Retweet";
+    int count = retweet.text == nil ? (int)cardGroup.mblog.pics.count : 1;
+    NSString * Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCell%@", count,retweetFlag];
     return [tableView fd_heightForCellWithIdentifier:Identifier configuration:^(TimeLineCell *cell) {
         cell.fd_enforceFrameLayout = NO;
         
         CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
-        
-        cell.timeLineTime.text = cardGroup.mblog.createdAt;
-        
-        NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-        cell.timeLineContent.attributedText = attrStr;
-        cell.timeLineContent.delegate = self;
-        cell.timeLineContent.text = cardGroup.mblog.text;
-        cell.timeLineName.text = cardGroup.mblog.user.screenName;
-        cell.timeLineSource.text = cardGroup.mblog.source;
-        [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
-        [cell showImages:cardGroup.mblog.pics];
+
+        [cell showStatus:cardGroup.mblog];
         
     }];
-//    if (cardGroup.mblog.picIds.count == 0) {
-//        return [tableView fd_heightForCellWithIdentifier:@"TimeLineCell" configuration:^(TimeLineCell *cell) {
-//            cell.fd_enforceFrameLayout = NO;
-//            
-//            CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
-//            
-//            cell.timeLineTime.text = cardGroup.mblog.createdAt;
-//            
-//            NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-//            cell.timeLineContent.attributedText = attrStr;
-//            cell.timeLineContent.delegate = self;
-//            cell.timeLineContent.text = cardGroup.mblog.text;
-//            cell.timeLineName.text = cardGroup.mblog.user.screenName;
-//            cell.timeLineSource.text = cardGroup.mblog.source;
-//            [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
-//            
-//        }];
-//    } else if (cardGroup.mblog.picIds.count == 1){
-//
-//        return [tableView fd_heightForCellWithIdentifier:@"TimeLineSingleImageCell" configuration:^(TimeLineSingleImageCell *cell) {
-//            cell.fd_enforceFrameLayout = NO;
-//            
-//            CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
-//            
-//            cell.timeLineTime.text = cardGroup.mblog.createdAt;
-//            
-//            NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-//            cell.timeLineContent.attributedText = attrStr;
-//            cell.timeLineContent.delegate = self;
-//            cell.timeLineContent.text = cardGroup.mblog.text;
-//            cell.timeLineName.text = cardGroup.mblog.user.screenName;
-//            cell.timeLineSource.text = cardGroup.mblog.source;
-//            [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
-//            Pics * pics = cardGroup.mblog.pics[0];
-//            [cell.timeLineSigleImage sd_setImageWithURL:[NSURL URLWithString:pics.url]];
-//        }];
-//    } else if (cardGroup.mblog.picIds.count == 2){
-//        return [tableView fd_heightForCellWithIdentifier:@"TimeLineTwoImageCell" configuration:^(TimeLineTwoImageCell *cell) {
-//            cell.fd_enforceFrameLayout = NO;
-//            
-//            CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
-//            
-//            cell.timeLineTime.text = cardGroup.mblog.createdAt;
-//            
-//            NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-//            cell.timeLineContent.attributedText = attrStr;
-//            cell.timeLineContent.delegate = self;
-//            cell.timeLineContent.text = cardGroup.mblog.text;
-//            cell.timeLineName.text = cardGroup.mblog.user.screenName;
-//            cell.timeLineSource.text = cardGroup.mblog.source;
-//            [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
-//            Pics * pics0 = cardGroup.mblog.pics[0];
-//            [cell.timeLineImage0 sd_setImageWithURL:[NSURL URLWithString:pics0.url]];
-//            Pics * pics1 = cardGroup.mblog.pics[1];
-//            [cell.timeLineImage1 sd_setImageWithURL:[NSURL URLWithString:pics1.url]];
-//        }];
-//    } else{
-//        return [tableView fd_heightForCellWithIdentifier:@"TimeLineCell" configuration:^(TimeLineCell *cell) {
-//            cell.fd_enforceFrameLayout = NO;
-//            
-//            CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
-//            
-//            cell.timeLineTime.text = cardGroup.mblog.createdAt;
-//            
-//            NSAttributedString * attrStr = [self attributedTextWithText:cardGroup.mblog.text];
-//            cell.timeLineContent.attributedText = attrStr;
-//            cell.timeLineContent.delegate = self;
-//            cell.timeLineContent.text = cardGroup.mblog.text;
-//            cell.timeLineName.text = cardGroup.mblog.user.screenName;
-//            cell.timeLineSource.text = cardGroup.mblog.source;
-//            [cell.timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.mblog.user.profileImageUrl]];
-//        }];
-//    }
 }
 
 
 
-static NSString * const kRegexPattern = @"@[\\w-_]+|#[\\w]+#|\\[\\w+\\]|(https?)://(?:(\\S+?)(?::(\\S+?))?@)?([a-zA-Z0-9\\-.]+)(?::(\\d+))?((?:/[a-zA-Z0-9\\-._?,'+\\&%$=~*!():@\\\\]*)+)?";
 
-static UIFont *sStatusTextFont = nil;
-static NSDictionary *sSpecialAttributes = nil;
-
-- (NSMutableArray<LXStatusTextPart *> *)statusTextPartsWithText:(NSString *)text {
-    NSMutableArray<LXStatusTextPart *> *parts = [NSMutableArray new];
-    
-    // 匹配特殊字段.
-    [text enumerateStringsMatchedByRegex:kRegexPattern
-                              usingBlock:^(NSInteger captureCount,
-                                           NSString *const __unsafe_unretained *capturedStrings,
-                                           const NSRange *capturedRanges,
-                                           volatile BOOL *const stop) {
-                                  NSAssert((*capturedRanges).length > 0, @"尼玛长度能为0?");
-                                  LXStatusTextPart *part = [LXStatusTextPart new];
-                                  part.text  = *capturedStrings;
-                                  part.range = *capturedRanges;
-                                  part.isEmotion = [*capturedStrings hasPrefix:@"["];
-                                  part.isSpecial = YES;
-                                  [parts addObject:part];
-                              }];
-    
-    // 用特殊字段分割微博文本,即匹配普通文本字段.
-    [text enumerateStringsSeparatedByRegex:kRegexPattern
-                                usingBlock:^(NSInteger captureCount,
-                                             NSString *const __unsafe_unretained *capturedStrings,
-                                             const NSRange *capturedRanges,
-                                             volatile BOOL *const stop) {
-                                    if ((*capturedRanges).length == 0) {
-                                        return ;
-                                    }
-                                    LXStatusTextPart *part = [LXStatusTextPart new];
-                                    part.text  = *capturedStrings;
-                                    part.range = *capturedRanges;
-                                    
-                                    [parts addObject:part];
-                                }];
-    
-    // 按照 location 排序字段,即还原其原本的顺序.
-    [parts sortUsingComparator:^NSComparisonResult(LXStatusTextPart * _Nonnull obj1, LXStatusTextPart * _Nonnull obj2) {
-        return obj1.range.location < obj2.range.location ? NSOrderedAscending : NSOrderedDescending;
-    }];
-    
-    return parts;
-}
-
-- (NSAttributedString *)attributedTextWithText:(NSString *)text {
-    NSMutableArray *links = [NSMutableArray new];
-    NSMutableAttributedString *attributedString = [NSMutableAttributedString new];
-
-    for (LXStatusTextPart *part in [self statusTextPartsWithText:text]) {
-        
-        NSMutableAttributedString *subAttributedString = nil;
-        if (part.isEmotion) { // 表情.
-            Emotion *emotion = [EmotionsManager emotionWithCHS:part.text];
-            if (!emotion) {
-                subAttributedString = [[NSMutableAttributedString alloc] initWithString:part.text];
-            } else {
-                NSTextAttachment *textAttachment = [NSTextAttachment new];
-                textAttachment.image = [UIImage imageNamed:emotion.png];
-                textAttachment.bounds = CGRectMake(0, sStatusTextFont.descender, sStatusTextFont.lineHeight, sStatusTextFont.lineHeight);
-                subAttributedString = [NSMutableAttributedString attributedStringWithAttachment:textAttachment];
-            }
-        } else if (part.isSpecial) { // @ #.
-            LXStatusTextLink *link = [LXStatusTextLink new];
-
-            link.text  = part.text;
-            link.range = NSMakeRange(attributedString.length, part.text.length);
-            
-            [links addObject:link];
-            
-            
-            NSString * linkName = [link.text copy];
-            //subAttributedString = [[NSMutableAttributedString alloc] initWithString:part.text attributes:sSpecialAttributes];
-            if (![link.text hasPrefix:@"http"]) {
-                link.text = [@"app://" stringByAppendingString:[link.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-            }
-            subAttributedString = [[NSMutableAttributedString alloc] initWithString:linkName];
-            [subAttributedString addAttribute:NSLinkAttributeName value:[NSURL URLWithString:link.text] range:NSMakeRange(0, linkName.length)];
-        } else { // 普通文本内容.
-            subAttributedString = [[NSMutableAttributedString alloc] initWithString:part.text];
-        }
-        
-        [attributedString appendAttributedString:subAttributedString];
-    }
-    
-    [attributedString addAttribute:NSFontAttributeName value:sStatusTextFont range:(NSRange){ 0, attributedString.length }];
-    
-    [attributedString addAttribute:@"links" value:links range:(NSRange){0, 1}]; // 绑定链接数组.
-    
-    return attributedString;
-}
 
 @end

@@ -190,6 +190,7 @@
                                     <outlet property="timeLineAvatar" destination="zjG-DQ-bna" id="Wvi-Ki-mPc"/>
                                     <outlet property="timeLineContent" destination="XHV-Aw-TBP" id="ExS-XM-oyc"/>
                                     <outlet property="timeLineName" destination="aoA-6P-FhX" id="9ug-3g-pJq"/>
+                                    <outlet property="timeLineReTweetContent" destination="ein-iM-IzP" id="JYh-3m-jX8"/>
                                     <outlet property="timeLineSource" destination="GhZ-nE-Qyg" id="leB-IB-uSh"/>
                                     <outlet property="timeLineTime" destination="iP7-qt-jcs" id="60X-Ut-fbO"/>
                                 </connections>
@@ -538,6 +539,7 @@
                                     <outlet property="timeLineImage0" destination="ZZx-ai-6sz" id="4Pd-vQ-ZeK"/>
                                     <outlet property="timeLineImage1" destination="ARh-08-u56" id="eLN-AA-8KR"/>
                                     <outlet property="timeLineName" destination="cRF-yp-Mnf" id="uaA-dS-P0h"/>
+                                    <outlet property="timeLineReTweetContent" destination="Z25-6E-NCe" id="BLz-pc-Psw"/>
                                     <outlet property="timeLineSource" destination="hRq-7B-AlG" id="yAd-kb-j6r"/>
                                     <outlet property="timeLineTime" destination="wZb-pg-454" id="Blf-1g-NfT"/>
                                 </connections>
@@ -755,6 +757,7 @@
                                     <outlet property="timeLineImage1" destination="whu-aW-OHM" id="23x-E9-QDm"/>
                                     <outlet property="timeLineImage2" destination="f6L-2E-FPM" id="8bg-za-L8X"/>
                                     <outlet property="timeLineName" destination="FpC-Lh-kWO" id="U4N-mX-Pxu"/>
+                                    <outlet property="timeLineReTweetContent" destination="5pI-MZ-2Nu" id="Mbq-hf-q0B"/>
                                     <outlet property="timeLineSource" destination="Ie7-OL-EJf" id="5mf-10-fAd"/>
                                     <outlet property="timeLineTime" destination="HL7-ML-f7k" id="PLP-qn-cHL"/>
                                 </connections>
@@ -986,6 +989,7 @@
                                     <outlet property="timeLineImage2" destination="IvG-6r-V6m" id="znU-Uo-EMp"/>
                                     <outlet property="timeLineImage3" destination="cjI-dt-A70" id="ubb-R2-R3M"/>
                                     <outlet property="timeLineName" destination="yfS-N7-qgJ" id="ZGR-x2-uaE"/>
+                                    <outlet property="timeLineReTweetContent" destination="bGU-52-Vhr" id="u3g-f0-ogN"/>
                                     <outlet property="timeLineSource" destination="hYE-Li-XVp" id="cFe-eA-u2u"/>
                                     <outlet property="timeLineTime" destination="RtZ-Ld-0y4" id="vYn-G9-5ds"/>
                                 </connections>
@@ -1241,6 +1245,7 @@
                                     <outlet property="timeLineImage3" destination="F3l-Uw-q1h" id="v2q-Mq-iXN"/>
                                     <outlet property="timeLineImage4" destination="L8a-gQ-WM5" id="VTi-3Z-VCa"/>
                                     <outlet property="timeLineName" destination="rBx-qv-8x3" id="Xxs-d8-wyZ"/>
+                                    <outlet property="timeLineReTweetContent" destination="4km-cE-nIZ" id="t6n-B3-kXA"/>
                                     <outlet property="timeLineSource" destination="p7s-MB-tvh" id="YGj-VK-mVQ"/>
                                     <outlet property="timeLineTime" destination="wvr-a0-tvF" id="jdt-8Q-BIo"/>
                                 </connections>
@@ -1525,6 +1530,7 @@
                                     <outlet property="timeLineImage4" destination="Src-Ta-HhB" id="caV-jL-33m"/>
                                     <outlet property="timeLineImage5" destination="OzB-V7-6T6" id="cZT-Wf-8Fr"/>
                                     <outlet property="timeLineName" destination="AKs-A7-s1U" id="Aus-j5-gGq"/>
+                                    <outlet property="timeLineReTweetContent" destination="y7E-ap-V9Y" id="BIS-fb-0zX"/>
                                     <outlet property="timeLineSource" destination="zjA-Uu-hK9" id="CJ5-me-5vf"/>
                                     <outlet property="timeLineTime" destination="Hxa-gP-AAI" id="fbJ-Te-nWn"/>
                                 </connections>
@@ -1828,6 +1834,7 @@
                                     <outlet property="timeLineImage5" destination="iF5-Rp-bBL" id="ynO-PH-MKE"/>
                                     <outlet property="timeLineImage6" destination="Uxd-KX-oKt" id="t5r-bc-ixr"/>
                                     <outlet property="timeLineName" destination="QiK-g7-7ZF" id="USs-8C-Cgr"/>
+                                    <outlet property="timeLineReTweetContent" destination="BPJ-1X-nzh" id="5cV-PE-Cez"/>
                                     <outlet property="timeLineSource" destination="gaM-BV-57U" id="HZZ-za-dAE"/>
                                     <outlet property="timeLineTime" destination="nZV-yU-NTH" id="XPQ-Uz-AF7"/>
                                 </connections>
@@ -2154,6 +2161,7 @@
                                     <outlet property="timeLineImage6" destination="ecP-6e-Xcm" id="NIo-nP-IG3"/>
                                     <outlet property="timeLineImage7" destination="gUV-EJ-fQO" id="dhF-3A-Q6K"/>
                                     <outlet property="timeLineName" destination="C3T-HU-9Bw" id="q0F-sq-Os5"/>
+                                    <outlet property="timeLineReTweetContent" destination="u4N-wo-YRk" id="Hqi-R8-ysd"/>
                                     <outlet property="timeLineSource" destination="mld-OZ-bfp" id="EqP-0I-fYn"/>
                                     <outlet property="timeLineTime" destination="N9E-md-thT" id="LRe-UN-0Kp"/>
                                 </connections>
@@ -2512,6 +2520,7 @@
                                     <outlet property="timeLineImage7" destination="2Zw-fY-LaA" id="1oD-VL-ZKn"/>
                                     <outlet property="timeLineImage8" destination="Jv2-r6-Kbx" id="0af-SM-cW4"/>
                                     <outlet property="timeLineName" destination="JDj-s0-8Jz" id="fpk-QT-Zt0"/>
+                                    <outlet property="timeLineReTweetContent" destination="Lqj-aM-4lU" id="hdA-7P-9US"/>
                                     <outlet property="timeLineSource" destination="E1f-cU-kZW" id="bFk-zU-PgP"/>
                                     <outlet property="timeLineTime" destination="uQy-ul-s8V" id="RRL-d4-JGb"/>
                                 </connections>
@@ -2528,7 +2537,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJ9-Gq-aDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="90" y="-1278"/>
+            <point key="canvasLocation" x="-157" y="-1223"/>
         </scene>
         <!--Item-->
         <scene sceneID="IKC-RP-tFK">

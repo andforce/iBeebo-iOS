@@ -63,6 +63,7 @@
     [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:status.user.profileImageUrl]];
     if (isRetweet) {
         [self showImages:status.retweetedStatus.pics];
+        _timeLineReTweetContent.attributedText = [self attributedTextWithText:status.retweetedStatus.text];
     } else{
         [self showImages:status.pics];
     }

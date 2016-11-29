@@ -15,4 +15,6 @@ target 'iBeeboPro' do
     pod 'AVOSCloud', '~>3.5.0'
     pod 'AVOSCloudIM', '~>3.5.0'
     pod 'NYTPhotoViewer', :git => "https://github.com/andforce/NYTPhotoViewer.git", :commit => "659d4ac"
+    pod 'RegexKitLite', '~> 4.0'
+    pod 'MJExtension', '~> 3.0.10'
 end

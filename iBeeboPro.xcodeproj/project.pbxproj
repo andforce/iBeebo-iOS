@@ -57,10 +57,11 @@
 		3A85C2481D4511C700B0FB8E /* WeiboMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2471D4511C700B0FB8E /* WeiboMainTabBarController.m */; };
 		3A85C24D1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C24C1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.m */; };
 		3A85C2501D45213900B0FB8E /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C24F1D45213900B0FB8E /* NSString+Extensions.m */; };
-		86DB1E24D784EF834E4B7B20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B092B96E0712E05392D54B18 /* libPods.a */; };
+		542C4D0CDABDA17A79467044 /* libPods-iBeeboPro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C98854ABD08BD7E691A049D /* libPods-iBeeboPro.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C98854ABD08BD7E691A049D /* libPods-iBeeboPro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iBeeboPro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A6410431D466B68000651E6 /* Actionlog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Actionlog.h; sourceTree = "<group>"; };
 		3A6410441D466B68000651E6 /* Actionlog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Actionlog.m; sourceTree = "<group>"; };
 		3A6410451D466B68000651E6 /* CardGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardGroup.h; sourceTree = "<group>"; };
@@ -156,9 +157,8 @@
 		3A85C24C1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPSessionManager+SimpleAction.m"; sourceTree = "<group>"; };
 		3A85C24E1D45213900B0FB8E /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
 		3A85C24F1D45213900B0FB8E /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
-		A7DF75F4CCE1D564E4FFAC21 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		B092B96E0712E05392D54B18 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFC00E599051CB0FA5E2D298 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		85848B6C50344BAD3D72FDC4 /* Pods-iBeeboPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBeeboPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-iBeeboPro/Pods-iBeeboPro.release.xcconfig"; sourceTree = "<group>"; };
+		B9B0A1B115C4DC0741FD0865 /* Pods-iBeeboPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBeeboPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iBeeboPro/Pods-iBeeboPro.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86DB1E24D784EF834E4B7B20 /* libPods.a in Frameworks */,
+				542C4D0CDABDA17A79467044 /* libPods-iBeeboPro.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,8 +275,8 @@
 				3A6E21F61D4C8EFF00ED92E6 /* Views */,
 				3A85C2211D44DAD000B0FB8E /* iBeeboPro */,
 				3A85C2201D44DAD000B0FB8E /* Products */,
-				BA8C045310D8D84359C2E9F9 /* Pods */,
-				B0EEA6578314853E608FE4D5 /* Frameworks */,
+				B0701C363D0DB6C50E46DE3E /* Pods */,
+				78AB65A05FBC3C6399B84737 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -356,19 +356,19 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		B0EEA6578314853E608FE4D5 /* Frameworks */ = {
+		78AB65A05FBC3C6399B84737 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B092B96E0712E05392D54B18 /* libPods.a */,
+				1C98854ABD08BD7E691A049D /* libPods-iBeeboPro.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BA8C045310D8D84359C2E9F9 /* Pods */ = {
+		B0701C363D0DB6C50E46DE3E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DFC00E599051CB0FA5E2D298 /* Pods.debug.xcconfig */,
-				A7DF75F4CCE1D564E4FFAC21 /* Pods.release.xcconfig */,
+				B9B0A1B115C4DC0741FD0865 /* Pods-iBeeboPro.debug.xcconfig */,
+				85848B6C50344BAD3D72FDC4 /* Pods-iBeeboPro.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -380,12 +380,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A85C2391D44DAD000B0FB8E /* Build configuration list for PBXNativeTarget "iBeeboPro" */;
 			buildPhases = (
-				3E78BEFB63BC1DA8DCCC6DB4 /* Check Pods Manifest.lock */,
+				0DC89991FFC7F57F82CFAE7E /* [CP] Check Pods Manifest.lock */,
 				3A85C21B1D44DAD000B0FB8E /* Sources */,
 				3A85C21C1D44DAD000B0FB8E /* Frameworks */,
 				3A85C21D1D44DAD000B0FB8E /* Resources */,
-				05585AB67D016988FE03E737 /* Embed Pods Frameworks */,
-				47989F12CC079B2DE277F4CC /* Copy Pods Resources */,
+				F88AAA8E663433ED69FA451D /* [CP] Embed Pods Frameworks */,
+				AE0AFFBB9D8C97DC5879AC01 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -445,49 +445,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05585AB67D016988FE03E737 /* Embed Pods Frameworks */ = {
+		0DC89991FFC7F57F82CFAE7E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		3E78BEFB63BC1DA8DCCC6DB4 /* Check Pods Manifest.lock */ = {
+		AE0AFFBB9D8C97DC5879AC01 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iBeeboPro/Pods-iBeeboPro-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		47989F12CC079B2DE277F4CC /* Copy Pods Resources */ = {
+		F88AAA8E663433ED69FA451D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iBeeboPro/Pods-iBeeboPro-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -650,7 +650,7 @@
 		};
 		3A85C23A1D44DAD000B0FB8E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFC00E599051CB0FA5E2D298 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = B9B0A1B115C4DC0741FD0865 /* Pods-iBeeboPro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -665,7 +665,7 @@
 		};
 		3A85C23B1D44DAD000B0FB8E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7DF75F4CCE1D564E4FFAC21 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 85848B6C50344BAD3D72FDC4 /* Pods-iBeeboPro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";

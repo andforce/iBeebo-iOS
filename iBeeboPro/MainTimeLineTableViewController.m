@@ -21,19 +21,20 @@
 #import "Emotion.h"
 #import "UITableView+FDTemplateLayoutCell.h"
 #import "NSString+Extensions.h"
-#import "WeiboJsonCleanner.h"
 #import "TimeLine1ImagesCell.h"
 #import "TimeLine2ImagesCell.h"
 #import "Pics.h"
 #import "RetweetedStatus.h"
+#import "MJRefresh.h"
 
+#import "WeiboHelper.h"
 
 @interface MainTimeLineTableViewController ()<UITextViewDelegate>{
-    AFHTTPSessionManager *_browser;
     
     NSMutableArray * _mblogs;
+    WeiboHelper * _weiboHelper;
     
-    WeiboJsonCleanner *_cleanner;
+    WeiboPage * _currentPage;
 }
 
 @end
@@ -43,7 +44,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _cleanner = [[WeiboJsonCleanner alloc] init];
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 180.0;
@@ -52,30 +52,45 @@
     
     _mblogs = [NSMutableArray array];
     
-    _browser = [AFHTTPSessionManager manager];
-    _browser.responseSerializer = [AFHTTPResponseSerializer serializer];
-    _browser.responseSerializer.acceptableContentTypes = [_browser.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    _weiboHelper = [[WeiboHelper alloc] init];
     
     
-    
-    [_browser GETWithURLString:@"http://m.weibo.cn/index/feed?format=cards" requestCallback:^(BOOL isSuccess, NSString *html) {
-        NSString * debugStr = [_cleanner cleanHtmlTag:html];
-
-        //NSArray * atUrls = [debugStr arrayWithRegulat:@"<a href=\'/n/[\\u4e00-\\u9fa5_a-zA-Z0-9-]+\'>@[\\u4e00-\\u9fa5_a-zA-Z0-9-]+</a>"];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [_weiboHelper fetchTimeLine:-1 page:1 withCallback:^(WeiboPage *weiboPage) {
+            
+            _currentPage = weiboPage;
+            
+            NSArray *cardGroup = weiboPage.cardGroup;
+            
+            [_mblogs addObjectsFromArray:cardGroup];
+            
+            [self.tableView reloadData];
+            
+            [self.tableView.mj_header endRefreshing];
         
-        NSData *data = [debugStr dataUsingEncoding:NSUTF8StringEncoding];
-        
-        NSArray *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-        
-        WeiboPage * page = [WeiboPage modelObjectWithDictionary:[dictionary firstObject]];
-        
-        NSArray *cardGroup = page.cardGroup;
-        
-        [_mblogs addObjectsFromArray:cardGroup];
-        
-        [self.tableView reloadData];
-        
+        }];
     }];
+    
+    [self.tableView.mj_header beginRefreshing];
+    
+    
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+
+        [_weiboHelper fetchTimeLine:_currentPage.nextCursor page:1 withCallback:^(WeiboPage *weiboPage) {
+            
+            _currentPage = weiboPage;
+            
+            NSArray *cardGroup = weiboPage.cardGroup;
+            
+            [_mblogs addObjectsFromArray:cardGroup];
+            
+            [self.tableView reloadData];
+            
+            [self.tableView.mj_footer endRefreshing];
+            
+        }];
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -120,6 +135,7 @@
     
     return YES;
 }
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];

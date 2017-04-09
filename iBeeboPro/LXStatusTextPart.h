@@ -10,6 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, LinkType) {
+    LinkTypeNone,   //默认从0开始
+    LinkTypeAt,
+    LinkTypeHuaTi,
+    LinkTypeEmoation,
+    LinkTypeLink
+};
+
+
 @interface LXStatusTextPart : NSObject
 
 /** 文字的内容. */
@@ -17,10 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 /** 文字的范围. */
 @property (nonatomic, assign) NSRange range;
 
-/** 是否为特殊文字. */
-@property (nonatomic, assign) BOOL isSpecial;
-/** 是否为表情. */
-@property (nonatomic, assign) BOOL isEmotion;
+/** LinkType */
+@property (nonatomic, assign) LinkType linkType;
 
 @end
 

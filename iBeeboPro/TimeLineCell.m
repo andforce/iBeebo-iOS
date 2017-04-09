@@ -110,30 +110,34 @@ static NSDictionary *sSpecialAttributes = nil;
 - (NSMutableArray<LXStatusTextPart *> *)statusTextPartsWithText:(NSString *)text {
     NSMutableArray<LXStatusTextPart *> *parts = [NSMutableArray new];
     
-    // 匹配特殊字段.
-    [text enumerateStringsMatchedByRegex:kRegexPattern
+    // 匹配@
+    [text enumerateStringsMatchedByRegex:@"<a href='https://m.weibo.cn/n/.*?[^<]+</a>"
                               usingBlock:^(NSInteger captureCount,
                                            NSString *const __unsafe_unretained *capturedStrings,
                                            const NSRange *capturedRanges,
                                            volatile BOOL *const stop) {
+                                  
                                   NSAssert((*capturedRanges).length > 0, @"尼玛长度能为0?");
+                                  
                                   LXStatusTextPart *part = [LXStatusTextPart new];
                                   part.text  = *capturedStrings;
                                   part.range = *capturedRanges;
-                                  part.isEmotion = [*capturedStrings hasPrefix:@"["];
-                                  part.isSpecial = YES;
+                                  part.linkType = LinkTypeAt;
+                                  
                                   [parts addObject:part];
                               }];
     
     // 用特殊字段分割微博文本,即匹配普通文本字段.
-    [text enumerateStringsSeparatedByRegex:kRegexPattern
+    [text enumerateStringsSeparatedByRegex:@"<a href='https://m.weibo.cn/n/.*?[^<]+</a>"
                                 usingBlock:^(NSInteger captureCount,
                                              NSString *const __unsafe_unretained *capturedStrings,
                                              const NSRange *capturedRanges,
                                              volatile BOOL *const stop) {
+                                    
                                     if ((*capturedRanges).length == 0) {
                                         return ;
                                     }
+                                    
                                     LXStatusTextPart *part = [LXStatusTextPart new];
                                     part.text  = *capturedStrings;
                                     part.range = *capturedRanges;
@@ -153,10 +157,12 @@ static NSDictionary *sSpecialAttributes = nil;
     NSMutableArray *links = [NSMutableArray new];
     NSMutableAttributedString *attributedString = [NSMutableAttributedString new];
     
-    for (LXStatusTextPart *part in [self statusTextPartsWithText:text]) {
+    NSArray *lxSt = [self statusTextPartsWithText:text];
+    
+    for (LXStatusTextPart *part in lxSt) {
         
         NSMutableAttributedString *subAttributedString = nil;
-        if (part.isEmotion) { // 表情.
+        if (part.linkType == LinkTypeEmoation) { // 表情.
             Emotion *emotion = [EmotionsManager emotionWithCHS:part.text];
             if (!emotion) {
                 subAttributedString = [[NSMutableAttributedString alloc] initWithString:part.text];
@@ -166,11 +172,14 @@ static NSDictionary *sSpecialAttributes = nil;
                 textAttachment.bounds = CGRectMake(0, sStatusTextFont.descender, sStatusTextFont.lineHeight, sStatusTextFont.lineHeight);
                 subAttributedString = [NSMutableAttributedString attributedStringWithAttachment:textAttachment];
             }
-        } else if (part.isSpecial) { // @ #.
+        } else if (part.linkType == LinkTypeAt) { // @ #.
             LXStatusTextLink *link = [LXStatusTextLink new];
             
-            link.text  = part.text;
-            link.range = NSMakeRange(attributedString.length, part.text.length);
+            NSString * spl = [part.text componentsSeparatedByString:@"@"][1];
+            NSString * name = [spl componentsSeparatedByString:@"</a>"].firstObject;
+            
+            link.text  = [@"@" stringByAppendingString:name];
+            link.range = NSMakeRange(attributedString.length, link.text.length);
             
             [links addObject:link];
             

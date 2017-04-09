@@ -45,6 +45,7 @@
 		3A6E22161D4D181100ED92E6 /* TimeLine7ImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E22151D4D181100ED92E6 /* TimeLine7ImagesCell.m */; };
 		3A6E22191D4D182400ED92E6 /* TimeLine8ImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E22181D4D182400ED92E6 /* TimeLine8ImagesCell.m */; };
 		3A6E221C1D4D184700ED92E6 /* TimeLine9ImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E221B1D4D184700ED92E6 /* TimeLine9ImagesCell.m */; };
+		3A78B4E41E9A45C00053DFA9 /* WeiboHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A78B4E31E9A45C00053DFA9 /* WeiboHelper.m */; };
 		3A85C2241D44DAD000B0FB8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2231D44DAD000B0FB8E /* main.m */; };
 		3A85C2271D44DAD000B0FB8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2261D44DAD000B0FB8E /* AppDelegate.m */; };
 		3A85C22A1D44DAD000B0FB8E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2291D44DAD000B0FB8E /* ViewController.m */; };
@@ -136,6 +137,8 @@
 		3A6E22181D4D182400ED92E6 /* TimeLine8ImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLine8ImagesCell.m; sourceTree = "<group>"; };
 		3A6E221A1D4D184700ED92E6 /* TimeLine9ImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLine9ImagesCell.h; sourceTree = "<group>"; };
 		3A6E221B1D4D184700ED92E6 /* TimeLine9ImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLine9ImagesCell.m; sourceTree = "<group>"; };
+		3A78B4E21E9A45C00053DFA9 /* WeiboHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboHelper.h; sourceTree = "<group>"; };
+		3A78B4E31E9A45C00053DFA9 /* WeiboHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboHelper.m; sourceTree = "<group>"; };
 		3A85C21F1D44DAD000B0FB8E /* iBeeboPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBeeboPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A85C2231D44DAD000B0FB8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A85C2251D44DAD000B0FB8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -269,6 +272,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		3A78B4E11E9A45760053DFA9 /* WeiboHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3A78B4E21E9A45C00053DFA9 /* WeiboHelper.h */,
+				3A78B4E31E9A45C00053DFA9 /* WeiboHelper.m */,
+			);
+			name = WeiboHelper;
+			sourceTree = "<group>";
+		};
 		3A85C2161D44DAD000B0FB8E = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +303,7 @@
 		3A85C2211D44DAD000B0FB8E /* iBeeboPro */ = {
 			isa = PBXGroup;
 			children = (
+				3A78B4E11E9A45760053DFA9 /* WeiboHelper */,
 				3A6844E11D4A646C00655A17 /* NSNotificationCenter+LXAdditions.h */,
 				3A6844E21D4A646C00655A17 /* NSNotificationCenter+LXAdditions.m */,
 				3A6844D81D4A60CD00655A17 /* Emotion.h */,
@@ -532,6 +545,7 @@
 				3A6410711D466B68000651E6 /* Visible.m in Sources */,
 				3A6410681D466B68000651E6 /* H5icon.m in Sources */,
 				3A85C2411D44FD7500B0FB8E /* CookiesManager.m in Sources */,
+				3A78B4E41E9A45C00053DFA9 /* WeiboHelper.m in Sources */,
 				3A6E220D1D4D17BE00ED92E6 /* TimeLine4ImagesCell.m in Sources */,
 				3A64106F1D466B68000651E6 /* UrlStruct.m in Sources */,
 				3A6410651D466B68000651E6 /* CardGroup.m in Sources */,

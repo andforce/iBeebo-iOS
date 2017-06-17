@@ -28,6 +28,7 @@
 #import "TimeLine2ImagesCell.h"
 #import "Pics.h"
 #import "RetweetedStatus.h"
+#import <IGHTMLQuery.h>
 
 @interface TimeLineCell()<UITextViewDelegate>{
     
@@ -127,6 +128,25 @@ static NSDictionary *sSpecialAttributes = nil;
                                   [parts addObject:part];
                               }];
     
+    // 匹配@
+    [text enumerateStringsMatchedByRegex:@"<a class='k' href='https://m.weibo.cn/k/.*?[^<]+</a>"
+                              usingBlock:^(NSInteger captureCount,
+                                           NSString *const __unsafe_unretained *capturedStrings,
+                                           const NSRange *capturedRanges,
+                                           volatile BOOL *const stop) {
+                                  
+                                  NSAssert((*capturedRanges).length > 0, @"尼玛长度能为0?");
+                                  
+                                  LXStatusTextPart *part = [LXStatusTextPart new];
+                                  part.text  = *capturedStrings;
+                                  part.range = *capturedRanges;
+                                  part.linkType = LinkTypeHuaTi;
+                                  
+                                  [parts addObject:part];
+                              }];
+    
+    
+    
     // 用特殊字段分割微博文本,即匹配普通文本字段.
     [text enumerateStringsSeparatedByRegex:@"<a href='https://m.weibo.cn/n/.*?[^<]+</a>"
                                 usingBlock:^(NSInteger captureCount,
@@ -191,7 +211,35 @@ static NSDictionary *sSpecialAttributes = nil;
             }
             subAttributedString = [[NSMutableAttributedString alloc] initWithString:linkName];
             [subAttributedString addAttribute:NSLinkAttributeName value:[NSURL URLWithString:link.text] range:NSMakeRange(0, linkName.length)];
-        } else { // 普通文本内容.
+        } else if (part.linkType == LinkTypeHuaTi){
+            
+            
+            IGHTMLDocument * doc = [[IGHTMLDocument alloc] initWithXMLString:part.text error:nil];
+            IGXMLNode * node = [doc queryWithCSS:@".k"].firstObject;
+            NSString * herf = [node attribute:@"href"];
+            NSString * content = doc.text;
+            
+            
+            LXStatusTextLink *link = [LXStatusTextLink new];
+            
+            link.text  = content;
+            link.range = NSMakeRange(attributedString.length, link.text.length);
+            
+            [links addObject:link];
+            
+            
+            NSString * linkName = [link.text copy];
+            //subAttributedString = [[NSMutableAttributedString alloc] initWithString:part.text attributes:sSpecialAttributes];
+            if (![link.text hasPrefix:@"http"]) {
+                link.text = [@"app://" stringByAppendingString:[link.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            }
+            subAttributedString = [[NSMutableAttributedString alloc] initWithString:linkName];
+            [subAttributedString addAttribute:NSLinkAttributeName value:[NSURL URLWithString:link.text] range:NSMakeRange(0, linkName.length)];
+            
+        }
+        
+        
+        else { // 普通文本内容.
             subAttributedString = [[NSMutableAttributedString alloc] initWithString:part.text];
         }
         

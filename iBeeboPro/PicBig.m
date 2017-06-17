@@ -1,25 +1,25 @@
 //
-//  WeiboCamera.m
+//  PicBig.m
 //
-//  Created by   on 16/7/25
-//  Copyright (c) 2016 __MyCompanyName__. All rights reserved.
+//  Created by   on 2017/6/17
+//  Copyright (c) 2017 __MyCompanyName__. All rights reserved.
 //
 
-#import "WeiboCamera.h"
+#import "PicBig.h"
 
 
-NSString *const kWeiboCameraC = @"c";
+NSString *const kPicBigUrl = @"url";
 
 
-@interface WeiboCamera ()
+@interface PicBig ()
 
 - (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
 
 @end
 
-@implementation WeiboCamera
+@implementation PicBig
 
-@synthesize c = _c;
+@synthesize url = _url;
 
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
@@ -34,7 +34,7 @@ NSString *const kWeiboCameraC = @"c";
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-            self.c = [self objectOrNilForKey:kWeiboCameraC fromDictionary:dict];
+            self.url = [self objectOrNilForKey:kPicBigUrl fromDictionary:dict];
 
     }
     
@@ -45,17 +45,7 @@ NSString *const kWeiboCameraC = @"c";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    NSMutableArray *tempArrayForC = [NSMutableArray array];
-    for (NSObject *subArrayObject in self.c) {
-        if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
-            // This class is a model object
-            [tempArrayForC addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
-        } else {
-            // Generic object
-            [tempArrayForC addObject:subArrayObject];
-        }
-    }
-    [mutableDict setValue:[NSArray arrayWithArray:tempArrayForC] forKey:kWeiboCameraC];
+    [mutableDict setValue:self.url forKey:kPicBigUrl];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -79,23 +69,23 @@ NSString *const kWeiboCameraC = @"c";
 {
     self = [super init];
 
-    self.c = [aDecoder decodeObjectForKey:kWeiboCameraC];
+    self.url = [aDecoder decodeObjectForKey:kPicBigUrl];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 
-    [aCoder encodeObject:_c forKey:kWeiboCameraC];
+    [aCoder encodeObject:_url forKey:kPicBigUrl];
 }
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    WeiboCamera *copy = [[WeiboCamera alloc] init];
+    PicBig *copy = [[PicBig alloc] init];
     
     if (copy) {
 
-        copy.c = [self.c copyWithZone:zone];
+        copy.url = [self.url copyWithZone:zone];
     }
     
     return copy;

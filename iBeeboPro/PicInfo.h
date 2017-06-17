@@ -1,5 +1,5 @@
 //
-//  Geo.h
+//  PicInfo.h
 //
 //  Created by   on 2017/6/17
 //  Copyright (c) 2017 __MyCompanyName__. All rights reserved.
@@ -7,13 +7,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class PicBig;
 
+@interface PicInfo : NSObject <NSCoding, NSCopying>
 
-@interface Geo : NSObject <NSCoding, NSCopying>
-
-@property (nonatomic, strong) NSString *width;
-@property (nonatomic, assign) BOOL croped;
-@property (nonatomic, strong) NSString *height;
+@property (nonatomic, strong) PicBig *picBig;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

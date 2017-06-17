@@ -1,8 +1,8 @@
 //
 //  Visible.h
 //
-//  Created by   on 16/7/25
-//  Copyright (c) 2016 __MyCompanyName__. All rights reserved.
+//  Created by   on 2017/6/17
+//  Copyright (c) 2017 __MyCompanyName__. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

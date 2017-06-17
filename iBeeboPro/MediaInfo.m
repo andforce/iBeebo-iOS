@@ -1,26 +1,27 @@
 //
-//  ExtendInfo.m
+//  MediaInfo.m
 //
-//  Created by   on 16/7/25
-//  Copyright (c) 2016 __MyCompanyName__. All rights reserved.
+//  Created by   on 2017/6/17
+//  Copyright (c) 2017 __MyCompanyName__. All rights reserved.
 //
 
-#import "ExtendInfo.h"
-#import "WeiboCamera.h"
+#import "MediaInfo.h"
 
 
-NSString *const kExtendInfoWeiboCamera = @"weibo_camera";
+NSString *const kMediaInfoStreamUrl = @"stream_url";
+NSString *const kMediaInfoGoto = @"goto";
 
 
-@interface ExtendInfo ()
+@interface MediaInfo ()
 
 - (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
 
 @end
 
-@implementation ExtendInfo
+@implementation MediaInfo
 
-@synthesize weiboCamera = _weiboCamera;
+@synthesize streamUrl = _streamUrl;
+@synthesize gotoProperty = _gotoProperty;
 
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
@@ -35,7 +36,8 @@ NSString *const kExtendInfoWeiboCamera = @"weibo_camera";
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-            self.weiboCamera = [WeiboCamera modelObjectWithDictionary:[dict objectForKey:kExtendInfoWeiboCamera]];
+            self.streamUrl = [self objectOrNilForKey:kMediaInfoStreamUrl fromDictionary:dict];
+            self.gotoProperty = [[self objectOrNilForKey:kMediaInfoGoto fromDictionary:dict] doubleValue];
 
     }
     
@@ -46,7 +48,8 @@ NSString *const kExtendInfoWeiboCamera = @"weibo_camera";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    [mutableDict setValue:[self.weiboCamera dictionaryRepresentation] forKey:kExtendInfoWeiboCamera];
+    [mutableDict setValue:self.streamUrl forKey:kMediaInfoStreamUrl];
+    [mutableDict setValue:[NSNumber numberWithDouble:self.gotoProperty] forKey:kMediaInfoGoto];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -70,23 +73,26 @@ NSString *const kExtendInfoWeiboCamera = @"weibo_camera";
 {
     self = [super init];
 
-    self.weiboCamera = [aDecoder decodeObjectForKey:kExtendInfoWeiboCamera];
+    self.streamUrl = [aDecoder decodeObjectForKey:kMediaInfoStreamUrl];
+    self.gotoProperty = [aDecoder decodeDoubleForKey:kMediaInfoGoto];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 
-    [aCoder encodeObject:_weiboCamera forKey:kExtendInfoWeiboCamera];
+    [aCoder encodeObject:_streamUrl forKey:kMediaInfoStreamUrl];
+    [aCoder encodeDouble:_gotoProperty forKey:kMediaInfoGoto];
 }
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    ExtendInfo *copy = [[ExtendInfo alloc] init];
+    MediaInfo *copy = [[MediaInfo alloc] init];
     
     if (copy) {
 
-        copy.weiboCamera = [self.weiboCamera copyWithZone:zone];
+        copy.streamUrl = [self.streamUrl copyWithZone:zone];
+        copy.gotoProperty = self.gotoProperty;
     }
     
     return copy;

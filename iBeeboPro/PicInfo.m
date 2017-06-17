@@ -1,27 +1,26 @@
 //
-//  Visible.m
+//  PicInfo.m
 //
 //  Created by   on 2017/6/17
 //  Copyright (c) 2017 __MyCompanyName__. All rights reserved.
 //
 
-#import "Visible.h"
+#import "PicInfo.h"
+#import "PicBig.h"
 
 
-NSString *const kVisibleType = @"type";
-NSString *const kVisibleListId = @"list_id";
+NSString *const kPicInfoPicBig = @"pic_big";
 
 
-@interface Visible ()
+@interface PicInfo ()
 
 - (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
 
 @end
 
-@implementation Visible
+@implementation PicInfo
 
-@synthesize type = _type;
-@synthesize listId = _listId;
+@synthesize picBig = _picBig;
 
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
@@ -36,8 +35,7 @@ NSString *const kVisibleListId = @"list_id";
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-            self.type = [[self objectOrNilForKey:kVisibleType fromDictionary:dict] doubleValue];
-            self.listId = [[self objectOrNilForKey:kVisibleListId fromDictionary:dict] doubleValue];
+            self.picBig = [PicBig modelObjectWithDictionary:[dict objectForKey:kPicInfoPicBig]];
 
     }
     
@@ -48,8 +46,7 @@ NSString *const kVisibleListId = @"list_id";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    [mutableDict setValue:[NSNumber numberWithDouble:self.type] forKey:kVisibleType];
-    [mutableDict setValue:[NSNumber numberWithDouble:self.listId] forKey:kVisibleListId];
+    [mutableDict setValue:[self.picBig dictionaryRepresentation] forKey:kPicInfoPicBig];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -73,26 +70,23 @@ NSString *const kVisibleListId = @"list_id";
 {
     self = [super init];
 
-    self.type = [aDecoder decodeDoubleForKey:kVisibleType];
-    self.listId = [aDecoder decodeDoubleForKey:kVisibleListId];
+    self.picBig = [aDecoder decodeObjectForKey:kPicInfoPicBig];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 
-    [aCoder encodeDouble:_type forKey:kVisibleType];
-    [aCoder encodeDouble:_listId forKey:kVisibleListId];
+    [aCoder encodeObject:_picBig forKey:kPicInfoPicBig];
 }
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    Visible *copy = [[Visible alloc] init];
+    PicInfo *copy = [[PicInfo alloc] init];
     
     if (copy) {
 
-        copy.type = self.type;
-        copy.listId = self.listId;
+        copy.picBig = [self.picBig copyWithZone:zone];
     }
     
     return copy;

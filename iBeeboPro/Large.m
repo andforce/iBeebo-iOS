@@ -1,27 +1,30 @@
 //
-//  Visible.m
+//  Large.m
 //
 //  Created by   on 2017/6/17
 //  Copyright (c) 2017 __MyCompanyName__. All rights reserved.
 //
 
-#import "Visible.h"
+#import "Large.h"
+#import "Geo.h"
 
 
-NSString *const kVisibleType = @"type";
-NSString *const kVisibleListId = @"list_id";
+NSString *const kLargeUrl = @"url";
+NSString *const kLargeSize = @"size";
+NSString *const kLargeGeo = @"geo";
 
 
-@interface Visible ()
+@interface Large ()
 
 - (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
 
 @end
 
-@implementation Visible
+@implementation Large
 
-@synthesize type = _type;
-@synthesize listId = _listId;
+@synthesize url = _url;
+@synthesize size = _size;
+@synthesize geo = _geo;
 
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
@@ -36,8 +39,9 @@ NSString *const kVisibleListId = @"list_id";
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-            self.type = [[self objectOrNilForKey:kVisibleType fromDictionary:dict] doubleValue];
-            self.listId = [[self objectOrNilForKey:kVisibleListId fromDictionary:dict] doubleValue];
+            self.url = [self objectOrNilForKey:kLargeUrl fromDictionary:dict];
+            self.size = [self objectOrNilForKey:kLargeSize fromDictionary:dict];
+            self.geo = [Geo modelObjectWithDictionary:[dict objectForKey:kLargeGeo]];
 
     }
     
@@ -48,8 +52,9 @@ NSString *const kVisibleListId = @"list_id";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    [mutableDict setValue:[NSNumber numberWithDouble:self.type] forKey:kVisibleType];
-    [mutableDict setValue:[NSNumber numberWithDouble:self.listId] forKey:kVisibleListId];
+    [mutableDict setValue:self.url forKey:kLargeUrl];
+    [mutableDict setValue:self.size forKey:kLargeSize];
+    [mutableDict setValue:[self.geo dictionaryRepresentation] forKey:kLargeGeo];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -73,26 +78,29 @@ NSString *const kVisibleListId = @"list_id";
 {
     self = [super init];
 
-    self.type = [aDecoder decodeDoubleForKey:kVisibleType];
-    self.listId = [aDecoder decodeDoubleForKey:kVisibleListId];
+    self.url = [aDecoder decodeObjectForKey:kLargeUrl];
+    self.size = [aDecoder decodeObjectForKey:kLargeSize];
+    self.geo = [aDecoder decodeObjectForKey:kLargeGeo];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 
-    [aCoder encodeDouble:_type forKey:kVisibleType];
-    [aCoder encodeDouble:_listId forKey:kVisibleListId];
+    [aCoder encodeObject:_url forKey:kLargeUrl];
+    [aCoder encodeObject:_size forKey:kLargeSize];
+    [aCoder encodeObject:_geo forKey:kLargeGeo];
 }
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    Visible *copy = [[Visible alloc] init];
+    Large *copy = [[Large alloc] init];
     
     if (copy) {
 
-        copy.type = self.type;
-        copy.listId = self.listId;
+        copy.url = [self.url copyWithZone:zone];
+        copy.size = [self.size copyWithZone:zone];
+        copy.geo = [self.geo copyWithZone:zone];
     }
     
     return copy;

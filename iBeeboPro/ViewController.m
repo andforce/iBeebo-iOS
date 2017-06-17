@@ -58,7 +58,7 @@
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
     NSURL * url = webView.request.URL;
     NSLog(@"webViewDidFinishLoad > %@", url);
-    if ([url.absoluteString isEqualToString:@"http://m.weibo.cn/"]) {
+    if ([url.host isEqualToString:@"http://m.weibo.cn/"] || [url.absoluteString isEqualToString:@"https://m.weibo.cn/"]) {
         [CookiesManager saveCookies];
         [[UIStoryboard mainStoryboard] changeRootViewController:[WeiboMainTabBarController class]];
     }

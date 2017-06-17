@@ -1,5 +1,5 @@
 //
-//  Geo.h
+//  Author.h
 //
 //  Created by   on 2017/6/17
 //  Copyright (c) 2017 __MyCompanyName__. All rights reserved.
@@ -9,11 +9,10 @@
 
 
 
-@interface Geo : NSObject <NSCoding, NSCopying>
+@interface Author : NSObject <NSCoding, NSCopying>
 
-@property (nonatomic, strong) NSString *width;
-@property (nonatomic, assign) BOOL croped;
-@property (nonatomic, strong) NSString *height;
+@property (nonatomic, strong) NSString *profileImageUrl;
+@property (nonatomic, strong) NSString *screenName;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

@@ -1,27 +1,27 @@
 //
-//  TopicStruct.m
+//  Author.m
 //
-//  Created by   on 16/7/25
-//  Copyright (c) 2016 __MyCompanyName__. All rights reserved.
+//  Created by   on 2017/6/17
+//  Copyright (c) 2017 __MyCompanyName__. All rights reserved.
 //
 
-#import "TopicStruct.h"
+#import "Author.h"
 
 
-NSString *const kTopicStructTopicTitle = @"topic_title";
-NSString *const kTopicStructTopicUrl = @"topic_url";
+NSString *const kAuthorProfileImageUrl = @"profile_image_url";
+NSString *const kAuthorScreenName = @"screen_name";
 
 
-@interface TopicStruct ()
+@interface Author ()
 
 - (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
 
 @end
 
-@implementation TopicStruct
+@implementation Author
 
-@synthesize topicTitle = _topicTitle;
-@synthesize topicUrl = _topicUrl;
+@synthesize profileImageUrl = _profileImageUrl;
+@synthesize screenName = _screenName;
 
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
@@ -36,8 +36,8 @@ NSString *const kTopicStructTopicUrl = @"topic_url";
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-            self.topicTitle = [self objectOrNilForKey:kTopicStructTopicTitle fromDictionary:dict];
-            self.topicUrl = [self objectOrNilForKey:kTopicStructTopicUrl fromDictionary:dict];
+            self.profileImageUrl = [self objectOrNilForKey:kAuthorProfileImageUrl fromDictionary:dict];
+            self.screenName = [self objectOrNilForKey:kAuthorScreenName fromDictionary:dict];
 
     }
     
@@ -48,8 +48,8 @@ NSString *const kTopicStructTopicUrl = @"topic_url";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    [mutableDict setValue:self.topicTitle forKey:kTopicStructTopicTitle];
-    [mutableDict setValue:self.topicUrl forKey:kTopicStructTopicUrl];
+    [mutableDict setValue:self.profileImageUrl forKey:kAuthorProfileImageUrl];
+    [mutableDict setValue:self.screenName forKey:kAuthorScreenName];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -73,26 +73,26 @@ NSString *const kTopicStructTopicUrl = @"topic_url";
 {
     self = [super init];
 
-    self.topicTitle = [aDecoder decodeObjectForKey:kTopicStructTopicTitle];
-    self.topicUrl = [aDecoder decodeObjectForKey:kTopicStructTopicUrl];
+    self.profileImageUrl = [aDecoder decodeObjectForKey:kAuthorProfileImageUrl];
+    self.screenName = [aDecoder decodeObjectForKey:kAuthorScreenName];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 
-    [aCoder encodeObject:_topicTitle forKey:kTopicStructTopicTitle];
-    [aCoder encodeObject:_topicUrl forKey:kTopicStructTopicUrl];
+    [aCoder encodeObject:_profileImageUrl forKey:kAuthorProfileImageUrl];
+    [aCoder encodeObject:_screenName forKey:kAuthorScreenName];
 }
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    TopicStruct *copy = [[TopicStruct alloc] init];
+    Author *copy = [[Author alloc] init];
     
     if (copy) {
 
-        copy.topicTitle = [self.topicTitle copyWithZone:zone];
-        copy.topicUrl = [self.topicUrl copyWithZone:zone];
+        copy.profileImageUrl = [self.profileImageUrl copyWithZone:zone];
+        copy.screenName = [self.screenName copyWithZone:zone];
     }
     
     return copy;

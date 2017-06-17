@@ -113,6 +113,24 @@ static NSDictionary *sSpecialAttributes = nil;
 
     //text = @"接品牌方通知，BOSE QC35降噪耳机，现已同步官方618活动价：2887元，原价为2888元，<a data-url=\"http://t.cn/RSTHRjN\" target=\"_blank\" href=\"http://weibo.cn/sinaurl/blocked4cb26666?luicode=20000174&featurecode=20000320&u=https%3A%2F%2Fwww.jjboom.com%2Fproducts%2Fp000159\" class=\"\"><span class=\"iconimg iconimg-xs\"><img src=\"https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png\"></span></i><span class=\"surl-text\">网页链接</a> 可以说是史上最无力的618促销了一刚，但有降价，还是要通知大家的嘛，请大家不要吐糟BOSE，这个锅我们背了";
 
+    // 匹配 表情
+    //<span class=\\"iconimg iconimg-xs\\">.* alt=\\"\[.*\]\\"></span>
+    [text enumerateStringsMatchedByRegex:@"<span class=\"iconimg iconimg-xs\">.*?]\"></span>"
+                              usingBlock:^(NSInteger captureCount,
+                                      NSString *const __unsafe_unretained *capturedStrings,
+                                      const NSRange *capturedRanges,
+                                      volatile BOOL *const stop) {
+
+                                  NSAssert((*capturedRanges).length > 0, @"尼玛长度能为0?");
+
+                                  LXStatusTextPart *part = [LXStatusTextPart new];
+                                  part.text  = *capturedStrings;
+                                  part.range = *capturedRanges;
+                                  part.linkType = LinkTypeEmoation;
+
+                                  [parts addObject:part];
+                              }];
+
     // 匹配@
     [text enumerateStringsMatchedByRegex:@"<a href='https://m.weibo.cn/n/.*?[^<]+</a>"
                               usingBlock:^(NSInteger captureCount,
@@ -226,9 +244,11 @@ static NSDictionary *sSpecialAttributes = nil;
         
         NSMutableAttributedString *subAttributedString = nil;
         if (part.linkType == LinkTypeEmoation) { // 表情.
-            Emotion *emotion = [EmotionsManager emotionWithCHS:part.text];
+            NSString * realEmotion = [part.text stringWithRegular:@"\\[.*\\]"];
+            
+            Emotion *emotion = [EmotionsManager emotionWithCHS:realEmotion];
             if (!emotion) {
-                subAttributedString = [[NSMutableAttributedString alloc] initWithString:part.text];
+                subAttributedString = [[NSMutableAttributedString alloc] initWithString:realEmotion];
             } else {
                 NSTextAttachment *textAttachment = [NSTextAttachment new];
                 textAttachment.image = [UIImage imageNamed:emotion.png];

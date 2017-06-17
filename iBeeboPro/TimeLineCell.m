@@ -110,7 +110,9 @@ static NSDictionary *sSpecialAttributes = nil;
 
 - (NSMutableArray<LXStatusTextPart *> *)statusTextPartsWithText:(NSString *)text {
     NSMutableArray<LXStatusTextPart *> *parts = [NSMutableArray new];
-    
+
+    //text = @"接品牌方通知，BOSE QC35降噪耳机，现已同步官方618活动价：2887元，原价为2888元，<a data-url=\"http://t.cn/RSTHRjN\" target=\"_blank\" href=\"http://weibo.cn/sinaurl/blocked4cb26666?luicode=20000174&featurecode=20000320&u=https%3A%2F%2Fwww.jjboom.com%2Fproducts%2Fp000159\" class=\"\"><span class=\"iconimg iconimg-xs\"><img src=\"https://h5.sinaimg.cn/upload/2015/09/25/3/timeline_card_small_web_default.png\"></span></i><span class=\"surl-text\">网页链接</a> 可以说是史上最无力的618促销了一刚，但有降价，还是要通知大家的嘛，请大家不要吐糟BOSE，这个锅我们背了";
+
     // 匹配@
     [text enumerateStringsMatchedByRegex:@"<a href='https://m.weibo.cn/n/.*?[^<]+</a>"
                               usingBlock:^(NSInteger captureCount,
@@ -127,8 +129,8 @@ static NSDictionary *sSpecialAttributes = nil;
                                   
                                   [parts addObject:part];
                               }];
-    
-    // 匹配@
+
+    // 匹配#
     [text enumerateStringsMatchedByRegex:@"<a class='k' href='https://m.weibo.cn/k/.*?[^<]+</a>"
                               usingBlock:^(NSInteger captureCount,
                                            NSString *const __unsafe_unretained *capturedStrings,
@@ -144,32 +146,73 @@ static NSDictionary *sSpecialAttributes = nil;
                                   
                                   [parts addObject:part];
                               }];
-    
-    
-    
-    // 用特殊字段分割微博文本,即匹配普通文本字段.
-    [text enumerateStringsSeparatedByRegex:@"<a href='https://m.weibo.cn/n/.*?[^<]+</a>"
-                                usingBlock:^(NSInteger captureCount,
-                                             NSString *const __unsafe_unretained *capturedStrings,
-                                             const NSRange *capturedRanges,
-                                             volatile BOOL *const stop) {
-                                    
-                                    if ((*capturedRanges).length == 0) {
-                                        return ;
-                                    }
-                                    
-                                    LXStatusTextPart *part = [LXStatusTextPart new];
-                                    part.text  = *capturedStrings;
-                                    part.range = *capturedRanges;
-                                    
-                                    [parts addObject:part];
-                                }];
-    
+
+    // 匹配 网页链接 秒拍视频 等
+    [text enumerateStringsMatchedByRegex:@"<a data-url=\"http://t.cn/.*?[^<]+</a>"
+                              usingBlock:^(NSInteger captureCount,
+                                      NSString *const __unsafe_unretained *capturedStrings,
+                                      const NSRange *capturedRanges,
+                                      volatile BOOL *const stop) {
+
+                                  NSAssert((*capturedRanges).length > 0, @"尼玛长度能为0?");
+
+                                  LXStatusTextPart *part = [LXStatusTextPart new];
+                                  part.text  = *capturedStrings;
+                                  part.range = *capturedRanges;
+                                  part.linkType = LinkTypeLink;
+
+                                  [parts addObject:part];
+                              }];
+
+
     // 按照 location 排序字段,即还原其原本的顺序.
     [parts sortUsingComparator:^NSComparisonResult(LXStatusTextPart * _Nonnull obj1, LXStatusTextPart * _Nonnull obj2) {
         return obj1.range.location < obj2.range.location ? NSOrderedAscending : NSOrderedDescending;
     }];
-    
+    if (parts.count == 0){
+        // 说明没有找到什么特殊的
+        LXStatusTextPart *part = [LXStatusTextPart new];
+        part.text  = text;
+        part.range = NSMakeRange(0, text.length);
+        part.linkType = LinkTypeNone;
+        [parts addObject:part];
+
+    } else{
+
+        NSMutableArray<LXStatusTextPart *> *tmpParts = [NSMutableArray new];
+
+        NSUInteger location = 0;
+        for (int i = 0; i < parts.count; ++i) {
+            LXStatusTextPart * part = parts[(NSUInteger) i];
+            if (location != part.range.location){
+                LXStatusTextPart *needToAdd = [LXStatusTextPart new];
+                needToAdd.linkType = LinkTypeNone;
+                needToAdd.range = NSMakeRange(location, part.range.location - location);
+                needToAdd.text  = [text substringWithRange:needToAdd.range];
+
+                [tmpParts addObject:needToAdd];
+            }
+
+            location = part.range.location + part.range.length;
+        }
+
+        if (location < text.length){
+            LXStatusTextPart *needToAdd = [LXStatusTextPart new];
+            needToAdd.linkType = LinkTypeNone;
+            needToAdd.range = NSMakeRange(location, text.length - location);
+            needToAdd.text  = [text substringWithRange:needToAdd.range];
+
+            [tmpParts addObject:needToAdd];
+        }
+
+        if (tmpParts.count > 0){
+            [parts addObjectsFromArray:tmpParts];
+            [parts sortUsingComparator:^NSComparisonResult(LXStatusTextPart * _Nonnull obj1, LXStatusTextPart * _Nonnull obj2) {
+                return obj1.range.location < obj2.range.location ? NSOrderedAscending : NSOrderedDescending;
+            }];
+        }
+
+    }
     return parts;
 }
 
@@ -236,6 +279,29 @@ static NSDictionary *sSpecialAttributes = nil;
             subAttributedString = [[NSMutableAttributedString alloc] initWithString:linkName];
             [subAttributedString addAttribute:NSLinkAttributeName value:[NSURL URLWithString:link.text] range:NSMakeRange(0, linkName.length)];
             
+        } else if (part.linkType == LinkTypeLink){
+
+            IGHTMLDocument * doc = [[IGHTMLDocument alloc] initWithXMLString:part.text error:nil];
+            //IGXMLNode * node = [doc attribute:@"data-url"]
+
+            NSString * content = doc.text;
+
+
+            LXStatusTextLink *link = [LXStatusTextLink new];
+
+            link.text  = content;
+            link.range = NSMakeRange(attributedString.length, link.text.length);
+
+            [links addObject:link];
+
+
+            NSString * linkName = [link.text copy];
+            if (![link.text hasPrefix:@"http"]) {
+                link.text = [@"app://" stringByAppendingString:[link.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            }
+            subAttributedString = [[NSMutableAttributedString alloc] initWithString:linkName];
+            [subAttributedString addAttribute:NSLinkAttributeName value:[NSURL URLWithString:link.text] range:NSMakeRange(0, linkName.length)];
+
         }
         
         

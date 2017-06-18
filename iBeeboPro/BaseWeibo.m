@@ -34,8 +34,7 @@ static NSDictionary *sSpecialAttributes = nil;
     NSMutableArray<LXStatusTextPart *> *parts = [NSMutableArray new];
 
     // 匹配 表情
-    //<span class=\\"iconimg iconimg-xs\\">.* alt=\\"\[.*\]\\"></span>
-    [text enumerateStringsMatchedByRegex:@"<span class=\"iconimg iconimg-xs\">.*?]\"></span>"
+    [text enumerateStringsMatchedByRegex:@"<span class=\"iconimg iconimg-xs\"><img src=\"//h5.sinaimg.cn/m/emoticon/icon/\\S*/\\S*\.png\" style=\"width:1em;height:1em;\" alt=\"\\[\\S*\\]\"></span>"
                               usingBlock:^(NSInteger captureCount,
                                       NSString *const __unsafe_unretained *capturedStrings,
                                       const NSRange *capturedRanges,

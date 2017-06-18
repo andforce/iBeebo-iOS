@@ -28,18 +28,14 @@
 @property (weak, nonatomic) IBOutlet UIImageView *timeLineImage7;
 @property (weak, nonatomic) IBOutlet UIImageView *timeLineImage8;
 
--(void) showStatus:(Weibo *)status forRetweet:(BOOL) isRetweet;
+@property (weak, nonatomic) IBOutlet UIImageView *pageInfoImage;
+@property (weak, nonatomic) IBOutlet UILabel *pageInfoContent;
+@property (weak, nonatomic) IBOutlet UILabel *pageDesc;
+
+-(void) showStatus:(Weibo *)status;
 
 @property (weak, nonatomic) IBOutlet UIWeiboTextView *timeLineReTweetContent;
-//@property (weak, nonatomic) IBOutlet UIImageView *timeLineReTweetImage0;
-//@property (weak, nonatomic) IBOutlet UIImageView *timeLineReTweetImage1;
-//@property (weak, nonatomic) IBOutlet UIImageView *timeLineReTweetImage2;
-//@property (weak, nonatomic) IBOutlet UIImageView *timeLineReTweetImage3;
-//@property (weak, nonatomic) IBOutlet UIImageView *timeLineReTweetImage4;
-//@property (weak, nonatomic) IBOutlet UIImageView *timeLineReTweetImage5;
-//@property (weak, nonatomic) IBOutlet UIImageView *timeLineReTweetImage6;
-//@property (weak, nonatomic) IBOutlet UIImageView *timeLineReTweetImage7;
-//@property (weak, nonatomic) IBOutlet UIImageView *timeLineReTweetImage8;
+
 
 
 @end

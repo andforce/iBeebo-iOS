@@ -11,6 +11,7 @@
 
 #import "User.h"
 #import "RetweetedWeibo.h"
+#import "PageInfo.h"
 
 @interface TimeLineCell()<UITextViewDelegate>{
 
@@ -31,7 +32,7 @@
     // Configure the view for the selected state
 }
 
--(void)showStatus:(Weibo *)status forRetweet:(BOOL)isRetweet{
+-(void)showStatus:(Weibo *)status{
     _timeLineTime.text = status.createdAt;
     
     _timeLineContent.attributedText = status.text;
@@ -40,11 +41,37 @@
     _timeLineName.text = status.user.screenName;
     _timeLineSource.text = status.source;
     [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:status.user.profileImageUrl]];
-    if (isRetweet) {
-        [self showImages:status.retweetedWeibo.pics];
-        _timeLineReTweetContent.attributedText = status.retweetedWeibo.text;
-    } else{
-        [self showImages:status.pics];
+
+
+
+    RetweetedWeibo * retweet = status.retweetedWeibo;
+
+    BOOL isRetweet = retweet.text != nil;
+
+    if (isRetweet){
+        PageInfo *retweetPageInfo = status.retweetedWeibo.pageInfo;
+        if (retweetPageInfo.pageUrl == nil){
+
+            [self showImages:status.retweetedWeibo.pics];
+            _timeLineReTweetContent.attributedText = status.retweetedWeibo.text;
+
+        } else {
+            [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:retweetPageInfo.pagePic]];
+            _pageInfoContent.text = status.pageInfo.pageTitle;
+            _pageDesc.text = status.pageInfo.pageDesc;
+        }
+    } else {
+        PageInfo *pageInfo = status.pageInfo;
+        if (pageInfo.pageUrl == nil) {
+            [self showImages:status.pics];
+        } else{
+            PageInfo *pageInfo = status.pageInfo;
+
+            [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:pageInfo.pagePic]];
+            _pageInfoContent.text = pageInfo.pageTitle;
+            _pageDesc.text = pageInfo.pageDesc;
+
+        }
     }
 
 

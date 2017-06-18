@@ -10,14 +10,5 @@
 
 @interface TimeLine9ImagesCell : TimeLineCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *timeLineImage0;
-@property (weak, nonatomic) IBOutlet UIImageView *timeLineImage1;
-@property (weak, nonatomic) IBOutlet UIImageView *timeLineImage2;
-@property (weak, nonatomic) IBOutlet UIImageView *timeLineImage3;
-@property (weak, nonatomic) IBOutlet UIImageView *timeLineImage4;
-@property (weak, nonatomic) IBOutlet UIImageView *timeLineImage5;
-@property (weak, nonatomic) IBOutlet UIImageView *timeLineImage6;
-@property (weak, nonatomic) IBOutlet UIImageView *timeLineImage7;
-@property (weak, nonatomic) IBOutlet UIImageView *timeLineImage8;
 
 @end

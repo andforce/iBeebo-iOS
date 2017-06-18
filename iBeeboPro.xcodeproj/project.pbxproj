@@ -15,6 +15,7 @@
 		2F34C5ABC0980D6276B65E3D /* BaseWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C453F4ECA81B10255FFB /* BaseWeibo.m */; };
 		2F34C5B96CF6C3F28FFEA9FC /* PicBig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34CE6E20185895512C6DD1 /* PicBig.m */; };
 		2F34C6BCF78948B6DEA82A5D /* Geo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C604229F0DB529A96B66 /* Geo.m */; };
+		2F34C73E867192B0DAFC411A /* TimeLinePageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C63D81F0CE53B4BF29D3 /* TimeLinePageInfo.m */; };
 		2F34C7DA79B40B6FE64F754B /* RetweetedStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C467CDC45B2E49C1E7BA /* RetweetedStatus.m */; };
 		2F34C9BD99E2AC9F17E96F7D /* PicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C8008762317F328246A3 /* PicInfo.m */; };
 		2F34CCCEBDC718751E614E2C /* Large.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34CF27C8F6AED7147722FE /* Large.m */; };
@@ -79,7 +80,9 @@
 		2F34C604229F0DB529A96B66 /* Geo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Geo.m; sourceTree = "<group>"; };
 		2F34C6212E49E452C390DBCA /* PageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageInfo.m; sourceTree = "<group>"; };
 		2F34C62470AF419FC28FB111 /* CardGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardGroup.h; sourceTree = "<group>"; };
+		2F34C63D81F0CE53B4BF29D3 /* TimeLinePageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLinePageInfo.m; sourceTree = "<group>"; };
 		2F34C6B2E247F8EE943E7D55 /* Weibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weibo.h; sourceTree = "<group>"; };
+		2F34C6D14F0CC27A70F1E79D /* TimeLinePageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLinePageInfo.h; sourceTree = "<group>"; };
 		2F34C6E9A84D90199187BA5A /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
 		2F34C7C5FC6537BD962D317F /* WeiboPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboPage.m; sourceTree = "<group>"; };
 		2F34C8008762317F328246A3 /* PicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicInfo.m; sourceTree = "<group>"; };
@@ -258,6 +261,8 @@
 				3A6E22181D4D182400ED92E6 /* TimeLine8ImagesCell.m */,
 				3A6E221A1D4D184700ED92E6 /* TimeLine9ImagesCell.h */,
 				3A6E221B1D4D184700ED92E6 /* TimeLine9ImagesCell.m */,
+				2F34C63D81F0CE53B4BF29D3 /* TimeLinePageInfo.m */,
+				2F34C6D14F0CC27A70F1E79D /* TimeLinePageInfo.h */,
 			);
 			name = TableCell;
 			sourceTree = "<group>";
@@ -569,6 +574,7 @@
 				2F34CEC299A112CEC5EC6893 /* Weibo.m in Sources */,
 				2F34CCE7F114F28FF04AA297 /* RetweetedWeibo.m in Sources */,
 				2F34C5ABC0980D6276B65E3D /* BaseWeibo.m in Sources */,
+				2F34C73E867192B0DAFC411A /* TimeLinePageInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@
 #import "MJRefresh.h"
 #import "RetweetedWeibo.h"
 #import "WeiboHelper.h"
+#import "PageInfo.h"
 
 @interface MainTimeLineTableViewController ()<UITextViewDelegate>{
     
@@ -106,19 +107,52 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    Weibo * cardGroup = _mblogs[(NSUInteger) indexPath.row];
-    
-    RetweetedWeibo * retweet = cardGroup.retweetedWeibo;
-    
+    Weibo * weibo = _mblogs[(NSUInteger) indexPath.row];
+
+    RetweetedWeibo * retweet = weibo.retweetedWeibo;
+
     BOOL isRetweet = retweet.text != nil;
-    NSString * retweetFlag = isRetweet ? @"Retweet" : @"";
-    int count = isRetweet ? (int)cardGroup.retweetedWeibo.pics.count : (int)cardGroup.pics.count;
-    NSString * Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCell%@", count,retweetFlag];
-    TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
-    cell.fd_enforceFrameLayout = NO;
-    
-    [cell showStatus:cardGroup forRetweet:isRetweet];
-    return cell;
+
+    if (isRetweet){
+        PageInfo *retweetPageInfo = weibo.retweetedWeibo.pageInfo;
+        if (retweetPageInfo.pageUrl == nil){
+            int count = (int)weibo.retweetedWeibo.pics.count;
+            NSString * Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCellRetweet", count];
+            TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+            cell.fd_enforceFrameLayout = NO;
+
+            [cell showStatus:weibo];
+            return cell;
+        } else {
+            NSString * Identifier = @"TimeLinePageInfoRetweet";
+            TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+            cell.fd_enforceFrameLayout = NO;
+
+            [cell showStatus:weibo];
+            return cell;
+        }
+    } else {
+        PageInfo *pageInfo = weibo.pageInfo;
+        if (pageInfo.pageUrl == nil) {
+
+            int count = (int)weibo.pics.count;
+            NSString * Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCell", count];
+            TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+            cell.fd_enforceFrameLayout = NO;
+
+            [cell showStatus:weibo];
+            return cell;
+        } else{
+
+            NSString * Identifier = @"TimeLinePageInfo";
+            TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+            cell.fd_enforceFrameLayout = NO;
+
+            [cell showStatus:weibo];
+            return cell;
+        }
+    }
+
 }
 
 -(BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange{

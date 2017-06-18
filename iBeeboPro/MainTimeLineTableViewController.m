@@ -60,7 +60,6 @@
             
             _currentPage = weiboPage;
             
-            NSArray *cardGroup = weiboPage.cardGroup;
             for (CardGroup * cg in weiboPage.cardGroup){
                 if (cg.mblog.text != nil){
                     [_mblogs addObject:cg];

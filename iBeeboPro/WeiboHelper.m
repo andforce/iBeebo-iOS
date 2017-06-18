@@ -30,16 +30,14 @@
 -(void)fetchTimeLine:(double)cursor page:(int)page withCallback:(RequestWeiboPageCallback)callback{
     
     [_browser GETWithURLString:[self buildTimeLineUrl:cursor page:page] requestCallback:^(BOOL isSuccess, NSString *html) {
-        NSString * debugStr = html;//[_cleanner cleanHtmlTag:html];
         
+        NSString * debugStr = html;
         
         NSData *data = [debugStr dataUsingEncoding:NSUTF8StringEncoding];
         
         NSArray *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
         
         WeiboPage * page = [WeiboPage modelObjectWithDictionary:[dictionary firstObject]];
-        
-        //NSArray *cardGroup = page.cardGroup;
         
         callback(page);
         

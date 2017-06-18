@@ -182,6 +182,39 @@ static NSDictionary *sSpecialAttributes = nil;
                                   [parts addObject:part];
                               }];
 
+    // 匹配 全文
+    [text enumerateStringsMatchedByRegex:@"<a href=\"/status/\\d+\">全文</a>"
+                              usingBlock:^(NSInteger captureCount,
+                                      NSString *const __unsafe_unretained *capturedStrings,
+                                      const NSRange *capturedRanges,
+                                      volatile BOOL *const stop) {
+
+                                  NSAssert((*capturedRanges).length > 0, @"尼玛长度能为0?");
+
+                                  LXStatusTextPart *part = [LXStatusTextPart new];
+                                  part.text  = *capturedStrings;
+                                  part.range = *capturedRanges;
+                                  part.linkType = LinkTypeQuanWen;
+
+                                  [parts addObject:part];
+                              }];
+
+    [text enumerateStringsMatchedByRegex:@"<br\\/>"
+                              usingBlock:^(NSInteger captureCount,
+                                      NSString *const __unsafe_unretained *capturedStrings,
+                                      const NSRange *capturedRanges,
+                                      volatile BOOL *const stop) {
+
+                                  NSAssert((*capturedRanges).length > 0, @"尼玛长度能为0?");
+
+                                  LXStatusTextPart *part = [LXStatusTextPart new];
+                                  part.text  = *capturedStrings;
+                                  part.range = *capturedRanges;
+                                  part.linkType = LinkReturn;
+
+                                  [parts addObject:part];
+                              }];
+
 
     // 按照 location 排序字段,即还原其原本的顺序.
     [parts sortUsingComparator:^NSComparisonResult(LXStatusTextPart * _Nonnull obj1, LXStatusTextPart * _Nonnull obj2) {
@@ -302,7 +335,6 @@ static NSDictionary *sSpecialAttributes = nil;
         } else if (part.linkType == LinkTypeLink){
 
             IGHTMLDocument * doc = [[IGHTMLDocument alloc] initWithXMLString:part.text error:nil];
-            //IGXMLNode * node = [doc attribute:@"data-url"]
 
             NSString * content = doc.text;
 
@@ -322,6 +354,36 @@ static NSDictionary *sSpecialAttributes = nil;
             subAttributedString = [[NSMutableAttributedString alloc] initWithString:linkName];
             [subAttributedString addAttribute:NSLinkAttributeName value:[NSURL URLWithString:link.text] range:NSMakeRange(0, linkName.length)];
 
+        } else if (part.linkType == LinkTypeQuanWen){
+            LXStatusTextLink *link = [LXStatusTextLink new];
+
+            link.text  = @"全文";
+            link.range = NSMakeRange(attributedString.length, link.text.length);
+
+            [links addObject:link];
+
+
+            NSString * linkName = [link.text copy];
+            if (![link.text hasPrefix:@"http"]) {
+                link.text = [@"app://" stringByAppendingString:[link.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            }
+            subAttributedString = [[NSMutableAttributedString alloc] initWithString:linkName];
+            [subAttributedString addAttribute:NSLinkAttributeName value:[NSURL URLWithString:link.text] range:NSMakeRange(0, linkName.length)];
+        } else if (part.linkType == LinkReturn){
+            LXStatusTextLink *link = [LXStatusTextLink new];
+
+            link.text  = @"\n";
+            link.range = NSMakeRange(attributedString.length, link.text.length);
+
+            [links addObject:link];
+
+
+            NSString * linkName = [link.text copy];
+            if (![link.text hasPrefix:@"http"]) {
+                link.text = [@"app://" stringByAppendingString:[link.text stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            }
+            subAttributedString = [[NSMutableAttributedString alloc] initWithString:linkName];
+            //[subAttributedString addAttribute:NSLinkAttributeName value:[NSURL URLWithString:link.text] range:NSMakeRange(0, linkName.length)];
         }
         
         

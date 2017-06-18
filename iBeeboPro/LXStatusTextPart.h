@@ -15,7 +15,9 @@ typedef NS_ENUM(NSInteger, LinkType) {
     LinkTypeAt,
     LinkTypeHuaTi,
     LinkTypeEmoation,
-    LinkTypeLink
+    LinkTypeLink,
+    LinkTypeQuanWen,
+    LinkReturn,
 };
 
 

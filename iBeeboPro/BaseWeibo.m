@@ -25,7 +25,7 @@ static NSDictionary *sSpecialAttributes = nil;
 - (instancetype)init {
     self = [super init];
     if (self){
-        sStatusTextFont = [UIFont systemFontOfSize:14];
+        sStatusTextFont = [UIFont systemFontOfSize:16];
         sSpecialAttributes = @{ NSForegroundColorAttributeName : [UIColor blueColor] };
     }
     return self;

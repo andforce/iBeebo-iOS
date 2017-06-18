@@ -48,13 +48,19 @@
             
             _currentPage = weiboPage;
             
+            NSMutableArray *tmp = [NSMutableArray array];
+            
             for (CardGroup * cg in weiboPage.cardGroup){
                 if (cg.mblog.text != nil){
-                    [_mblogs addObject:[[Weibo alloc] initWithMBlog:cg.mblog]];
+                    [tmp addObject:[[Weibo alloc] initWithMBlog:cg.mblog]];
                 }
             }
-
             
+
+            [_mblogs removeAllObjects];
+            [_mblogs addObjectsFromArray:tmp];
+            
+
             [self.tableView reloadData];
             
             [self.tableView.mj_header endRefreshing];

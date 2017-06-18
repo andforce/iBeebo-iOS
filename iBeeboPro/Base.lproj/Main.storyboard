@@ -159,18 +159,15 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XHV-Aw-TBP" customClass="UIWeiboTextView">
-                                            <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="33" id="6c3-fN-HwU"/>
-                                            </constraints>
+                                            <rect key="frame" x="8" y="56" width="584" height="35.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dKG-Fq-h9t" userLabel="Retweet">
-                                            <rect key="frame" x="0.0" y="98" width="600" height="33"/>
+                                            <rect key="frame" x="0.0" y="95.5" width="600" height="35.5"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ein-iM-IzP" customClass="UIWeiboTextView">
-                                                    <rect key="frame" x="8" y="0.0" width="584" height="33"/>
+                                                    <rect key="frame" x="8" y="0.0" width="584" height="35.5"/>
                                                     <color key="textColor" red="0.29813727736473083" green="0.29813104867935181" blue="0.29813528060913086" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -187,19 +184,20 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="iP7-qt-jcs" firstAttribute="leading" secondItem="zjG-DQ-bna" secondAttribute="trailing" constant="8" id="45c-6v-fhp"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="XHV-Aw-TBP" secondAttribute="trailing" id="7q6-mo-d26"/>
                                         <constraint firstItem="iP7-qt-jcs" firstAttribute="bottom" secondItem="zjG-DQ-bna" secondAttribute="bottom" id="ATM-5A-RFu"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="dKG-Fq-h9t" secondAttribute="bottom" id="CB9-Vc-jVh"/>
                                         <constraint firstItem="aoA-6P-FhX" firstAttribute="top" secondItem="zjG-DQ-bna" secondAttribute="top" id="EZ0-jp-yak"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="XHV-Aw-TBP" secondAttribute="leading" id="FDl-CB-jyO"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="zjG-DQ-bna" secondAttribute="leading" id="Gj0-xQ-Gpr"/>
-                                        <constraint firstItem="XHV-Aw-TBP" firstAttribute="top" secondItem="cpB-Km-zYh" secondAttribute="topMargin" constant="48" id="Kv4-mE-uAW"/>
+                                        <constraint firstItem="XHV-Aw-TBP" firstAttribute="top" secondItem="zjG-DQ-bna" secondAttribute="bottom" constant="8" id="Ray-rf-x92"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="dKG-Fq-h9t" secondAttribute="bottom" id="SKW-zq-Ga3"/>
                                         <constraint firstItem="GhZ-nE-Qyg" firstAttribute="leading" secondItem="iP7-qt-jcs" secondAttribute="trailing" constant="8" id="Un5-zm-kBb"/>
                                         <constraint firstItem="GhZ-nE-Qyg" firstAttribute="bottom" secondItem="zjG-DQ-bna" secondAttribute="bottom" id="XZn-K9-Nxq"/>
+                                        <constraint firstItem="dKG-Fq-h9t" firstAttribute="top" secondItem="XHV-Aw-TBP" secondAttribute="bottom" constant="4" id="Yev-2b-pN4"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="XHV-Aw-TBP" secondAttribute="trailing" id="Z7X-IY-zbv"/>
                                         <constraint firstAttribute="topMargin" secondItem="zjG-DQ-bna" secondAttribute="top" id="cXn-5e-kdJ"/>
                                         <constraint firstItem="aoA-6P-FhX" firstAttribute="leading" secondItem="zjG-DQ-bna" secondAttribute="trailing" constant="8" id="eH7-6a-OHp"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="XHV-Aw-TBP" secondAttribute="leading" id="fdR-HI-6wD"/>
                                         <constraint firstItem="dKG-Fq-h9t" firstAttribute="leading" secondItem="cpB-Km-zYh" secondAttribute="leadingMargin" constant="-8" id="ind-Zg-SBA"/>
-                                        <constraint firstItem="dKG-Fq-h9t" firstAttribute="top" secondItem="XHV-Aw-TBP" secondAttribute="bottom" constant="8.5" id="ooH-sT-cpi"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="dKG-Fq-h9t" secondAttribute="trailing" constant="-8" id="prm-HK-1uO"/>
                                     </constraints>
                                 </tableViewCellContentView>

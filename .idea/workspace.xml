@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77d95e32-3e65-46b5-b001-f76466f36c6b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iBeeboPro.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/iBeeboPro.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iBeeboPro/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/iBeeboPro/Base.lproj/Main.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iBeeboPro/BaseWeibo.m" afterPath="$PROJECT_DIR$/iBeeboPro/BaseWeibo.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iBeeboPro/MainTimeLineTableViewController.m" afterPath="$PROJECT_DIR$/iBeeboPro/MainTimeLineTableViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iBeeboPro/TimeLine9ImagesCell.h" afterPath="$PROJECT_DIR$/iBeeboPro/TimeLine9ImagesCell.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iBeeboPro/TimeLineCell.h" afterPath="$PROJECT_DIR$/iBeeboPro/TimeLineCell.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iBeeboPro/TimeLineCell.m" afterPath="$PROJECT_DIR$/iBeeboPro/TimeLineCell.m" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_d7bdfe61f699571dc2cbd383f52a38d6963f0bc1" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TimeLineCell.m" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TimeLineCell.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/iBeeboPro/TimeLineCell.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="488">
+              <caret line="59" column="83" lean-forward="false" selection-start-line="59" selection-start-column="68" selection-end-line="59" selection-end-column="83" />
               <folding>
                 <element signature="e#128#152#0" expanded="true" />
               </folding>
@@ -33,11 +27,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseWeibo.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseWeibo.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iBeeboPro/BaseWeibo.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="56" column="66" lean-forward="true" selection-start-line="56" selection-start-column="66" selection-end-line="56" selection-end-column="66" />
+            <state relative-caret-position="547">
+              <caret line="279" column="15" lean-forward="false" selection-start-line="279" selection-start-column="15" selection-end-line="279" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Weibo.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/iBeeboPro/Weibo.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -47,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/iBeeboPro/MainTimeLineTableViewController.m">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1057">
-              <caret line="153" column="5" lean-forward="true" selection-start-line="111" selection-start-column="4" selection-end-line="153" selection-end-column="5" />
+              <caret line="153" column="5" lean-forward="false" selection-start-line="111" selection-start-column="4" selection-end-line="153" selection-end-column="5" />
               <folding>
                 <element signature="e#147#190#0" expanded="true" />
               </folding>
@@ -94,8 +98,8 @@
         <option value="$PROJECT_DIR$/iBeeboPro/TimeLineCell.h" />
         <option value="$PROJECT_DIR$/iBeeboPro/TimeLinePageInfo.h" />
         <option value="$PROJECT_DIR$/iBeeboPro/MainTimeLineTableViewController.m" />
-        <option value="$PROJECT_DIR$/iBeeboPro/TimeLineCell.m" />
         <option value="$PROJECT_DIR$/iBeeboPro/BaseWeibo.m" />
+        <option value="$PROJECT_DIR$/iBeeboPro/TimeLineCell.m" />
       </list>
     </option>
   </component>
@@ -107,8 +111,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="160" />
-    <option name="y" value="107" />
+    <option name="x" value="-182" />
+    <option name="y" value="38" />
     <option name="width" value="1999" />
     <option name="height" value="1417" />
   </component>
@@ -370,15 +374,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1497695073895</updated>
-      <workItem from="1497695076898" duration="23175000" />
+      <workItem from="1497695076898" duration="23946000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23175000" />
+    <option name="totallyTimeSpent" value="23946000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="160" y="107" width="1999" height="1417" extended-state="0" />
+    <frame x="-182" y="38" width="1999" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -387,7 +391,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981133" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7554717" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5230189" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24519716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981133" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -636,14 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iBeeboPro/Weibo.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/iBeeboPro/Weibo.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -825,28 +821,36 @@
     <entry file="file://$PROJECT_DIR$/iBeeboPro/MainTimeLineTableViewController.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1057">
-          <caret line="153" column="5" lean-forward="true" selection-start-line="111" selection-start-column="4" selection-end-line="153" selection-end-column="5" />
+          <caret line="153" column="5" lean-forward="false" selection-start-line="111" selection-start-column="4" selection-end-line="153" selection-end-column="5" />
           <folding>
             <element signature="e#147#190#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iBeeboPro/TimeLineCell.m">
+    <entry file="file://$PROJECT_DIR$/iBeeboPro/BaseWeibo.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#128#152#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="547">
+          <caret line="279" column="15" lean-forward="false" selection-start-line="279" selection-start-column="15" selection-end-line="279" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iBeeboPro/BaseWeibo.m">
+    <entry file="file://$PROJECT_DIR$/iBeeboPro/Weibo.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="56" column="66" lean-forward="true" selection-start-line="56" selection-start-column="66" selection-end-line="56" selection-end-column="66" />
+        <state relative-caret-position="240">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iBeeboPro/TimeLineCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="59" column="83" lean-forward="false" selection-start-line="59" selection-start-column="68" selection-end-line="59" selection-end-column="83" />
+          <folding>
+            <element signature="e#128#152#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

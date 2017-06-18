@@ -56,6 +56,7 @@
             _timeLineReTweetContent.attributedText = status.retweetedWeibo.text;
 
         } else {
+            _timeLineReTweetContent.attributedText = status.retweetedWeibo.text;
             [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:retweetPageInfo.pagePic]];
             _pageInfoContent.text = status.pageInfo.pageTitle;
             _pageDesc.text = status.pageInfo.pageDesc;

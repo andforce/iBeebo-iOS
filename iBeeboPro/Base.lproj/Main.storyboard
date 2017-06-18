@@ -395,6 +395,7 @@
                                     <outlet property="timeLineAvatar" destination="Pny-Kj-w7B" id="EVr-Mx-kKx"/>
                                     <outlet property="timeLineContent" destination="Ef9-4D-fUX" id="t2s-D7-IhQ"/>
                                     <outlet property="timeLineName" destination="Vn9-O6-WyH" id="fI9-3e-mg5"/>
+                                    <outlet property="timeLineReTweetContent" destination="Xek-3W-FEW" id="88Q-fA-Vea"/>
                                     <outlet property="timeLineSource" destination="6bp-yI-kgF" id="fAl-44-3vE"/>
                                     <outlet property="timeLineTime" destination="DG3-UZ-XDD" id="p98-7f-jyF"/>
                                 </connections>

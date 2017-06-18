@@ -12,14 +12,17 @@
 		2F34C290F133FDB5EC583FB1 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C204C7F7573486CEB9B4 /* User.m */; };
 		2F34C4D8AC32286ACBEDB4FB /* Mblog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C406502D408173799166 /* Mblog.m */; };
 		2F34C576A4F745C978358EE4 /* Visible.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C0932D667BA69A882F68 /* Visible.m */; };
+		2F34C5ABC0980D6276B65E3D /* BaseWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C453F4ECA81B10255FFB /* BaseWeibo.m */; };
 		2F34C5B96CF6C3F28FFEA9FC /* PicBig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34CE6E20185895512C6DD1 /* PicBig.m */; };
 		2F34C6BCF78948B6DEA82A5D /* Geo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C604229F0DB529A96B66 /* Geo.m */; };
 		2F34C7DA79B40B6FE64F754B /* RetweetedStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C467CDC45B2E49C1E7BA /* RetweetedStatus.m */; };
 		2F34C9BD99E2AC9F17E96F7D /* PicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C8008762317F328246A3 /* PicInfo.m */; };
 		2F34CCCEBDC718751E614E2C /* Large.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34CF27C8F6AED7147722FE /* Large.m */; };
+		2F34CCE7F114F28FF04AA297 /* RetweetedWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C8234AD5F99F30A819DD /* RetweetedWeibo.m */; };
 		2F34CCF63A92515DEE7EB12A /* Author.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C86415405AE385F78D3A /* Author.m */; };
 		2F34CD55968E4C06A67063C2 /* Pics.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34CBE8C0750A39D5E172AB /* Pics.m */; };
 		2F34CE403B8EFCD1FD9097A0 /* PageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C6212E49E452C390DBCA /* PageInfo.m */; };
+		2F34CEC299A112CEC5EC6893 /* Weibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34CEE6B799F29F431FD199 /* Weibo.m */; };
 		2F34CF4254CCF9E02F82529A /* CardGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34CB0C38D63BB5885D6581 /* CardGroup.m */; };
 		2F34CF8F5676D83E49F5BE07 /* Cards.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C344B0D1B76CE767E37D /* Cards.m */; };
 		3A6410761D466C51000651E6 /* MainTimeLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */; };
@@ -68,17 +71,22 @@
 		2F34C204C7F7573486CEB9B4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		2F34C344B0D1B76CE767E37D /* Cards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cards.m; sourceTree = "<group>"; };
 		2F34C406502D408173799166 /* Mblog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mblog.m; sourceTree = "<group>"; };
+		2F34C453F4ECA81B10255FFB /* BaseWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWeibo.m; sourceTree = "<group>"; };
 		2F34C467CDC45B2E49C1E7BA /* RetweetedStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetweetedStatus.m; sourceTree = "<group>"; };
 		2F34C46E18CDBF311AB1FC41 /* Large.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Large.h; sourceTree = "<group>"; };
+		2F34C471833B34BF95362C1A /* BaseWeibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWeibo.h; sourceTree = "<group>"; };
 		2F34C49AA818F5F2185D4B73 /* MediaInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaInfo.h; sourceTree = "<group>"; };
 		2F34C604229F0DB529A96B66 /* Geo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Geo.m; sourceTree = "<group>"; };
 		2F34C6212E49E452C390DBCA /* PageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageInfo.m; sourceTree = "<group>"; };
 		2F34C62470AF419FC28FB111 /* CardGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardGroup.h; sourceTree = "<group>"; };
+		2F34C6B2E247F8EE943E7D55 /* Weibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weibo.h; sourceTree = "<group>"; };
 		2F34C6E9A84D90199187BA5A /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
 		2F34C7C5FC6537BD962D317F /* WeiboPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboPage.m; sourceTree = "<group>"; };
 		2F34C8008762317F328246A3 /* PicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicInfo.m; sourceTree = "<group>"; };
+		2F34C8234AD5F99F30A819DD /* RetweetedWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetweetedWeibo.m; sourceTree = "<group>"; };
 		2F34C86415405AE385F78D3A /* Author.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Author.m; sourceTree = "<group>"; };
 		2F34C86B024C73E8207EFE06 /* Author.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Author.h; sourceTree = "<group>"; };
+		2F34C97FEF845E6C43EB3A26 /* RetweetedWeibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetweetedWeibo.h; sourceTree = "<group>"; };
 		2F34C99D5C77049B01243924 /* Geo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geo.h; sourceTree = "<group>"; };
 		2F34CABC019A6718DFEFD73A /* Cards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cards.h; sourceTree = "<group>"; };
 		2F34CB0C38D63BB5885D6581 /* CardGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardGroup.m; sourceTree = "<group>"; };
@@ -90,6 +98,7 @@
 		2F34CE6E20185895512C6DD1 /* PicBig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicBig.m; sourceTree = "<group>"; };
 		2F34CE8EA99E4D849356B327 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		2F34CEC531482F5389043F0D /* PicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicInfo.h; sourceTree = "<group>"; };
+		2F34CEE6B799F29F431FD199 /* Weibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weibo.m; sourceTree = "<group>"; };
 		2F34CF27C8F6AED7147722FE /* Large.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Large.m; sourceTree = "<group>"; };
 		2F34CFEFE135DC3D82ACCA05 /* Visible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Visible.h; sourceTree = "<group>"; };
 		2F34CFFC2E9A81EDA8CB09BC /* Mblog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mblog.h; sourceTree = "<group>"; };
@@ -178,6 +187,12 @@
 			children = (
 				3A6844C41D4A59D300655A17 /* Home */,
 				3A6410111D465F00000651E6 /* CardGroup */,
+				2F34CEE6B799F29F431FD199 /* Weibo.m */,
+				2F34C6B2E247F8EE943E7D55 /* Weibo.h */,
+				2F34C8234AD5F99F30A819DD /* RetweetedWeibo.m */,
+				2F34C97FEF845E6C43EB3A26 /* RetweetedWeibo.h */,
+				2F34C453F4ECA81B10255FFB /* BaseWeibo.m */,
+				2F34C471833B34BF95362C1A /* BaseWeibo.h */,
 			);
 			name = Beans;
 			sourceTree = "<group>";
@@ -551,6 +566,9 @@
 				2F34C576A4F745C978358EE4 /* Visible.m in Sources */,
 				2F34CF4254CCF9E02F82529A /* CardGroup.m in Sources */,
 				2F34C5B96CF6C3F28FFEA9FC /* PicBig.m in Sources */,
+				2F34CEC299A112CEC5EC6893 /* Weibo.m in Sources */,
+				2F34CCE7F114F28FF04AA297 /* RetweetedWeibo.m in Sources */,
+				2F34C5ABC0980D6276B65E3D /* BaseWeibo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

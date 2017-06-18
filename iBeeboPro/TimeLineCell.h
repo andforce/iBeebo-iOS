@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UIWeiboTextView.h"
 #import "Pics.h"
-#import "Mblog.h"
+#import "Weibo.h"
 
 @interface TimeLineCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *timeLineAvatar;
@@ -28,7 +28,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *timeLineImage7;
 @property (weak, nonatomic) IBOutlet UIImageView *timeLineImage8;
 
--(void) showStatus:(Mblog *)status forRetweet:(BOOL) isRetweet;
+-(void) showStatus:(Weibo *)status forRetweet:(BOOL) isRetweet;
 
 @property (weak, nonatomic) IBOutlet UIWeiboTextView *timeLineReTweetContent;
 //@property (weak, nonatomic) IBOutlet UIImageView *timeLineReTweetImage0;

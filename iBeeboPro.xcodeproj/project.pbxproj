@@ -26,6 +26,7 @@
 		2F34CEC299A112CEC5EC6893 /* Weibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34CEE6B799F29F431FD199 /* Weibo.m */; };
 		2F34CF4254CCF9E02F82529A /* CardGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34CB0C38D63BB5885D6581 /* CardGroup.m */; };
 		2F34CF8F5676D83E49F5BE07 /* Cards.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C344B0D1B76CE767E37D /* Cards.m */; };
+		3A195A491EF68252006886BE /* UIView+Corner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A195A481EF68252006886BE /* UIView+Corner.m */; };
 		3A6410761D466C51000651E6 /* MainTimeLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */; };
 		3A6559E41D47B9DD00776797 /* TimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6559E31D47B9DD00776797 /* TimeLineCell.m */; };
 		3A6844C91D4A59E200655A17 /* LXStatusTextPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6844C61D4A59E200655A17 /* LXStatusTextPart.m */; };
@@ -105,6 +106,8 @@
 		2F34CF27C8F6AED7147722FE /* Large.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Large.m; sourceTree = "<group>"; };
 		2F34CFEFE135DC3D82ACCA05 /* Visible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Visible.h; sourceTree = "<group>"; };
 		2F34CFFC2E9A81EDA8CB09BC /* Mblog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mblog.h; sourceTree = "<group>"; };
+		3A195A471EF68252006886BE /* UIView+Corner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Corner.h"; sourceTree = "<group>"; };
+		3A195A481EF68252006886BE /* UIView+Corner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Corner.m"; sourceTree = "<group>"; };
 		3A6410741D466C51000651E6 /* MainTimeLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTimeLineTableViewController.h; sourceTree = "<group>"; };
 		3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTimeLineTableViewController.m; sourceTree = "<group>"; };
 		3A6559E21D47B9DD00776797 /* TimeLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineCell.h; sourceTree = "<group>"; };
@@ -281,6 +284,8 @@
 		3A6E21F61D4C8EFF00ED92E6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3A195A471EF68252006886BE /* UIView+Corner.h */,
+				3A195A481EF68252006886BE /* UIView+Corner.m */,
 				3A6E21F71D4C8F9C00ED92E6 /* UIWeiboTextView.h */,
 				3A6E21F81D4C8F9C00ED92E6 /* UIWeiboTextView.m */,
 			);
@@ -550,6 +555,7 @@
 				3A6E21FF1D4CE79700ED92E6 /* TimeLine1ImagesCell.m in Sources */,
 				3A85C2411D44FD7500B0FB8E /* CookiesManager.m in Sources */,
 				3A78B4E41E9A45C00053DFA9 /* WeiboHelper.m in Sources */,
+				3A195A491EF68252006886BE /* UIView+Corner.m in Sources */,
 				3A6E220D1D4D17BE00ED92E6 /* TimeLine4ImagesCell.m in Sources */,
 				3A85C24D1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.m in Sources */,
 				3A6E221C1D4D184700ED92E6 /* TimeLine9ImagesCell.m in Sources */,

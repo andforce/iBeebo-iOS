@@ -33,8 +33,12 @@
         self.retweetedStatusIdentifier = retweetedStatus.retweetedStatusIdentifier;
         self.user = retweetedStatus.user;
         self.pics = retweetedStatus.pics;
-        NSString * retweet = [NSString stringWithFormat:@"@%@: %@",retweetedStatus.user.screenName, retweetedStatus.text];
-        self.text = [self attributedTextWithText:retweet];
+        if (retweetedStatus.user.screenName == nil){
+            self.text = nil;
+        } else {
+            NSString * retweet = [NSString stringWithFormat:@"@%@: %@",retweetedStatus.user.screenName, retweetedStatus.text];
+            self.text = [self attributedTextWithText:retweet];
+        }
         self.createdAt = retweetedStatus.createdAt;
         self.picIds = retweetedStatus.picIds;
         self.visible = retweetedStatus.visible;

@@ -19,7 +19,7 @@
 @property (nonatomic, strong) NSString *gifIds;
 @property (nonatomic, strong) PageInfo *pageInfo;
 @property (nonatomic, strong) NSString *originalPic;
-@property (nonatomic, strong) RetweetedWeibo *retweetedStatus;
+@property (nonatomic, strong) RetweetedWeibo *retweetedWeibo;
 @property (nonatomic, assign) double commentsCount;
 @property (nonatomic, strong) NSString *cardid;
 @property (nonatomic, assign) BOOL isLongText;

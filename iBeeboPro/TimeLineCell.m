@@ -41,8 +41,8 @@
     _timeLineSource.text = status.source;
     [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:status.user.profileImageUrl]];
     if (isRetweet) {
-        [self showImages:status.retweetedStatus.pics];
-        _timeLineReTweetContent.attributedText = status.retweetedStatus.text;
+        [self showImages:status.retweetedWeibo.pics];
+        _timeLineReTweetContent.attributedText = status.retweetedWeibo.text;
     } else{
         [self showImages:status.pics];
     }

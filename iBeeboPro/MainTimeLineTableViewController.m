@@ -108,11 +108,11 @@
 
     Weibo * cardGroup = _mblogs[(NSUInteger) indexPath.row];
     
-    RetweetedWeibo * retweet = cardGroup.retweetedStatus;
+    RetweetedWeibo * retweet = cardGroup.retweetedWeibo;
     
     BOOL isRetweet = retweet.text != nil;
     NSString * retweetFlag = isRetweet ? @"Retweet" : @"";
-    int count = isRetweet ? (int)cardGroup.retweetedStatus.pics.count : (int)cardGroup.pics.count;
+    int count = isRetweet ? (int)cardGroup.retweetedWeibo.pics.count : (int)cardGroup.pics.count;
     NSString * Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCell%@", count,retweetFlag];
     TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
     cell.fd_enforceFrameLayout = NO;
@@ -125,31 +125,5 @@
     
     return YES;
 }
-
-//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//
-//    Weibo * cardGroup = [_mblogs objectAtIndex:indexPath.row];
-//
-//
-//    RetweetedWeibo * retweet = cardGroup.retweetedStatus;
-//
-//    BOOL isRetweet = retweet.text != nil;
-//    NSString * retweetFlag = isRetweet ? @"Retweet" : @"";
-//    int count = isRetweet ? (int)cardGroup.retweetedStatus.pics.count : (int)cardGroup.pics.count;
-//    NSString * Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCell%@", count,retweetFlag];
-//
-//    return [tableView fd_heightForCellWithIdentifier:Identifier configuration:^(TimeLineCell *cell) {
-//        cell.fd_enforceFrameLayout = NO;
-//
-//        CardGroup * cardGroup = [_mblogs objectAtIndex:indexPath.row];
-//
-//        [cell showStatus:cardGroup.mblog forRetweet:isRetweet];
-//
-//    }];
-//}
-
-
-
-
 
 @end

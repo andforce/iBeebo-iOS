@@ -40,7 +40,7 @@ static NSDictionary *sSpecialAttributes = nil;
         self.gifIds = mblog.gifIds;
         self.pageInfo = mblog.pageInfo;
         self.originalPic = mblog.originalPic;
-        self.retweetedStatus = [[RetweetedWeibo alloc] initWithRetweetedStatus:mblog.retweetedStatus];
+        self.retweetedWeibo = mblog.retweetedStatus == nil ? nil : [[RetweetedWeibo alloc] initWithRetweetedStatus:mblog.retweetedStatus];
         self.commentsCount = mblog.commentsCount;
         self.cardid = mblog.cardid;
         self.isLongText = mblog.isLongText;

@@ -39,8 +39,8 @@
       <file leaf-file-name="MainTimeLineTableViewController.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/iBeeboPro/MainTimeLineTableViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+            <state relative-caret-position="772">
+              <caret line="126" column="52" lean-forward="true" selection-start-line="126" selection-start-column="52" selection-end-line="126" selection-end-column="52" />
               <folding>
                 <element signature="e#147#190#0" expanded="true" />
               </folding>
@@ -364,15 +364,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1497695073895</updated>
-      <workItem from="1497695076898" duration="26836000" />
+      <workItem from="1497695076898" duration="27118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26836000" />
+    <option name="totallyTimeSpent" value="27118000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="38" y="26" width="1999" height="1417" extended-state="0" />
+    <frame x="38" y="26" width="1999" height="1417" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981133" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -380,7 +381,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981133" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5230189" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5230189" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24519716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981133" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -482,9 +483,9 @@
         <state relative-caret-position="435">
           <caret line="32" column="35" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
           <folding>
-            <marker date="1497749332000" expanded="true" signature="845:1376" ph="{...}" />
-            <marker date="1497749332000" expanded="true" signature="940:1367" ph="^(BOOL isSuccess, NSString *html){...}" />
-            <marker date="1497749332000" expanded="true" signature="1440:1674" ph="{...}" />
+            <marker date="1497787450000" expanded="true" signature="845:851" ph="{...}" />
+            <marker date="1497787450000" expanded="true" signature="940:1367" ph="^(BOOL isSuccess, NSString *html){...}" />
+            <marker date="1497787450000" expanded="true" signature="1824:1840" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -835,8 +836,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/iBeeboPro/MainTimeLineTableViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        <state relative-caret-position="772">
+          <caret line="126" column="52" lean-forward="true" selection-start-line="126" selection-start-column="52" selection-end-line="126" selection-end-column="52" />
           <folding>
             <element signature="e#147#190#0" expanded="true" />
           </folding>

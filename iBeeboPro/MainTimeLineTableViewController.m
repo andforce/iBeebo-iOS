@@ -113,46 +113,36 @@
 
     BOOL isRetweet = retweet.text != nil;
 
+    TimeLineCell * cell = nil;
+    NSString * Identifier = nil;
+
     if (isRetweet){
         PageInfo *retweetPageInfo = weibo.retweetedWeibo.pageInfo;
         if (retweetPageInfo.pageUrl == nil){
             int count = (int)weibo.retweetedWeibo.pics.count;
-            NSString * Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCellRetweet", count];
-            TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
-            cell.fd_enforceFrameLayout = NO;
-
-            [cell showStatus:weibo];
-            return cell;
+            Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCellRetweet", count];
         } else {
-            NSString * Identifier = @"TimeLinePageInfoRetweet";
-            TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
-            cell.fd_enforceFrameLayout = NO;
-
-            [cell showStatus:weibo];
-            return cell;
+            Identifier = @"TimeLinePageInfoRetweet";
         }
     } else {
         PageInfo *pageInfo = weibo.pageInfo;
         if (pageInfo.pageUrl == nil) {
-
             int count = (int)weibo.pics.count;
-            NSString * Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCell", count];
-            TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
-            cell.fd_enforceFrameLayout = NO;
-
-            [cell showStatus:weibo];
-            return cell;
+            Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCell", count];
         } else{
 
-            NSString * Identifier = @"TimeLinePageInfo";
-            TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
-            cell.fd_enforceFrameLayout = NO;
-
-            [cell showStatus:weibo];
-            return cell;
+            Identifier = @"TimeLinePageInfo";
         }
     }
 
+    cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+    cell.fd_enforceFrameLayout = NO;
+
+    [cell showStatus:weibo];
+
+    [cell setSeparatorInset:UIEdgeInsetsZero];
+    [cell setLayoutMargins:UIEdgeInsetsZero];
+    return cell;
 }
 
 -(BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange{

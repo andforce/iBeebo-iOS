@@ -28,8 +28,10 @@
 }
 
 -(void)fetchTimeLine:(double)cursor page:(int)page withCallback:(RequestWeiboPageCallback)callback{
-    
-    [_browser GETWithURLString:[self buildTimeLineUrl:cursor page:page] requestCallback:^(BOOL isSuccess, NSString *html) {
+    NSNumber *cursorNumber = [NSNumber numberWithDouble:cursor];
+    NSString *cursorStr = [cursorNumber stringValue];
+    NSString * url = [self buildTimeLineUrl:cursorStr page:page];
+    [_browser GETWithURLString:url requestCallback:^(BOOL isSuccess, NSString *html) {
         
         NSString * debugStr = html;
         
@@ -45,11 +47,11 @@
     
 }
 
-- (NSString *) buildTimeLineUrl:(double) cursor page:(int)page{
-    if (cursor == -1) {
+- (NSString *) buildTimeLineUrl:(NSString *) cursor page:(int)page{
+    if ([cursor isEqualToString:@"-1"]) {
         return @"https://m.weibo.cn/feed/friends?version=v4";
     } else{
-        return [NSString stringWithFormat:@"https://m.weibo.cn/feed/friends?version=v4&next_cursor=%f&page=%d", cursor, page];
+        return [NSString stringWithFormat:@"https://m.weibo.cn/feed/friends?version=v4&next_cursor=%@&page=%d", cursor , page];
     }
 }
 

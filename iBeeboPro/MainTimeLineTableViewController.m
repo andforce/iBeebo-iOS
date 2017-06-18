@@ -71,9 +71,11 @@
             
             _currentPage = weiboPage;
             
-            NSArray *cardGroup = weiboPage.cardGroup;
-            
-            [_mblogs addObjectsFromArray:cardGroup];
+            for (CardGroup * cg in weiboPage.cardGroup){
+                if (cg.mblog.text != nil){
+                    [_mblogs addObject:[[Weibo alloc] initWithMBlog:cg.mblog]];
+                }
+            }
             
             [self.tableView reloadData];
             

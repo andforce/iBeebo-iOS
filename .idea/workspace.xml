@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77d95e32-3e65-46b5-b001-f76466f36c6b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iBeeboPro/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/iBeeboPro/Base.lproj/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -364,15 +364,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1497695073895</updated>
-      <workItem from="1497695076898" duration="26529000" />
+      <workItem from="1497695076898" duration="26836000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26529000" />
+    <option name="totallyTimeSpent" value="26836000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="38" y="26" width="1999" height="1417" extended-state="1" />
+    <frame x="38" y="26" width="1999" height="1417" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981133" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />

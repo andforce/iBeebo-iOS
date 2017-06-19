@@ -19,6 +19,9 @@ DerivedData
 Pods/
 .DS_Store
 
+#app code
+.idea/
+
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However

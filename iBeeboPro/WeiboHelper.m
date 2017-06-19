@@ -10,6 +10,7 @@
 
 #import "AFHTTPSessionManager+SimpleAction.h"
 #import "WeiboJsonCleanner.h"
+#import "HotWeiboPage.h"
 
 @implementation WeiboHelper{
     AFHTTPSessionManager *_browser;
@@ -28,7 +29,7 @@
 }
 
 -(void)fetchTimeLine:(double)cursor page:(int)page withCallback:(RequestWeiboPageCallback)callback{
-    NSNumber *cursorNumber = [NSNumber numberWithDouble:cursor];
+    NSNumber *cursorNumber = @(cursor);
     NSString *cursorStr = [cursorNumber stringValue];
     NSString * url = [self buildTimeLineUrl:cursorStr page:page];
     [_browser GETWithURLString:url requestCallback:^(BOOL isSuccess, NSString *html) {
@@ -55,6 +56,31 @@
     }
 }
 
+
+-(void)fetchHot:(double)since_id withCallback:(HotWeiboCallback)callback{
+
+    NSNumber *cursorNumber = @(since_id);
+    NSString *cursorStr = [cursorNumber stringValue];
+
+    NSString * url = [NSString stringWithFormat:@"https://m.weibo.cn/api/container/getIndex?containerid=102803&since_id=%@", cursorStr];
+    if (since_id < 1) {
+        url = @"https://m.weibo.cn/api/container/getIndex?containerid=102803";
+    }
+    
+    [_browser GETWithURLString:url requestCallback:^(BOOL isSuccess, NSString *html) {
+        
+        NSString * debugStr = html;
+        
+        NSData *data = [debugStr dataUsingEncoding:NSUTF8StringEncoding];
+        
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        
+        HotWeiboPage * page = [HotWeiboPage modelObjectWithDictionary:dictionary];
+        
+        callback(page);
+        
+    }];
+}
 
 
 @end

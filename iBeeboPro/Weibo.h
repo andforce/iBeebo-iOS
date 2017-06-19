@@ -6,7 +6,7 @@
 #import <Foundation/Foundation.h>
 #import "BaseWeibo.h"
 
-@class Mblog, PageInfo, RetweetedWeibo, User, Visible;
+@class HotMblog, Mblog, PageInfo, RetweetedWeibo, User, Visible;
 
 @interface Weibo : BaseWeibo
 
@@ -42,5 +42,10 @@
 @property (nonatomic, strong) NSString *bid;
 
 - (instancetype)initWithMBlog:(Mblog *)mblog;
+
+- (instancetype)initWithHotMBlog:(HotMblog *)mblog;
+
+
+
 
 @end

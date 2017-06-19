@@ -6,6 +6,8 @@
 #import "Weibo.h"
 #import "Mblog.h"
 
+#import "HotMblog.h"
+
 #import "AFHTTPSessionManager+SimpleAction.h"
 #import "User.h"
 #import "LXStatusTextLink.h"
@@ -16,6 +18,8 @@
 #import "RetweetedStatus.h"
 #import "RetweetedWeibo.h"
 #import <IGHTMLQuery.h>
+
+
 @implementation Weibo {
 
 }
@@ -65,5 +69,45 @@ static NSDictionary *sSpecialAttributes = nil;
     return self;
 }
 
+- (instancetype)initWithHotMBlog:(HotMblog *)mblog {
+    self = [super init];
+    if (self){
+
+        sStatusTextFont = [UIFont systemFontOfSize:14];
+        sSpecialAttributes = @{ NSForegroundColorAttributeName : [UIColor blueColor] };
+
+//        self.rawText = mblog.rawText;
+        self.attitudesCount = mblog.attitudesCount;
+        self.source = mblog.source;
+//        self.hasActionTypeCard = mblog.hasActionTypeCard;
+        self.textLength = mblog.textLength;
+        self.mid = mblog.mid;
+//        self.gifIds = mblog.gifIds;
+        self.pageInfo = mblog.pageInfo;
+        self.originalPic = mblog.originalPic;
+//        self.retweetedWeibo = mblog.retweetedStatus == nil ? nil : [[RetweetedWeibo alloc] initWithRetweetedStatus:mblog.retweetedStatus];
+        self.commentsCount = mblog.commentsCount;
+        self.cardid = mblog.cardid;
+        self.isLongText = mblog.isLongText;
+        self.repostsCount = mblog.repostsCount;
+//        self.isShowBulletin = mblog.isShowBulletin;
+        self.favorited = mblog.favorited;
+        self.thumbnailPic = mblog.thumbnailPic;
+        self.bmiddlePic = mblog.bmiddlePic;
+        self.mblogIdentifier = mblog.mblogIdentifier;
+        self.user = mblog.user;
+//        self.mlevelSource = mblog.mlevelSource;
+        self.pics = mblog.pics;
+        self.text = [self attributedTextWithText:mblog.text];
+//        self.pid = mblog.pid;
+        self.createdAt = mblog.createdAt;
+        self.visible = mblog.visible;
+//        self.picIds = mblog.picIds;
+        self.picStatus = mblog.picStatus;
+        self.rid = mblog.rid;
+        self.bid = mblog.bid;
+    }
+    return self;
+}
 
 @end

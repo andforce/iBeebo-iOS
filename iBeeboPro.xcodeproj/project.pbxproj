@@ -50,6 +50,23 @@
 		3A6E22191D4D182400ED92E6 /* TimeLine8ImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E22181D4D182400ED92E6 /* TimeLine8ImagesCell.m */; };
 		3A6E221C1D4D184700ED92E6 /* TimeLine9ImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E221B1D4D184700ED92E6 /* TimeLine9ImagesCell.m */; };
 		3A78B4E41E9A45C00053DFA9 /* WeiboHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A78B4E31E9A45C00053DFA9 /* WeiboHelper.m */; };
+		3A7EA6A31EF81C3F00C6C8CE /* HotTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6A21EF81C3F00C6C8CE /* HotTableViewController.m */; };
+		3A7EA6C41EF81E8C00C6C8CE /* HotActionlog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6A51EF81E8C00C6C8CE /* HotActionlog.m */; };
+		3A7EA6C51EF81E8C00C6C8CE /* HotButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6A71EF81E8C00C6C8CE /* HotButtons.m */; };
+		3A7EA6C61EF81E8C00C6C8CE /* HotCardlistInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6A91EF81E8C00C6C8CE /* HotCardlistInfo.m */; };
+		3A7EA6C71EF81E8C00C6C8CE /* HotCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6AB1EF81E8C00C6C8CE /* HotCards.m */; };
+		3A7EA6C81EF81E8C00C6C8CE /* HotGeo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6AD1EF81E8C00C6C8CE /* HotGeo.m */; };
+		3A7EA6C91EF81E8C00C6C8CE /* HotLarge.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6AF1EF81E8C00C6C8CE /* HotLarge.m */; };
+		3A7EA6CA1EF81E8C00C6C8CE /* HotMblog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6B11EF81E8C00C6C8CE /* HotMblog.m */; };
+		3A7EA6CB1EF81E8C00C6C8CE /* HotMblogButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6B31EF81E8C00C6C8CE /* HotMblogButtons.m */; };
+		3A7EA6CC1EF81E8C00C6C8CE /* HotMediaInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6B51EF81E8C00C6C8CE /* HotMediaInfo.m */; };
+		3A7EA6CD1EF81E8C00C6C8CE /* HotPageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6B71EF81E8C00C6C8CE /* HotPageInfo.m */; };
+		3A7EA6CE1EF81E8C00C6C8CE /* HotPagePic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6B91EF81E8C00C6C8CE /* HotPagePic.m */; };
+		3A7EA6CF1EF81E8C00C6C8CE /* HotParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6BB1EF81E8C00C6C8CE /* HotParams.m */; };
+		3A7EA6D01EF81E8C00C6C8CE /* HotPics.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6BD1EF81E8C00C6C8CE /* HotPics.m */; };
+		3A7EA6D11EF81E8C00C6C8CE /* HotUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6BF1EF81E8C00C6C8CE /* HotUser.m */; };
+		3A7EA6D21EF81E8C00C6C8CE /* HotVisible.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6C11EF81E8C00C6C8CE /* HotVisible.m */; };
+		3A7EA6D31EF81E8C00C6C8CE /* HotWeiboPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6C31EF81E8C00C6C8CE /* HotWeiboPage.m */; };
 		3A85C2241D44DAD000B0FB8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2231D44DAD000B0FB8E /* main.m */; };
 		3A85C2271D44DAD000B0FB8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2261D44DAD000B0FB8E /* AppDelegate.m */; };
 		3A85C22A1D44DAD000B0FB8E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2291D44DAD000B0FB8E /* ViewController.m */; };
@@ -84,7 +101,6 @@
 		2F34C63D81F0CE53B4BF29D3 /* TimeLinePageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLinePageInfo.m; sourceTree = "<group>"; };
 		2F34C6B2E247F8EE943E7D55 /* Weibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weibo.h; sourceTree = "<group>"; };
 		2F34C6D14F0CC27A70F1E79D /* TimeLinePageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLinePageInfo.h; sourceTree = "<group>"; };
-		2F34C6E9A84D90199187BA5A /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
 		2F34C7C5FC6537BD962D317F /* WeiboPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboPage.m; sourceTree = "<group>"; };
 		2F34C8008762317F328246A3 /* PicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicInfo.m; sourceTree = "<group>"; };
 		2F34C8234AD5F99F30A819DD /* RetweetedWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetweetedWeibo.m; sourceTree = "<group>"; };
@@ -151,6 +167,40 @@
 		3A6E221B1D4D184700ED92E6 /* TimeLine9ImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLine9ImagesCell.m; sourceTree = "<group>"; };
 		3A78B4E21E9A45C00053DFA9 /* WeiboHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboHelper.h; sourceTree = "<group>"; };
 		3A78B4E31E9A45C00053DFA9 /* WeiboHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboHelper.m; sourceTree = "<group>"; };
+		3A7EA6A11EF81C3F00C6C8CE /* HotTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotTableViewController.h; sourceTree = "<group>"; };
+		3A7EA6A21EF81C3F00C6C8CE /* HotTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotTableViewController.m; sourceTree = "<group>"; };
+		3A7EA6A41EF81E8C00C6C8CE /* HotActionlog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotActionlog.h; sourceTree = "<group>"; };
+		3A7EA6A51EF81E8C00C6C8CE /* HotActionlog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotActionlog.m; sourceTree = "<group>"; };
+		3A7EA6A61EF81E8C00C6C8CE /* HotButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotButtons.h; sourceTree = "<group>"; };
+		3A7EA6A71EF81E8C00C6C8CE /* HotButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotButtons.m; sourceTree = "<group>"; };
+		3A7EA6A81EF81E8C00C6C8CE /* HotCardlistInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotCardlistInfo.h; sourceTree = "<group>"; };
+		3A7EA6A91EF81E8C00C6C8CE /* HotCardlistInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotCardlistInfo.m; sourceTree = "<group>"; };
+		3A7EA6AA1EF81E8C00C6C8CE /* HotCards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotCards.h; sourceTree = "<group>"; };
+		3A7EA6AB1EF81E8C00C6C8CE /* HotCards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotCards.m; sourceTree = "<group>"; };
+		3A7EA6AC1EF81E8C00C6C8CE /* HotGeo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotGeo.h; sourceTree = "<group>"; };
+		3A7EA6AD1EF81E8C00C6C8CE /* HotGeo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotGeo.m; sourceTree = "<group>"; };
+		3A7EA6AE1EF81E8C00C6C8CE /* HotLarge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotLarge.h; sourceTree = "<group>"; };
+		3A7EA6AF1EF81E8C00C6C8CE /* HotLarge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotLarge.m; sourceTree = "<group>"; };
+		3A7EA6B01EF81E8C00C6C8CE /* HotMblog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotMblog.h; sourceTree = "<group>"; };
+		3A7EA6B11EF81E8C00C6C8CE /* HotMblog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotMblog.m; sourceTree = "<group>"; };
+		3A7EA6B21EF81E8C00C6C8CE /* HotMblogButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotMblogButtons.h; sourceTree = "<group>"; };
+		3A7EA6B31EF81E8C00C6C8CE /* HotMblogButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotMblogButtons.m; sourceTree = "<group>"; };
+		3A7EA6B41EF81E8C00C6C8CE /* HotMediaInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotMediaInfo.h; sourceTree = "<group>"; };
+		3A7EA6B51EF81E8C00C6C8CE /* HotMediaInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotMediaInfo.m; sourceTree = "<group>"; };
+		3A7EA6B61EF81E8C00C6C8CE /* HotPageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotPageInfo.h; sourceTree = "<group>"; };
+		3A7EA6B71EF81E8C00C6C8CE /* HotPageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotPageInfo.m; sourceTree = "<group>"; };
+		3A7EA6B81EF81E8C00C6C8CE /* HotPagePic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotPagePic.h; sourceTree = "<group>"; };
+		3A7EA6B91EF81E8C00C6C8CE /* HotPagePic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotPagePic.m; sourceTree = "<group>"; };
+		3A7EA6BA1EF81E8C00C6C8CE /* HotParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotParams.h; sourceTree = "<group>"; };
+		3A7EA6BB1EF81E8C00C6C8CE /* HotParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotParams.m; sourceTree = "<group>"; };
+		3A7EA6BC1EF81E8C00C6C8CE /* HotPics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotPics.h; sourceTree = "<group>"; };
+		3A7EA6BD1EF81E8C00C6C8CE /* HotPics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotPics.m; sourceTree = "<group>"; };
+		3A7EA6BE1EF81E8C00C6C8CE /* HotUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotUser.h; sourceTree = "<group>"; };
+		3A7EA6BF1EF81E8C00C6C8CE /* HotUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotUser.m; sourceTree = "<group>"; };
+		3A7EA6C01EF81E8C00C6C8CE /* HotVisible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotVisible.h; sourceTree = "<group>"; };
+		3A7EA6C11EF81E8C00C6C8CE /* HotVisible.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotVisible.m; sourceTree = "<group>"; };
+		3A7EA6C21EF81E8C00C6C8CE /* HotWeiboPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotWeiboPage.h; sourceTree = "<group>"; };
+		3A7EA6C31EF81E8C00C6C8CE /* HotWeiboPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotWeiboPage.m; sourceTree = "<group>"; };
 		3A85C21F1D44DAD000B0FB8E /* iBeeboPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBeeboPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A85C2231D44DAD000B0FB8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A85C2251D44DAD000B0FB8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -188,6 +238,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F34C1261919903D232CEC12 /* HotWeibo */ = {
+			isa = PBXGroup;
+			children = (
+				3A7EA6A41EF81E8C00C6C8CE /* HotActionlog.h */,
+				3A7EA6A51EF81E8C00C6C8CE /* HotActionlog.m */,
+				3A7EA6A61EF81E8C00C6C8CE /* HotButtons.h */,
+				3A7EA6A71EF81E8C00C6C8CE /* HotButtons.m */,
+				3A7EA6A81EF81E8C00C6C8CE /* HotCardlistInfo.h */,
+				3A7EA6A91EF81E8C00C6C8CE /* HotCardlistInfo.m */,
+				3A7EA6AA1EF81E8C00C6C8CE /* HotCards.h */,
+				3A7EA6AB1EF81E8C00C6C8CE /* HotCards.m */,
+				3A7EA6AC1EF81E8C00C6C8CE /* HotGeo.h */,
+				3A7EA6AD1EF81E8C00C6C8CE /* HotGeo.m */,
+				3A7EA6AE1EF81E8C00C6C8CE /* HotLarge.h */,
+				3A7EA6AF1EF81E8C00C6C8CE /* HotLarge.m */,
+				3A7EA6B01EF81E8C00C6C8CE /* HotMblog.h */,
+				3A7EA6B11EF81E8C00C6C8CE /* HotMblog.m */,
+				3A7EA6B21EF81E8C00C6C8CE /* HotMblogButtons.h */,
+				3A7EA6B31EF81E8C00C6C8CE /* HotMblogButtons.m */,
+				3A7EA6B41EF81E8C00C6C8CE /* HotMediaInfo.h */,
+				3A7EA6B51EF81E8C00C6C8CE /* HotMediaInfo.m */,
+				3A7EA6B61EF81E8C00C6C8CE /* HotPageInfo.h */,
+				3A7EA6B71EF81E8C00C6C8CE /* HotPageInfo.m */,
+				3A7EA6B81EF81E8C00C6C8CE /* HotPagePic.h */,
+				3A7EA6B91EF81E8C00C6C8CE /* HotPagePic.m */,
+				3A7EA6BA1EF81E8C00C6C8CE /* HotParams.h */,
+				3A7EA6BB1EF81E8C00C6C8CE /* HotParams.m */,
+				3A7EA6BC1EF81E8C00C6C8CE /* HotPics.h */,
+				3A7EA6BD1EF81E8C00C6C8CE /* HotPics.m */,
+				3A7EA6BE1EF81E8C00C6C8CE /* HotUser.h */,
+				3A7EA6BF1EF81E8C00C6C8CE /* HotUser.m */,
+				3A7EA6C01EF81E8C00C6C8CE /* HotVisible.h */,
+				3A7EA6C11EF81E8C00C6C8CE /* HotVisible.m */,
+				3A7EA6C21EF81E8C00C6C8CE /* HotWeiboPage.h */,
+				3A7EA6C31EF81E8C00C6C8CE /* HotWeiboPage.m */,
+			);
+			name = HotWeibo;
+			sourceTree = "<group>";
+		};
 		3A6410101D465EF1000651E6 /* Beans */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +288,7 @@
 				2F34C97FEF845E6C43EB3A26 /* RetweetedWeibo.h */,
 				2F34C453F4ECA81B10255FFB /* BaseWeibo.m */,
 				2F34C471833B34BF95362C1A /* BaseWeibo.h */,
+				2F34C1261919903D232CEC12 /* HotWeibo */,
 			);
 			name = Beans;
 			sourceTree = "<group>";
@@ -206,7 +296,6 @@
 		3A6410111D465F00000651E6 /* CardGroup */ = {
 			isa = PBXGroup;
 			children = (
-				2F34C6E9A84D90199187BA5A /* DataModels.h */,
 				2F34C99D5C77049B01243924 /* Geo.h */,
 				2F34C7C5FC6537BD962D317F /* WeiboPage.m */,
 				2F34CB85B6052B9A2BE55331 /* Pics.h */,
@@ -385,6 +474,8 @@
 				3A85C2471D4511C700B0FB8E /* WeiboMainTabBarController.m */,
 				3A6410741D466C51000651E6 /* MainTimeLineTableViewController.h */,
 				3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */,
+				3A7EA6A11EF81C3F00C6C8CE /* HotTableViewController.h */,
+				3A7EA6A21EF81C3F00C6C8CE /* HotTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -532,28 +623,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A7EA6D21EF81E8C00C6C8CE /* HotVisible.m in Sources */,
 				3A85C2441D45083700B0FB8E /* UIStoryboard+Extensions.m in Sources */,
 				3A6E22131D4D17FC00ED92E6 /* TimeLine6ImagesCell.m in Sources */,
 				3A6844DD1D4A60CD00655A17 /* NSString+Emoji.m in Sources */,
 				3A85C22A1D44DAD000B0FB8E /* ViewController.m in Sources */,
+				3A7EA6C41EF81E8C00C6C8CE /* HotActionlog.m in Sources */,
 				3A6559E41D47B9DD00776797 /* TimeLineCell.m in Sources */,
 				3A6E220A1D4D116E00ED92E6 /* TimeLine3ImagesCell.m in Sources */,
 				3A6844E31D4A646C00655A17 /* NSNotificationCenter+LXAdditions.m in Sources */,
 				3A6E22191D4D182400ED92E6 /* TimeLine8ImagesCell.m in Sources */,
+				3A7EA6C61EF81E8C00C6C8CE /* HotCardlistInfo.m in Sources */,
 				3A6844CA1D4A59E200655A17 /* LXStatusTextLink.m in Sources */,
 				3A85C2301D44DAD000B0FB8E /* iBeeboPro.xcdatamodeld in Sources */,
 				3A6E22161D4D181100ED92E6 /* TimeLine7ImagesCell.m in Sources */,
+				3A7EA6A31EF81C3F00C6C8CE /* HotTableViewController.m in Sources */,
 				3A85C2501D45213900B0FB8E /* NSString+Extensions.m in Sources */,
+				3A7EA6CB1EF81E8C00C6C8CE /* HotMblogButtons.m in Sources */,
+				3A7EA6C81EF81E8C00C6C8CE /* HotGeo.m in Sources */,
 				3A6410761D466C51000651E6 /* MainTimeLineTableViewController.m in Sources */,
 				3A85C2271D44DAD000B0FB8E /* AppDelegate.m in Sources */,
 				3A85C2241D44DAD000B0FB8E /* main.m in Sources */,
+				3A7EA6CA1EF81E8C00C6C8CE /* HotMblog.m in Sources */,
 				3A6E22101D4D17D800ED92E6 /* TimeLine5ImagesCell.m in Sources */,
 				3A6844DC1D4A60CD00655A17 /* Emotion.m in Sources */,
 				3A6E21F91D4C8F9C00ED92E6 /* UIWeiboTextView.m in Sources */,
 				3A6844C91D4A59E200655A17 /* LXStatusTextPart.m in Sources */,
 				3A85C2481D4511C700B0FB8E /* WeiboMainTabBarController.m in Sources */,
+				3A7EA6D01EF81E8C00C6C8CE /* HotPics.m in Sources */,
 				3A6E21FF1D4CE79700ED92E6 /* TimeLine1ImagesCell.m in Sources */,
 				3A85C2411D44FD7500B0FB8E /* CookiesManager.m in Sources */,
+				3A7EA6CD1EF81E8C00C6C8CE /* HotPageInfo.m in Sources */,
 				3A78B4E41E9A45C00053DFA9 /* WeiboHelper.m in Sources */,
 				3A195A491EF68252006886BE /* UIView+Corner.m in Sources */,
 				3A6E220D1D4D17BE00ED92E6 /* TimeLine4ImagesCell.m in Sources */,
@@ -563,22 +663,30 @@
 				3A6E22021D4CFE4000ED92E6 /* TimeLine2ImagesCell.m in Sources */,
 				3A6844D71D4A608000655A17 /* EmotionsManager.m in Sources */,
 				2F34C2492249AD8036CB7E15 /* WeiboPage.m in Sources */,
+				3A7EA6C91EF81E8C00C6C8CE /* HotLarge.m in Sources */,
 				2F34C9BD99E2AC9F17E96F7D /* PicInfo.m in Sources */,
 				2F34C290F133FDB5EC583FB1 /* User.m in Sources */,
 				2F34C1559967EC1C2793FC0D /* MediaInfo.m in Sources */,
 				2F34C7DA79B40B6FE64F754B /* RetweetedStatus.m in Sources */,
 				2F34CD55968E4C06A67063C2 /* Pics.m in Sources */,
 				2F34C4D8AC32286ACBEDB4FB /* Mblog.m in Sources */,
+				3A7EA6D11EF81E8C00C6C8CE /* HotUser.m in Sources */,
 				2F34CF8F5676D83E49F5BE07 /* Cards.m in Sources */,
 				2F34CCCEBDC718751E614E2C /* Large.m in Sources */,
 				2F34C6BCF78948B6DEA82A5D /* Geo.m in Sources */,
+				3A7EA6C71EF81E8C00C6C8CE /* HotCards.m in Sources */,
+				3A7EA6CF1EF81E8C00C6C8CE /* HotParams.m in Sources */,
 				2F34CCF63A92515DEE7EB12A /* Author.m in Sources */,
 				2F34CE403B8EFCD1FD9097A0 /* PageInfo.m in Sources */,
 				2F34C576A4F745C978358EE4 /* Visible.m in Sources */,
+				3A7EA6C51EF81E8C00C6C8CE /* HotButtons.m in Sources */,
+				3A7EA6CE1EF81E8C00C6C8CE /* HotPagePic.m in Sources */,
 				2F34CF4254CCF9E02F82529A /* CardGroup.m in Sources */,
+				3A7EA6CC1EF81E8C00C6C8CE /* HotMediaInfo.m in Sources */,
 				2F34C5B96CF6C3F28FFEA9FC /* PicBig.m in Sources */,
 				2F34CEC299A112CEC5EC6893 /* Weibo.m in Sources */,
 				2F34CCE7F114F28FF04AA297 /* RetweetedWeibo.m in Sources */,
+				3A7EA6D31EF81E8C00C6C8CE /* HotWeiboPage.m in Sources */,
 				2F34C5ABC0980D6276B65E3D /* BaseWeibo.m in Sources */,
 				2F34C73E867192B0DAFC411A /* TimeLinePageInfo.m in Sources */,
 			);

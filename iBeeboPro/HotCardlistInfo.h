@@ -14,13 +14,13 @@
 @property (nonatomic, assign) double canShared;
 @property (nonatomic, assign) double sinceId;
 @property (nonatomic, assign) double showStyle;
-@property (nonatomic, strong) NSString *statisticsFrom;
+@property (nonatomic, strong) NSString *titleTop;
 @property (nonatomic, strong) NSString *vP;
 @property (nonatomic, strong) NSString *containerid;
 @property (nonatomic, strong) NSString *cardlistTitle;
 @property (nonatomic, assign) double total;
 @property (nonatomic, strong) NSString *desc;
-@property (nonatomic, strong) NSString *titleTop;
+@property (nonatomic, strong) NSString *statisticsFrom;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

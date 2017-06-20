@@ -116,10 +116,6 @@
 
     Weibo * weibo = _mblogs[(NSUInteger) indexPath.row];
 
-    RetweetedWeibo * retweet = weibo.retweetedWeibo;
-
-    BOOL isRetweet = false;
-
     TimeLineCell * cell = nil;
     NSString * Identifier = nil;
 

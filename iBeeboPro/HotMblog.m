@@ -14,7 +14,7 @@
 #import "HotMblogButtons.h"
 
 
-NSString *const kHotMblogRid = @"rid";
+NSString *const kHotMblogBid = @"bid";
 NSString *const kHotMblogAttitudesCount = @"attitudes_count";
 NSString *const kHotMblogSource = @"source";
 NSString *const kHotMblogTextLength = @"textLength";
@@ -24,24 +24,26 @@ NSString *const kHotMblogMid = @"mid";
 NSString *const kHotMblogButtons = @"buttons";
 NSString *const kHotMblogRecommendSource = @"recommend_source";
 NSString *const kHotMblogFromCateid = @"from_cateid";
-NSString *const kHotMblogCardid = @"cardid";
 NSString *const kHotMblogCommentsCount = @"comments_count";
 NSString *const kHotMblogOriginalPic = @"original_pic";
+NSString *const kHotMblogCardid = @"cardid";
 NSString *const kHotMblogIsLongText = @"isLongText";
 NSString *const kHotMblogRepostsCount = @"reposts_count";
-NSString *const kHotMblogExpireTime = @"expire_time";
+NSString *const kHotMblogSyncMblog = @"sync_mblog";
 NSString *const kHotMblogThumbnailPic = @"thumbnail_pic";
 NSString *const kHotMblogFavorited = @"favorited";
 NSString *const kHotMblogBmiddlePic = @"bmiddle_pic";
 NSString *const kHotMblogId = @"id";
 NSString *const kHotMblogUser = @"user";
+NSString *const kHotMblogTopicId = @"topic_id";
 NSString *const kHotMblogPics = @"pics";
 NSString *const kHotMblogText = @"text";
+NSString *const kHotMblogIsImportedTopic = @"is_imported_topic";
 NSString *const kHotMblogCreatedAt = @"created_at";
 NSString *const kHotMblogVisible = @"visible";
 NSString *const kHotMblogPicStatus = @"picStatus";
 NSString *const kHotMblogMblogButtons = @"mblog_buttons";
-NSString *const kHotMblogBid = @"bid";
+NSString *const kHotMblogRid = @"rid";
 
 
 @interface HotMblog ()
@@ -52,7 +54,7 @@ NSString *const kHotMblogBid = @"bid";
 
 @implementation HotMblog
 
-@synthesize rid = _rid;
+@synthesize bid = _bid;
 @synthesize attitudesCount = _attitudesCount;
 @synthesize source = _source;
 @synthesize textLength = _textLength;
@@ -62,24 +64,26 @@ NSString *const kHotMblogBid = @"bid";
 @synthesize buttons = _buttons;
 @synthesize recommendSource = _recommendSource;
 @synthesize fromCateid = _fromCateid;
-@synthesize cardid = _cardid;
 @synthesize commentsCount = _commentsCount;
 @synthesize originalPic = _originalPic;
+@synthesize cardid = _cardid;
 @synthesize isLongText = _isLongText;
 @synthesize repostsCount = _repostsCount;
-@synthesize expireTime = _expireTime;
+@synthesize syncMblog = _syncMblog;
 @synthesize thumbnailPic = _thumbnailPic;
 @synthesize favorited = _favorited;
 @synthesize bmiddlePic = _bmiddlePic;
 @synthesize mblogIdentifier = _mblogIdentifier;
 @synthesize user = _user;
+@synthesize topicId = _topicId;
 @synthesize pics = _pics;
 @synthesize text = _text;
+@synthesize isImportedTopic = _isImportedTopic;
 @synthesize createdAt = _createdAt;
 @synthesize visible = _visible;
 @synthesize picStatus = _picStatus;
 @synthesize mblogButtons = _mblogButtons;
-@synthesize bid = _bid;
+@synthesize rid = _rid;
 
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
@@ -94,7 +98,7 @@ NSString *const kHotMblogBid = @"bid";
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-            self.rid = [self objectOrNilForKey:kHotMblogRid fromDictionary:dict];
+            self.bid = [self objectOrNilForKey:kHotMblogBid fromDictionary:dict];
             self.attitudesCount = [[self objectOrNilForKey:kHotMblogAttitudesCount fromDictionary:dict] doubleValue];
             self.source = [self objectOrNilForKey:kHotMblogSource fromDictionary:dict];
             self.textLength = [[self objectOrNilForKey:kHotMblogTextLength fromDictionary:dict] doubleValue];
@@ -116,17 +120,18 @@ NSString *const kHotMblogBid = @"bid";
     self.buttons = [NSArray arrayWithArray:parsedHotButtons];
             self.recommendSource = [[self objectOrNilForKey:kHotMblogRecommendSource fromDictionary:dict] doubleValue];
             self.fromCateid = [self objectOrNilForKey:kHotMblogFromCateid fromDictionary:dict];
-            self.cardid = [self objectOrNilForKey:kHotMblogCardid fromDictionary:dict];
             self.commentsCount = [[self objectOrNilForKey:kHotMblogCommentsCount fromDictionary:dict] doubleValue];
             self.originalPic = [self objectOrNilForKey:kHotMblogOriginalPic fromDictionary:dict];
+            self.cardid = [self objectOrNilForKey:kHotMblogCardid fromDictionary:dict];
             self.isLongText = [[self objectOrNilForKey:kHotMblogIsLongText fromDictionary:dict] boolValue];
             self.repostsCount = [[self objectOrNilForKey:kHotMblogRepostsCount fromDictionary:dict] doubleValue];
-            self.expireTime = [[self objectOrNilForKey:kHotMblogExpireTime fromDictionary:dict] doubleValue];
+            self.syncMblog = [[self objectOrNilForKey:kHotMblogSyncMblog fromDictionary:dict] boolValue];
             self.thumbnailPic = [self objectOrNilForKey:kHotMblogThumbnailPic fromDictionary:dict];
             self.favorited = [[self objectOrNilForKey:kHotMblogFavorited fromDictionary:dict] boolValue];
             self.bmiddlePic = [self objectOrNilForKey:kHotMblogBmiddlePic fromDictionary:dict];
             self.mblogIdentifier = [self objectOrNilForKey:kHotMblogId fromDictionary:dict];
             self.user = [HotUser modelObjectWithDictionary:[dict objectForKey:kHotMblogUser]];
+            self.topicId = [self objectOrNilForKey:kHotMblogTopicId fromDictionary:dict];
     NSObject *receivedHotPics = [dict objectForKey:kHotMblogPics];
     NSMutableArray *parsedHotPics = [NSMutableArray array];
     if ([receivedHotPics isKindOfClass:[NSArray class]]) {
@@ -141,6 +146,7 @@ NSString *const kHotMblogBid = @"bid";
 
     self.pics = [NSArray arrayWithArray:parsedHotPics];
             self.text = [self objectOrNilForKey:kHotMblogText fromDictionary:dict];
+            self.isImportedTopic = [[self objectOrNilForKey:kHotMblogIsImportedTopic fromDictionary:dict] boolValue];
             self.createdAt = [self objectOrNilForKey:kHotMblogCreatedAt fromDictionary:dict];
             self.visible = [HotVisible modelObjectWithDictionary:[dict objectForKey:kHotMblogVisible]];
             self.picStatus = [self objectOrNilForKey:kHotMblogPicStatus fromDictionary:dict];
@@ -157,7 +163,7 @@ NSString *const kHotMblogBid = @"bid";
     }
 
     self.mblogButtons = [NSArray arrayWithArray:parsedHotMblogButtons];
-            self.bid = [self objectOrNilForKey:kHotMblogBid fromDictionary:dict];
+            self.rid = [self objectOrNilForKey:kHotMblogRid fromDictionary:dict];
 
     }
     
@@ -168,7 +174,7 @@ NSString *const kHotMblogBid = @"bid";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    [mutableDict setValue:self.rid forKey:kHotMblogRid];
+    [mutableDict setValue:self.bid forKey:kHotMblogBid];
     [mutableDict setValue:[NSNumber numberWithDouble:self.attitudesCount] forKey:kHotMblogAttitudesCount];
     [mutableDict setValue:self.source forKey:kHotMblogSource];
     [mutableDict setValue:[NSNumber numberWithDouble:self.textLength] forKey:kHotMblogTextLength];
@@ -188,17 +194,18 @@ NSString *const kHotMblogBid = @"bid";
     [mutableDict setValue:[NSArray arrayWithArray:tempArrayForButtons] forKey:kHotMblogButtons];
     [mutableDict setValue:[NSNumber numberWithDouble:self.recommendSource] forKey:kHotMblogRecommendSource];
     [mutableDict setValue:self.fromCateid forKey:kHotMblogFromCateid];
-    [mutableDict setValue:self.cardid forKey:kHotMblogCardid];
     [mutableDict setValue:[NSNumber numberWithDouble:self.commentsCount] forKey:kHotMblogCommentsCount];
     [mutableDict setValue:self.originalPic forKey:kHotMblogOriginalPic];
+    [mutableDict setValue:self.cardid forKey:kHotMblogCardid];
     [mutableDict setValue:[NSNumber numberWithBool:self.isLongText] forKey:kHotMblogIsLongText];
     [mutableDict setValue:[NSNumber numberWithDouble:self.repostsCount] forKey:kHotMblogRepostsCount];
-    [mutableDict setValue:[NSNumber numberWithDouble:self.expireTime] forKey:kHotMblogExpireTime];
+    [mutableDict setValue:[NSNumber numberWithBool:self.syncMblog] forKey:kHotMblogSyncMblog];
     [mutableDict setValue:self.thumbnailPic forKey:kHotMblogThumbnailPic];
     [mutableDict setValue:[NSNumber numberWithBool:self.favorited] forKey:kHotMblogFavorited];
     [mutableDict setValue:self.bmiddlePic forKey:kHotMblogBmiddlePic];
     [mutableDict setValue:self.mblogIdentifier forKey:kHotMblogId];
     [mutableDict setValue:[self.user dictionaryRepresentation] forKey:kHotMblogUser];
+    [mutableDict setValue:self.topicId forKey:kHotMblogTopicId];
     NSMutableArray *tempArrayForPics = [NSMutableArray array];
     for (NSObject *subArrayObject in self.pics) {
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
@@ -211,6 +218,7 @@ NSString *const kHotMblogBid = @"bid";
     }
     [mutableDict setValue:[NSArray arrayWithArray:tempArrayForPics] forKey:kHotMblogPics];
     [mutableDict setValue:self.text forKey:kHotMblogText];
+    [mutableDict setValue:[NSNumber numberWithBool:self.isImportedTopic] forKey:kHotMblogIsImportedTopic];
     [mutableDict setValue:self.createdAt forKey:kHotMblogCreatedAt];
     [mutableDict setValue:[self.visible dictionaryRepresentation] forKey:kHotMblogVisible];
     [mutableDict setValue:self.picStatus forKey:kHotMblogPicStatus];
@@ -225,7 +233,7 @@ NSString *const kHotMblogBid = @"bid";
         }
     }
     [mutableDict setValue:[NSArray arrayWithArray:tempArrayForMblogButtons] forKey:kHotMblogMblogButtons];
-    [mutableDict setValue:self.bid forKey:kHotMblogBid];
+    [mutableDict setValue:self.rid forKey:kHotMblogRid];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -249,7 +257,7 @@ NSString *const kHotMblogBid = @"bid";
 {
     self = [super init];
 
-    self.rid = [aDecoder decodeObjectForKey:kHotMblogRid];
+    self.bid = [aDecoder decodeObjectForKey:kHotMblogBid];
     self.attitudesCount = [aDecoder decodeDoubleForKey:kHotMblogAttitudesCount];
     self.source = [aDecoder decodeObjectForKey:kHotMblogSource];
     self.textLength = [aDecoder decodeDoubleForKey:kHotMblogTextLength];
@@ -259,31 +267,33 @@ NSString *const kHotMblogBid = @"bid";
     self.buttons = [aDecoder decodeObjectForKey:kHotMblogButtons];
     self.recommendSource = [aDecoder decodeDoubleForKey:kHotMblogRecommendSource];
     self.fromCateid = [aDecoder decodeObjectForKey:kHotMblogFromCateid];
-    self.cardid = [aDecoder decodeObjectForKey:kHotMblogCardid];
     self.commentsCount = [aDecoder decodeDoubleForKey:kHotMblogCommentsCount];
     self.originalPic = [aDecoder decodeObjectForKey:kHotMblogOriginalPic];
+    self.cardid = [aDecoder decodeObjectForKey:kHotMblogCardid];
     self.isLongText = [aDecoder decodeBoolForKey:kHotMblogIsLongText];
     self.repostsCount = [aDecoder decodeDoubleForKey:kHotMblogRepostsCount];
-    self.expireTime = [aDecoder decodeDoubleForKey:kHotMblogExpireTime];
+    self.syncMblog = [aDecoder decodeBoolForKey:kHotMblogSyncMblog];
     self.thumbnailPic = [aDecoder decodeObjectForKey:kHotMblogThumbnailPic];
     self.favorited = [aDecoder decodeBoolForKey:kHotMblogFavorited];
     self.bmiddlePic = [aDecoder decodeObjectForKey:kHotMblogBmiddlePic];
     self.mblogIdentifier = [aDecoder decodeObjectForKey:kHotMblogId];
     self.user = [aDecoder decodeObjectForKey:kHotMblogUser];
+    self.topicId = [aDecoder decodeObjectForKey:kHotMblogTopicId];
     self.pics = [aDecoder decodeObjectForKey:kHotMblogPics];
     self.text = [aDecoder decodeObjectForKey:kHotMblogText];
+    self.isImportedTopic = [aDecoder decodeBoolForKey:kHotMblogIsImportedTopic];
     self.createdAt = [aDecoder decodeObjectForKey:kHotMblogCreatedAt];
     self.visible = [aDecoder decodeObjectForKey:kHotMblogVisible];
     self.picStatus = [aDecoder decodeObjectForKey:kHotMblogPicStatus];
     self.mblogButtons = [aDecoder decodeObjectForKey:kHotMblogMblogButtons];
-    self.bid = [aDecoder decodeObjectForKey:kHotMblogBid];
+    self.rid = [aDecoder decodeObjectForKey:kHotMblogRid];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 
-    [aCoder encodeObject:_rid forKey:kHotMblogRid];
+    [aCoder encodeObject:_bid forKey:kHotMblogBid];
     [aCoder encodeDouble:_attitudesCount forKey:kHotMblogAttitudesCount];
     [aCoder encodeObject:_source forKey:kHotMblogSource];
     [aCoder encodeDouble:_textLength forKey:kHotMblogTextLength];
@@ -293,24 +303,26 @@ NSString *const kHotMblogBid = @"bid";
     [aCoder encodeObject:_buttons forKey:kHotMblogButtons];
     [aCoder encodeDouble:_recommendSource forKey:kHotMblogRecommendSource];
     [aCoder encodeObject:_fromCateid forKey:kHotMblogFromCateid];
-    [aCoder encodeObject:_cardid forKey:kHotMblogCardid];
     [aCoder encodeDouble:_commentsCount forKey:kHotMblogCommentsCount];
     [aCoder encodeObject:_originalPic forKey:kHotMblogOriginalPic];
+    [aCoder encodeObject:_cardid forKey:kHotMblogCardid];
     [aCoder encodeBool:_isLongText forKey:kHotMblogIsLongText];
     [aCoder encodeDouble:_repostsCount forKey:kHotMblogRepostsCount];
-    [aCoder encodeDouble:_expireTime forKey:kHotMblogExpireTime];
+    [aCoder encodeBool:_syncMblog forKey:kHotMblogSyncMblog];
     [aCoder encodeObject:_thumbnailPic forKey:kHotMblogThumbnailPic];
     [aCoder encodeBool:_favorited forKey:kHotMblogFavorited];
     [aCoder encodeObject:_bmiddlePic forKey:kHotMblogBmiddlePic];
     [aCoder encodeObject:_mblogIdentifier forKey:kHotMblogId];
     [aCoder encodeObject:_user forKey:kHotMblogUser];
+    [aCoder encodeObject:_topicId forKey:kHotMblogTopicId];
     [aCoder encodeObject:_pics forKey:kHotMblogPics];
     [aCoder encodeObject:_text forKey:kHotMblogText];
+    [aCoder encodeBool:_isImportedTopic forKey:kHotMblogIsImportedTopic];
     [aCoder encodeObject:_createdAt forKey:kHotMblogCreatedAt];
     [aCoder encodeObject:_visible forKey:kHotMblogVisible];
     [aCoder encodeObject:_picStatus forKey:kHotMblogPicStatus];
     [aCoder encodeObject:_mblogButtons forKey:kHotMblogMblogButtons];
-    [aCoder encodeObject:_bid forKey:kHotMblogBid];
+    [aCoder encodeObject:_rid forKey:kHotMblogRid];
 }
 
 - (id)copyWithZone:(NSZone *)zone
@@ -319,7 +331,7 @@ NSString *const kHotMblogBid = @"bid";
     
     if (copy) {
 
-        copy.rid = [self.rid copyWithZone:zone];
+        copy.bid = [self.bid copyWithZone:zone];
         copy.attitudesCount = self.attitudesCount;
         copy.source = [self.source copyWithZone:zone];
         copy.textLength = self.textLength;
@@ -329,24 +341,26 @@ NSString *const kHotMblogBid = @"bid";
         copy.buttons = [self.buttons copyWithZone:zone];
         copy.recommendSource = self.recommendSource;
         copy.fromCateid = [self.fromCateid copyWithZone:zone];
-        copy.cardid = [self.cardid copyWithZone:zone];
         copy.commentsCount = self.commentsCount;
         copy.originalPic = [self.originalPic copyWithZone:zone];
+        copy.cardid = [self.cardid copyWithZone:zone];
         copy.isLongText = self.isLongText;
         copy.repostsCount = self.repostsCount;
-        copy.expireTime = self.expireTime;
+        copy.syncMblog = self.syncMblog;
         copy.thumbnailPic = [self.thumbnailPic copyWithZone:zone];
         copy.favorited = self.favorited;
         copy.bmiddlePic = [self.bmiddlePic copyWithZone:zone];
         copy.mblogIdentifier = [self.mblogIdentifier copyWithZone:zone];
         copy.user = [self.user copyWithZone:zone];
+        copy.topicId = [self.topicId copyWithZone:zone];
         copy.pics = [self.pics copyWithZone:zone];
         copy.text = [self.text copyWithZone:zone];
+        copy.isImportedTopic = self.isImportedTopic;
         copy.createdAt = [self.createdAt copyWithZone:zone];
         copy.visible = [self.visible copyWithZone:zone];
         copy.picStatus = [self.picStatus copyWithZone:zone];
         copy.mblogButtons = [self.mblogButtons copyWithZone:zone];
-        copy.bid = [self.bid copyWithZone:zone];
+        copy.rid = [self.rid copyWithZone:zone];
     }
     
     return copy;

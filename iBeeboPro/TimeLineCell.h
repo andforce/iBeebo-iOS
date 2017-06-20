@@ -11,6 +11,8 @@
 #import "Pics.h"
 #import "Weibo.h"
 
+@class HotWeibo;
+
 @interface TimeLineCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *timeLineAvatar;
 @property (weak, nonatomic) IBOutlet UILabel *timeLineName;
@@ -33,6 +35,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *pageDesc;
 
 -(void) showStatus:(Weibo *)status;
+
+-(void) showHotWeibo:(HotWeibo *)status;
 
 @property (weak, nonatomic) IBOutlet UIWeiboTextView *timeLineReTweetContent;
 

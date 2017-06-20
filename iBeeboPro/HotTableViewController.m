@@ -17,11 +17,12 @@
 #import "HotCardlistInfo.h"
 #import "HotMblog.h"
 #import "HotPageInfo.h"
+#import "HotWeibo.h"
 
 
 @interface HotTableViewController ()<UITextViewDelegate>{
 
-    NSMutableArray<Weibo *> * _mblogs;
+    NSMutableArray<HotWeibo *> * _mblogs;
     WeiboHelper * _weiboHelper;
 
     HotWeiboPage * _currentPage;
@@ -53,7 +54,7 @@
 
             for (HotCards * cg in weiboPage.cards){
                 if (cg.mblog.text != nil){
-                    [tmp addObject:[[Weibo alloc] initWithHotMBlog:cg.mblog]];
+                    [tmp addObject:[[HotWeibo alloc] initWithMBlog:cg.mblog]];
                 }
             }
 
@@ -78,7 +79,7 @@
 
             for (HotCards * cg in weiboPage.cards){
                 if (cg.mblog.text != nil){
-                    [_mblogs addObject:[[Weibo alloc] initWithHotMBlog:cg.mblog]];
+                    [_mblogs addObject:[[HotWeibo alloc] initWithMBlog:cg.mblog]];
                 }
             }
 
@@ -114,24 +115,23 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    Weibo * weibo = _mblogs[(NSUInteger) indexPath.row];
+    HotWeibo * hotWeibo = _mblogs[(NSUInteger) indexPath.row];
 
     TimeLineCell * cell = nil;
     NSString * Identifier = nil;
 
-    HotPageInfo *pageInfo = weibo.pageInfo;
+    HotPageInfo *pageInfo = hotWeibo.pageInfo;
     if (pageInfo.pageUrl == nil) {
-        int count = (int)weibo.pics.count;
+        int count = (int)hotWeibo.pics.count;
         Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCell", count];
     } else{
-
         Identifier = @"TimeLinePageInfo";
     }
 
     cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
     cell.fd_enforceFrameLayout = NO;
 
-    [cell showStatus:weibo];
+    [cell showHotWeibo:hotWeibo];
 
     [cell setSeparatorInset:UIEdgeInsetsZero];
     [cell setLayoutMargins:UIEdgeInsetsZero];

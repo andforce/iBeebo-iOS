@@ -12,6 +12,10 @@
 #import "User.h"
 #import "RetweetedWeibo.h"
 #import "PageInfo.h"
+#import "HotMblog.h"
+#import "HotUser.h"
+#import "HotWeibo.h"
+#import "HotPagePic.h"
 
 @interface TimeLineCell()<UITextViewDelegate>{
 
@@ -74,8 +78,30 @@
 
         }
     }
+}
 
 
+- (void)showHotWeibo:(HotWeibo *)status {
+    _timeLineTime.text = status.createdAt;
+
+    _timeLineContent.attributedText = status.text;
+    _timeLineContent.delegate = self;
+
+    _timeLineName.text = status.user.screenName;
+    _timeLineSource.text = status.source;
+    [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:status.user.profileImageUrl]];
+
+
+
+    HotPageInfo *pageInfo = status.pageInfo;
+    if (pageInfo.pageUrl == nil) {
+        [self showImages:status.pics];
+    } else{
+        [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:pageInfo.pagePic.url]];
+        _pageInfoContent.text = pageInfo.pageTitle;
+        _pageDesc.text = pageInfo.content1;
+
+    }
 }
 
 -(void)showImages:(NSArray<Pics *> *)pics{

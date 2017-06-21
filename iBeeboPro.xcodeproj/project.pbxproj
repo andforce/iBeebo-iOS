@@ -67,6 +67,8 @@
 		3A6A41C51EF985F200FD132F /* LkH5icon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41BE1EF985F200FD132F /* LkH5icon.m */; };
 		3A6A41C61EF985F200FD132F /* LkLikePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41C01EF985F200FD132F /* LkLikePage.m */; };
 		3A6A41C71EF985F200FD132F /* LkUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41C21EF985F200FD132F /* LkUser.m */; };
+		3A6A41CA1EFAC43E00FD132F /* AtMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41C91EFAC43E00FD132F /* AtMeTableViewController.m */; };
+		3A6A41CD1EFAC9E000FD132F /* AtMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41CC1EFAC9E000FD132F /* AtMeTableViewCell.m */; };
 		3A6E21F91D4C8F9C00ED92E6 /* UIWeiboTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E21F81D4C8F9C00ED92E6 /* UIWeiboTextView.m */; };
 		3A6E21FC1D4C972C00ED92E6 /* WeiboJsonCleanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E21FB1D4C972C00ED92E6 /* WeiboJsonCleanner.m */; };
 		3A6E21FF1D4CE79700ED92E6 /* TimeLine1ImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E21FE1D4CE79700ED92E6 /* TimeLine1ImagesCell.m */; };
@@ -230,6 +232,10 @@
 		3A6A41C01EF985F200FD132F /* LkLikePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LkLikePage.m; sourceTree = "<group>"; };
 		3A6A41C11EF985F200FD132F /* LkUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LkUser.h; sourceTree = "<group>"; };
 		3A6A41C21EF985F200FD132F /* LkUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LkUser.m; sourceTree = "<group>"; };
+		3A6A41C81EFAC43E00FD132F /* AtMeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtMeTableViewController.h; sourceTree = "<group>"; };
+		3A6A41C91EFAC43E00FD132F /* AtMeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtMeTableViewController.m; sourceTree = "<group>"; };
+		3A6A41CB1EFAC9E000FD132F /* AtMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtMeTableViewCell.h; sourceTree = "<group>"; };
+		3A6A41CC1EFAC9E000FD132F /* AtMeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtMeTableViewCell.m; sourceTree = "<group>"; };
 		3A6E21F71D4C8F9C00ED92E6 /* UIWeiboTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWeiboTextView.h; sourceTree = "<group>"; };
 		3A6E21F81D4C8F9C00ED92E6 /* UIWeiboTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWeiboTextView.m; sourceTree = "<group>"; };
 		3A6E21FA1D4C972C00ED92E6 /* WeiboJsonCleanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboJsonCleanner.h; sourceTree = "<group>"; };
@@ -449,6 +455,8 @@
 				3A6E221B1D4D184700ED92E6 /* TimeLine9ImagesCell.m */,
 				2F34C63D81F0CE53B4BF29D3 /* TimeLinePageInfo.m */,
 				2F34C6D14F0CC27A70F1E79D /* TimeLinePageInfo.h */,
+				3A6A41CB1EFAC9E000FD132F /* AtMeTableViewCell.h */,
+				3A6A41CC1EFAC9E000FD132F /* AtMeTableViewCell.m */,
 			);
 			name = TableCell;
 			sourceTree = "<group>";
@@ -661,6 +669,8 @@
 				3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */,
 				3A7EA6A11EF81C3F00C6C8CE /* HotTableViewController.h */,
 				3A7EA6A21EF81C3F00C6C8CE /* HotTableViewController.m */,
+				3A6A41C81EFAC43E00FD132F /* AtMeTableViewController.h */,
+				3A6A41C91EFAC43E00FD132F /* AtMeTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -831,6 +841,7 @@
 				3A6A41A31EF9850D00FD132F /* AtMeH5icon.m in Sources */,
 				3A7EA6A31EF81C3F00C6C8CE /* HotTableViewController.m in Sources */,
 				3A6A41861EF9836200FD132F /* MeApps.m in Sources */,
+				3A6A41CD1EFAC9E000FD132F /* AtMeTableViewCell.m in Sources */,
 				3A85C2501D45213900B0FB8E /* NSString+Extensions.m in Sources */,
 				3A6A419F1EF9850D00FD132F /* AtMeActionlog.m in Sources */,
 				3A7EA6FB1EF8298700C6C8CE /* HotMblogButtons.m in Sources */,
@@ -874,6 +885,7 @@
 				2F34C7DA79B40B6FE64F754B /* RetweetedStatus.m in Sources */,
 				2F34CD55968E4C06A67063C2 /* Pics.m in Sources */,
 				2F34C4D8AC32286ACBEDB4FB /* Mblog.m in Sources */,
+				3A6A41CA1EFAC43E00FD132F /* AtMeTableViewController.m in Sources */,
 				3A7EA7011EF8298700C6C8CE /* HotUser.m in Sources */,
 				2F34CF8F5676D83E49F5BE07 /* Cards.m in Sources */,
 				3A6A41881EF9836200FD132F /* MeCardGroup.m in Sources */,

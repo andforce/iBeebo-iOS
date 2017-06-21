@@ -11,6 +11,7 @@
 #import "AFHTTPSessionManager+SimpleAction.h"
 #import "WeiboJsonCleanner.h"
 #import "HotWeiboPage.h"
+#import "AtMeAtMePage.h"
 
 @implementation WeiboHelper{
     AFHTTPSessionManager *_browser;
@@ -79,6 +80,25 @@
         
         callback(page);
         
+    }];
+}
+
+- (void)fetchAtMe:(NSString *)subtype wiht:(int)page withCallback:(AtMeCallback)callback {
+    //https://m.weibo.cn/msg/atme?author=&type=&subtype=allWB&format=cards&page=2
+    NSString * url = [NSString stringWithFormat:@"https://m.weibo.cn/msg/atme?author=&type=&subtype=%@&format=cards&page=%d", subtype, page];
+
+    [_browser GETWithURLString:url requestCallback:^(BOOL isSuccess, NSString *html) {
+
+        NSString * debugStr = html;
+
+        NSData *data = [debugStr dataUsingEncoding:NSUTF8StringEncoding];
+
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+
+        AtMeAtMePage * page = [AtMeAtMePage modelObjectWithDictionary:dictionary];
+
+        callback(page);
+
     }];
 }
 

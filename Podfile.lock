@@ -44,6 +44,7 @@ PODS:
     - CSSSelectorConverter (>= 1.2.0)
   - JSONModel (1.1.2)
   - LCActionSheet (1.2.3)
+  - Masonry (1.0.2)
   - MGSwipeTableCell (1.5.6)
   - MJExtension (3.0.13)
   - MJRefresh (3.0.8)
@@ -71,6 +72,7 @@ DEPENDENCIES:
   - IGHTMLQuery (~> 0.8.4)
   - JSONModel (~> 1.1.2)
   - LCActionSheet (~> 1.2.3)
+  - Masonry (~> 1.0.1)
   - MGSwipeTableCell (~> 1.5.6)
   - MJExtension (~> 3.0.10)
   - MJRefresh (~> 3.0.8)
@@ -102,6 +104,7 @@ SPEC CHECKSUMS:
   IGHTMLQuery: 6176bcb88ad36f80ee984dbfde5592bb3ccc921f
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
   LCActionSheet: 690882cd8b9a6713f1b2881c3bb2c7f11954d034
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
@@ -112,6 +115,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
 
-PODFILE CHECKSUM: 1b19026cfaa7c0c254dd2b9dfcd82e60e3cd0270
+PODFILE CHECKSUM: 5c1fae72481317ac3f9436e20f32a4f29b9c4cf8
 
 COCOAPODS: 1.2.1

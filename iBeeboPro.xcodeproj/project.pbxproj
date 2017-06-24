@@ -110,6 +110,11 @@
 		3A85C2481D4511C700B0FB8E /* WeiboMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C2471D4511C700B0FB8E /* WeiboMainTabBarController.m */; };
 		3A85C24D1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C24C1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.m */; };
 		3A85C2501D45213900B0FB8E /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A85C24F1D45213900B0FB8E /* NSString+Extensions.m */; };
+		3AC6193F1EFE6A80003C58CD /* NSString+time.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC619391EFE6A80003C58CD /* NSString+time.m */; };
+		3AC619401EFE6A80003C58CD /* RotationScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6193B1EFE6A80003C58CD /* RotationScreen.m */; };
+		3AC619411EFE6A80003C58CD /* AGPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6193D1EFE6A80003C58CD /* AGPlayerView.m */; };
+		3AC619421EFE6A80003C58CD /* AGPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6193E1EFE6A80003C58CD /* AGPlayerView.xib */; };
+		3AC619451EFE6A89003C58CD /* H5_AVInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC619441EFE6A89003C58CD /* H5_AVInfo.m */; };
 		542C4D0CDABDA17A79467044 /* libPods-iBeeboPro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C98854ABD08BD7E691A049D /* libPods-iBeeboPro.a */; };
 /* End PBXBuildFile section */
 
@@ -315,6 +320,15 @@
 		3A85C24C1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPSessionManager+SimpleAction.m"; sourceTree = "<group>"; };
 		3A85C24E1D45213900B0FB8E /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
 		3A85C24F1D45213900B0FB8E /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
+		3AC619381EFE6A80003C58CD /* NSString+time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+time.h"; sourceTree = "<group>"; };
+		3AC619391EFE6A80003C58CD /* NSString+time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+time.m"; sourceTree = "<group>"; };
+		3AC6193A1EFE6A80003C58CD /* RotationScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationScreen.h; sourceTree = "<group>"; };
+		3AC6193B1EFE6A80003C58CD /* RotationScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationScreen.m; sourceTree = "<group>"; };
+		3AC6193C1EFE6A80003C58CD /* AGPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPlayerView.h; sourceTree = "<group>"; };
+		3AC6193D1EFE6A80003C58CD /* AGPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPlayerView.m; sourceTree = "<group>"; };
+		3AC6193E1EFE6A80003C58CD /* AGPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGPlayerView.xib; sourceTree = "<group>"; };
+		3AC619431EFE6A89003C58CD /* H5_AVInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = H5_AVInfo.h; sourceTree = "<group>"; };
+		3AC619441EFE6A89003C58CD /* H5_AVInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = H5_AVInfo.m; sourceTree = "<group>"; };
 		85848B6C50344BAD3D72FDC4 /* Pods-iBeeboPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBeeboPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-iBeeboPro/Pods-iBeeboPro.release.xcconfig"; sourceTree = "<group>"; };
 		B9B0A1B115C4DC0741FD0865 /* Pods-iBeeboPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBeeboPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iBeeboPro/Pods-iBeeboPro.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -586,6 +600,7 @@
 		3A85C2161D44DAD000B0FB8E = {
 			isa = PBXGroup;
 			children = (
+				3AC619371EFE6A6A003C58CD /* AVPlayer */,
 				3A6E21F61D4C8EFF00ED92E6 /* Views */,
 				3A85C2211D44DAD000B0FB8E /* iBeeboPro */,
 				3A85C2201D44DAD000B0FB8E /* Products */,
@@ -675,6 +690,22 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		3AC619371EFE6A6A003C58CD /* AVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				3AC619431EFE6A89003C58CD /* H5_AVInfo.h */,
+				3AC619441EFE6A89003C58CD /* H5_AVInfo.m */,
+				3AC619381EFE6A80003C58CD /* NSString+time.h */,
+				3AC619391EFE6A80003C58CD /* NSString+time.m */,
+				3AC6193A1EFE6A80003C58CD /* RotationScreen.h */,
+				3AC6193B1EFE6A80003C58CD /* RotationScreen.m */,
+				3AC6193C1EFE6A80003C58CD /* AGPlayerView.h */,
+				3AC6193D1EFE6A80003C58CD /* AGPlayerView.m */,
+				3AC6193E1EFE6A80003C58CD /* AGPlayerView.xib */,
+			);
+			name = AVPlayer;
+			sourceTree = "<group>";
+		};
 		78AB65A05FBC3C6399B84737 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -758,6 +789,7 @@
 				3A6844D21D4A5FF600655A17 /* default.plist in Resources */,
 				3A6844D41D4A5FF600655A17 /* lxh.plist in Resources */,
 				3A85C2351D44DAD000B0FB8E /* LaunchScreen.storyboard in Resources */,
+				3AC619421EFE6A80003C58CD /* AGPlayerView.xib in Resources */,
 				3A85C2321D44DAD000B0FB8E /* Assets.xcassets in Resources */,
 				3A85C22D1D44DAD000B0FB8E /* Main.storyboard in Resources */,
 			);
@@ -819,6 +851,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A7EA7021EF8298700C6C8CE /* HotVisible.m in Sources */,
+				3AC619411EFE6A80003C58CD /* AGPlayerView.m in Sources */,
 				3A6A41781EF9786300FD132F /* MsgWeiboMessagePage.m in Sources */,
 				3A85C2441D45083700B0FB8E /* UIStoryboard+Extensions.m in Sources */,
 				3A6E22131D4D17FC00ED92E6 /* TimeLine6ImagesCell.m in Sources */,
@@ -860,6 +893,7 @@
 				3A6E21F91D4C8F9C00ED92E6 /* UIWeiboTextView.m in Sources */,
 				3A6844C91D4A59E200655A17 /* LXStatusTextPart.m in Sources */,
 				3A85C2481D4511C700B0FB8E /* WeiboMainTabBarController.m in Sources */,
+				3AC619451EFE6A89003C58CD /* H5_AVInfo.m in Sources */,
 				3A7EA7001EF8298700C6C8CE /* HotPics.m in Sources */,
 				3A6E21FF1D4CE79700ED92E6 /* TimeLine1ImagesCell.m in Sources */,
 				3A6A41C51EF985F200FD132F /* LkH5icon.m in Sources */,
@@ -886,6 +920,7 @@
 				2F34CD55968E4C06A67063C2 /* Pics.m in Sources */,
 				2F34C4D8AC32286ACBEDB4FB /* Mblog.m in Sources */,
 				3A6A41CA1EFAC43E00FD132F /* AtMeTableViewController.m in Sources */,
+				3AC619401EFE6A80003C58CD /* RotationScreen.m in Sources */,
 				3A7EA7011EF8298700C6C8CE /* HotUser.m in Sources */,
 				2F34CF8F5676D83E49F5BE07 /* Cards.m in Sources */,
 				3A6A41881EF9836200FD132F /* MeCardGroup.m in Sources */,
@@ -906,6 +941,7 @@
 				3A7EA6FC1EF8298700C6C8CE /* HotMediaInfo.m in Sources */,
 				3A6A41A21EF9850D00FD132F /* AtMeCardGroup.m in Sources */,
 				2F34C5B96CF6C3F28FFEA9FC /* PicBig.m in Sources */,
+				3AC6193F1EFE6A80003C58CD /* NSString+time.m in Sources */,
 				3A6A41A41EF9850D00FD132F /* AtMeTopicStruct.m in Sources */,
 				2F34CEC299A112CEC5EC6893 /* Weibo.m in Sources */,
 				3A6A41B61EF9859300FD132F /* CmtH5icon.m in Sources */,

@@ -19,4 +19,5 @@ target 'iBeeboPro' do
     pod 'NYTPhotoViewer', :git => "https://github.com/andforce/NYTPhotoViewer.git", :commit => "659d4ac"
     pod 'RegexKitLite', '~> 4.0'
     pod 'MJExtension', '~> 3.0.10'
+    pod 'Masonry', '~> 1.0.1'
 end

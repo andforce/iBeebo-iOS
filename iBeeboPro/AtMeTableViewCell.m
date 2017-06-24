@@ -25,7 +25,7 @@
 
 
 - (void)showAtMe:(AtMeCardGroup *)cardGroup {
-    _atMeName = cardGroup.user.screenName;
+    _atMeName.text = cardGroup.user.screenName;
 
 }
 @end

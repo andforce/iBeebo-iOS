@@ -109,11 +109,7 @@
 
     AtMeCardGroup * hotWeibo = _mblogs[(NSUInteger) indexPath.row];
 
-    AtMeTableViewCell * cell = nil;
-
-    NSString * Identifier = @"AtMeTableViewCell";
-
-    cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+    AtMeTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"AtMeTableViewCell"];
     cell.fd_enforceFrameLayout = NO;
 
     [cell showAtMe:hotWeibo];

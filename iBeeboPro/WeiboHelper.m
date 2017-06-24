@@ -93,7 +93,10 @@
 
         NSData *data = [debugStr dataUsingEncoding:NSUTF8StringEncoding];
 
-        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        id dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        if ([dictionary isKindOfClass:[NSArray class]]) {
+            dictionary = ((NSArray *)dictionary).firstObject;
+        }
 
         AtMeAtMePage * page = [AtMeAtMePage modelObjectWithDictionary:dictionary];
 

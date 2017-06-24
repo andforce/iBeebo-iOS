@@ -6021,13 +6021,6 @@
                                     <outlet property="orgAvatar" destination="t4V-h9-DDZ" id="bvt-4s-nk9"/>
                                     <outlet property="orgContent" destination="EMN-L7-lZ1" id="STh-y6-hUv"/>
                                     <outlet property="orgName" destination="Knc-KM-qd6" id="jin-MN-sA8"/>
-                                    <outlet property="timeLineAvatar" destination="hNP-iu-ivP" id="OpK-Pw-Bh2"/>
-                                    <outlet property="timeLineContent" destination="oH8-BH-gf5" id="HY7-cr-tAu"/>
-                                    <outlet property="timeLineImage0" destination="t4V-h9-DDZ" id="2a4-qN-r10"/>
-                                    <outlet property="timeLineName" destination="HGb-8Z-6zT" id="rle-rV-KkO"/>
-                                    <outlet property="timeLineReTweetContent" destination="Knc-KM-qd6" id="nHe-rI-gSV"/>
-                                    <outlet property="timeLineSource" destination="1uj-1h-Qhc" id="TdH-rE-KDg"/>
-                                    <outlet property="timeLineTime" destination="tBM-2l-Bi3" id="pJq-HR-nyb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

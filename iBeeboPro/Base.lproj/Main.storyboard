@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TimeLine-->
+        <!--首页-->
         <scene sceneID="SpD-nr-4lh">
             <objects>
                 <tableViewController storyboardIdentifier="MainTimeLineTableViewController" id="UVl-VY-cZX" customClass="MainTimeLineTableViewController" sceneMemberID="viewController">
@@ -2510,55 +2510,55 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QrP-Vt-418" userLabel="TimeLineImage0">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QrP-Vt-418" userLabel="TimeLineImage0">
                                             <rect key="frame" x="8" y="97" width="191" height="191"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="QrP-Vt-418" secondAttribute="height" multiplier="1:1" id="I3z-hq-afm"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X3A-wY-sGf" userLabel="TimeLineImage1">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X3A-wY-sGf" userLabel="TimeLineImage1">
                                             <rect key="frame" x="205" y="97" width="191" height="191"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="X3A-wY-sGf" secondAttribute="height" multiplier="1:1" id="HU8-2v-Llp"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xlo-AH-2Zv" userLabel="TimeLineImage2">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xlo-AH-2Zv" userLabel="TimeLineImage2">
                                             <rect key="frame" x="401" y="97" width="191" height="191"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="xlo-AH-2Zv" secondAttribute="height" multiplier="1:1" id="M5M-yJ-sbq"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yXJ-Bx-dl7" userLabel="TimeLineImage0">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yXJ-Bx-dl7" userLabel="TimeLineImage0">
                                             <rect key="frame" x="8" y="296" width="191" height="191"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="yXJ-Bx-dl7" secondAttribute="height" multiplier="1:1" id="YT6-Nu-cSL"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gCR-Vh-LcS" userLabel="TimeLineImage1">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gCR-Vh-LcS" userLabel="TimeLineImage1">
                                             <rect key="frame" x="205" y="296" width="191" height="191"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="gCR-Vh-LcS" secondAttribute="height" multiplier="1:1" id="pOG-mY-k4f"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h1B-yu-pF8" userLabel="TimeLineImage2">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h1B-yu-pF8" userLabel="TimeLineImage2">
                                             <rect key="frame" x="401" y="296" width="191" height="191"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="h1B-yu-pF8" secondAttribute="height" multiplier="1:1" id="Lbh-Na-bia"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dtf-b9-san" userLabel="TimeLineImage0">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dtf-b9-san" userLabel="TimeLineImage0">
                                             <rect key="frame" x="8" y="495" width="191" height="191"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="dtf-b9-san" secondAttribute="height" multiplier="1:1" id="FV6-z2-8ki"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FZo-5z-EUc" userLabel="TimeLineImage1">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FZo-5z-EUc" userLabel="TimeLineImage1">
                                             <rect key="frame" x="205" y="495" width="191" height="191"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="FZo-5z-EUc" secondAttribute="height" multiplier="1:1" id="qFB-FL-drP"/>
                                             </constraints>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SZ9-dy-Lax" userLabel="TimeLineImage2">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SZ9-dy-Lax" userLabel="TimeLineImage2">
                                             <rect key="frame" x="401" y="495" width="191" height="191"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="SZ9-dy-Lax" secondAttribute="height" multiplier="1:1" id="J5O-vJ-Agw"/>
@@ -2853,7 +2853,7 @@
                             <outlet property="delegate" destination="UVl-VY-cZX" id="EH9-8y-Vxv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="TimeLine" id="sxk-D9-yNU"/>
+                    <navigationItem key="navigationItem" title="首页" id="sxk-D9-yNU"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
                 </tableViewController>
@@ -3058,7 +3058,7 @@
             </objects>
             <point key="canvasLocation" x="-2151" y="1961"/>
         </scene>
-        <!--TimeLine-->
+        <!--热门-->
         <scene sceneID="VHb-qT-oKm">
             <objects>
                 <tableViewController storyboardIdentifier="HotTableViewController" id="Sav-ZB-niq" customClass="HotTableViewController" sceneMemberID="viewController">
@@ -5900,7 +5900,7 @@
                             <outlet property="delegate" destination="Sav-ZB-niq" id="Svm-zN-xLW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="TimeLine" id="Igi-IN-oNI"/>
+                    <navigationItem key="navigationItem" title="热门" id="Igi-IN-oNI"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1600"/>
                 </tableViewController>
@@ -5908,7 +5908,7 @@
             </objects>
             <point key="canvasLocation" x="2445" y="1599"/>
         </scene>
-        <!--TimeLine-->
+        <!--消息-->
         <scene sceneID="lAg-fd-zAu">
             <objects>
                 <tableViewController storyboardIdentifier="AtMeTableViewController" id="Mge-oM-nVM" customClass="AtMeTableViewController" sceneMemberID="viewController">
@@ -6029,7 +6029,7 @@
                             <outlet property="delegate" destination="Mge-oM-nVM" id="okR-4I-jw5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="TimeLine" id="rb4-qV-CXC"/>
+                    <navigationItem key="navigationItem" title="消息" id="rb4-qV-CXC"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1600"/>
                 </tableViewController>

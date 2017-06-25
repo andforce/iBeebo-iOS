@@ -3070,6 +3070,7 @@
         <!--热门-->
         <scene sceneID="VHb-qT-oKm">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bJ-Tm-IIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="HotTableViewController" id="Sav-ZB-niq" customClass="HotTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="154" sectionHeaderHeight="28" sectionFooterHeight="28" id="k1o-ek-wIM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="10000"/>
@@ -3830,7 +3831,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="zVy-yt-2fM" firstAttribute="leading" secondItem="OWw-sD-pUE" secondAttribute="leading" id="8YQ-3F-iX7"/>
                                                         <constraint firstItem="zVy-yt-2fM" firstAttribute="top" secondItem="OWw-sD-pUE" secondAttribute="top" id="DIc-RK-Rbs"/>
@@ -6123,7 +6124,6 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="10000"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0bJ-Tm-IIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2444.8000000000002" y="1598.5007496251876"/>
         </scene>

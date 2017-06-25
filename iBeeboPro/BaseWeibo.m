@@ -33,6 +33,25 @@ static NSDictionary *sSpecialAttributes = nil;
 - (NSMutableArray<LXStatusTextPart *> *)statusTextPartsWithText:(NSString *)text {
     NSMutableArray<LXStatusTextPart *> *parts = [NSMutableArray new];
 
+    //<i[^>]+?class=["']?([^"']+)["']?[^>]*>([^<]+)</i>
+
+    // 匹配@我的表情
+    [text enumerateStringsMatchedByRegex:@"<i[^>]+?class=[\"']?([^\"']+)[\"']?[^>]*>([^<]+)</i>"
+                              usingBlock:^(NSInteger captureCount,
+                                      NSString *const __unsafe_unretained *capturedStrings,
+                                      const NSRange *capturedRanges,
+                                      volatile BOOL *const stop) {
+
+                                  NSAssert((*capturedRanges).length > 0, @"尼玛长度能为0?");
+
+                                  LXStatusTextPart *part = [LXStatusTextPart new];
+                                  part.text  = *capturedStrings;
+                                  part.range = *capturedRanges;
+                                  part.linkType = LinkTypeEmoation;
+
+                                  [parts addObject:part];
+                              }];
+
     // 匹配 表情
     [text enumerateStringsMatchedByRegex:@"<span class=\"(iconimg iconimg-xs|url-icon)\"><img src=\"//h5.sinaimg.cn/m/emoticon/icon/\\S*/\\S*\\.png\" style=\"width:1em;height:1em;\" alt=\"\\[\\S*\\]\"></span>"
                               usingBlock:^(NSInteger captureCount,
@@ -52,6 +71,23 @@ static NSDictionary *sSpecialAttributes = nil;
 
     // 匹配@
     [text enumerateStringsMatchedByRegex:@"<a href='https://m.weibo.cn/n/.*?[^<]+</a>"
+                              usingBlock:^(NSInteger captureCount,
+                                      NSString *const __unsafe_unretained *capturedStrings,
+                                      const NSRange *capturedRanges,
+                                      volatile BOOL *const stop) {
+
+                                  NSAssert((*capturedRanges).length > 0, @"尼玛长度能为0?");
+
+                                  LXStatusTextPart *part = [LXStatusTextPart new];
+                                  part.text  = *capturedStrings;
+                                  part.range = *capturedRanges;
+                                  part.linkType = LinkTypeAt;
+
+                                  [parts addObject:part];
+                              }];
+    // 匹配@我 的@
+    //<a href='/n/?([^"']+)["']?[^>]*>([^<]+)</a>
+    [text enumerateStringsMatchedByRegex:@"<a href='/n/?([^\"']+)[\"']?[^>]*>([^<]+)</a>"
                               usingBlock:^(NSInteger captureCount,
                                       NSString *const __unsafe_unretained *capturedStrings,
                                       const NSRange *capturedRanges,

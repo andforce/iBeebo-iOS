@@ -12,19 +12,14 @@
 #import "UITableView+FDTemplateLayoutCell.h"
 #import "MJRefresh.h"
 #import "WeiboHelper.h"
-#import "HotCards.h"
-#import "HotWeiboPage.h"
-#import "HotCardlistInfo.h"
-#import "HotMblog.h"
-#import "HotPageInfo.h"
-#import "HotWeibo.h"
 #import "AtMeAtMePage.h"
 #import "AtMeCardGroup.h"
 #import "AtMeTableViewCell.h"
+#import "AtMeMessage.h"
 
 @interface AtMeTableViewController ()<UITextViewDelegate>{
 
-    NSMutableArray<AtMeCardGroup *> * _mblogs;
+    NSMutableArray<AtMeMessage *> * _atMeMessages;
     WeiboHelper * _weiboHelper;
 
     AtMeAtMePage * _currentPage;
@@ -43,7 +38,7 @@
 
 
 
-    _mblogs = [NSMutableArray array];
+    _atMeMessages = [NSMutableArray array];
 
     _weiboHelper = [[WeiboHelper alloc] init];
 
@@ -53,8 +48,13 @@
         [_weiboHelper fetchAtMe:@"allWB" wiht:1 withCallback:^(AtMeAtMePage *weiboPage) {
             _currentPage = weiboPage;
 
-            [_mblogs removeAllObjects];
-            [_mblogs addObjectsFromArray:weiboPage.cardGroup];
+            [_atMeMessages removeAllObjects];
+
+            NSArray<AtMeCardGroup *> * cardGroups = weiboPage.cardGroup;
+            for (AtMeCardGroup * atMeCardGroup in cardGroups) {
+                [_atMeMessages addObject:[[AtMeMessage alloc] initWithAtMeCardFroup:atMeCardGroup]];
+
+            }
 
 
             [self.tableView reloadData];
@@ -71,8 +71,11 @@
         [_weiboHelper fetchAtMe:@"allWB" wiht:2 withCallback:^(AtMeAtMePage *weiboPage) {
             _currentPage = weiboPage;
 
-            [_mblogs removeAllObjects];
-            [_mblogs addObjectsFromArray:weiboPage.cardGroup];
+            NSArray<AtMeCardGroup *> * cardGroups = weiboPage.cardGroup;
+            for (AtMeCardGroup * atMeCardGroup in cardGroups) {
+                [_atMeMessages addObject:[[AtMeMessage alloc] initWithAtMeCardFroup:atMeCardGroup]];
+
+            }
 
 
             [self.tableView reloadData];
@@ -98,7 +101,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return _mblogs.count;
+    return _atMeMessages.count;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -107,7 +110,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    AtMeCardGroup * hotWeibo = _mblogs[(NSUInteger) indexPath.row];
+    AtMeMessage * hotWeibo = _atMeMessages[(NSUInteger) indexPath.row];
 
     AtMeTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"AtMeTableViewCell"];
     cell.fd_enforceFrameLayout = NO;

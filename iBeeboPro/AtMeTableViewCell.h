@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "UIWeiboTextView.h"
+#import "AtMeMessage.h"
 
 @class AtMeCardGroup;
 
@@ -23,6 +24,6 @@
 @property (weak, nonatomic) IBOutlet UIWeiboTextView *orgName;
 @property (weak, nonatomic) IBOutlet UIWeiboTextView *orgContent;
 
--(void) showAtMe:(AtMeCardGroup *)cardGroup;
+-(void) showAtMe:(AtMeMessage *)atMeMessage;
 
 @end

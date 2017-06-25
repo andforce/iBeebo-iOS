@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F34C0073EC0C4A9C15EF97C /* HotWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C156B568CCEC09C50C73 /* HotWeibo.m */; };
+		2F34C061A0F8FECBF4B622A5 /* AtMeMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C1D3F17B6E40E78AF9F8 /* AtMeMessage.m */; };
 		2F34C1559967EC1C2793FC0D /* MediaInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C03584114B421E7D65FE /* MediaInfo.m */; };
 		2F34C2492249AD8036CB7E15 /* WeiboPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C7C5FC6537BD962D317F /* WeiboPage.m */; };
 		2F34C290F133FDB5EC583FB1 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C204C7F7573486CEB9B4 /* User.m */; };
@@ -124,6 +125,7 @@
 		2F34C0932D667BA69A882F68 /* Visible.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Visible.m; sourceTree = "<group>"; };
 		2F34C0F91DD5AA6B7F15E3F8 /* PageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageInfo.h; sourceTree = "<group>"; };
 		2F34C156B568CCEC09C50C73 /* HotWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotWeibo.m; sourceTree = "<group>"; };
+		2F34C1D3F17B6E40E78AF9F8 /* AtMeMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtMeMessage.m; sourceTree = "<group>"; };
 		2F34C204C7F7573486CEB9B4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		2F34C344B0D1B76CE767E37D /* Cards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cards.m; sourceTree = "<group>"; };
 		2F34C406502D408173799166 /* Mblog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mblog.m; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		2F34CBC33A321C90E8E658F1 /* PicBig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicBig.h; sourceTree = "<group>"; };
 		2F34CBE8C0750A39D5E172AB /* Pics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pics.m; sourceTree = "<group>"; };
 		2F34CC7621672374693F0484 /* WeiboPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboPage.h; sourceTree = "<group>"; };
+		2F34CE603EA6EDAB194B396D /* AtMeMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtMeMessage.h; sourceTree = "<group>"; };
 		2F34CE6E20185895512C6DD1 /* PicBig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicBig.m; sourceTree = "<group>"; };
 		2F34CE8EA99E4D849356B327 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		2F34CEC531482F5389043F0D /* PicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicInfo.h; sourceTree = "<group>"; };
@@ -403,6 +406,8 @@
 				2F34C97FEF845E6C43EB3A26 /* RetweetedWeibo.h */,
 				2F34C453F4ECA81B10255FFB /* BaseWeibo.m */,
 				2F34C471833B34BF95362C1A /* BaseWeibo.h */,
+				2F34C1D3F17B6E40E78AF9F8 /* AtMeMessage.m */,
+				2F34CE603EA6EDAB194B396D /* AtMeMessage.h */,
 			);
 			name = Beans;
 			sourceTree = "<group>";
@@ -951,6 +956,7 @@
 				2F34C73E867192B0DAFC411A /* TimeLinePageInfo.m in Sources */,
 				2F34C0073EC0C4A9C15EF97C /* HotWeibo.m in Sources */,
 				3A6A41A61EF9850D00FD132F /* AtMeUser.m in Sources */,
+				2F34C061A0F8FECBF4B622A5 /* AtMeMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

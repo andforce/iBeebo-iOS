@@ -7,9 +7,6 @@
 //
 
 #import "AtMeTableViewCell.h"
-#import "AtMeCardGroup.h"
-#import "AtMeUser.h"
-#import "AtMeCard.h"
 #import <UIImageView+WebCache.h>
 
 @implementation AtMeTableViewCell
@@ -26,18 +23,18 @@
 }
 
 
-- (void)showAtMe:(AtMeCardGroup *)cardGroup {
-    [_atMeAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.user.profileImageUrl]];
-    _atMeName.text = cardGroup.user.screenName;
-    _atMeTime.text = cardGroup.createdAt;
-    _atMeSource.text = cardGroup.source;
+- (void)showAtMe:(AtMeMessage *)atMeMessage {
+    [_atMeAvatar sd_setImageWithURL:[NSURL URLWithString:atMeMessage.user.profileImageUrl]];
+    _atMeName.text = atMeMessage.user.screenName;
+    _atMeTime.text = atMeMessage.createdAt;
+    _atMeSource.text = atMeMessage.source;
 
-    _atMeContent.text = cardGroup.text;
+    _atMeContent.attributedText = atMeMessage.text;
 
 
-    [_orgAvatar sd_setImageWithURL:[NSURL URLWithString:cardGroup.card.pagePic]];
-    _orgName.text = cardGroup.card.pageTitle;
-    _orgContent.text = cardGroup.card.pageDesc;
+    [_orgAvatar sd_setImageWithURL:[NSURL URLWithString:atMeMessage.card.pagePic]];
+    _orgName.text = atMeMessage.card.pageTitle;
+    _orgContent.text = atMeMessage.card.pageDesc;
 
 }
 @end

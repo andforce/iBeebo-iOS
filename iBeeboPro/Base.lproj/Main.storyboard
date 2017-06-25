@@ -42,14 +42,27 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r66-hi-6nN" customClass="AGPlayerView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpn-gL-vXN">
+                                <rect key="frame" x="24" y="28" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="KEk-gd-pHO"/>
+                                    <constraint firstAttribute="width" constant="36" id="Y8K-T3-JJd"/>
+                                </constraints>
+                                <state key="normal" image="ic_clear_white_36pt"/>
+                                <connections>
+                                    <action selector="exitPlayVideo:" destination="fSY-wX-EB0" eventType="touchUpInside" id="Gpx-2b-F2x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="r66-hi-6nN" firstAttribute="centerX" secondItem="MbN-cm-wAw" secondAttribute="centerX" id="2bP-w4-rOO"/>
                             <constraint firstItem="r66-hi-6nN" firstAttribute="width" secondItem="MbN-cm-wAw" secondAttribute="width" id="KZL-ga-J5a"/>
                             <constraint firstItem="r66-hi-6nN" firstAttribute="centerY" secondItem="MbN-cm-wAw" secondAttribute="centerY" id="Lo6-ST-hD5"/>
+                            <constraint firstItem="fpn-gL-vXN" firstAttribute="leading" secondItem="MbN-cm-wAw" secondAttribute="leadingMargin" constant="8" id="Q0j-PG-ygS"/>
+                            <constraint firstItem="fpn-gL-vXN" firstAttribute="top" secondItem="akI-6J-kY2" secondAttribute="bottom" constant="8" id="V6Z-aK-c5b"/>
                             <constraint firstItem="r66-hi-6nN" firstAttribute="height" secondItem="MbN-cm-wAw" secondAttribute="height" id="Ywb-F0-TTb"/>
                         </constraints>
                     </view>
@@ -467,7 +480,6 @@
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vE7-io-IJa">
                                             <rect key="frame" x="8" y="110" width="584" height="328"/>
-                                            <state key="normal" title="Button"/>
                                             <connections>
                                                 <action selector="showPageInfo:" destination="ZRx-Ff-p1Q" eventType="touchUpInside" id="9Fc-HO-QKG"/>
                                             </connections>
@@ -7577,4 +7589,7 @@
             <point key="canvasLocation" x="4314" y="1599"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_clear_white_36pt" width="36" height="36"/>
+    </resources>
 </document>

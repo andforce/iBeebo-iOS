@@ -47,4 +47,12 @@
 }
 */
 
+- (IBAction)exitPlayVideo:(id)sender {
+    [_videoPlayer pause];
+    _videoPlayer = nil;
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+        
+    }];
+}
 @end

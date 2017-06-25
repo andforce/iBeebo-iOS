@@ -13,5 +13,6 @@
 @interface AGPlayerViewController : TransBundleUIViewController
 
 @property (weak, nonatomic) IBOutlet AGPlayerView *videoPlayer;
+- (IBAction)exitPlayVideo:(id)sender;
 
 @end

@@ -62,7 +62,6 @@
         } else {
             _timeLineReTweetContent.attributedText = status.retweetedWeibo.text;
             [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:retweetPageInfo.pagePic]];
-            _pageInfoContent.text = status.pageInfo.pageTitle;
             _pageDesc.text = status.pageInfo.pageDesc;
         }
     } else {
@@ -73,7 +72,6 @@
             PageInfo *pageInfo = status.pageInfo;
 
             [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:pageInfo.pagePic]];
-            _pageInfoContent.text = pageInfo.pageTitle;
             _pageDesc.text = pageInfo.pageDesc;
 
         }
@@ -98,7 +96,6 @@
         [self showImages:status.pics];
     } else{
         [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:pageInfo.pagePic.url]];
-        _pageInfoContent.text = pageInfo.pageTitle;
         _pageDesc.text = pageInfo.content1;
 
     }

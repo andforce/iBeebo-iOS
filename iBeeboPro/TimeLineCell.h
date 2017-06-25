@@ -31,7 +31,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *timeLineImage8;
 
 @property (weak, nonatomic) IBOutlet UIImageView *pageInfoImage;
-@property (weak, nonatomic) IBOutlet UILabel *pageInfoContent;
 @property (weak, nonatomic) IBOutlet UILabel *pageDesc;
 
 -(void) showStatus:(Weibo *)status;

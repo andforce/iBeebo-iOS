@@ -35,10 +35,11 @@
 
 -(void) showStatus:(Weibo *)status;
 
--(void) showHotWeibo:(HotWeibo *)status;
+-(void) showHotWeibo:(HotWeibo *)hotWeibo;
 
 @property (weak, nonatomic) IBOutlet UIWeiboTextView *timeLineReTweetContent;
 
+- (IBAction)showPageInfo:(id)sender;
 
 
 @end

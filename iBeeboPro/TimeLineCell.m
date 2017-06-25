@@ -16,9 +16,14 @@
 #import "HotUser.h"
 #import "HotWeibo.h"
 #import "HotPagePic.h"
+#import "TransBundle.h"
+#import "UIStoryboard+Forum.h"
+#import "TransBundleUIViewController.h"
+#import "AppDelegate.h"
+#import "AGPlayerViewController.h"
 
 @interface TimeLineCell()<UITextViewDelegate>{
-
+    HotWeibo *_hotWeibo;
 }
 
 @end
@@ -79,21 +84,23 @@
 }
 
 
-- (void)showHotWeibo:(HotWeibo *)status {
-    _timeLineTime.text = status.createdAt;
+- (void)showHotWeibo:(HotWeibo *)hotWeibo {
+    _hotWeibo = hotWeibo;
 
-    _timeLineContent.attributedText = status.text;
+    _timeLineTime.text = hotWeibo.createdAt;
+
+    _timeLineContent.attributedText = hotWeibo.text;
     _timeLineContent.delegate = self;
 
-    _timeLineName.text = status.user.screenName;
-    _timeLineSource.text = status.source;
-    [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:status.user.profileImageUrl]];
+    _timeLineName.text = hotWeibo.user.screenName;
+    _timeLineSource.text = hotWeibo.source;
+    [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:hotWeibo.user.profileImageUrl]];
 
 
 
-    HotPageInfo *pageInfo = status.pageInfo;
+    HotPageInfo *pageInfo = hotWeibo.pageInfo;
     if (pageInfo.pageUrl == nil) {
-        [self showImages:status.pics];
+        [self showImages:hotWeibo.pics];
     } else{
         [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:pageInfo.pagePic.url]];
         _pageDesc.text = pageInfo.content1;
@@ -135,4 +142,27 @@
 
 
 
+- (IBAction)showPageInfo:(id)sender {
+    //PageInfo *pageInfo = _hotWeibo.pageInfo.type;
+    NSLog(@"showPageInfo: %@", _hotWeibo.pageInfo.type);
+    if ([_hotWeibo.pageInfo.type isEqualToString:@"video"]){
+
+        AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+
+
+
+        UIStoryboard *storyboard = [UIStoryboard mainStoryboard];
+
+        AGPlayerViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"AGPlayerViewController"];
+
+        TransBundle *bundle = [[TransBundle alloc] init];
+        [bundle putObjectValue:_hotWeibo.pageInfo forKey:@"hotPageInfo"];
+        [controller transBundle:bundle forController:controller];
+
+
+        [app.window.rootViewController presentViewController:controller animated:YES completion:^{
+
+        }];
+    }
+}
 @end

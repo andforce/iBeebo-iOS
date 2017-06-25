@@ -116,6 +116,19 @@
 		3AC619411EFE6A80003C58CD /* AGPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6193D1EFE6A80003C58CD /* AGPlayerView.m */; };
 		3AC619421EFE6A80003C58CD /* AGPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC6193E1EFE6A80003C58CD /* AGPlayerView.xib */; };
 		3AC619451EFE6A89003C58CD /* H5_AVInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC619441EFE6A89003C58CD /* H5_AVInfo.m */; };
+		3AC6195A1F000E0C003C58CD /* AGPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC619591F000E0C003C58CD /* AGPlayerViewController.m */; };
+		3AC619671F000ECC003C58CD /* TranBundleUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6195D1F000ECC003C58CD /* TranBundleUITableViewController.m */; };
+		3AC619681F000ECC003C58CD /* TransBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6195F1F000ECC003C58CD /* TransBundle.m */; };
+		3AC619691F000ECC003C58CD /* TransBundleUINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC619621F000ECC003C58CD /* TransBundleUINavigationController.m */; };
+		3AC6196A1F000ECC003C58CD /* TransBundleUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC619641F000ECC003C58CD /* TransBundleUIViewController.m */; };
+		3AC619751F00113F003C58CD /* UIColor+MyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6196E1F00113F003C58CD /* UIColor+MyColor.m */; };
+		3AC619761F00113F003C58CD /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC619701F00113F003C58CD /* UIImage+Tint.m */; };
+		3AC619771F00113F003C58CD /* UIStoryboard+Forum.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC619721F00113F003C58CD /* UIStoryboard+Forum.m */; };
+		3AC619781F00113F003C58CD /* UIView+Corner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC619741F00113F003C58CD /* UIView+Corner.m */; };
+		3AC619831F00114E003C58CD /* NSData+UTF8.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6197A1F00114E003C58CD /* NSData+UTF8.m */; };
+		3AC619841F00114E003C58CD /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6197C1F00114E003C58CD /* NSString+Extensions.m */; };
+		3AC619851F00114E003C58CD /* NSString+time.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6197E1F00114E003C58CD /* NSString+time.m */; };
+		3AC619871F00114E003C58CD /* NSUserDefaults+Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC619821F00114E003C58CD /* NSUserDefaults+Setting.m */; };
 		542C4D0CDABDA17A79467044 /* libPods-iBeeboPro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C98854ABD08BD7E691A049D /* libPods-iBeeboPro.a */; };
 /* End PBXBuildFile section */
 
@@ -332,6 +345,33 @@
 		3AC6193E1EFE6A80003C58CD /* AGPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGPlayerView.xib; sourceTree = "<group>"; };
 		3AC619431EFE6A89003C58CD /* H5_AVInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = H5_AVInfo.h; sourceTree = "<group>"; };
 		3AC619441EFE6A89003C58CD /* H5_AVInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = H5_AVInfo.m; sourceTree = "<group>"; };
+		3AC619581F000E0C003C58CD /* AGPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPlayerViewController.h; sourceTree = "<group>"; };
+		3AC619591F000E0C003C58CD /* AGPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPlayerViewController.m; sourceTree = "<group>"; };
+		3AC6195C1F000ECC003C58CD /* TranBundleUITableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranBundleUITableViewController.h; sourceTree = "<group>"; };
+		3AC6195D1F000ECC003C58CD /* TranBundleUITableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranBundleUITableViewController.m; sourceTree = "<group>"; };
+		3AC6195E1F000ECC003C58CD /* TransBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransBundle.h; sourceTree = "<group>"; };
+		3AC6195F1F000ECC003C58CD /* TransBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransBundle.m; sourceTree = "<group>"; };
+		3AC619601F000ECC003C58CD /* TransBundleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransBundleDelegate.h; sourceTree = "<group>"; };
+		3AC619611F000ECC003C58CD /* TransBundleUINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransBundleUINavigationController.h; sourceTree = "<group>"; };
+		3AC619621F000ECC003C58CD /* TransBundleUINavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransBundleUINavigationController.m; sourceTree = "<group>"; };
+		3AC619631F000ECC003C58CD /* TransBundleUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransBundleUIViewController.h; sourceTree = "<group>"; };
+		3AC619641F000ECC003C58CD /* TransBundleUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransBundleUIViewController.m; sourceTree = "<group>"; };
+		3AC6196D1F00113F003C58CD /* UIColor+MyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MyColor.h"; sourceTree = "<group>"; };
+		3AC6196E1F00113F003C58CD /* UIColor+MyColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MyColor.m"; sourceTree = "<group>"; };
+		3AC6196F1F00113F003C58CD /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
+		3AC619701F00113F003C58CD /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
+		3AC619711F00113F003C58CD /* UIStoryboard+Forum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Forum.h"; sourceTree = "<group>"; };
+		3AC619721F00113F003C58CD /* UIStoryboard+Forum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Forum.m"; sourceTree = "<group>"; };
+		3AC619731F00113F003C58CD /* UIView+Corner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Corner.h"; sourceTree = "<group>"; };
+		3AC619741F00113F003C58CD /* UIView+Corner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Corner.m"; sourceTree = "<group>"; };
+		3AC619791F00114E003C58CD /* NSData+UTF8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+UTF8.h"; sourceTree = "<group>"; };
+		3AC6197A1F00114E003C58CD /* NSData+UTF8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+UTF8.m"; sourceTree = "<group>"; };
+		3AC6197B1F00114E003C58CD /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
+		3AC6197C1F00114E003C58CD /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
+		3AC6197D1F00114E003C58CD /* NSString+time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+time.h"; sourceTree = "<group>"; };
+		3AC6197E1F00114E003C58CD /* NSString+time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+time.m"; sourceTree = "<group>"; };
+		3AC619811F00114E003C58CD /* NSUserDefaults+Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Setting.h"; sourceTree = "<group>"; };
+		3AC619821F00114E003C58CD /* NSUserDefaults+Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Setting.m"; sourceTree = "<group>"; };
 		85848B6C50344BAD3D72FDC4 /* Pods-iBeeboPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBeeboPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-iBeeboPro/Pods-iBeeboPro.release.xcconfig"; sourceTree = "<group>"; };
 		B9B0A1B115C4DC0741FD0865 /* Pods-iBeeboPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBeeboPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iBeeboPro/Pods-iBeeboPro.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -605,6 +645,8 @@
 		3A85C2161D44DAD000B0FB8E = {
 			isa = PBXGroup;
 			children = (
+				3AC6196C1F00107F003C58CD /* Extension */,
+				3AC6195B1F000EB3003C58CD /* TransBundle */,
 				3AC619371EFE6A6A003C58CD /* AVPlayer */,
 				3A6E21F61D4C8EFF00ED92E6 /* Views */,
 				3A85C2211D44DAD000B0FB8E /* iBeeboPro */,
@@ -707,8 +749,49 @@
 				3AC6193C1EFE6A80003C58CD /* AGPlayerView.h */,
 				3AC6193D1EFE6A80003C58CD /* AGPlayerView.m */,
 				3AC6193E1EFE6A80003C58CD /* AGPlayerView.xib */,
+				3AC619581F000E0C003C58CD /* AGPlayerViewController.h */,
+				3AC619591F000E0C003C58CD /* AGPlayerViewController.m */,
 			);
 			name = AVPlayer;
+			sourceTree = "<group>";
+		};
+		3AC6195B1F000EB3003C58CD /* TransBundle */ = {
+			isa = PBXGroup;
+			children = (
+				3AC6195C1F000ECC003C58CD /* TranBundleUITableViewController.h */,
+				3AC6195D1F000ECC003C58CD /* TranBundleUITableViewController.m */,
+				3AC6195E1F000ECC003C58CD /* TransBundle.h */,
+				3AC6195F1F000ECC003C58CD /* TransBundle.m */,
+				3AC619601F000ECC003C58CD /* TransBundleDelegate.h */,
+				3AC619611F000ECC003C58CD /* TransBundleUINavigationController.h */,
+				3AC619621F000ECC003C58CD /* TransBundleUINavigationController.m */,
+				3AC619631F000ECC003C58CD /* TransBundleUIViewController.h */,
+				3AC619641F000ECC003C58CD /* TransBundleUIViewController.m */,
+			);
+			name = TransBundle;
+			sourceTree = "<group>";
+		};
+		3AC6196C1F00107F003C58CD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3AC619791F00114E003C58CD /* NSData+UTF8.h */,
+				3AC6197A1F00114E003C58CD /* NSData+UTF8.m */,
+				3AC6197B1F00114E003C58CD /* NSString+Extensions.h */,
+				3AC6197C1F00114E003C58CD /* NSString+Extensions.m */,
+				3AC6197D1F00114E003C58CD /* NSString+time.h */,
+				3AC6197E1F00114E003C58CD /* NSString+time.m */,
+				3AC619811F00114E003C58CD /* NSUserDefaults+Setting.h */,
+				3AC619821F00114E003C58CD /* NSUserDefaults+Setting.m */,
+				3AC6196D1F00113F003C58CD /* UIColor+MyColor.h */,
+				3AC6196E1F00113F003C58CD /* UIColor+MyColor.m */,
+				3AC6196F1F00113F003C58CD /* UIImage+Tint.h */,
+				3AC619701F00113F003C58CD /* UIImage+Tint.m */,
+				3AC619711F00113F003C58CD /* UIStoryboard+Forum.h */,
+				3AC619721F00113F003C58CD /* UIStoryboard+Forum.m */,
+				3AC619731F00113F003C58CD /* UIView+Corner.h */,
+				3AC619741F00113F003C58CD /* UIView+Corner.m */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		78AB65A05FBC3C6399B84737 /* Frameworks */ = {
@@ -859,13 +942,17 @@
 				3AC619411EFE6A80003C58CD /* AGPlayerView.m in Sources */,
 				3A6A41781EF9786300FD132F /* MsgWeiboMessagePage.m in Sources */,
 				3A85C2441D45083700B0FB8E /* UIStoryboard+Extensions.m in Sources */,
+				3AC619681F000ECC003C58CD /* TransBundle.m in Sources */,
 				3A6E22131D4D17FC00ED92E6 /* TimeLine6ImagesCell.m in Sources */,
 				3A6A418A1EF9836200FD132F /* MeUser.m in Sources */,
 				3A6A41771EF9786300FD132F /* MsgUser.m in Sources */,
 				3A6844DD1D4A60CD00655A17 /* NSString+Emoji.m in Sources */,
+				3AC619871F00114E003C58CD /* NSUserDefaults+Setting.m in Sources */,
+				3AC619841F00114E003C58CD /* NSString+Extensions.m in Sources */,
 				3A6A41A11EF9850D00FD132F /* AtMeCard.m in Sources */,
 				3A85C22A1D44DAD000B0FB8E /* ViewController.m in Sources */,
 				3A6A41C71EF985F200FD132F /* LkUser.m in Sources */,
+				3AC619691F000ECC003C58CD /* TransBundleUINavigationController.m in Sources */,
 				3A7EA6F41EF8298700C6C8CE /* HotActionlog.m in Sources */,
 				3A6A41C41EF985F200FD132F /* LkCardGroup.m in Sources */,
 				3A6559E41D47B9DD00776797 /* TimeLineCell.m in Sources */,
@@ -875,6 +962,7 @@
 				3A7EA6F61EF8298700C6C8CE /* HotCardlistInfo.m in Sources */,
 				3A6844CA1D4A59E200655A17 /* LXStatusTextLink.m in Sources */,
 				3A85C2301D44DAD000B0FB8E /* iBeeboPro.xcdatamodeld in Sources */,
+				3AC619781F00113F003C58CD /* UIView+Corner.m in Sources */,
 				3A6E22161D4D181100ED92E6 /* TimeLine7ImagesCell.m in Sources */,
 				3A6A41A31EF9850D00FD132F /* AtMeH5icon.m in Sources */,
 				3A7EA6A31EF81C3F00C6C8CE /* HotTableViewController.m in Sources */,
@@ -884,6 +972,7 @@
 				3A6A419F1EF9850D00FD132F /* AtMeActionlog.m in Sources */,
 				3A7EA6FB1EF8298700C6C8CE /* HotMblogButtons.m in Sources */,
 				3A6A418B1EF9836200FD132F /* MeWeiboProfilePage.m in Sources */,
+				3AC619761F00113F003C58CD /* UIImage+Tint.m in Sources */,
 				3A6A41B71EF9859300FD132F /* CmtUser.m in Sources */,
 				3A7EA6F81EF8298700C6C8CE /* HotGeo.m in Sources */,
 				3A6A41A01EF9850D00FD132F /* AtMeAtMePage.m in Sources */,
@@ -905,6 +994,7 @@
 				3A85C2411D44FD7500B0FB8E /* CookiesManager.m in Sources */,
 				3A7EA6FD1EF8298700C6C8CE /* HotPageInfo.m in Sources */,
 				3A78B4E41E9A45C00053DFA9 /* WeiboHelper.m in Sources */,
+				3AC6196A1F000ECC003C58CD /* TransBundleUIViewController.m in Sources */,
 				3A195A491EF68252006886BE /* UIView+Corner.m in Sources */,
 				3A6E220D1D4D17BE00ED92E6 /* TimeLine4ImagesCell.m in Sources */,
 				3A6A41C61EF985F200FD132F /* LkLikePage.m in Sources */,
@@ -919,10 +1009,14 @@
 				2F34C2492249AD8036CB7E15 /* WeiboPage.m in Sources */,
 				3A7EA6F91EF8298700C6C8CE /* HotLarge.m in Sources */,
 				2F34C9BD99E2AC9F17E96F7D /* PicInfo.m in Sources */,
+				3AC619671F000ECC003C58CD /* TranBundleUITableViewController.m in Sources */,
 				2F34C290F133FDB5EC583FB1 /* User.m in Sources */,
 				2F34C1559967EC1C2793FC0D /* MediaInfo.m in Sources */,
 				2F34C7DA79B40B6FE64F754B /* RetweetedStatus.m in Sources */,
+				3AC619751F00113F003C58CD /* UIColor+MyColor.m in Sources */,
 				2F34CD55968E4C06A67063C2 /* Pics.m in Sources */,
+				3AC619851F00114E003C58CD /* NSString+time.m in Sources */,
+				3AC6195A1F000E0C003C58CD /* AGPlayerViewController.m in Sources */,
 				2F34C4D8AC32286ACBEDB4FB /* Mblog.m in Sources */,
 				3A6A41CA1EFAC43E00FD132F /* AtMeTableViewController.m in Sources */,
 				3AC619401EFE6A80003C58CD /* RotationScreen.m in Sources */,
@@ -934,6 +1028,7 @@
 				3A7EA6F71EF8298700C6C8CE /* HotCards.m in Sources */,
 				3A7EA6FF1EF8298700C6C8CE /* HotParams.m in Sources */,
 				2F34CCF63A92515DEE7EB12A /* Author.m in Sources */,
+				3AC619771F00113F003C58CD /* UIStoryboard+Forum.m in Sources */,
 				2F34CE403B8EFCD1FD9097A0 /* PageInfo.m in Sources */,
 				2F34C576A4F745C978358EE4 /* Visible.m in Sources */,
 				3A7EA6F51EF8298700C6C8CE /* HotButtons.m in Sources */,
@@ -946,6 +1041,7 @@
 				3A7EA6FC1EF8298700C6C8CE /* HotMediaInfo.m in Sources */,
 				3A6A41A21EF9850D00FD132F /* AtMeCardGroup.m in Sources */,
 				2F34C5B96CF6C3F28FFEA9FC /* PicBig.m in Sources */,
+				3AC619831F00114E003C58CD /* NSData+UTF8.m in Sources */,
 				3AC6193F1EFE6A80003C58CD /* NSString+time.m in Sources */,
 				3A6A41A41EF9850D00FD132F /* AtMeTopicStruct.m in Sources */,
 				2F34CEC299A112CEC5EC6893 /* Weibo.m in Sources */,

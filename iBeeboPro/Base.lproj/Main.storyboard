@@ -28,6 +28,39 @@
             </objects>
             <point key="canvasLocation" x="-996" y="688"/>
         </scene>
+        <!--Player View Controller-->
+        <scene sceneID="9Na-6R-dG4">
+            <objects>
+                <viewController storyboardIdentifier="AGPlayerViewController" id="fSY-wX-EB0" customClass="AGPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="akI-6J-kY2"/>
+                        <viewControllerLayoutGuide type="bottom" id="QqW-1a-p3x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MbN-cm-wAw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r66-hi-6nN" customClass="AGPlayerView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r66-hi-6nN" firstAttribute="centerX" secondItem="MbN-cm-wAw" secondAttribute="centerX" id="2bP-w4-rOO"/>
+                            <constraint firstItem="r66-hi-6nN" firstAttribute="width" secondItem="MbN-cm-wAw" secondAttribute="width" id="KZL-ga-J5a"/>
+                            <constraint firstItem="r66-hi-6nN" firstAttribute="centerY" secondItem="MbN-cm-wAw" secondAttribute="centerY" id="Lo6-ST-hD5"/>
+                            <constraint firstItem="r66-hi-6nN" firstAttribute="height" secondItem="MbN-cm-wAw" secondAttribute="height" id="Ywb-F0-TTb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoPlayer" destination="r66-hi-6nN" id="KeG-bK-jKz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1JV-b5-svr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1884" y="-3405.2473763118442"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="8SI-X3-vIB">
             <objects>
@@ -432,6 +465,13 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vE7-io-IJa">
+                                            <rect key="frame" x="8" y="110" width="584" height="328"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="showPageInfo:" destination="ZRx-Ff-p1Q" eventType="touchUpInside" id="9Fc-HO-QKG"/>
+                                            </connections>
+                                        </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nn0-lk-scR">
                                             <rect key="frame" x="8" y="437.5" width="584" height="44"/>
                                             <subviews>
@@ -463,10 +503,13 @@
                                         <constraint firstItem="baP-YM-eHB" firstAttribute="leading" secondItem="45a-hK-xBF" secondAttribute="trailing" constant="8" id="5ml-hG-rqH"/>
                                         <constraint firstItem="kM7-rj-5Ru" firstAttribute="top" secondItem="v1Y-Zg-Kmu" secondAttribute="bottom" constant="8" id="Bkm-q5-4rh"/>
                                         <constraint firstItem="rF3-za-Qgk" firstAttribute="bottom" secondItem="45a-hK-xBF" secondAttribute="bottom" id="CHu-4K-wab"/>
+                                        <constraint firstItem="vE7-io-IJa" firstAttribute="height" secondItem="kM7-rj-5Ru" secondAttribute="height" id="Cee-vn-q2j"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="45a-hK-xBF" secondAttribute="leading" id="ElT-9e-DQF"/>
                                         <constraint firstItem="T2w-ps-ueF" firstAttribute="bottom" secondItem="45a-hK-xBF" secondAttribute="bottom" id="Fp5-XO-ojm"/>
+                                        <constraint firstItem="vE7-io-IJa" firstAttribute="width" secondItem="kM7-rj-5Ru" secondAttribute="width" id="GRQ-AS-nX4"/>
                                         <constraint firstItem="Nn0-lk-scR" firstAttribute="centerX" secondItem="kM7-rj-5Ru" secondAttribute="centerX" id="JCl-eJ-zFT"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="v1Y-Zg-Kmu" secondAttribute="trailing" id="OmE-iF-F7l"/>
+                                        <constraint firstItem="vE7-io-IJa" firstAttribute="centerX" secondItem="kM7-rj-5Ru" secondAttribute="centerX" id="POn-sZ-HDh"/>
                                         <constraint firstItem="baP-YM-eHB" firstAttribute="top" secondItem="45a-hK-xBF" secondAttribute="top" id="R1W-LT-VGd"/>
                                         <constraint firstItem="T2w-ps-ueF" firstAttribute="leading" secondItem="rF3-za-Qgk" secondAttribute="trailing" constant="8" id="YBZ-tM-zgV"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="kM7-rj-5Ru" secondAttribute="leading" id="abj-Fd-jG7"/>
@@ -480,6 +523,7 @@
                                         <constraint firstItem="Nn0-lk-scR" firstAttribute="leading" secondItem="kM7-rj-5Ru" secondAttribute="leading" id="l1K-nQ-13t"/>
                                         <constraint firstItem="Nn0-lk-scR" firstAttribute="trailing" secondItem="kM7-rj-5Ru" secondAttribute="trailing" id="oed-dK-S1n"/>
                                         <constraint firstItem="rF3-za-Qgk" firstAttribute="leading" secondItem="45a-hK-xBF" secondAttribute="trailing" constant="8" id="w9v-lb-PJR"/>
+                                        <constraint firstItem="vE7-io-IJa" firstAttribute="centerY" secondItem="kM7-rj-5Ru" secondAttribute="centerY" id="x46-dJ-YOE"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

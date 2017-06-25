@@ -16,7 +16,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="MainTimeLineTableViewController" id="UVl-VY-cZX" customClass="MainTimeLineTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="154" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ze7-4j-N09">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="10000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
@@ -1197,24 +1197,36 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="jvS-Cd-I9e" secondAttribute="height" multiplier="144:95" id="Lwm-WT-9c3"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ycs-8J-PXT">
                                                     <rect key="frame" x="304" y="34" width="288" height="190"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Ycs-8J-PXT" secondAttribute="height" multiplier="144:95" id="8nx-kC-REt"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iq6-Hu-Hiw">
                                                     <rect key="frame" x="8" y="232" width="289.5" height="191"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Iq6-Hu-Hiw" secondAttribute="height" multiplier="289:191" id="253-cX-T5s"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3F7-8i-fZW" userLabel="TimeLineImage2">
                                                     <rect key="frame" x="304" y="232" width="289.5" height="191"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="3F7-8i-fZW" secondAttribute="height" multiplier="289:191" id="ahp-EX-ru0"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.96079599859999998" green="0.96077799799999997" blue="0.96079027650000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1663,19 +1675,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="554.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Yk-UT-qE4" userLabel="avatar">
-                                            <rect key="frame" x="8" y="8" width="40" height="40"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="40" id="Cpm-0B-BcB"/>
-                                                <constraint firstAttribute="height" constant="40" id="wZ8-ch-IUU"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="20"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKs-A7-s1U" userLabel="name">
                                             <rect key="frame" x="56" y="8" width="38" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1695,54 +1694,51 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jbJ-5i-qtv" customClass="UIWeiboTextView">
-                                            <rect key="frame" x="8" y="56" width="584" height="33"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="33" id="vOR-Ws-s6O"/>
-                                            </constraints>
+                                            <rect key="frame" x="8" y="56" width="584" height="35.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsl-UH-95D" userLabel="Retweet">
-                                            <rect key="frame" x="0.0" y="97" width="600" height="447"/>
+                                            <rect key="frame" x="0.0" y="95" width="600" height="449"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="y7E-ap-V9Y" customClass="UIWeiboTextView">
-                                                    <rect key="frame" x="7" y="8" width="584" height="33.5"/>
+                                                    <rect key="frame" x="7" y="8" width="584" height="35.5"/>
                                                     <color key="textColor" red="0.29813727740000001" green="0.29813104870000001" blue="0.2981352806" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M9n-SM-1wi" userLabel="TimeLineImage0">
-                                                    <rect key="frame" x="8" y="49.5" width="191" height="191"/>
+                                                    <rect key="frame" x="8" y="51.5" width="191" height="191"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="M9n-SM-1wi" secondAttribute="height" multiplier="1:1" id="aX7-r0-P6c"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jot-u6-1YU" userLabel="TimeLineImage2">
-                                                    <rect key="frame" x="400" y="49.5" width="191" height="191"/>
+                                                    <rect key="frame" x="400" y="51.5" width="191" height="191"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Jot-u6-1YU" secondAttribute="height" multiplier="1:1" id="cKc-YB-vcK"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GdZ-Kb-rwz" userLabel="TimeLineImage3">
-                                                    <rect key="frame" x="8" y="248.5" width="191" height="191"/>
+                                                    <rect key="frame" x="8" y="250.5" width="191" height="191"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="GdZ-Kb-rwz" secondAttribute="height" multiplier="1:1" id="83f-dA-LRP"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OzB-V7-6T6" userLabel="TimeLineImage4">
-                                                    <rect key="frame" x="205" y="248.5" width="191" height="191"/>
+                                                    <rect key="frame" x="205" y="250.5" width="191" height="191"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="OzB-V7-6T6" secondAttribute="height" multiplier="1:1" id="A3P-6n-hdS"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Src-Ta-HhB" userLabel="TimeLineImage5">
-                                                    <rect key="frame" x="400" y="248.5" width="191" height="191"/>
+                                                    <rect key="frame" x="400" y="250.5" width="191" height="191"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Src-Ta-HhB" secondAttribute="height" multiplier="1:1" id="Ae3-ph-hKh"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l5W-bu-VkZ" userLabel="TimeLineImage1">
-                                                    <rect key="frame" x="205" y="49.5" width="191" height="191"/>
+                                                    <rect key="frame" x="205" y="51.5" width="191" height="191"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="l5W-bu-VkZ" secondAttribute="height" multiplier="1:1" id="Dfy-3O-GaE"/>
                                                     </constraints>
@@ -1782,23 +1778,36 @@
                                                 <constraint firstItem="OzB-V7-6T6" firstAttribute="height" secondItem="M9n-SM-1wi" secondAttribute="height" id="zfU-lG-cSg"/>
                                             </constraints>
                                         </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Yk-UT-qE4" userLabel="avatar">
+                                            <rect key="frame" x="8" y="8" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="2Yk-UT-qE4" secondAttribute="height" multiplier="1:1" id="2SY-kc-eoi"/>
+                                                <constraint firstAttribute="width" constant="40" id="5qa-WH-Aov"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="20"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="fsl-UH-95D" secondAttribute="trailing" constant="-8" id="00p-Cm-xhx"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="jbJ-5i-qtv" secondAttribute="trailing" id="17q-Vo-U4C"/>
-                                        <constraint firstAttribute="topMargin" secondItem="2Yk-UT-qE4" secondAttribute="top" id="8Vs-TG-j5T"/>
+                                        <constraint firstItem="AKs-A7-s1U" firstAttribute="leading" secondItem="2Yk-UT-qE4" secondAttribute="trailing" constant="8" id="Cax-Gw-vC1"/>
                                         <constraint firstItem="fsl-UH-95D" firstAttribute="leading" secondItem="q8W-Sr-ZNc" secondAttribute="leadingMargin" constant="-8" id="EwU-je-IDZ"/>
-                                        <constraint firstItem="zjA-Uu-hK9" firstAttribute="bottom" secondItem="2Yk-UT-qE4" secondAttribute="bottom" id="FhL-SK-Dpn"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="jbJ-5i-qtv" secondAttribute="leading" id="GtH-Mh-C9f"/>
-                                        <constraint firstItem="jbJ-5i-qtv" firstAttribute="top" secondItem="q8W-Sr-ZNc" secondAttribute="topMargin" constant="48" id="KRQ-Ba-q4a"/>
-                                        <constraint firstItem="Hxa-gP-AAI" firstAttribute="bottom" secondItem="2Yk-UT-qE4" secondAttribute="bottom" id="LWf-Xw-aOq"/>
-                                        <constraint firstItem="AKs-A7-s1U" firstAttribute="top" secondItem="2Yk-UT-qE4" secondAttribute="top" id="RFL-A1-zC8"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="2Yk-UT-qE4" secondAttribute="leading" id="ShW-UE-eys"/>
-                                        <constraint firstItem="Hxa-gP-AAI" firstAttribute="leading" secondItem="2Yk-UT-qE4" secondAttribute="trailing" constant="8" id="bkS-ZW-iFC"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="jbJ-5i-qtv" secondAttribute="leading" id="LX8-O4-JA3"/>
+                                        <constraint firstItem="zjA-Uu-hK9" firstAttribute="bottom" secondItem="Hxa-gP-AAI" secondAttribute="bottom" id="Qzx-0v-3Kv"/>
+                                        <constraint firstItem="Hxa-gP-AAI" firstAttribute="bottom" secondItem="2Yk-UT-qE4" secondAttribute="bottom" id="bTV-Ft-hQa"/>
+                                        <constraint firstItem="jbJ-5i-qtv" firstAttribute="top" secondItem="2Yk-UT-qE4" secondAttribute="bottom" constant="8" id="cyU-aY-YH0"/>
                                         <constraint firstItem="zjA-Uu-hK9" firstAttribute="leading" secondItem="Hxa-gP-AAI" secondAttribute="trailing" constant="8" id="fHf-WK-mYR"/>
-                                        <constraint firstItem="AKs-A7-s1U" firstAttribute="leading" secondItem="2Yk-UT-qE4" secondAttribute="trailing" constant="8" id="map-yY-u9x"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="2Yk-UT-qE4" secondAttribute="leading" id="nJ4-f1-UPS"/>
+                                        <constraint firstItem="fsl-UH-95D" firstAttribute="top" secondItem="jbJ-5i-qtv" secondAttribute="bottom" constant="3.5" id="o6G-T7-zcb"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="fsl-UH-95D" secondAttribute="bottom" constant="3" id="odF-jN-Ge4"/>
-                                        <constraint firstItem="fsl-UH-95D" firstAttribute="top" secondItem="jbJ-5i-qtv" secondAttribute="bottom" constant="8" id="veA-on-LKq"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="jbJ-5i-qtv" secondAttribute="trailing" id="pEx-Q3-ZBw"/>
+                                        <constraint firstItem="Hxa-gP-AAI" firstAttribute="leading" secondItem="2Yk-UT-qE4" secondAttribute="trailing" constant="8" id="qP5-Es-wsq"/>
+                                        <constraint firstItem="AKs-A7-s1U" firstAttribute="top" secondItem="2Yk-UT-qE4" secondAttribute="top" id="u9P-tF-Oa5"/>
+                                        <constraint firstAttribute="topMargin" secondItem="2Yk-UT-qE4" secondAttribute="top" id="yNh-4s-sRE"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -2855,7 +2864,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="首页" id="sxk-D9-yNU"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="1000"/>
+                    <size key="freeformSize" width="600" height="10000"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJ9-Gq-aDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,7 +12,6 @@
 #import "User.h"
 #import "RetweetedWeibo.h"
 #import "PageInfo.h"
-#import "HotMblog.h"
 #import "HotUser.h"
 #import "HotWeibo.h"
 #import "HotPagePic.h"
@@ -164,5 +163,9 @@
 
         }];
     }
+}
+
+- (IBAction)showTimeLineImages:(UIButton *)sender {
+    float number = 0;
 }
 @end

@@ -165,7 +165,23 @@
     }
 }
 
-- (IBAction)showTimeLineImages:(UIButton *)sender {
-    float number = 0;
+- (IBAction)show0Image:(id)sender {
 }
+- (IBAction)show1Image:(id)sender {
+}
+- (IBAction)show2Image:(id)sender {
+}
+- (IBAction)show3Image:(id)sender {
+}
+- (IBAction)show4Image:(id)sender {
+}
+- (IBAction)show5Image:(id)sender {
+}
+- (IBAction)show6Image:(id)sender {
+}
+- (IBAction)show7Image:(id)sender {
+}
+- (IBAction)show8Image:(id)sender {
+}
+
 @end

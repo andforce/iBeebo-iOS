@@ -41,6 +41,4 @@
 
 - (IBAction)showPageInfo:(id)sender;
 
-- (IBAction)showTimeLineImages:(UIButton *)sender;
-
 @end

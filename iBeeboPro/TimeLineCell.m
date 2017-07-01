@@ -66,8 +66,6 @@
     _timeLineSource.text = weibo.source;
     [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:weibo.user.profileImageUrl]];
 
-
-
     RetweetedWeibo * retweet = weibo.retweetedWeibo;
 
     BOOL isRetweet = retweet.text != nil;
@@ -98,7 +96,6 @@
     }
 }
 
-
 - (void)showHotWeibo:(HotWeibo *)hotWeibo {
     _hotWeibo = hotWeibo;
 
@@ -123,94 +120,46 @@
     }
 }
 
--(void)showImages:(NSArray<Pics *> *)pics{
-    if (_timeLineImage0 != nil) {
-        [_timeLineImage0 sd_setImageWithURL:[NSURL URLWithString:pics[0].url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+- (void) loadImage:(NSArray<Pics *> *)pics into:(UIImageView *) imageView withIndex:(int) index{
+    [imageView sd_setImageWithURL:[NSURL URLWithString:pics[(NSUInteger) index].url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
 
-            NYTExamplePhoto *photo1 = [[NYTExamplePhoto alloc] init];
+        NYTExamplePhoto *photo1 = [[NYTExamplePhoto alloc] init];
 
-            photo1.attributedCaptionTitle = [[NSAttributedString alloc] initWithString:@"1" attributes:nil];
-            photo1.image = image;
-            _array[0] = photo1;
-        }];
-    }
-    if (_timeLineImage1 != nil) {
-        [_timeLineImage1 sd_setImageWithURL:[NSURL URLWithString:pics[1].url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            NYTExamplePhoto *photo1 = [[NYTExamplePhoto alloc] init];
-
-            photo1.attributedCaptionTitle = [[NSAttributedString alloc] initWithString:@"2" attributes:nil];
-            photo1.image = image;
-            _array[1] = photo1;
-        }];
-    }
-    if (_timeLineImage2 != nil) {
-        [_timeLineImage2 sd_setImageWithURL:[NSURL URLWithString:pics[2].url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            NYTExamplePhoto *photo1 = [[NYTExamplePhoto alloc] init];
-
-            photo1.attributedCaptionTitle = [[NSAttributedString alloc] initWithString:@"3" attributes:nil];
-            photo1.image = image;
-            _array[2] = photo1;
-        }];
-    }
-    if (_timeLineImage3 != nil) {
-        [_timeLineImage3 sd_setImageWithURL:[NSURL URLWithString:pics[3].url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            NYTExamplePhoto *photo1 = [[NYTExamplePhoto alloc] init];
-
-            photo1.attributedCaptionTitle = [[NSAttributedString alloc] initWithString:@"4" attributes:nil];
-            photo1.image = image;
-            _array[3] = photo1;
-        }];
-    }
-    if (_timeLineImage4 != nil) {
-        [_timeLineImage4 sd_setImageWithURL:[NSURL URLWithString:pics[4].url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            NYTExamplePhoto *photo1 = [[NYTExamplePhoto alloc] init];
-
-            photo1.attributedCaptionTitle = [[NSAttributedString alloc] initWithString:@"5" attributes:nil];
-            photo1.image = image;
-            _array[4] = photo1;
-        }];
-    }
-    if (_timeLineImage5 != nil) {
-        [_timeLineImage5 sd_setImageWithURL:[NSURL URLWithString:pics[5].url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            NYTExamplePhoto *photo1 = [[NYTExamplePhoto alloc] init];
-
-            photo1.attributedCaptionTitle = [[NSAttributedString alloc] initWithString:@"6" attributes:nil];
-            photo1.image = image;
-            _array[5] = photo1;
-        }];
-    }
-    if (_timeLineImage6 != nil) {
-        [_timeLineImage6 sd_setImageWithURL:[NSURL URLWithString:pics[6].url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            NYTExamplePhoto *photo1 = [[NYTExamplePhoto alloc] init];
-
-            photo1.attributedCaptionTitle = [[NSAttributedString alloc] initWithString:@"7" attributes:nil];
-            photo1.image = image;
-            _array[6] = photo1;
-        }];
-    }
-    if (_timeLineImage7 != nil) {
-        [_timeLineImage7 sd_setImageWithURL:[NSURL URLWithString:pics[7].url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            NYTExamplePhoto *photo1 = [[NYTExamplePhoto alloc] init];
-
-            photo1.attributedCaptionTitle = [[NSAttributedString alloc] initWithString:@"8" attributes:nil];
-            photo1.image = image;
-            _array[7] = photo1;
-        }];
-    }
-    if (_timeLineImage8 != nil) {
-        [_timeLineImage8 sd_setImageWithURL:[NSURL URLWithString:pics[8].url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            NYTExamplePhoto *photo1 = [[NYTExamplePhoto alloc] init];
-
-            photo1.attributedCaptionTitle = [[NSAttributedString alloc] initWithString:@"9" attributes:nil];
-            photo1.image = image;
-            _array[8] = photo1;
-        }];
-    }
+        photo1.attributedCaptionTitle = [[NSAttributedString alloc] initWithString:@"1" attributes:nil];
+        photo1.image = image;
+        _array[(NSUInteger) index] = photo1;
+    }];
 }
 
-
-
-
+-(void)showImages:(NSArray<Pics *> *)pics{
+    if (_timeLineImage0 != nil) {
+        [self loadImage:pics into:_timeLineImage0 withIndex:0];
+    }
+    if (_timeLineImage1 != nil) {
+        [self loadImage:pics into:_timeLineImage1 withIndex:1];
+    }
+    if (_timeLineImage2 != nil) {
+        [self loadImage:pics into:_timeLineImage2 withIndex:2];
+    }
+    if (_timeLineImage3 != nil) {
+        [self loadImage:pics into:_timeLineImage3 withIndex:3];
+    }
+    if (_timeLineImage4 != nil) {
+        [self loadImage:pics into:_timeLineImage4 withIndex:4];
+    }
+    if (_timeLineImage5 != nil) {
+        [self loadImage:pics into:_timeLineImage5 withIndex:5];
+    }
+    if (_timeLineImage6 != nil) {
+        [self loadImage:pics into:_timeLineImage6 withIndex:6];
+    }
+    if (_timeLineImage7 != nil) {
+        [self loadImage:pics into:_timeLineImage7 withIndex:7];
+    }
+    if (_timeLineImage8 != nil) {
+        [self loadImage:pics into:_timeLineImage8 withIndex:8];
+    }
+}
 
 - (IBAction)showPageInfo:(id)sender {
     //PageInfo *pageInfo = _hotWeibo.pageInfo.type;

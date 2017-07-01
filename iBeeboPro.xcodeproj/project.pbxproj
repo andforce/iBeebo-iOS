@@ -21,6 +21,7 @@
 		2F34C73E867192B0DAFC411A /* TimeLinePageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C63D81F0CE53B4BF29D3 /* TimeLinePageInfo.m */; };
 		2F34C7DA79B40B6FE64F754B /* RetweetedStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C467CDC45B2E49C1E7BA /* RetweetedStatus.m */; };
 		2F34C8B26C55EC8E7CE8C547 /* TimeLineButton+Index.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C8071B1B962E6509CCCA /* TimeLineButton+Index.m */; };
+		2F34C8CB95520BD38E61A9FD /* NYTExamplePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34CF9CF6B6379F938E8DCE /* NYTExamplePhoto.m */; };
 		2F34C9BD99E2AC9F17E96F7D /* PicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C8008762317F328246A3 /* PicInfo.m */; };
 		2F34CCCEBDC718751E614E2C /* Large.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34CF27C8F6AED7147722FE /* Large.m */; };
 		2F34CCE7F114F28FF04AA297 /* RetweetedWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C8234AD5F99F30A819DD /* RetweetedWeibo.m */; };
@@ -142,6 +143,7 @@
 		2F34C156B568CCEC09C50C73 /* HotWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotWeibo.m; sourceTree = "<group>"; };
 		2F34C1D3F17B6E40E78AF9F8 /* AtMeMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtMeMessage.m; sourceTree = "<group>"; };
 		2F34C204C7F7573486CEB9B4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		2F34C301750500ACA37B40D6 /* NYTExamplePhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTExamplePhoto.h; sourceTree = "<group>"; };
 		2F34C344B0D1B76CE767E37D /* Cards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cards.m; sourceTree = "<group>"; };
 		2F34C406502D408173799166 /* Mblog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mblog.m; sourceTree = "<group>"; };
 		2F34C453F4ECA81B10255FFB /* BaseWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWeibo.m; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		2F34CEC531482F5389043F0D /* PicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicInfo.h; sourceTree = "<group>"; };
 		2F34CEE6B799F29F431FD199 /* Weibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weibo.m; sourceTree = "<group>"; };
 		2F34CF27C8F6AED7147722FE /* Large.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Large.m; sourceTree = "<group>"; };
+		2F34CF9CF6B6379F938E8DCE /* NYTExamplePhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTExamplePhoto.m; sourceTree = "<group>"; };
 		2F34CFEFE135DC3D82ACCA05 /* Visible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Visible.h; sourceTree = "<group>"; };
 		2F34CFFC2E9A81EDA8CB09BC /* Mblog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mblog.h; sourceTree = "<group>"; };
 		3A195A471EF68252006886BE /* UIView+Corner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Corner.h"; sourceTree = "<group>"; };
@@ -433,6 +436,15 @@
 			name = HotWeibo;
 			sourceTree = "<group>";
 		};
+		2F34C721456BAF029EE02989 /* PhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				2F34CF9CF6B6379F938E8DCE /* NYTExamplePhoto.m */,
+				2F34C301750500ACA37B40D6 /* NYTExamplePhoto.h */,
+			);
+			path = PhotoView;
+			sourceTree = "<group>";
+		};
 		3A6410101D465EF1000651E6 /* Beans */ = {
 			isa = PBXGroup;
 			children = (
@@ -663,6 +675,7 @@
 				3A85C2201D44DAD000B0FB8E /* Products */,
 				B0701C363D0DB6C50E46DE3E /* Pods */,
 				78AB65A05FBC3C6399B84737 /* Frameworks */,
+				2F34C721456BAF029EE02989 /* PhotoView */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1065,6 +1078,7 @@
 				2F34C061A0F8FECBF4B622A5 /* AtMeMessage.m in Sources */,
 				2F34C1A02CAED97E7C3D5D15 /* TimeLineButton.m in Sources */,
 				2F34C8B26C55EC8E7CE8C547 /* TimeLineButton+Index.m in Sources */,
+				2F34C8CB95520BD38E61A9FD /* NYTExamplePhoto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

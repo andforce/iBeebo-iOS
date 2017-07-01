@@ -33,7 +33,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *pageInfoImage;
 @property (weak, nonatomic) IBOutlet UILabel *pageDesc;
 
--(void) showStatus:(Weibo *)status;
+-(void) showStatus:(Weibo *)weibo;
 
 -(void) showHotWeibo:(HotWeibo *)hotWeibo;
 

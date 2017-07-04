@@ -23,6 +23,7 @@
 #import <NYTPhotosViewController.h>
 #import <NYTPhotoViewer/NYTPhoto.h>
 #import "NYTExamplePhoto.h"
+#import "TimeLinePics.h"
 
 @interface TimeLineCell()<UITextViewDelegate>{
     HotWeibo *_hotWeibo;
@@ -31,6 +32,7 @@
 
     NSMutableArray *_array;
 }
+@property (weak, nonatomic) IBOutlet TimeLinePics *timeLinePicView;
 
 @end
 
@@ -85,7 +87,11 @@
     } else {
         PageInfo *pageInfo = weibo.pageInfo;
         if (pageInfo.pageUrl == nil) {
-            [self showImages:weibo.pics];
+            if (weibo.picIds.count != 9){
+                [self showImages:weibo.pics];
+            } else{
+                [self.timeLinePicView showWithPicCount:9];
+            }
         } else{
             PageInfo *pageInfo = weibo.pageInfo;
 
@@ -112,7 +118,14 @@
 
     HotPageInfo *pageInfo = hotWeibo.pageInfo;
     if (pageInfo.pageUrl == nil) {
-        [self showImages:hotWeibo.pics];
+        
+        
+        if (hotWeibo.pics.count != 9){
+            [self showImages:hotWeibo.pics];
+        } else{
+            [self.timeLinePicView showWithPicCount:8];
+        }
+        
     } else{
         [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:pageInfo.pagePic.url]];
         _pageDesc.text = pageInfo.content1;

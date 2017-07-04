@@ -32,6 +32,8 @@
 		2F34CF4254CCF9E02F82529A /* CardGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34CB0C38D63BB5885D6581 /* CardGroup.m */; };
 		2F34CF8F5676D83E49F5BE07 /* Cards.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C344B0D1B76CE767E37D /* Cards.m */; };
 		3A195A491EF68252006886BE /* UIView+Corner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A195A481EF68252006886BE /* UIView+Corner.m */; };
+		3A2ECEA01F0BAA5400BC54EF /* TimeLinePics.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2ECE9F1F0BAA5400BC54EF /* TimeLinePics.m */; };
+		3A2ECEA21F0BAA6E00BC54EF /* TimeLinePics.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2ECEA11F0BAA6E00BC54EF /* TimeLinePics.xib */; };
 		3A6410761D466C51000651E6 /* MainTimeLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */; };
 		3A6559E41D47B9DD00776797 /* TimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6559E31D47B9DD00776797 /* TimeLineCell.m */; };
 		3A6844C91D4A59E200655A17 /* LXStatusTextPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6844C61D4A59E200655A17 /* LXStatusTextPart.m */; };
@@ -187,6 +189,9 @@
 		2F34CFFC2E9A81EDA8CB09BC /* Mblog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mblog.h; sourceTree = "<group>"; };
 		3A195A471EF68252006886BE /* UIView+Corner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Corner.h"; sourceTree = "<group>"; };
 		3A195A481EF68252006886BE /* UIView+Corner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Corner.m"; sourceTree = "<group>"; };
+		3A2ECE9E1F0BAA5400BC54EF /* TimeLinePics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLinePics.h; sourceTree = "<group>"; };
+		3A2ECE9F1F0BAA5400BC54EF /* TimeLinePics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLinePics.m; sourceTree = "<group>"; };
+		3A2ECEA11F0BAA6E00BC54EF /* TimeLinePics.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeLinePics.xib; sourceTree = "<group>"; };
 		3A6410741D466C51000651E6 /* MainTimeLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTimeLineTableViewController.h; sourceTree = "<group>"; };
 		3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTimeLineTableViewController.m; sourceTree = "<group>"; };
 		3A6559E21D47B9DD00776797 /* TimeLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineCell.h; sourceTree = "<group>"; };
@@ -651,6 +656,9 @@
 				2F34CDAC2A3D0643F9A32EB9 /* TimeLineButton.h */,
 				2F34C8071B1B962E6509CCCA /* TimeLineButton+Index.m */,
 				2F34C99AE4F413370C104AAE /* TimeLineButton+Index.h */,
+				3A2ECE9E1F0BAA5400BC54EF /* TimeLinePics.h */,
+				3A2ECE9F1F0BAA5400BC54EF /* TimeLinePics.m */,
+				3A2ECEA11F0BAA6E00BC54EF /* TimeLinePics.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -903,6 +911,7 @@
 				3AC619421EFE6A80003C58CD /* AGPlayerView.xib in Resources */,
 				3A85C2321D44DAD000B0FB8E /* Assets.xcassets in Resources */,
 				3A85C22D1D44DAD000B0FB8E /* Main.storyboard in Resources */,
+				3A2ECEA21F0BAA6E00BC54EF /* TimeLinePics.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1020,6 +1029,7 @@
 				3AC6196A1F000ECC003C58CD /* TransBundleUIViewController.m in Sources */,
 				3A195A491EF68252006886BE /* UIView+Corner.m in Sources */,
 				3A6E220D1D4D17BE00ED92E6 /* TimeLine4ImagesCell.m in Sources */,
+				3A2ECEA01F0BAA5400BC54EF /* TimeLinePics.m in Sources */,
 				3A6A41C61EF985F200FD132F /* LkLikePage.m in Sources */,
 				3A85C24D1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.m in Sources */,
 				3A6E221C1D4D184700ED92E6 /* TimeLine9ImagesCell.m in Sources */,

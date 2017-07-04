@@ -87,11 +87,7 @@
     } else {
         PageInfo *pageInfo = weibo.pageInfo;
         if (pageInfo.pageUrl == nil) {
-            if (weibo.picIds.count != 9){
-                [self showImages:weibo.pics];
-            } else{
-                [self.timeLinePicView showWithPicCount:9];
-            }
+            [self.timeLinePicView showPictures:weibo.pics];
         } else{
             PageInfo *pageInfo = weibo.pageInfo;
 
@@ -118,13 +114,8 @@
 
     HotPageInfo *pageInfo = hotWeibo.pageInfo;
     if (pageInfo.pageUrl == nil) {
-        
-        
-        if (hotWeibo.pics.count != 9){
-            [self showImages:hotWeibo.pics];
-        } else{
-            [self.timeLinePicView showWithPicCount:8];
-        }
+
+        [self.timeLinePicView showPictures:hotWeibo.pics];
         
     } else{
         [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:pageInfo.pagePic.url]];

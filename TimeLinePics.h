@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Pics;
 
 @interface TimeLinePics : UIView
 
-- (void) showWithPicCount:(int)count;
+- (void) showPictures:(NSArray<Pics *> *)pics;
 
 @end

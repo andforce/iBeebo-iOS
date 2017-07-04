@@ -77,15 +77,6 @@
 		3A6A41CD1EFAC9E000FD132F /* AtMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41CC1EFAC9E000FD132F /* AtMeTableViewCell.m */; };
 		3A6E21F91D4C8F9C00ED92E6 /* UIWeiboTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E21F81D4C8F9C00ED92E6 /* UIWeiboTextView.m */; };
 		3A6E21FC1D4C972C00ED92E6 /* WeiboJsonCleanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E21FB1D4C972C00ED92E6 /* WeiboJsonCleanner.m */; };
-		3A6E21FF1D4CE79700ED92E6 /* TimeLine1ImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E21FE1D4CE79700ED92E6 /* TimeLine1ImagesCell.m */; };
-		3A6E22021D4CFE4000ED92E6 /* TimeLine2ImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E22011D4CFE4000ED92E6 /* TimeLine2ImagesCell.m */; };
-		3A6E220A1D4D116E00ED92E6 /* TimeLine3ImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E22091D4D116E00ED92E6 /* TimeLine3ImagesCell.m */; };
-		3A6E220D1D4D17BE00ED92E6 /* TimeLine4ImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E220C1D4D17BE00ED92E6 /* TimeLine4ImagesCell.m */; };
-		3A6E22101D4D17D800ED92E6 /* TimeLine5ImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E220F1D4D17D800ED92E6 /* TimeLine5ImagesCell.m */; };
-		3A6E22131D4D17FC00ED92E6 /* TimeLine6ImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E22121D4D17FC00ED92E6 /* TimeLine6ImagesCell.m */; };
-		3A6E22161D4D181100ED92E6 /* TimeLine7ImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E22151D4D181100ED92E6 /* TimeLine7ImagesCell.m */; };
-		3A6E22191D4D182400ED92E6 /* TimeLine8ImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E22181D4D182400ED92E6 /* TimeLine8ImagesCell.m */; };
-		3A6E221C1D4D184700ED92E6 /* TimeLine9ImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E221B1D4D184700ED92E6 /* TimeLine9ImagesCell.m */; };
 		3A78B4E41E9A45C00053DFA9 /* WeiboHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A78B4E31E9A45C00053DFA9 /* WeiboHelper.m */; };
 		3A7EA6A31EF81C3F00C6C8CE /* HotTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6A21EF81C3F00C6C8CE /* HotTableViewController.m */; };
 		3A7EA6F41EF8298700C6C8CE /* HotActionlog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6D51EF8298600C6C8CE /* HotActionlog.m */; };
@@ -275,24 +266,6 @@
 		3A6E21F81D4C8F9C00ED92E6 /* UIWeiboTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWeiboTextView.m; sourceTree = "<group>"; };
 		3A6E21FA1D4C972C00ED92E6 /* WeiboJsonCleanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboJsonCleanner.h; sourceTree = "<group>"; };
 		3A6E21FB1D4C972C00ED92E6 /* WeiboJsonCleanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboJsonCleanner.m; sourceTree = "<group>"; };
-		3A6E21FD1D4CE79700ED92E6 /* TimeLine1ImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLine1ImagesCell.h; sourceTree = "<group>"; };
-		3A6E21FE1D4CE79700ED92E6 /* TimeLine1ImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLine1ImagesCell.m; sourceTree = "<group>"; };
-		3A6E22001D4CFE4000ED92E6 /* TimeLine2ImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLine2ImagesCell.h; sourceTree = "<group>"; };
-		3A6E22011D4CFE4000ED92E6 /* TimeLine2ImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLine2ImagesCell.m; sourceTree = "<group>"; };
-		3A6E22081D4D116E00ED92E6 /* TimeLine3ImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLine3ImagesCell.h; sourceTree = "<group>"; };
-		3A6E22091D4D116E00ED92E6 /* TimeLine3ImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLine3ImagesCell.m; sourceTree = "<group>"; };
-		3A6E220B1D4D17BE00ED92E6 /* TimeLine4ImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLine4ImagesCell.h; sourceTree = "<group>"; };
-		3A6E220C1D4D17BE00ED92E6 /* TimeLine4ImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLine4ImagesCell.m; sourceTree = "<group>"; };
-		3A6E220E1D4D17D800ED92E6 /* TimeLine5ImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLine5ImagesCell.h; sourceTree = "<group>"; };
-		3A6E220F1D4D17D800ED92E6 /* TimeLine5ImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLine5ImagesCell.m; sourceTree = "<group>"; };
-		3A6E22111D4D17FC00ED92E6 /* TimeLine6ImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLine6ImagesCell.h; sourceTree = "<group>"; };
-		3A6E22121D4D17FC00ED92E6 /* TimeLine6ImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLine6ImagesCell.m; sourceTree = "<group>"; };
-		3A6E22141D4D181100ED92E6 /* TimeLine7ImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLine7ImagesCell.h; sourceTree = "<group>"; };
-		3A6E22151D4D181100ED92E6 /* TimeLine7ImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLine7ImagesCell.m; sourceTree = "<group>"; };
-		3A6E22171D4D182400ED92E6 /* TimeLine8ImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLine8ImagesCell.h; sourceTree = "<group>"; };
-		3A6E22181D4D182400ED92E6 /* TimeLine8ImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLine8ImagesCell.m; sourceTree = "<group>"; };
-		3A6E221A1D4D184700ED92E6 /* TimeLine9ImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLine9ImagesCell.h; sourceTree = "<group>"; };
-		3A6E221B1D4D184700ED92E6 /* TimeLine9ImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLine9ImagesCell.m; sourceTree = "<group>"; };
 		3A78B4E21E9A45C00053DFA9 /* WeiboHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboHelper.h; sourceTree = "<group>"; };
 		3A78B4E31E9A45C00053DFA9 /* WeiboHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboHelper.m; sourceTree = "<group>"; };
 		3A7EA6A11EF81C3F00C6C8CE /* HotTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotTableViewController.h; sourceTree = "<group>"; };
@@ -517,24 +490,6 @@
 			children = (
 				3A6559E21D47B9DD00776797 /* TimeLineCell.h */,
 				3A6559E31D47B9DD00776797 /* TimeLineCell.m */,
-				3A6E21FD1D4CE79700ED92E6 /* TimeLine1ImagesCell.h */,
-				3A6E21FE1D4CE79700ED92E6 /* TimeLine1ImagesCell.m */,
-				3A6E22001D4CFE4000ED92E6 /* TimeLine2ImagesCell.h */,
-				3A6E22011D4CFE4000ED92E6 /* TimeLine2ImagesCell.m */,
-				3A6E22081D4D116E00ED92E6 /* TimeLine3ImagesCell.h */,
-				3A6E22091D4D116E00ED92E6 /* TimeLine3ImagesCell.m */,
-				3A6E220B1D4D17BE00ED92E6 /* TimeLine4ImagesCell.h */,
-				3A6E220C1D4D17BE00ED92E6 /* TimeLine4ImagesCell.m */,
-				3A6E220E1D4D17D800ED92E6 /* TimeLine5ImagesCell.h */,
-				3A6E220F1D4D17D800ED92E6 /* TimeLine5ImagesCell.m */,
-				3A6E22111D4D17FC00ED92E6 /* TimeLine6ImagesCell.h */,
-				3A6E22121D4D17FC00ED92E6 /* TimeLine6ImagesCell.m */,
-				3A6E22141D4D181100ED92E6 /* TimeLine7ImagesCell.h */,
-				3A6E22151D4D181100ED92E6 /* TimeLine7ImagesCell.m */,
-				3A6E22171D4D182400ED92E6 /* TimeLine8ImagesCell.h */,
-				3A6E22181D4D182400ED92E6 /* TimeLine8ImagesCell.m */,
-				3A6E221A1D4D184700ED92E6 /* TimeLine9ImagesCell.h */,
-				3A6E221B1D4D184700ED92E6 /* TimeLine9ImagesCell.m */,
 				2F34C63D81F0CE53B4BF29D3 /* TimeLinePageInfo.m */,
 				2F34C6D14F0CC27A70F1E79D /* TimeLinePageInfo.h */,
 				3A6A41CB1EFAC9E000FD132F /* AtMeTableViewCell.h */,
@@ -975,7 +930,6 @@
 				3A6A41781EF9786300FD132F /* MsgWeiboMessagePage.m in Sources */,
 				3A85C2441D45083700B0FB8E /* UIStoryboard+Extensions.m in Sources */,
 				3AC619681F000ECC003C58CD /* TransBundle.m in Sources */,
-				3A6E22131D4D17FC00ED92E6 /* TimeLine6ImagesCell.m in Sources */,
 				3A6A418A1EF9836200FD132F /* MeUser.m in Sources */,
 				3A6A41771EF9786300FD132F /* MsgUser.m in Sources */,
 				3A6844DD1D4A60CD00655A17 /* NSString+Emoji.m in Sources */,
@@ -988,14 +942,11 @@
 				3A7EA6F41EF8298700C6C8CE /* HotActionlog.m in Sources */,
 				3A6A41C41EF985F200FD132F /* LkCardGroup.m in Sources */,
 				3A6559E41D47B9DD00776797 /* TimeLineCell.m in Sources */,
-				3A6E220A1D4D116E00ED92E6 /* TimeLine3ImagesCell.m in Sources */,
 				3A6844E31D4A646C00655A17 /* NSNotificationCenter+LXAdditions.m in Sources */,
-				3A6E22191D4D182400ED92E6 /* TimeLine8ImagesCell.m in Sources */,
 				3A7EA6F61EF8298700C6C8CE /* HotCardlistInfo.m in Sources */,
 				3A6844CA1D4A59E200655A17 /* LXStatusTextLink.m in Sources */,
 				3A85C2301D44DAD000B0FB8E /* iBeeboPro.xcdatamodeld in Sources */,
 				3AC619781F00113F003C58CD /* UIView+Corner.m in Sources */,
-				3A6E22161D4D181100ED92E6 /* TimeLine7ImagesCell.m in Sources */,
 				3A6A41A31EF9850D00FD132F /* AtMeH5icon.m in Sources */,
 				3A7EA6A31EF81C3F00C6C8CE /* HotTableViewController.m in Sources */,
 				3A6A41861EF9836200FD132F /* MeApps.m in Sources */,
@@ -1014,28 +965,23 @@
 				3A7EA6FA1EF8298700C6C8CE /* HotMblog.m in Sources */,
 				3A6A41B51EF9859300FD132F /* CmtCommentPage.m in Sources */,
 				3A6A41871EF9836200FD132F /* MeBadge.m in Sources */,
-				3A6E22101D4D17D800ED92E6 /* TimeLine5ImagesCell.m in Sources */,
 				3A6844DC1D4A60CD00655A17 /* Emotion.m in Sources */,
 				3A6E21F91D4C8F9C00ED92E6 /* UIWeiboTextView.m in Sources */,
 				3A6844C91D4A59E200655A17 /* LXStatusTextPart.m in Sources */,
 				3A85C2481D4511C700B0FB8E /* WeiboMainTabBarController.m in Sources */,
 				3AC619451EFE6A89003C58CD /* H5_AVInfo.m in Sources */,
 				3A7EA7001EF8298700C6C8CE /* HotPics.m in Sources */,
-				3A6E21FF1D4CE79700ED92E6 /* TimeLine1ImagesCell.m in Sources */,
 				3A6A41C51EF985F200FD132F /* LkH5icon.m in Sources */,
 				3A85C2411D44FD7500B0FB8E /* CookiesManager.m in Sources */,
 				3A7EA6FD1EF8298700C6C8CE /* HotPageInfo.m in Sources */,
 				3A78B4E41E9A45C00053DFA9 /* WeiboHelper.m in Sources */,
 				3AC6196A1F000ECC003C58CD /* TransBundleUIViewController.m in Sources */,
 				3A195A491EF68252006886BE /* UIView+Corner.m in Sources */,
-				3A6E220D1D4D17BE00ED92E6 /* TimeLine4ImagesCell.m in Sources */,
 				3A2ECEA01F0BAA5400BC54EF /* TimeLinePics.m in Sources */,
 				3A6A41C61EF985F200FD132F /* LkLikePage.m in Sources */,
 				3A85C24D1D45211600B0FB8E /* AFHTTPSessionManager+SimpleAction.m in Sources */,
-				3A6E221C1D4D184700ED92E6 /* TimeLine9ImagesCell.m in Sources */,
 				3A6E21FC1D4C972C00ED92E6 /* WeiboJsonCleanner.m in Sources */,
 				3A6A41C31EF985F200FD132F /* LkCard.m in Sources */,
-				3A6E22021D4CFE4000ED92E6 /* TimeLine2ImagesCell.m in Sources */,
 				3A6844D71D4A608000655A17 /* EmotionsManager.m in Sources */,
 				3A6A41891EF9836200FD132F /* MeH5icon.m in Sources */,
 				3A6A41761EF9786300FD132F /* MsgCardGroup.m in Sources */,

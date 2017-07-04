@@ -132,7 +132,7 @@
     HotPageInfo *pageInfo = hotWeibo.pageInfo;
     if (pageInfo.pageUrl == nil) {
         int count = (int)hotWeibo.pics.count;
-        Identifier = count == 0 ? @"TimeLine0ImagesCell" : @"TimeLineImagesCell";
+        Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCell", count];
     } else{
         Identifier = @"TimeLinePageInfo";
     }

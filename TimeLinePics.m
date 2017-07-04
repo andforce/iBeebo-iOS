@@ -133,6 +133,20 @@
     }
     
     if (mainView) {
+
+        // 先清空
+        mainViewSubViews = mainView.subviews;
+//        
+//        for (UIImageView *uiv in mainViewSubViews) {
+//            
+//            [uiv removeFromSuperview];
+//        }
+        
+        CGRect mainFrame = mainView.frame;
+        CGRect rootFrame = self.frame;
+        mainView.frame = CGRectMake(mainFrame.origin.x, mainFrame.origin.y, rootFrame.size.width, rootFrame.size.height);
+        [self addSubview:mainView];
+        
         mainViewSubViews = mainView.subviews;
         
         for (UIImageView *uiv in mainViewSubViews) {
@@ -141,13 +155,6 @@
             // 添加手势识别器
             [uiv addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick:)]];
         }
-        
-        CGRect mainFrame = mainView.frame;
-        
-        CGRect rootFrame = self.frame;
-        mainView.frame = CGRectMake(mainFrame.origin.x, mainFrame.origin.y, rootFrame.size.width, rootFrame.size.height);
-        [self addSubview:mainView];
-        
         
         for (int i = 0; i < mainViewSubViews.count; i ++) {
             [self loadImage:pics into:mainViewSubViews[i] withIndex:i];

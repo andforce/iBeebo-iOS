@@ -16,10 +16,29 @@
 @property (strong, nonatomic) IBOutlet UIView *threePicMainView;
 @property (strong, nonatomic) IBOutlet UIView *fourPicMainView;
 @property (strong, nonatomic) IBOutlet UIView *fivePicMainView;
-
 @property (strong, nonatomic) IBOutlet UIView *sixPicMainView;
 @property (strong, nonatomic) IBOutlet UIView *sevenPicMainView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *eightPicMainView0;
+@property (weak, nonatomic) IBOutlet UIImageView *eightPicMainView1;
+@property (weak, nonatomic) IBOutlet UIImageView *eightPicMainView2;
+@property (weak, nonatomic) IBOutlet UIImageView *eightPicMainView3;
+@property (weak, nonatomic) IBOutlet UIImageView *eightPicMainView4;
+@property (weak, nonatomic) IBOutlet UIImageView *eightPicMainView5;
+@property (weak, nonatomic) IBOutlet UIImageView *eightPicMainView6;
+@property (weak, nonatomic) IBOutlet UIImageView *eightPicMainView7;
 @property (strong, nonatomic) IBOutlet UIView *eightPicMainView;
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *ninePicMainView0;
+@property (weak, nonatomic) IBOutlet UIImageView *ninePicMainView1;
+@property (weak, nonatomic) IBOutlet UIImageView *ninePicMainView2;
+@property (weak, nonatomic) IBOutlet UIImageView *ninePicMainView3;
+@property (weak, nonatomic) IBOutlet UIImageView *ninePicMainView4;
+@property (weak, nonatomic) IBOutlet UIImageView *ninePicMainView5;
+@property (weak, nonatomic) IBOutlet UIImageView *ninePicMainView6;
+@property (weak, nonatomic) IBOutlet UIImageView *ninePicMainView7;
+@property (weak, nonatomic) IBOutlet UIImageView *ninePicMainView8;
 @property (strong, nonatomic) IBOutlet UIView *ninePicMainView;
 
 @end
@@ -51,11 +70,23 @@
     
     UIView * mainView = self.ninePicMainView;
     
+    NSArray * images = mainView.subviews;
+    
+    for (UIImageView *uiv in images) {
+        
+        uiv.userInteractionEnabled = YES;
+        // 添加手势识别器
+        [uiv addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick:)]];
+    }
+    
     CGRect mainFrame = mainView.frame;
     
     CGRect rootFrame = self.frame;
     mainView.frame = CGRectMake(mainFrame.origin.x, mainFrame.origin.y, rootFrame.size.width, rootFrame.size.height);
     [self addSubview:mainView];
+}
+- (IBAction)imageClick:(UITapGestureRecognizer *)sender {
+    NSLog(@"imageClick %d", (int)[self.ninePicMainView.subviews indexOfObject:sender.view]);
 }
 
 @end

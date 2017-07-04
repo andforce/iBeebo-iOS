@@ -134,14 +134,6 @@
     
     if (mainView) {
 
-        // 先清空
-        mainViewSubViews = mainView.subviews;
-//        
-//        for (UIImageView *uiv in mainViewSubViews) {
-//            
-//            [uiv removeFromSuperview];
-//        }
-        
         CGRect mainFrame = mainView.frame;
         CGRect rootFrame = self.frame;
         mainView.frame = CGRectMake(mainFrame.origin.x, mainFrame.origin.y, rootFrame.size.width, rootFrame.size.height);
@@ -176,7 +168,7 @@
 }
 
 - (IBAction)imageClick:(UITapGestureRecognizer *)sender {
-    int index = (int)[self.ninePicMainView.subviews indexOfObject:sender.view];
+    int index = (int)[mainViewSubViews indexOfObject:sender.view];
     NSLog(@"imageClick %d", index);
     
     [self showImageWithIndex:index];

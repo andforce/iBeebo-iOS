@@ -20,17 +20,12 @@
 #import "TransBundleUIViewController.h"
 #import "AppDelegate.h"
 #import "AGPlayerViewController.h"
-#import <NYTPhotosViewController.h>
 #import <NYTPhotoViewer/NYTPhoto.h>
-#import "NYTExamplePhoto.h"
 #import "TimeLinePics.h"
 
 @interface TimeLineCell()<UITextViewDelegate>{
     HotWeibo *_hotWeibo;
 
-    Weibo * _weibo;
-
-    NSMutableArray *_array;
 }
 @property (weak, nonatomic) IBOutlet TimeLinePics *timeLinePicView;
 
@@ -41,12 +36,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-
-    _array = [NSMutableArray arrayWithCapacity:9];
-
-    for (int i = 0; i < 9; i++){
-        [_array addObject:@(i)];
-    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -56,8 +45,6 @@
 }
 
 -(void)showStatus:(Weibo *)weibo {
-
-    _weibo = weibo;
 
     _timeLineTime.text = weibo.createdAt;
     
@@ -76,7 +63,7 @@
         PageInfo *retweetPageInfo = weibo.retweetedWeibo.pageInfo;
         if (retweetPageInfo.pageUrl == nil){
 
-            [self showImages:weibo.retweetedWeibo.pics];
+            [self.timeLinePicView showPictures:weibo.retweetedWeibo.pics];
             _timeLineReTweetContent.attributedText = weibo.retweetedWeibo.text;
 
         } else {
@@ -124,46 +111,7 @@
     }
 }
 
-- (void) loadImage:(NSArray<Pics *> *)pics into:(UIImageView *) imageView withIndex:(int) index{
-    [imageView sd_setImageWithURL:[NSURL URLWithString:pics[(NSUInteger) index].url] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
 
-        NYTExamplePhoto *photo1 = [[NYTExamplePhoto alloc] init];
-
-        photo1.attributedCaptionTitle = [[NSAttributedString alloc] initWithString:@"1" attributes:nil];
-        photo1.image = image;
-        _array[(NSUInteger) index] = photo1;
-    }];
-}
-
--(void)showImages:(NSArray<Pics *> *)pics{
-    if (_timeLineImage0 != nil) {
-        [self loadImage:pics into:_timeLineImage0 withIndex:0];
-    }
-    if (_timeLineImage1 != nil) {
-        [self loadImage:pics into:_timeLineImage1 withIndex:1];
-    }
-    if (_timeLineImage2 != nil) {
-        [self loadImage:pics into:_timeLineImage2 withIndex:2];
-    }
-    if (_timeLineImage3 != nil) {
-        [self loadImage:pics into:_timeLineImage3 withIndex:3];
-    }
-    if (_timeLineImage4 != nil) {
-        [self loadImage:pics into:_timeLineImage4 withIndex:4];
-    }
-    if (_timeLineImage5 != nil) {
-        [self loadImage:pics into:_timeLineImage5 withIndex:5];
-    }
-    if (_timeLineImage6 != nil) {
-        [self loadImage:pics into:_timeLineImage6 withIndex:6];
-    }
-    if (_timeLineImage7 != nil) {
-        [self loadImage:pics into:_timeLineImage7 withIndex:7];
-    }
-    if (_timeLineImage8 != nil) {
-        [self loadImage:pics into:_timeLineImage8 withIndex:8];
-    }
-}
 
 - (IBAction)showPageInfo:(id)sender {
     //PageInfo *pageInfo = _hotWeibo.pageInfo.type;
@@ -185,57 +133,6 @@
 
         }];
     }
-}
-
-- (void) showImageWithIndex:(int) index{
-    NSMutableArray *filterArray = [NSMutableArray array];
-    for (NYTExamplePhoto * image in _array){
-        if ([image isKindOfClass:[NYTExamplePhoto class]]){
-            [filterArray addObject:image];
-        }
-    }
-    NYTExamplePhoto *selectImage = filterArray[(NSUInteger) index];
-
-    NYTPhotosViewController *photosViewController = [[NYTPhotosViewController alloc] initWithPhotos:filterArray initialPhoto:selectImage];
-
-    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [app.window.rootViewController presentViewController:photosViewController animated:YES completion:nil];
-}
-
-- (IBAction)show0Image:(id)sender {
-    [self showImageWithIndex:0];
-}
-
-- (IBAction)show1Image:(id)sender {
-    [self showImageWithIndex:1];
-}
-
-- (IBAction)show2Image:(id)sender {
-    [self showImageWithIndex:2];
-}
-
-- (IBAction)show3Image:(id)sender {
-    [self showImageWithIndex:3];
-}
-
-- (IBAction)show4Image:(id)sender {
-    [self showImageWithIndex:4];
-}
-
-- (IBAction)show5Image:(id)sender {
-    [self showImageWithIndex:5];
-}
-
-- (IBAction)show6Image:(id)sender {
-    [self showImageWithIndex:6];
-}
-
-- (IBAction)show7Image:(id)sender {
-    [self showImageWithIndex:7];
-}
-
-- (IBAction)show8Image:(id)sender {
-    [self showImageWithIndex:8];
 }
 
 @end

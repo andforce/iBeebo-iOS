@@ -18,7 +18,9 @@
 @property (strong, nonatomic) IBOutlet UIView *fivePicMainView;
 
 @property (strong, nonatomic) IBOutlet UIView *sixPicMainView;
-
+@property (strong, nonatomic) IBOutlet UIView *sevenPicMainView;
+@property (strong, nonatomic) IBOutlet UIView *eightPicMainView;
+@property (strong, nonatomic) IBOutlet UIView *ninePicMainView;
 
 @end
 
@@ -47,7 +49,7 @@
 
 -(void)showWithPicCount:(int)count{
     
-    UIView * mainView = self.sixPicMainView;
+    UIView * mainView = self.ninePicMainView;
     
     CGRect mainFrame = mainView.frame;
     

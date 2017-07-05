@@ -83,6 +83,8 @@
 
         }
     }
+
+    [_bottomView showBottomInfo:weibo.source repost:(int) weibo.repostsCount comments:(int) weibo.commentsCount like:(int) weibo.attitudesCount];
 }
 
 - (void)showHotWeibo:(HotWeibo *)hotWeibo {
@@ -109,6 +111,8 @@
         _pageDesc.text = pageInfo.content1;
 
     }
+
+    [_bottomView showBottomInfo:hotWeibo.source repost:(int) hotWeibo.repostsCount comments:(int) hotWeibo.commentsCount like:(int) hotWeibo.attitudesCount];
 }
 
 

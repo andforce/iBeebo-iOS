@@ -429,12 +429,6 @@
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aE3-Zk-LGH" userLabel="source">
-                                            <rect key="frame" x="92.5" y="32" width="41.5" height="16"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LjB-RJ-hds" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="196.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -454,7 +448,6 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="Gac-Ly-bkN" secondAttribute="bottom" id="QrB-xX-eI6"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="LjB-RJ-hds" secondAttribute="trailing" id="W35-hF-DDy"/>
                                         <constraint firstAttribute="topMargin" secondItem="fC4-Wh-8Hf" secondAttribute="top" id="X4F-md-iQj"/>
-                                        <constraint firstItem="aE3-Zk-LGH" firstAttribute="leading" secondItem="wd7-mr-jTs" secondAttribute="trailing" constant="8" id="XB0-Zw-183"/>
                                         <constraint firstItem="Osg-A9-Yc6" firstAttribute="leading" secondItem="fC4-Wh-8Hf" secondAttribute="trailing" constant="8" id="YFB-s1-fFN"/>
                                         <constraint firstItem="Gac-Ly-bkN" firstAttribute="width" secondItem="147-f3-Zyx" secondAttribute="width" id="Yv7-ZK-u9l"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="fC4-Wh-8Hf" secondAttribute="leading" id="Zex-Rk-aee"/>
@@ -463,7 +456,6 @@
                                         <constraint firstItem="Gac-Ly-bkN" firstAttribute="centerX" secondItem="147-f3-Zyx" secondAttribute="centerX" id="nvh-sy-Dxi"/>
                                         <constraint firstItem="wd7-mr-jTs" firstAttribute="leading" secondItem="fC4-Wh-8Hf" secondAttribute="trailing" constant="8" id="t9u-SN-pBY"/>
                                         <constraint firstItem="LjB-RJ-hds" firstAttribute="top" secondItem="147-f3-Zyx" secondAttribute="topMargin" constant="48" id="wWg-Tq-ZrF"/>
-                                        <constraint firstItem="aE3-Zk-LGH" firstAttribute="bottom" secondItem="fC4-Wh-8Hf" secondAttribute="bottom" id="yov-lQ-R1m"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -471,12 +463,11 @@
                                     <outlet property="timeLineAvatar" destination="fC4-Wh-8Hf" id="60Z-bF-QXh"/>
                                     <outlet property="timeLineContent" destination="LjB-RJ-hds" id="Mu7-lZ-YEv"/>
                                     <outlet property="timeLineName" destination="Osg-A9-Yc6" id="now-M3-Haz"/>
-                                    <outlet property="timeLineSource" destination="aE3-Zk-LGH" id="V3u-j9-KDd"/>
                                     <outlet property="timeLineTime" destination="wd7-mr-jTs" id="3DX-4r-cti"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLine0ImagesCellRetweet" rowHeight="220" id="V7c-Vp-7Qj" customClass="TimeLineCell">
-                                <rect key="frame" x="0.0" y="356" width="600" height="220"/>
+                                <rect key="frame" x="0.0" y="355.5" width="600" height="220"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V7c-Vp-7Qj" id="mRd-nY-wKg">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="220"/>
@@ -503,12 +494,6 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WB1-ad-3h4" userLabel="time">
                                             <rect key="frame" x="56" y="31" width="29" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lK7-k7-eM3" userLabel="source">
-                                            <rect key="frame" x="93" y="31" width="44" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -549,13 +534,11 @@
                                         <constraint firstItem="Zvd-dh-beK" firstAttribute="width" secondItem="mRd-nY-wKg" secondAttribute="width" id="15C-EF-DM0"/>
                                         <constraint firstItem="E9q-oM-TcX" firstAttribute="centerX" secondItem="mRd-nY-wKg" secondAttribute="centerX" id="4HM-wr-6FW"/>
                                         <constraint firstItem="Zvd-dh-beK" firstAttribute="top" secondItem="E9q-oM-TcX" secondAttribute="bottom" constant="4" id="Bam-Hh-q1v"/>
-                                        <constraint firstItem="lK7-k7-eM3" firstAttribute="bottom" secondItem="WB1-ad-3h4" secondAttribute="bottom" id="FAQ-ld-ihf"/>
                                         <constraint firstAttribute="topMargin" secondItem="RHF-Ex-Na5" secondAttribute="top" id="L5D-5n-AeU"/>
                                         <constraint firstItem="rjp-p8-1SW" firstAttribute="leading" secondItem="RHF-Ex-Na5" secondAttribute="trailing" constant="8" id="MLk-j1-FM2"/>
                                         <constraint firstItem="tJx-5Y-iQN" firstAttribute="centerX" secondItem="mRd-nY-wKg" secondAttribute="centerX" id="Mwc-vz-2v0"/>
                                         <constraint firstItem="tJx-5Y-iQN" firstAttribute="width" secondItem="mRd-nY-wKg" secondAttribute="width" id="Oat-oP-g4o"/>
                                         <constraint firstItem="WB1-ad-3h4" firstAttribute="leading" secondItem="RHF-Ex-Na5" secondAttribute="trailing" constant="8" id="Rd8-An-Mb2"/>
-                                        <constraint firstItem="lK7-k7-eM3" firstAttribute="leading" secondItem="WB1-ad-3h4" secondAttribute="trailing" constant="8" id="Wl6-Iu-5rO"/>
                                         <constraint firstItem="E9q-oM-TcX" firstAttribute="top" secondItem="RHF-Ex-Na5" secondAttribute="bottom" constant="8" id="Ye3-3s-Hrp"/>
                                         <constraint firstItem="rjp-p8-1SW" firstAttribute="top" secondItem="RHF-Ex-Na5" secondAttribute="top" id="akv-kS-bJD"/>
                                         <constraint firstItem="WB1-ad-3h4" firstAttribute="bottom" secondItem="RHF-Ex-Na5" secondAttribute="bottom" id="amY-yN-nAv"/>
@@ -571,7 +554,6 @@
                                     <outlet property="timeLineContent" destination="E9q-oM-TcX" id="i6o-rF-fCr"/>
                                     <outlet property="timeLineName" destination="rjp-p8-1SW" id="gA3-ii-RvR"/>
                                     <outlet property="timeLineReTweetContent" destination="PVV-k5-vcO" id="0qC-w9-ZTI"/>
-                                    <outlet property="timeLineSource" destination="lK7-k7-eM3" id="I08-17-A5R"/>
                                     <outlet property="timeLineTime" destination="WB1-ad-3h4" id="G3v-Ct-1ou"/>
                                 </connections>
                             </tableViewCell>
@@ -603,12 +585,6 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uw-Ki-q1U" userLabel="time">
                                             <rect key="frame" x="56" y="31" width="28.5" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9i-Yy-OhN" userLabel="source">
-                                            <rect key="frame" x="92.5" y="31" width="44" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -684,7 +660,6 @@
                                         <constraint firstItem="4IY-pM-nue" firstAttribute="leading" secondItem="99a-WD-geO" secondAttribute="trailing" constant="8" id="BWu-fu-dbZ"/>
                                         <constraint firstItem="iKO-2M-CB8" firstAttribute="width" secondItem="yhk-op-BFA" secondAttribute="width" id="C23-c2-Yix"/>
                                         <constraint firstItem="iKO-2M-CB8" firstAttribute="centerX" secondItem="yhk-op-BFA" secondAttribute="centerX" id="HrU-aw-KoP"/>
-                                        <constraint firstItem="o9i-Yy-OhN" firstAttribute="leading" secondItem="4uw-Ki-q1U" secondAttribute="trailing" constant="8" id="ILb-Pc-Zbj"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="99a-WD-geO" secondAttribute="leading" id="JJK-bX-6Vh"/>
                                         <constraint firstItem="4uw-Ki-q1U" firstAttribute="leading" secondItem="99a-WD-geO" secondAttribute="trailing" constant="8" id="R3W-Wz-GOO"/>
                                         <constraint firstItem="4IY-pM-nue" firstAttribute="top" secondItem="99a-WD-geO" secondAttribute="top" id="RLN-l3-s45"/>
@@ -697,7 +672,6 @@
                                         <constraint firstAttribute="leadingMargin" secondItem="MXI-1r-3NS" secondAttribute="leading" id="eAe-cQ-2oV"/>
                                         <constraint firstItem="ISM-6e-qKT" firstAttribute="top" secondItem="loU-sG-ZXA" secondAttribute="bottom" constant="-0.5" id="f5b-dD-Dql"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="iKO-2M-CB8" secondAttribute="bottom" id="hCz-MC-27q"/>
-                                        <constraint firstItem="o9i-Yy-OhN" firstAttribute="bottom" secondItem="99a-WD-geO" secondAttribute="bottom" id="ja2-TV-xB5"/>
                                         <constraint firstItem="MXI-1r-3NS" firstAttribute="top" secondItem="yhk-op-BFA" secondAttribute="topMargin" constant="48" id="lf7-dx-sZz"/>
                                         <constraint firstItem="qem-Sw-sTc" firstAttribute="height" secondItem="loU-sG-ZXA" secondAttribute="height" id="ptC-8D-nOq"/>
                                         <constraint firstItem="qem-Sw-sTc" firstAttribute="width" secondItem="loU-sG-ZXA" secondAttribute="width" id="rcu-zZ-UKD"/>
@@ -710,7 +684,6 @@
                                     <outlet property="timeLineAvatar" destination="99a-WD-geO" id="zfO-fB-A3R"/>
                                     <outlet property="timeLineContent" destination="MXI-1r-3NS" id="z5k-V6-kM8"/>
                                     <outlet property="timeLineName" destination="4IY-pM-nue" id="Hph-mh-KOa"/>
-                                    <outlet property="timeLineSource" destination="o9i-Yy-OhN" id="jrC-vX-mH5"/>
                                     <outlet property="timeLineTime" destination="4uw-Ki-q1U" id="uCR-bF-blV"/>
                                 </connections>
                             </tableViewCell>
@@ -742,12 +715,6 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQ4-ps-Ros" userLabel="time">
                                             <rect key="frame" x="56" y="32" width="27" height="16"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4O-30-pcP" userLabel="source">
-                                            <rect key="frame" x="91" y="32" width="42" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -849,10 +816,8 @@
                                         <constraint firstItem="0wc-x2-Rmd" firstAttribute="top" secondItem="TFo-rc-asN" secondAttribute="bottom" constant="3" id="VBd-yo-Kih"/>
                                         <constraint firstItem="0wc-x2-Rmd" firstAttribute="centerX" secondItem="okc-Xx-qNp" secondAttribute="centerX" id="XDI-kI-Gy3"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="LGp-NR-q3F" secondAttribute="leading" id="abh-GS-8AO"/>
-                                        <constraint firstItem="c4O-30-pcP" firstAttribute="centerY" secondItem="BQ4-ps-Ros" secondAttribute="centerY" id="fEN-yU-6y1"/>
                                         <constraint firstItem="TFo-rc-asN" firstAttribute="centerX" secondItem="okc-Xx-qNp" secondAttribute="centerX" id="faK-Hs-mWj"/>
                                         <constraint firstItem="i6a-01-dHF" firstAttribute="width" secondItem="okc-Xx-qNp" secondAttribute="width" id="iNa-oV-qng"/>
-                                        <constraint firstItem="c4O-30-pcP" firstAttribute="leading" secondItem="BQ4-ps-Ros" secondAttribute="trailing" constant="8" id="lGO-pT-gKf"/>
                                         <constraint firstItem="wLA-4h-DE7" firstAttribute="top" secondItem="LGp-NR-q3F" secondAttribute="top" id="mPi-z9-ktI"/>
                                         <constraint firstItem="i6a-01-dHF" firstAttribute="top" secondItem="0wc-x2-Rmd" secondAttribute="bottom" constant="4" id="rd1-r1-HGy"/>
                                         <constraint firstItem="i6a-01-dHF" firstAttribute="centerX" secondItem="okc-Xx-qNp" secondAttribute="centerX" id="y7y-4Z-H6q"/>
@@ -868,7 +833,6 @@
                                     <outlet property="timeLineContent" destination="TFo-rc-asN" id="fNq-W0-DeM"/>
                                     <outlet property="timeLineName" destination="wLA-4h-DE7" id="WIW-tM-vPr"/>
                                     <outlet property="timeLineReTweetContent" destination="wbf-mu-LdY" id="g2g-va-ZEY"/>
-                                    <outlet property="timeLineSource" destination="c4O-30-pcP" id="ZJF-fa-d3Z"/>
                                     <outlet property="timeLineTime" destination="BQ4-ps-Ros" id="uRx-nq-kh1"/>
                                 </connections>
                             </tableViewCell>
@@ -904,12 +868,6 @@
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kq9-AV-aBb" userLabel="source">
-                                            <rect key="frame" x="92.5" y="31" width="44" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zNi-4E-5iC" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -930,7 +888,6 @@
                                     <constraints>
                                         <constraint firstItem="1KE-FC-pF6" firstAttribute="bottom" secondItem="p6X-qQ-W1u" secondAttribute="bottom" id="0Tv-4Q-ZKx"/>
                                         <constraint firstItem="Nnq-Ge-nMj" firstAttribute="width" secondItem="BfC-Kc-Y4M" secondAttribute="width" id="3sg-6y-iFt"/>
-                                        <constraint firstItem="Kq9-AV-aBb" firstAttribute="leading" secondItem="1KE-FC-pF6" secondAttribute="trailing" constant="8" id="5zS-cG-Tmb"/>
                                         <constraint firstItem="Ly9-En-TA0" firstAttribute="top" secondItem="p6X-qQ-W1u" secondAttribute="top" id="DiK-uR-tz2"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="p6X-qQ-W1u" secondAttribute="leading" id="Dxu-OJ-uxd"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="zNi-4E-5iC" secondAttribute="leading" id="FGD-04-Pzu"/>
@@ -939,7 +896,6 @@
                                         <constraint firstItem="zNi-4E-5iC" firstAttribute="top" secondItem="p6X-qQ-W1u" secondAttribute="bottom" constant="8" id="Kqs-mV-26G"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Nnq-Ge-nMj" secondAttribute="bottom" id="Luf-eS-9pH"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="PgO-31-eAx" secondAttribute="leading" id="MRR-K3-fDt"/>
-                                        <constraint firstItem="Kq9-AV-aBb" firstAttribute="bottom" secondItem="p6X-qQ-W1u" secondAttribute="bottom" id="QRi-Ag-OzR"/>
                                         <constraint firstItem="PgO-31-eAx" firstAttribute="top" secondItem="zNi-4E-5iC" secondAttribute="bottom" constant="8" id="SLv-9k-dJO"/>
                                         <constraint firstItem="1KE-FC-pF6" firstAttribute="leading" secondItem="p6X-qQ-W1u" secondAttribute="trailing" constant="8" id="TFg-Pb-sn1"/>
                                         <constraint firstAttribute="topMargin" secondItem="p6X-qQ-W1u" secondAttribute="top" id="cvu-16-F26"/>
@@ -954,7 +910,6 @@
                                     <outlet property="timeLineContent" destination="zNi-4E-5iC" id="uD0-6I-Dxr"/>
                                     <outlet property="timeLineName" destination="Ly9-En-TA0" id="GKI-Za-d9t"/>
                                     <outlet property="timeLinePicView" destination="PgO-31-eAx" id="rZU-lu-KVc"/>
-                                    <outlet property="timeLineSource" destination="Kq9-AV-aBb" id="IWA-Rk-HrQ"/>
                                     <outlet property="timeLineTime" destination="1KE-FC-pF6" id="ZgX-g4-Wam"/>
                                 </connections>
                             </tableViewCell>
@@ -986,12 +941,6 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBc-We-gR4" userLabel="time">
                                             <rect key="frame" x="56" y="31" width="29" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOv-01-rCn" userLabel="source">
-                                            <rect key="frame" x="93" y="31" width="44" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -1042,13 +991,11 @@
                                         <constraint firstItem="v9F-8t-evI" firstAttribute="top" secondItem="jVN-cv-a3X" secondAttribute="bottom" constant="4" id="5ZA-OG-Q90"/>
                                         <constraint firstItem="jVN-cv-a3X" firstAttribute="top" secondItem="Rg9-wV-jmu" secondAttribute="bottom" constant="8" id="7Eo-3z-kxw"/>
                                         <constraint firstItem="jVN-cv-a3X" firstAttribute="leading" secondItem="zQd-MM-Cpe" secondAttribute="leadingMargin" constant="-8" id="8nk-LU-mQQ"/>
-                                        <constraint firstItem="AOv-01-rCn" firstAttribute="leading" secondItem="ZBc-We-gR4" secondAttribute="trailing" constant="8" id="9ug-SP-lve"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Rg9-wV-jmu" secondAttribute="trailing" id="AKj-oc-kdB"/>
                                         <constraint firstItem="ZBc-We-gR4" firstAttribute="leading" secondItem="s12-9w-oCw" secondAttribute="trailing" constant="8" id="EI0-eo-hBd"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="s12-9w-oCw" secondAttribute="leading" id="IEK-nV-LoF"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="v9F-8t-evI" secondAttribute="bottom" id="Psf-oL-cOW"/>
                                         <constraint firstItem="v9F-8t-evI" firstAttribute="width" secondItem="zQd-MM-Cpe" secondAttribute="width" id="Tvu-Pn-slb"/>
-                                        <constraint firstItem="AOv-01-rCn" firstAttribute="bottom" secondItem="s12-9w-oCw" secondAttribute="bottom" id="UOw-aq-pxL"/>
                                         <constraint firstAttribute="topMargin" secondItem="s12-9w-oCw" secondAttribute="top" id="Uwc-dw-EFn"/>
                                         <constraint firstItem="v9F-8t-evI" firstAttribute="centerX" secondItem="zQd-MM-Cpe" secondAttribute="centerX" id="XWs-zc-QRi"/>
                                         <constraint firstItem="kuo-jj-W3N" firstAttribute="top" secondItem="s12-9w-oCw" secondAttribute="top" id="aRw-Jf-Ui2"/>
@@ -1074,7 +1021,6 @@
                                     <outlet property="timeLineName" destination="kuo-jj-W3N" id="9hv-fe-516"/>
                                     <outlet property="timeLinePicView" destination="Yaz-fI-DwV" id="kYe-FP-luy"/>
                                     <outlet property="timeLineReTweetContent" destination="aFJ-Aw-BXF" id="JYD-cV-fcf"/>
-                                    <outlet property="timeLineSource" destination="AOv-01-rCn" id="xQq-Gv-0YM"/>
                                     <outlet property="timeLineTime" destination="ZBc-We-gR4" id="VJZ-cQ-0Gk"/>
                                 </connections>
                             </tableViewCell>
@@ -1110,12 +1056,6 @@
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edM-E1-FDg" userLabel="source">
-                                            <rect key="frame" x="92.5" y="31" width="44" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iK0-m9-NJy" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1139,7 +1079,6 @@
                                         <constraint firstItem="8X7-es-qL6" firstAttribute="width" secondItem="285-qd-ayD" secondAttribute="width" id="EXV-7y-snZ"/>
                                         <constraint firstAttribute="topMargin" secondItem="uma-uj-Aqq" secondAttribute="top" id="Fwk-aR-t1h"/>
                                         <constraint firstItem="WYf-vb-QwX" firstAttribute="leading" secondItem="uma-uj-Aqq" secondAttribute="trailing" constant="8" id="Gdo-0G-TcW"/>
-                                        <constraint firstItem="edM-E1-FDg" firstAttribute="bottom" secondItem="uma-uj-Aqq" secondAttribute="bottom" id="HnZ-Qx-NhH"/>
                                         <constraint firstItem="rUS-nv-fuv" firstAttribute="top" secondItem="iK0-m9-NJy" secondAttribute="bottom" constant="8" id="NUd-H2-Mtf"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="iK0-m9-NJy" secondAttribute="leading" id="Qoc-PV-ZPz"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="uma-uj-Aqq" secondAttribute="leading" id="UUu-Jl-Q0g"/>
@@ -1148,7 +1087,6 @@
                                         <constraint firstItem="Aye-a0-JsL" firstAttribute="leading" secondItem="uma-uj-Aqq" secondAttribute="trailing" constant="8" id="VQu-3o-Kht"/>
                                         <constraint firstItem="8X7-es-qL6" firstAttribute="centerX" secondItem="285-qd-ayD" secondAttribute="centerX" id="czS-9V-D4L"/>
                                         <constraint firstItem="Aye-a0-JsL" firstAttribute="bottom" secondItem="uma-uj-Aqq" secondAttribute="bottom" id="eG0-VN-S9J"/>
-                                        <constraint firstItem="edM-E1-FDg" firstAttribute="leading" secondItem="Aye-a0-JsL" secondAttribute="trailing" constant="8" id="eWy-Cu-1bd"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="iK0-m9-NJy" secondAttribute="trailing" id="fZN-5m-qII"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="8X7-es-qL6" secondAttribute="bottom" id="fy6-kP-fuB"/>
                                         <constraint firstItem="8X7-es-qL6" firstAttribute="top" secondItem="rUS-nv-fuv" secondAttribute="bottom" constant="4" id="huJ-9G-keB"/>
@@ -1160,7 +1098,6 @@
                                     <outlet property="timeLineContent" destination="iK0-m9-NJy" id="ygg-Qs-DBD"/>
                                     <outlet property="timeLineName" destination="WYf-vb-QwX" id="KgN-Tw-Ijj"/>
                                     <outlet property="timeLinePicView" destination="rUS-nv-fuv" id="mqX-Jq-Blg"/>
-                                    <outlet property="timeLineSource" destination="edM-E1-FDg" id="vJi-qf-4AQ"/>
                                     <outlet property="timeLineTime" destination="Aye-a0-JsL" id="0lU-QW-ooh"/>
                                 </connections>
                             </tableViewCell>
@@ -1192,12 +1129,6 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwk-AB-eCc" userLabel="time">
                                             <rect key="frame" x="56" y="31" width="29" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKJ-Hl-15J" userLabel="source">
-                                            <rect key="frame" x="93" y="31" width="44" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -1245,8 +1176,6 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="leadingMargin" secondItem="P9v-WL-ycc" secondAttribute="leading" id="7Aa-2V-Kep"/>
-                                        <constraint firstItem="wKJ-Hl-15J" firstAttribute="bottom" secondItem="P9v-WL-ycc" secondAttribute="bottom" id="7m4-XD-RjL"/>
-                                        <constraint firstItem="wKJ-Hl-15J" firstAttribute="leading" secondItem="zwk-AB-eCc" secondAttribute="trailing" constant="8" id="IDK-2c-3a5"/>
                                         <constraint firstItem="KJs-TW-JxL" firstAttribute="leading" secondItem="P9v-WL-ycc" secondAttribute="trailing" constant="8" id="INo-Wj-dUO"/>
                                         <constraint firstItem="7N4-Ks-RIO" firstAttribute="top" secondItem="Iab-qe-wPa" secondAttribute="bottom" constant="8" id="KrW-bM-JAL"/>
                                         <constraint firstItem="7N4-Ks-RIO" firstAttribute="top" secondItem="Iab-qe-wPa" secondAttribute="bottom" constant="8" id="LDg-0J-u5t"/>
@@ -1280,7 +1209,6 @@
                                     <outlet property="timeLineName" destination="KJs-TW-JxL" id="5X5-xd-z4t"/>
                                     <outlet property="timeLinePicView" destination="aPu-ag-290" id="qyr-MU-ncR"/>
                                     <outlet property="timeLineReTweetContent" destination="gLX-EC-eIp" id="YEw-Tc-ch5"/>
-                                    <outlet property="timeLineSource" destination="wKJ-Hl-15J" id="Rh1-Wz-av2"/>
                                     <outlet property="timeLineTime" destination="zwk-AB-eCc" id="nZc-yS-rs0"/>
                                 </connections>
                             </tableViewCell>
@@ -1316,12 +1244,6 @@
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hu-Ui-yQ4" userLabel="source">
-                                            <rect key="frame" x="92.5" y="31" width="44" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Aot-rS-wBU" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1350,11 +1272,9 @@
                                         <constraint firstItem="gHa-yg-fXi" firstAttribute="top" secondItem="Aot-rS-wBU" secondAttribute="bottom" constant="8" id="WIB-MZ-o9i"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Aot-rS-wBU" secondAttribute="trailing" id="XWp-yO-GOU"/>
                                         <constraint firstItem="oWy-X4-H9f" firstAttribute="width" secondItem="Uw6-SU-akA" secondAttribute="width" id="ZA3-ev-8zH"/>
-                                        <constraint firstItem="6Hu-Ui-yQ4" firstAttribute="leading" secondItem="ghD-Vf-UWi" secondAttribute="trailing" constant="8" id="bnx-lt-G9U"/>
                                         <constraint firstAttribute="topMargin" secondItem="kc3-B4-qnV" secondAttribute="top" id="ePx-hX-96R"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="gHa-yg-fXi" secondAttribute="trailing" id="jui-SB-99a"/>
                                         <constraint firstItem="ghD-Vf-UWi" firstAttribute="bottom" secondItem="kc3-B4-qnV" secondAttribute="bottom" id="kXY-RW-4Hz"/>
-                                        <constraint firstItem="6Hu-Ui-yQ4" firstAttribute="bottom" secondItem="kc3-B4-qnV" secondAttribute="bottom" id="n9O-zQ-CIZ"/>
                                         <constraint firstItem="Aot-rS-wBU" firstAttribute="top" secondItem="kc3-B4-qnV" secondAttribute="bottom" constant="8" id="pDJ-yp-9g3"/>
                                         <constraint firstItem="oWy-X4-H9f" firstAttribute="centerX" secondItem="Uw6-SU-akA" secondAttribute="centerX" id="s7V-Ob-d4t"/>
                                         <constraint firstItem="ghD-Vf-UWi" firstAttribute="leading" secondItem="kc3-B4-qnV" secondAttribute="trailing" constant="8" id="vgE-bl-SFu"/>
@@ -1366,7 +1286,6 @@
                                     <outlet property="timeLineContent" destination="Aot-rS-wBU" id="apL-u1-sGn"/>
                                     <outlet property="timeLineName" destination="F9C-sM-tYy" id="yjg-sx-w65"/>
                                     <outlet property="timeLinePicView" destination="gHa-yg-fXi" id="0gi-3c-Vha"/>
-                                    <outlet property="timeLineSource" destination="6Hu-Ui-yQ4" id="Ik1-Rj-oy8"/>
                                     <outlet property="timeLineTime" destination="ghD-Vf-UWi" id="Ea8-dO-XwR"/>
                                 </connections>
                             </tableViewCell>
@@ -1374,7 +1293,7 @@
                                 <rect key="frame" x="0.0" y="2975.5" width="600" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n9i-Gu-u8u" id="aJy-O9-yXR">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="249.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DrQ-PP-kNm" userLabel="avatar">
@@ -1402,12 +1321,6 @@
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6J6-lq-BqS" userLabel="source">
-                                            <rect key="frame" x="93" y="31" width="44" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6W0-kW-kTg" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="33"/>
                                             <constraints>
@@ -1417,16 +1330,16 @@
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7tn-XW-tu1" userLabel="Retweet">
-                                            <rect key="frame" x="0.0" y="97" width="600" height="105.5"/>
+                                            <rect key="frame" x="0.0" y="97" width="600" height="106"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cyi-sd-jrm" customClass="UIWeiboTextView">
-                                                    <rect key="frame" x="8" y="0.0" width="584" height="35.5"/>
+                                                    <rect key="frame" x="8" y="0.0" width="584" height="36"/>
                                                     <color key="textColor" red="0.29813727740000001" green="0.29813104870000001" blue="0.2981352806" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4KG-Yd-Fxo" customClass="TimeLinePics">
-                                                    <rect key="frame" x="8" y="39.5" width="584" height="58"/>
+                                                    <rect key="frame" x="8" y="40" width="584" height="58"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
@@ -1442,7 +1355,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OCs-zL-kj6" customClass="BottomView">
-                                            <rect key="frame" x="0.0" y="206.5" width="600" height="35"/>
+                                            <rect key="frame" x="0.0" y="207" width="600" height="35"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="W4h-x5-Ten"/>
@@ -1459,8 +1372,6 @@
                                         <constraint firstAttribute="topMargin" secondItem="DrQ-PP-kNm" secondAttribute="top" id="Tx8-Tr-9Ku"/>
                                         <constraint firstItem="OCs-zL-kj6" firstAttribute="width" secondItem="aJy-O9-yXR" secondAttribute="width" id="VjI-OU-Bkd"/>
                                         <constraint firstItem="0WG-gZ-5bt" firstAttribute="leading" secondItem="DrQ-PP-kNm" secondAttribute="trailing" constant="8" id="Wp3-iQ-u57"/>
-                                        <constraint firstItem="6J6-lq-BqS" firstAttribute="leading" secondItem="0WG-gZ-5bt" secondAttribute="trailing" constant="8" id="X8a-DI-Hu6"/>
-                                        <constraint firstItem="6J6-lq-BqS" firstAttribute="bottom" secondItem="DrQ-PP-kNm" secondAttribute="bottom" id="ZeS-ve-9eF"/>
                                         <constraint firstItem="OCs-zL-kj6" firstAttribute="centerX" secondItem="aJy-O9-yXR" secondAttribute="centerX" id="ciG-7S-cNN"/>
                                         <constraint firstItem="7tn-XW-tu1" firstAttribute="top" secondItem="6W0-kW-kTg" secondAttribute="bottom" constant="8" id="coK-zN-S94"/>
                                         <constraint firstItem="psw-qZ-5c0" firstAttribute="top" secondItem="DrQ-PP-kNm" secondAttribute="top" id="eJq-Vz-RX7"/>
@@ -1486,7 +1397,6 @@
                                     <outlet property="timeLineName" destination="psw-qZ-5c0" id="S27-26-eLH"/>
                                     <outlet property="timeLinePicView" destination="4KG-Yd-Fxo" id="zOp-Za-AfT"/>
                                     <outlet property="timeLineReTweetContent" destination="cyi-sd-jrm" id="0LJ-pG-RdA"/>
-                                    <outlet property="timeLineSource" destination="6J6-lq-BqS" id="A4h-fi-JXR"/>
                                     <outlet property="timeLineTime" destination="0WG-gZ-5bt" id="J3i-yZ-1gf"/>
                                 </connections>
                             </tableViewCell>
@@ -1522,12 +1432,6 @@
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTa-04-1fv" userLabel="source">
-                                            <rect key="frame" x="92.5" y="31" width="44" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ryH-LB-dB8" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1550,7 +1454,6 @@
                                         <constraint firstItem="dcR-Yx-b8O" firstAttribute="bottom" secondItem="YQz-Kq-pTf" secondAttribute="bottom" id="3r6-hY-UaE"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="ryH-LB-dB8" secondAttribute="leading" id="6FT-Q5-quM"/>
                                         <constraint firstItem="Lk0-eK-z3e" firstAttribute="top" secondItem="ryH-LB-dB8" secondAttribute="bottom" constant="8" id="Eu4-nM-x7M"/>
-                                        <constraint firstItem="TTa-04-1fv" firstAttribute="leading" secondItem="dcR-Yx-b8O" secondAttribute="trailing" constant="8" id="OkC-BY-Blb"/>
                                         <constraint firstItem="dcR-Yx-b8O" firstAttribute="leading" secondItem="YQz-Kq-pTf" secondAttribute="trailing" constant="8" id="OwU-ya-RAE"/>
                                         <constraint firstItem="fNt-oa-eJ0" firstAttribute="top" secondItem="Lk0-eK-z3e" secondAttribute="bottom" constant="4" id="USd-of-Uf5"/>
                                         <constraint firstItem="Xe8-4s-yTA" firstAttribute="top" secondItem="YQz-Kq-pTf" secondAttribute="top" id="Vhc-N9-WRf"/>
@@ -1562,7 +1465,6 @@
                                         <constraint firstAttribute="leadingMargin" secondItem="YQz-Kq-pTf" secondAttribute="leading" id="kxP-tm-Ilh"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ryH-LB-dB8" secondAttribute="trailing" id="lVr-84-UT9"/>
                                         <constraint firstItem="fNt-oa-eJ0" firstAttribute="centerX" secondItem="U43-VU-2Ry" secondAttribute="centerX" id="pVg-ha-2b0"/>
-                                        <constraint firstItem="TTa-04-1fv" firstAttribute="bottom" secondItem="YQz-Kq-pTf" secondAttribute="bottom" id="y7O-0x-Fqk"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Lk0-eK-z3e" secondAttribute="trailing" id="yLD-7V-92g"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -1572,7 +1474,6 @@
                                     <outlet property="timeLineContent" destination="ryH-LB-dB8" id="L8h-IO-wEw"/>
                                     <outlet property="timeLineName" destination="Xe8-4s-yTA" id="vFt-An-kW6"/>
                                     <outlet property="timeLinePicView" destination="Lk0-eK-z3e" id="Itb-GV-xfN"/>
-                                    <outlet property="timeLineSource" destination="TTa-04-1fv" id="rm9-sr-p6I"/>
                                     <outlet property="timeLineTime" destination="dcR-Yx-b8O" id="4XM-4Z-IPk"/>
                                 </connections>
                             </tableViewCell>
@@ -1604,12 +1505,6 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqW-CW-smR" userLabel="time">
                                             <rect key="frame" x="56" y="31" width="29" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lly-Bn-DKL" userLabel="source">
-                                            <rect key="frame" x="93" y="31" width="44" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -1671,9 +1566,7 @@
                                         <constraint firstItem="qBj-CU-kp6" firstAttribute="top" secondItem="nfP-6A-1Az" secondAttribute="bottom" constant="8" id="ZvV-lf-wdA"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="xev-Mi-lW2" secondAttribute="leading" id="dKO-C1-Vyd"/>
                                         <constraint firstItem="hXF-mA-WPc" firstAttribute="width" secondItem="1XP-VJ-zrk" secondAttribute="width" id="fA1-vD-wLK"/>
-                                        <constraint firstItem="Lly-Bn-DKL" firstAttribute="leading" secondItem="AqW-CW-smR" secondAttribute="trailing" constant="8" id="fqt-cM-K4S"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="qBj-CU-kp6" secondAttribute="trailing" constant="-8" id="mve-zo-37C"/>
-                                        <constraint firstItem="Lly-Bn-DKL" firstAttribute="bottom" secondItem="xev-Mi-lW2" secondAttribute="bottom" id="oZT-A0-QQw"/>
                                         <constraint firstItem="qBj-CU-kp6" firstAttribute="top" secondItem="nfP-6A-1Az" secondAttribute="bottom" constant="8" id="pfo-m8-IC8"/>
                                         <constraint firstItem="nfP-6A-1Az" firstAttribute="top" secondItem="xev-Mi-lW2" secondAttribute="bottom" constant="8" id="urn-JA-Cuv"/>
                                         <constraint firstItem="hXF-mA-WPc" firstAttribute="top" secondItem="qBj-CU-kp6" secondAttribute="bottom" constant="4" id="yPH-hy-rKV"/>
@@ -1692,7 +1585,6 @@
                                     <outlet property="timeLineName" destination="TIM-S4-IHr" id="P11-pK-a22"/>
                                     <outlet property="timeLinePicView" destination="7V3-vL-i0Q" id="fEI-QR-JWk"/>
                                     <outlet property="timeLineReTweetContent" destination="bAW-Yb-q4c" id="261-d8-S1J"/>
-                                    <outlet property="timeLineSource" destination="Lly-Bn-DKL" id="SAj-2t-ull"/>
                                     <outlet property="timeLineTime" destination="AqW-CW-smR" id="fUA-7a-BNj"/>
                                 </connections>
                             </tableViewCell>
@@ -1728,12 +1620,6 @@
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZf-fE-fDv" userLabel="source">
-                                            <rect key="frame" x="92.5" y="31" width="44" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ETB-wo-Fh6" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1758,14 +1644,12 @@
                                         <constraint firstItem="vcG-ob-vBd" firstAttribute="top" secondItem="S7H-5r-F7D" secondAttribute="top" id="8o3-no-qM5"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="ETB-wo-Fh6" secondAttribute="leading" id="FY4-4w-41x"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="07p-DS-nol" secondAttribute="bottom" id="Jzs-rS-KNk"/>
-                                        <constraint firstItem="hZf-fE-fDv" firstAttribute="bottom" secondItem="S7H-5r-F7D" secondAttribute="bottom" id="KXz-ju-dQI"/>
                                         <constraint firstItem="07p-DS-nol" firstAttribute="width" secondItem="8Uf-nh-Hx7" secondAttribute="width" id="MJd-km-eC5"/>
                                         <constraint firstItem="07p-DS-nol" firstAttribute="centerX" secondItem="8Uf-nh-Hx7" secondAttribute="centerX" id="YCb-VG-7KA"/>
                                         <constraint firstItem="4W5-5H-7eD" firstAttribute="bottom" secondItem="S7H-5r-F7D" secondAttribute="bottom" id="ezF-VE-f9X"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ETB-wo-Fh6" secondAttribute="trailing" id="f54-vq-MJR"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="uhF-z7-bYe" secondAttribute="trailing" id="gz5-NA-F8G"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="S7H-5r-F7D" secondAttribute="leading" id="kHt-cM-s2S"/>
-                                        <constraint firstItem="hZf-fE-fDv" firstAttribute="leading" secondItem="4W5-5H-7eD" secondAttribute="trailing" constant="8" id="kpK-4t-yCd"/>
                                         <constraint firstItem="vcG-ob-vBd" firstAttribute="leading" secondItem="S7H-5r-F7D" secondAttribute="trailing" constant="8" id="l0D-9a-q6W"/>
                                         <constraint firstItem="ETB-wo-Fh6" firstAttribute="top" secondItem="S7H-5r-F7D" secondAttribute="bottom" constant="8" id="me9-3u-KQ2"/>
                                         <constraint firstItem="4W5-5H-7eD" firstAttribute="leading" secondItem="S7H-5r-F7D" secondAttribute="trailing" constant="8" id="tWO-0L-6zp"/>
@@ -1778,7 +1662,6 @@
                                     <outlet property="timeLineContent" destination="ETB-wo-Fh6" id="rAb-9C-rDc"/>
                                     <outlet property="timeLineName" destination="vcG-ob-vBd" id="Kc4-BV-SNM"/>
                                     <outlet property="timeLinePicView" destination="uhF-z7-bYe" id="UTO-qN-Ug4"/>
-                                    <outlet property="timeLineSource" destination="hZf-fE-fDv" id="Rc8-rV-JMD"/>
                                     <outlet property="timeLineTime" destination="4W5-5H-7eD" id="cZl-wE-Fye"/>
                                 </connections>
                             </tableViewCell>
@@ -1810,12 +1693,6 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6e-gr-rcI" userLabel="time">
                                             <rect key="frame" x="56" y="31" width="29" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fec-h6-xlZ" userLabel="source">
-                                            <rect key="frame" x="93" y="31" width="44" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -1867,12 +1744,10 @@
                                         <constraint firstItem="cS6-gs-kSp" firstAttribute="leading" secondItem="qYX-Th-PeL" secondAttribute="trailing" constant="8" id="CG6-2A-x3U"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Z2k-sl-btB" secondAttribute="trailing" id="DVv-WD-6Dr"/>
                                         <constraint firstItem="Z2k-sl-btB" firstAttribute="top" secondItem="sYh-8k-gnv" secondAttribute="topMargin" constant="48" id="Ev3-94-6ho"/>
-                                        <constraint firstItem="fec-h6-xlZ" firstAttribute="leading" secondItem="r6e-gr-rcI" secondAttribute="trailing" constant="8" id="Hox-8Q-b30"/>
                                         <constraint firstItem="cS6-gs-kSp" firstAttribute="top" secondItem="qYX-Th-PeL" secondAttribute="top" id="IWK-nS-lcv"/>
                                         <constraint firstItem="r6e-gr-rcI" firstAttribute="bottom" secondItem="qYX-Th-PeL" secondAttribute="bottom" id="KUB-8b-ZLD"/>
                                         <constraint firstItem="Cg8-ek-AJ8" firstAttribute="top" secondItem="vHu-BF-DNy" secondAttribute="bottom" constant="4" id="NpA-sh-gF7"/>
                                         <constraint firstItem="vHu-BF-DNy" firstAttribute="top" secondItem="Z2k-sl-btB" secondAttribute="bottom" constant="8" id="YvK-cf-zmZ"/>
-                                        <constraint firstItem="fec-h6-xlZ" firstAttribute="bottom" secondItem="qYX-Th-PeL" secondAttribute="bottom" id="aX8-UG-fYD"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Cg8-ek-AJ8" secondAttribute="bottom" id="aaq-wl-Kkp"/>
                                         <constraint firstAttribute="topMargin" secondItem="qYX-Th-PeL" secondAttribute="top" id="fwz-zN-CJm"/>
                                         <constraint firstItem="r6e-gr-rcI" firstAttribute="leading" secondItem="qYX-Th-PeL" secondAttribute="trailing" constant="8" id="g3k-La-kSN"/>
@@ -1898,7 +1773,6 @@
                                     <outlet property="timeLineName" destination="cS6-gs-kSp" id="hVe-Hr-JtY"/>
                                     <outlet property="timeLinePicView" destination="3kb-ia-teI" id="50Q-4Z-QlB"/>
                                     <outlet property="timeLineReTweetContent" destination="Jpd-Mz-msO" id="c5X-i0-e36"/>
-                                    <outlet property="timeLineSource" destination="fec-h6-xlZ" id="LZZ-iy-gxc"/>
                                     <outlet property="timeLineTime" destination="r6e-gr-rcI" id="iNX-sV-WR3"/>
                                 </connections>
                             </tableViewCell>
@@ -1934,12 +1808,6 @@
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3y-cR-dU2" userLabel="source">
-                                            <rect key="frame" x="92.5" y="31" width="44" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BSp-IE-rNX" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1963,8 +1831,6 @@
                                         <constraint firstItem="PCS-PB-snH" firstAttribute="width" secondItem="spH-N7-hjJ" secondAttribute="width" id="5g6-dq-CZz"/>
                                         <constraint firstItem="2ce-R1-dAP" firstAttribute="top" secondItem="poA-6S-A8d" secondAttribute="top" id="6SC-CH-lJK"/>
                                         <constraint firstItem="PCS-PB-snH" firstAttribute="top" secondItem="DGZ-YQ-ndG" secondAttribute="bottom" constant="4" id="7DX-9X-1mD"/>
-                                        <constraint firstItem="C3y-cR-dU2" firstAttribute="bottom" secondItem="poA-6S-A8d" secondAttribute="bottom" id="HsG-os-V9E"/>
-                                        <constraint firstItem="C3y-cR-dU2" firstAttribute="leading" secondItem="I8a-EM-ih1" secondAttribute="trailing" constant="8" id="Lba-tN-nRE"/>
                                         <constraint firstItem="DGZ-YQ-ndG" firstAttribute="top" secondItem="BSp-IE-rNX" secondAttribute="bottom" constant="8" id="N7L-Tc-ACF"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="DGZ-YQ-ndG" secondAttribute="trailing" id="ONS-VQ-wYg"/>
                                         <constraint firstAttribute="topMargin" secondItem="poA-6S-A8d" secondAttribute="top" id="QzQ-SH-DOm"/>
@@ -1984,7 +1850,6 @@
                                     <outlet property="timeLineContent" destination="BSp-IE-rNX" id="TqC-1z-eTv"/>
                                     <outlet property="timeLineName" destination="2ce-R1-dAP" id="dVI-6R-KEH"/>
                                     <outlet property="timeLinePicView" destination="DGZ-YQ-ndG" id="Ac6-D7-hlf"/>
-                                    <outlet property="timeLineSource" destination="C3y-cR-dU2" id="O8Y-AW-CmS"/>
                                     <outlet property="timeLineTime" destination="I8a-EM-ih1" id="pHi-gW-std"/>
                                 </connections>
                             </tableViewCell>
@@ -2016,12 +1881,6 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94e-cG-aAt" userLabel="time">
                                             <rect key="frame" x="56" y="31" width="29" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeB-3m-5na" userLabel="source">
-                                            <rect key="frame" x="93" y="31" width="44" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -2078,10 +1937,8 @@
                                         <constraint firstItem="94e-cG-aAt" firstAttribute="bottom" secondItem="3x8-tu-Aiz" secondAttribute="bottom" id="OUN-26-Uka"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="v1y-v8-YSb" secondAttribute="leading" id="PYW-WK-xdJ"/>
                                         <constraint firstItem="QHI-Xe-fiT" firstAttribute="top" secondItem="v1y-v8-YSb" secondAttribute="bottom" constant="8" id="Pam-tT-EtG"/>
-                                        <constraint firstItem="IeB-3m-5na" firstAttribute="bottom" secondItem="3x8-tu-Aiz" secondAttribute="bottom" id="RPX-gC-1LH"/>
                                         <constraint firstItem="94e-cG-aAt" firstAttribute="leading" secondItem="3x8-tu-Aiz" secondAttribute="trailing" constant="8" id="YNV-qS-hT7"/>
                                         <constraint firstItem="QHI-Xe-fiT" firstAttribute="top" secondItem="ffP-dd-XYb" secondAttribute="topMargin" constant="89" id="iy2-bZ-lDy"/>
-                                        <constraint firstItem="IeB-3m-5na" firstAttribute="leading" secondItem="94e-cG-aAt" secondAttribute="trailing" constant="8" id="jR6-Wn-o44"/>
                                         <constraint firstItem="QHI-Xe-fiT" firstAttribute="top" secondItem="v1y-v8-YSb" secondAttribute="bottom" constant="8" id="lcD-6o-m79"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="v1y-v8-YSb" secondAttribute="trailing" id="sHL-oa-7Pa"/>
                                         <constraint firstItem="D4U-4o-Knc" firstAttribute="top" secondItem="QHI-Xe-fiT" secondAttribute="bottom" constant="4" id="u8p-cY-eqa"/>
@@ -2104,7 +1961,6 @@
                                     <outlet property="timeLineName" destination="r9B-CH-fvq" id="wGB-3L-Gcd"/>
                                     <outlet property="timeLinePicView" destination="XdH-ai-Jrw" id="Xn2-6c-wB3"/>
                                     <outlet property="timeLineReTweetContent" destination="6X9-Xc-Kai" id="XVQ-CQ-4tD"/>
-                                    <outlet property="timeLineSource" destination="IeB-3m-5na" id="HpR-u8-vFZ"/>
                                     <outlet property="timeLineTime" destination="94e-cG-aAt" id="0Yu-A4-PZw"/>
                                 </connections>
                             </tableViewCell>
@@ -2140,12 +1996,6 @@
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOb-L5-Qkd" userLabel="source">
-                                            <rect key="frame" x="92.5" y="31" width="44" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Xb-Ly-C2V" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -2167,7 +2017,6 @@
                                         <constraint firstItem="0Xb-Ly-C2V" firstAttribute="top" secondItem="Rdv-ON-WFH" secondAttribute="bottom" constant="8" id="C6j-Zn-S75"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="0Xb-Ly-C2V" secondAttribute="trailing" id="CBB-bL-dgr"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="0Xb-Ly-C2V" secondAttribute="leading" id="CR7-Hu-HBB"/>
-                                        <constraint firstItem="YOb-L5-Qkd" firstAttribute="leading" secondItem="dwE-hm-Uuy" secondAttribute="trailing" constant="8" id="Gem-eW-5V2"/>
                                         <constraint firstItem="3bJ-FN-mbA" firstAttribute="width" secondItem="iiR-wH-rbM" secondAttribute="width" id="IFQ-gn-jGD"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="Rdv-ON-WFH" secondAttribute="leading" id="IoU-9w-OFo"/>
                                         <constraint firstItem="dwE-hm-Uuy" firstAttribute="leading" secondItem="Rdv-ON-WFH" secondAttribute="trailing" constant="8" id="O1g-4Q-TTr"/>
@@ -2177,7 +2026,6 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="6XK-sJ-1O5" secondAttribute="trailing" id="Xx4-4j-s3K"/>
                                         <constraint firstItem="3bJ-FN-mbA" firstAttribute="centerX" secondItem="iiR-wH-rbM" secondAttribute="centerX" id="YAk-qH-WWj"/>
                                         <constraint firstAttribute="topMargin" secondItem="Rdv-ON-WFH" secondAttribute="top" id="YHD-S0-0xh"/>
-                                        <constraint firstItem="YOb-L5-Qkd" firstAttribute="bottom" secondItem="Rdv-ON-WFH" secondAttribute="bottom" id="beI-9X-79h"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="6XK-sJ-1O5" secondAttribute="leading" id="l4t-84-33H"/>
                                         <constraint firstItem="dwE-hm-Uuy" firstAttribute="bottom" secondItem="Rdv-ON-WFH" secondAttribute="bottom" id="q8h-4Z-Lqs"/>
                                         <constraint firstItem="3bJ-FN-mbA" firstAttribute="top" secondItem="6XK-sJ-1O5" secondAttribute="bottom" constant="4" id="rvp-yI-xho"/>
@@ -2190,7 +2038,6 @@
                                     <outlet property="timeLineContent" destination="0Xb-Ly-C2V" id="EbX-cX-CUG"/>
                                     <outlet property="timeLineName" destination="2vq-6Z-rND" id="GI9-qy-bH0"/>
                                     <outlet property="timeLinePicView" destination="6XK-sJ-1O5" id="2hg-X8-fUW"/>
-                                    <outlet property="timeLineSource" destination="YOb-L5-Qkd" id="hgw-LD-eRo"/>
                                     <outlet property="timeLineTime" destination="dwE-hm-Uuy" id="FcD-EL-aPg"/>
                                 </connections>
                             </tableViewCell>
@@ -2222,12 +2069,6 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vh-Jy-PbF" userLabel="time">
                                             <rect key="frame" x="56" y="31" width="29" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nv-CH-QkG" userLabel="source">
-                                            <rect key="frame" x="93" y="31" width="44" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -2275,7 +2116,6 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="1hu-D1-HVd" firstAttribute="top" secondItem="qct-aT-fcG" secondAttribute="bottom" constant="8" id="07S-Us-iL5"/>
-                                        <constraint firstItem="5nv-CH-QkG" firstAttribute="bottom" secondItem="qct-aT-fcG" secondAttribute="bottom" id="6sC-6Y-Gz7"/>
                                         <constraint firstAttribute="topMargin" secondItem="qct-aT-fcG" secondAttribute="top" id="6tI-BK-Iqn"/>
                                         <constraint firstItem="9Vh-Jy-PbF" firstAttribute="bottom" secondItem="qct-aT-fcG" secondAttribute="bottom" id="8Ap-yj-faZ"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="1hu-D1-HVd" secondAttribute="leading" id="INw-dS-T8m"/>
@@ -2284,7 +2124,6 @@
                                         <constraint firstAttribute="leadingMargin" secondItem="qct-aT-fcG" secondAttribute="leading" id="SGE-Xb-UXa"/>
                                         <constraint firstItem="9Vh-Jy-PbF" firstAttribute="leading" secondItem="qct-aT-fcG" secondAttribute="trailing" constant="8" id="Sbz-nq-8eX"/>
                                         <constraint firstItem="48Z-Na-rqH" firstAttribute="centerX" secondItem="ZOA-4T-IBe" secondAttribute="centerX" id="TX0-Jp-8b2"/>
-                                        <constraint firstItem="5nv-CH-QkG" firstAttribute="leading" secondItem="9Vh-Jy-PbF" secondAttribute="trailing" constant="8" id="cYy-cP-eM4"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="1hu-D1-HVd" secondAttribute="trailing" id="euU-hs-frY"/>
                                         <constraint firstItem="48Z-Na-rqH" firstAttribute="top" secondItem="fgc-Tj-bGZ" secondAttribute="bottom" constant="4" id="fiy-i3-4gq"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="48Z-Na-rqH" secondAttribute="bottom" id="gjE-HW-QWa"/>
@@ -2310,7 +2149,6 @@
                                     <outlet property="timeLineName" destination="Kge-fE-mgI" id="Tu3-b9-At6"/>
                                     <outlet property="timeLinePicView" destination="VY8-ar-DbH" id="MeM-jc-sXQ"/>
                                     <outlet property="timeLineReTweetContent" destination="DCq-pF-fAd" id="t2O-8G-aIl"/>
-                                    <outlet property="timeLineSource" destination="5nv-CH-QkG" id="Dcn-e9-uC2"/>
                                     <outlet property="timeLineTime" destination="9Vh-Jy-PbF" id="cKT-Kd-YKd"/>
                                 </connections>
                             </tableViewCell>
@@ -2346,12 +2184,6 @@
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tN5-dS-DZg" userLabel="source">
-                                            <rect key="frame" x="92.5" y="31" width="44" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JhU-ms-6QI" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -2378,14 +2210,12 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="uhx-aP-6QI" secondAttribute="trailing" id="XXT-kv-uiW"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="JhU-ms-6QI" secondAttribute="leading" id="Xgh-0l-Yjb"/>
                                         <constraint firstItem="wwC-aK-Tiv" firstAttribute="leading" secondItem="e2c-fU-Iez" secondAttribute="trailing" constant="8" id="cEb-dr-jRo"/>
-                                        <constraint firstItem="tN5-dS-DZg" firstAttribute="bottom" secondItem="e2c-fU-Iez" secondAttribute="bottom" id="dni-7i-mwI"/>
                                         <constraint firstItem="F7q-lp-inY" firstAttribute="leading" secondItem="e2c-fU-Iez" secondAttribute="trailing" constant="8" id="kjK-gp-AAg"/>
                                         <constraint firstItem="9un-WW-uQQ" firstAttribute="centerX" secondItem="qvJ-yb-M5E" secondAttribute="centerX" id="lH3-bG-qnQ"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="e2c-fU-Iez" secondAttribute="leading" id="mch-O1-uEV"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="uhx-aP-6QI" secondAttribute="leading" id="ohJ-o2-Ohb"/>
                                         <constraint firstItem="uhx-aP-6QI" firstAttribute="top" secondItem="JhU-ms-6QI" secondAttribute="bottom" constant="8" id="pU4-yu-hdt"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="9un-WW-uQQ" secondAttribute="bottom" id="qJx-mX-qhW"/>
-                                        <constraint firstItem="tN5-dS-DZg" firstAttribute="leading" secondItem="wwC-aK-Tiv" secondAttribute="trailing" constant="8" id="u2R-11-jIh"/>
                                         <constraint firstItem="9un-WW-uQQ" firstAttribute="top" secondItem="uhx-aP-6QI" secondAttribute="bottom" constant="4" id="uLt-VL-CZB"/>
                                         <constraint firstItem="wwC-aK-Tiv" firstAttribute="bottom" secondItem="e2c-fU-Iez" secondAttribute="bottom" id="uPs-jF-Wep"/>
                                     </constraints>
@@ -2396,7 +2226,6 @@
                                     <outlet property="timeLineContent" destination="JhU-ms-6QI" id="g3U-Mc-4mb"/>
                                     <outlet property="timeLineName" destination="F7q-lp-inY" id="mth-xs-tTn"/>
                                     <outlet property="timeLinePicView" destination="uhx-aP-6QI" id="0eo-U7-wLs"/>
-                                    <outlet property="timeLineSource" destination="tN5-dS-DZg" id="Wlg-jX-otS"/>
                                     <outlet property="timeLineTime" destination="wwC-aK-Tiv" id="ac3-9g-Lxv"/>
                                 </connections>
                             </tableViewCell>
@@ -2428,12 +2257,6 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Woh-oB-Tyd" userLabel="time">
                                             <rect key="frame" x="56" y="31" width="29" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDm-Ff-joV" userLabel="source">
-                                            <rect key="frame" x="93" y="31" width="44" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -2487,7 +2310,6 @@
                                         <constraint firstItem="Woh-oB-Tyd" firstAttribute="leading" secondItem="exC-S0-gMx" secondAttribute="trailing" constant="8" id="B32-bc-f8f"/>
                                         <constraint firstItem="lzt-Gg-KMG" firstAttribute="top" secondItem="FLG-Sd-qxx" secondAttribute="bottom" constant="8" id="FFw-rw-8WC"/>
                                         <constraint firstItem="Woh-oB-Tyd" firstAttribute="bottom" secondItem="exC-S0-gMx" secondAttribute="bottom" id="ICI-z4-9sh"/>
-                                        <constraint firstItem="gDm-Ff-joV" firstAttribute="bottom" secondItem="exC-S0-gMx" secondAttribute="bottom" id="QJX-J1-sa3"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="FLG-Sd-qxx" secondAttribute="leading" id="Tml-1C-kQM"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="FLG-Sd-qxx" secondAttribute="trailing" id="aKZ-AJ-MGc"/>
                                         <constraint firstAttribute="topMargin" secondItem="exC-S0-gMx" secondAttribute="top" id="exk-bz-b3G"/>
@@ -2497,7 +2319,6 @@
                                         <constraint firstItem="FLG-Sd-qxx" firstAttribute="top" secondItem="auQ-05-8qL" secondAttribute="topMargin" constant="48" id="kNc-56-6tA"/>
                                         <constraint firstItem="PFz-7E-1I8" firstAttribute="leading" secondItem="exC-S0-gMx" secondAttribute="trailing" constant="8" id="kdu-Jf-5tv"/>
                                         <constraint firstItem="lzt-Gg-KMG" firstAttribute="top" secondItem="auQ-05-8qL" secondAttribute="topMargin" constant="89" id="lUy-3S-KDy"/>
-                                        <constraint firstItem="gDm-Ff-joV" firstAttribute="leading" secondItem="Woh-oB-Tyd" secondAttribute="trailing" constant="8" id="nIi-40-4ht"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="lzt-Gg-KMG" secondAttribute="trailing" constant="-8" id="oDE-Sk-GVG"/>
                                         <constraint firstItem="lzt-Gg-KMG" firstAttribute="leading" secondItem="auQ-05-8qL" secondAttribute="leadingMargin" constant="-8" id="u5l-zY-fbu"/>
                                         <constraint firstItem="FLG-Sd-qxx" firstAttribute="top" secondItem="exC-S0-gMx" secondAttribute="bottom" constant="8" id="xqt-yb-F5g"/>
@@ -2516,7 +2337,6 @@
                                     <outlet property="timeLineName" destination="PFz-7E-1I8" id="unf-Ph-woQ"/>
                                     <outlet property="timeLinePicView" destination="who-hR-V7K" id="b78-lv-jMe"/>
                                     <outlet property="timeLineReTweetContent" destination="LMl-Iw-JIF" id="fUC-gF-ngr"/>
-                                    <outlet property="timeLineSource" destination="gDm-Ff-joV" id="eBy-Kt-8PQ"/>
                                     <outlet property="timeLineTime" destination="Woh-oB-Tyd" id="XLb-Jd-Xdd"/>
                                 </connections>
                             </tableViewCell>
@@ -2552,12 +2372,6 @@
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ij-g5-kbo" userLabel="source">
-                                            <rect key="frame" x="92.5" y="31" width="44" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="csN-Mq-llJ" customClass="UIWeiboTextView">
                                             <rect key="frame" x="8" y="56" width="584" height="36"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -2581,7 +2395,6 @@
                                         <constraint firstItem="csN-Mq-llJ" firstAttribute="top" secondItem="Bft-3T-GpV" secondAttribute="bottom" constant="8" id="7Xp-yM-VpC"/>
                                         <constraint firstItem="jZW-bF-6CP" firstAttribute="top" secondItem="csN-Mq-llJ" secondAttribute="bottom" constant="8" id="BXW-wD-bPo"/>
                                         <constraint firstAttribute="topMargin" secondItem="Bft-3T-GpV" secondAttribute="top" id="DQx-4Q-f5k"/>
-                                        <constraint firstItem="5Ij-g5-kbo" firstAttribute="bottom" secondItem="Bft-3T-GpV" secondAttribute="bottom" id="EhI-el-ZAe"/>
                                         <constraint firstItem="dIY-XQ-1S6" firstAttribute="leading" secondItem="Bft-3T-GpV" secondAttribute="trailing" constant="8" id="Fca-SG-Tqu"/>
                                         <constraint firstItem="2qt-f4-Y18" firstAttribute="top" secondItem="jZW-bF-6CP" secondAttribute="bottom" constant="4" id="RWD-Bq-AoC"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="Bft-3T-GpV" secondAttribute="leading" id="TnY-se-FGs"/>
@@ -2592,7 +2405,6 @@
                                         <constraint firstItem="2qt-f4-Y18" firstAttribute="centerX" secondItem="J8k-8k-nd6" secondAttribute="centerX" id="s0f-Wz-Q19"/>
                                         <constraint firstItem="2qt-f4-Y18" firstAttribute="width" secondItem="J8k-8k-nd6" secondAttribute="width" id="snn-Jo-Vjz"/>
                                         <constraint firstItem="dIY-XQ-1S6" firstAttribute="bottom" secondItem="Bft-3T-GpV" secondAttribute="bottom" id="tDo-PC-Vu2"/>
-                                        <constraint firstItem="5Ij-g5-kbo" firstAttribute="leading" secondItem="dIY-XQ-1S6" secondAttribute="trailing" constant="8" id="w5D-9O-25E"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="jZW-bF-6CP" secondAttribute="leading" id="zZh-Ia-MiV"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -2602,7 +2414,6 @@
                                     <outlet property="timeLineContent" destination="csN-Mq-llJ" id="9Aa-NX-eeo"/>
                                     <outlet property="timeLineName" destination="0EY-oa-lrT" id="48C-H7-1Rw"/>
                                     <outlet property="timeLinePicView" destination="jZW-bF-6CP" id="9jp-NF-WHA"/>
-                                    <outlet property="timeLineSource" destination="5Ij-g5-kbo" id="ork-dG-Nkc"/>
                                     <outlet property="timeLineTime" destination="dIY-XQ-1S6" id="46k-FC-SJ4"/>
                                 </connections>
                             </tableViewCell>
@@ -2634,12 +2445,6 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edu-3O-AUN" userLabel="time">
                                             <rect key="frame" x="56" y="31" width="29" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPl-It-7h0" userLabel="source">
-                                            <rect key="frame" x="93" y="31" width="44" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -2692,13 +2497,11 @@
                                         <constraint firstItem="kVW-zg-0cy" firstAttribute="centerX" secondItem="6Qt-Mc-cI6" secondAttribute="centerX" id="4t6-hW-xE1"/>
                                         <constraint firstItem="2Cp-cr-taf" firstAttribute="top" secondItem="6Qt-Mc-cI6" secondAttribute="topMargin" constant="48" id="8Gk-R8-sUt"/>
                                         <constraint firstItem="wDg-v9-mMa" firstAttribute="top" secondItem="2Cp-cr-taf" secondAttribute="bottom" constant="8" id="Frd-za-9Ma"/>
-                                        <constraint firstItem="yPl-It-7h0" firstAttribute="bottom" secondItem="KtM-vi-G5u" secondAttribute="bottom" id="H5P-cL-tRx"/>
                                         <constraint firstItem="Edu-3O-AUN" firstAttribute="bottom" secondItem="KtM-vi-G5u" secondAttribute="bottom" id="IFL-R9-bbe"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="2Cp-cr-taf" secondAttribute="leading" id="IiZ-dk-ky4"/>
                                         <constraint firstItem="7XD-8b-hS5" firstAttribute="top" secondItem="KtM-vi-G5u" secondAttribute="top" id="Ivi-zm-GeR"/>
                                         <constraint firstItem="wDg-v9-mMa" firstAttribute="top" secondItem="6Qt-Mc-cI6" secondAttribute="topMargin" constant="89" id="JPf-cP-8GE"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="wDg-v9-mMa" secondAttribute="trailing" constant="-8" id="N4h-iM-g0i"/>
-                                        <constraint firstItem="yPl-It-7h0" firstAttribute="leading" secondItem="Edu-3O-AUN" secondAttribute="trailing" constant="8" id="Oc8-jw-Utp"/>
                                         <constraint firstItem="kVW-zg-0cy" firstAttribute="width" secondItem="6Qt-Mc-cI6" secondAttribute="width" id="V0f-kJ-lVE"/>
                                         <constraint firstItem="Edu-3O-AUN" firstAttribute="leading" secondItem="KtM-vi-G5u" secondAttribute="trailing" constant="8" id="eo8-23-agD"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="2Cp-cr-taf" secondAttribute="trailing" id="h8M-RF-dX8"/>
@@ -2722,7 +2525,6 @@
                                     <outlet property="timeLineName" destination="7XD-8b-hS5" id="JMH-qa-rBY"/>
                                     <outlet property="timeLinePicView" destination="wAf-OM-8lG" id="c9g-yY-YgO"/>
                                     <outlet property="timeLineReTweetContent" destination="ahA-es-jHc" id="OdJ-qS-PKQ"/>
-                                    <outlet property="timeLineSource" destination="yPl-It-7h0" id="HWJ-fF-tVc"/>
                                     <outlet property="timeLineTime" destination="Edu-3O-AUN" id="bKG-kA-OBK"/>
                                 </connections>
                             </tableViewCell>

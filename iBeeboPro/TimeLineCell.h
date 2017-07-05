@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *timeLineAvatar;
 @property (weak, nonatomic) IBOutlet UILabel *timeLineName;
 @property (weak, nonatomic) IBOutlet UILabel *timeLineTime;
-@property (weak, nonatomic) IBOutlet UILabel *timeLineSource;
+
 @property (weak, nonatomic) IBOutlet UIWeiboTextView *timeLineContent;
 
 

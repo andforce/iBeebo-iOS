@@ -52,7 +52,7 @@
     _timeLineContent.delegate = self;
     
     _timeLineName.text = weibo.user.screenName;
-    _timeLineSource.text = weibo.source;
+
     [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:weibo.user.profileImageUrl]];
 
     RetweetedWeibo * retweet = weibo.retweetedWeibo;
@@ -96,7 +96,7 @@
     _timeLineContent.delegate = self;
 
     _timeLineName.text = hotWeibo.user.screenName;
-    _timeLineSource.text = hotWeibo.source;
+
     [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:hotWeibo.user.profileImageUrl]];
 
 

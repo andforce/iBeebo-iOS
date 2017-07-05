@@ -83,6 +83,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         NSArray * views = [[NSBundle mainBundle] loadNibNamed:@"TimeLinePics" owner:self options:nil];
+        
         self.twoPicMainView = views[1];
         
         self.onePicMainView = views[0];

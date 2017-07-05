@@ -10,6 +10,7 @@
 #import "UIWeiboTextView.h"
 #import "Pics.h"
 #import "Weibo.h"
+#import "BottomView.h"
 
 @class HotWeibo;
 
@@ -40,5 +41,6 @@
 @property (weak, nonatomic) IBOutlet UIWeiboTextView *timeLineReTweetContent;
 
 - (IBAction)showPageInfo:(id)sender;
+@property (weak, nonatomic) IBOutlet BottomView *bottomView;
 
 @end

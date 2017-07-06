@@ -47,43 +47,56 @@
 }
 
 -(void)showStatus:(Weibo *)weibo {
-
-    _timeLineTime.text = weibo.createdAt;
     
-    _timeLineContent.attributedText = weibo.text;
-    _timeLineContent.delegate = self;
-    
-    _timeLineName.text = weibo.user.screenName;
-
-    [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:weibo.user.profileImageUrl]];
-
-    RetweetedWeibo * retweet = weibo.retweetedWeibo;
-
-    BOOL isRetweet = retweet.text != nil;
-
-    if (isRetweet){
-        PageInfo *retweetPageInfo = weibo.retweetedWeibo.pageInfo;
-        if (retweetPageInfo.pageUrl == nil){
-
-            _timeLineReTweetContent.attributedText = weibo.retweetedWeibo.text;
-
+    if (weibo.pageInfo.pageUrl != nil || weibo.retweetedWeibo.pageInfo.pageUrl != nil) {
+        _timeLineTime.text = weibo.createdAt;
+        
+        _timeLineContent.attributedText = weibo.text;
+        _timeLineContent.delegate = self;
+        
+        _timeLineName.text = weibo.user.screenName;
+        
+        [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:weibo.user.profileImageUrl]];
+        
+        RetweetedWeibo * retweet = weibo.retweetedWeibo;
+        
+        BOOL isRetweet = retweet.text != nil;
+        
+        if (isRetweet){
+            PageInfo *retweetPageInfo = weibo.retweetedWeibo.pageInfo;
+            if (retweetPageInfo.pageUrl == nil){
+                
+                _timeLineReTweetContent.attributedText = weibo.retweetedWeibo.text;
+                
+            } else {
+                _timeLineReTweetContent.attributedText = weibo.retweetedWeibo.text;
+                [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:retweetPageInfo.pagePic]];
+                _pageDesc.text = weibo.pageInfo.pageDesc;
+            }
         } else {
-            _timeLineReTweetContent.attributedText = weibo.retweetedWeibo.text;
-            [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:retweetPageInfo.pagePic]];
-            _pageDesc.text = weibo.pageInfo.pageDesc;
+            PageInfo *pageInfo = weibo.pageInfo;
+            if (pageInfo.pageUrl == nil) {
+                
+            } else{
+                PageInfo *pageInfo = weibo.pageInfo;
+                
+                [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:pageInfo.pagePic]];
+                _pageDesc.text = pageInfo.pageDesc;
+                
+            }
         }
     } else {
-        PageInfo *pageInfo = weibo.pageInfo;
-        if (pageInfo.pageUrl == nil) {
-
-        } else{
-            PageInfo *pageInfo = weibo.pageInfo;
-
-            [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:pageInfo.pagePic]];
-            _pageDesc.text = pageInfo.pageDesc;
-
+        RetweetedWeibo * retweet = weibo.retweetedWeibo;
+        
+        BOOL isRetweet = retweet.text != nil;
+        
+        if (isRetweet){
+            [self.viewView showRepostWeiboContent:weibo.user.profileImageUrl name:weibo.user.screenName time:weibo.createdAt content:weibo.text repostContent:weibo.retweetedWeibo.text pics:weibo.retweetedWeibo.pics];
+        } else {
+            [self.viewView showWeiboContent:weibo.user.profileImageUrl name:weibo.user.screenName time:weibo.createdAt content:weibo.text pics:weibo.pics];
         }
     }
+
 
     [_bottomView showBottomInfo:weibo.source repost:(int) weibo.repostsCount comments:(int) weibo.commentsCount like:(int) weibo.attitudesCount];
 }

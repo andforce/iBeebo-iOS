@@ -89,7 +89,7 @@
     if (pics != nil && pics.count > 0) {
         [_repostWeiboPicView showPictures:pics];
     } else{
-        _weiboPicView.frame = CGRectZero;
+        _repostWeiboPicView.frame = CGRectZero;
     }
 }
 

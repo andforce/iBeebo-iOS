@@ -137,10 +137,10 @@
         PageInfo *retweetPageInfo = weibo.retweetedWeibo.pageInfo;
         if (retweetPageInfo.pageUrl == nil){
             int count = (int)weibo.retweetedWeibo.pics.count;
-            Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCellRetweet", count];
+            Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCellRepost", count];
 
         } else {
-            Identifier = @"TimeLinePageInfoRetweet";
+            Identifier = @"TimeLinePageInfoRepost";
         }
     } else {
         PageInfo *pageInfo = weibo.pageInfo;

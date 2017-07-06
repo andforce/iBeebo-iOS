@@ -100,6 +100,12 @@
 }
 
 -(void)showPictures:(NSArray<Pics *> *)pics{
+    
+    if (pics == nil || pics == 0) {
+        self.frame = CGRectMake(0, 0, 0, 0);
+        return;
+    }
+    
     switch (pics.count) {
         case 1:
             mainView = _onePicMainView;

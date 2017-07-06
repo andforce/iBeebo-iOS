@@ -22,12 +22,14 @@
 #import "AGPlayerViewController.h"
 #import <NYTPhotoViewer/NYTPhoto.h>
 #import "TimeLinePics.h"
+#import "WeiboView.h"
 
 @interface TimeLineCell()<UITextViewDelegate>{
     HotWeibo *_hotWeibo;
 
 }
-@property (weak, nonatomic) IBOutlet TimeLinePics *timeLinePicView;
+
+@property (weak, nonatomic) IBOutlet WeiboView *viewView;
 
 @end
 
@@ -63,7 +65,6 @@
         PageInfo *retweetPageInfo = weibo.retweetedWeibo.pageInfo;
         if (retweetPageInfo.pageUrl == nil){
 
-            [self.timeLinePicView showPictures:weibo.retweetedWeibo.pics];
             _timeLineReTweetContent.attributedText = weibo.retweetedWeibo.text;
 
         } else {
@@ -74,7 +75,7 @@
     } else {
         PageInfo *pageInfo = weibo.pageInfo;
         if (pageInfo.pageUrl == nil) {
-            [self.timeLinePicView showPictures:weibo.pics];
+
         } else{
             PageInfo *pageInfo = weibo.pageInfo;
 
@@ -89,24 +90,21 @@
 
 - (void)showHotWeibo:(HotWeibo *)hotWeibo {
     _hotWeibo = hotWeibo;
-
-    _timeLineTime.text = hotWeibo.createdAt;
-
-    _timeLineContent.attributedText = hotWeibo.text;
-    _timeLineContent.delegate = self;
-
-    _timeLineName.text = hotWeibo.user.screenName;
-
-    [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:hotWeibo.user.profileImageUrl]];
-
-
-
+    
     HotPageInfo *pageInfo = hotWeibo.pageInfo;
     if (pageInfo.pageUrl == nil) {
 
-        [self.timeLinePicView showPictures:hotWeibo.pics];
+        [self.viewView showWeiboContent:_hotWeibo.user.profileImageUrl name:_hotWeibo.user.screenName time:_hotWeibo.createdAt content:hotWeibo.text pics:_hotWeibo.pics];
         
     } else{
+        _timeLineTime.text = hotWeibo.createdAt;
+        
+        _timeLineContent.attributedText = hotWeibo.text;
+        _timeLineContent.delegate = self;
+        
+        _timeLineName.text = hotWeibo.user.screenName;
+        
+        [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:hotWeibo.user.profileImageUrl]];
         [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:pageInfo.pagePic.url]];
         _pageDesc.text = pageInfo.content1;
 

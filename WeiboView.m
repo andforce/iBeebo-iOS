@@ -9,6 +9,7 @@
 #import "WeiboView.h"
 #import "UIWeiboTextView.h"
 #import "TimeLinePics.h"
+#import "WeiboUserInfo.h"
 
 #import <UIImageView+WebCache.h>
 
@@ -16,18 +17,13 @@
     
     UIView * mainView;
 }
-@property (weak, nonatomic) IBOutlet UIImageView *weiboAvatar;
-@property (weak, nonatomic) IBOutlet UILabel *weiboName;
-@property (weak, nonatomic) IBOutlet UILabel *weiboTime;
-@property (weak, nonatomic) IBOutlet UIWeiboTextView *weiboContent;
+
+@property (weak, nonatomic) IBOutlet WeiboUserInfo *userInfo;
 @property (weak, nonatomic) IBOutlet TimeLinePics *weiboPicView;
 @property (strong, nonatomic) IBOutlet UIView *weiboMainView;
 
 
-@property (weak, nonatomic) IBOutlet UIImageView *repostWeiboAvatar;
-@property (weak, nonatomic) IBOutlet UILabel *repostWeiboName;
-@property (weak, nonatomic) IBOutlet UILabel *repostWeiboTime;
-@property (weak, nonatomic) IBOutlet UIWeiboTextView *repostWeiboContent;
+@property (weak, nonatomic) IBOutlet WeiboUserInfo *repostUserInfo;
 @property (weak, nonatomic) IBOutlet UIWeiboTextView *repostWeiboContent2;
 @property (weak, nonatomic) IBOutlet TimeLinePics *repostWeiboPicView;
 
@@ -62,10 +58,8 @@
     
     [self addRealView];
     
-    [_weiboAvatar sd_setImageWithURL:[NSURL URLWithString:avatarUrl]];
-    _weiboName.text = name;
-    _weiboTime.text = time;
-    _weiboContent.attributedText = content;
+    [_userInfo showUserInfo:avatarUrl name:name time:time weiboContent:content];
+    
     if (pics != nil && pics.count > 0) {
         [_weiboPicView showPictures:pics];
     } else{
@@ -80,10 +74,7 @@
     
     [self addRealView];
     
-    [_repostWeiboAvatar sd_setImageWithURL:[NSURL URLWithString:avatarUrl]];
-    _repostWeiboName.text = name;
-    _repostWeiboTime.text = time;
-    _repostWeiboContent.attributedText = content;
+    [_repostUserInfo showUserInfo:avatarUrl name:name time:time weiboContent:repostContent];
     _repostWeiboContent2.attributedText = repostContent;
 
     if (pics != nil && pics.count > 0) {

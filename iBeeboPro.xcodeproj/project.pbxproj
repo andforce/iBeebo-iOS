@@ -36,6 +36,8 @@
 		3A2ECEA21F0BAA6E00BC54EF /* TimeLinePics.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2ECEA11F0BAA6E00BC54EF /* TimeLinePics.xib */; };
 		3A59846E1F0E8BE500F8EACA /* WeiboView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A59846D1F0E8BE500F8EACA /* WeiboView.m */; };
 		3A5984701F0E8C1D00F8EACA /* WeiboView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A59846F1F0E8C1D00F8EACA /* WeiboView.xib */; };
+		3A5984731F0EF16400F8EACA /* WeiboUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5984721F0EF16400F8EACA /* WeiboUserInfo.m */; };
+		3A5984751F0EF17800F8EACA /* WeiboUserInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5984741F0EF17800F8EACA /* WeiboUserInfo.xib */; };
 		3A6410761D466C51000651E6 /* MainTimeLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */; };
 		3A6559E41D47B9DD00776797 /* TimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6559E31D47B9DD00776797 /* TimeLineCell.m */; };
 		3A6844C91D4A59E200655A17 /* LXStatusTextPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6844C61D4A59E200655A17 /* LXStatusTextPart.m */; };
@@ -190,6 +192,9 @@
 		3A59846C1F0E8BE500F8EACA /* WeiboView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboView.h; sourceTree = "<group>"; };
 		3A59846D1F0E8BE500F8EACA /* WeiboView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboView.m; sourceTree = "<group>"; };
 		3A59846F1F0E8C1D00F8EACA /* WeiboView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeiboView.xib; sourceTree = "<group>"; };
+		3A5984711F0EF16400F8EACA /* WeiboUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUserInfo.h; sourceTree = "<group>"; };
+		3A5984721F0EF16400F8EACA /* WeiboUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboUserInfo.m; sourceTree = "<group>"; };
+		3A5984741F0EF17800F8EACA /* WeiboUserInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeiboUserInfo.xib; sourceTree = "<group>"; };
 		3A6410741D466C51000651E6 /* MainTimeLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTimeLineTableViewController.h; sourceTree = "<group>"; };
 		3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTimeLineTableViewController.m; sourceTree = "<group>"; };
 		3A6559E21D47B9DD00776797 /* TimeLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineCell.h; sourceTree = "<group>"; };
@@ -500,8 +505,8 @@
 			children = (
 				3A6559E21D47B9DD00776797 /* TimeLineCell.h */,
 				3A6559E31D47B9DD00776797 /* TimeLineCell.m */,
-				2F34C63D81F0CE53B4BF29D3 /* TimeLinePageInfo.m */,
 				2F34C6D14F0CC27A70F1E79D /* TimeLinePageInfo.h */,
+				2F34C63D81F0CE53B4BF29D3 /* TimeLinePageInfo.m */,
 				3A6A41CB1EFAC9E000FD132F /* AtMeTableViewCell.h */,
 				3A6A41CC1EFAC9E000FD132F /* AtMeTableViewCell.m */,
 			);
@@ -627,6 +632,9 @@
 				3AC3A7DA1F0D25460061E2AA /* BottomView.h */,
 				3AC3A7DB1F0D25460061E2AA /* BottomView.m */,
 				3AC3A7DD1F0D255B0061E2AA /* BottomView.xib */,
+				3A5984711F0EF16400F8EACA /* WeiboUserInfo.h */,
+				3A5984721F0EF16400F8EACA /* WeiboUserInfo.m */,
+				3A5984741F0EF17800F8EACA /* WeiboUserInfo.xib */,
 				3A59846C1F0E8BE500F8EACA /* WeiboView.h */,
 				3A59846D1F0E8BE500F8EACA /* WeiboView.m */,
 				3A59846F1F0E8C1D00F8EACA /* WeiboView.xib */,
@@ -882,6 +890,7 @@
 				3A85C2351D44DAD000B0FB8E /* LaunchScreen.storyboard in Resources */,
 				3A5984701F0E8C1D00F8EACA /* WeiboView.xib in Resources */,
 				3AC619421EFE6A80003C58CD /* AGPlayerView.xib in Resources */,
+				3A5984751F0EF17800F8EACA /* WeiboUserInfo.xib in Resources */,
 				3A85C2321D44DAD000B0FB8E /* Assets.xcassets in Resources */,
 				3A85C22D1D44DAD000B0FB8E /* Main.storyboard in Resources */,
 				3A2ECEA21F0BAA6E00BC54EF /* TimeLinePics.xib in Resources */,
@@ -992,6 +1001,7 @@
 				3A7EA7001EF8298700C6C8CE /* HotPics.m in Sources */,
 				3A6A41C51EF985F200FD132F /* LkH5icon.m in Sources */,
 				3A85C2411D44FD7500B0FB8E /* CookiesManager.m in Sources */,
+				3A5984731F0EF16400F8EACA /* WeiboUserInfo.m in Sources */,
 				3A7EA6FD1EF8298700C6C8CE /* HotPageInfo.m in Sources */,
 				3A78B4E41E9A45C00053DFA9 /* WeiboHelper.m in Sources */,
 				3AC6196A1F000ECC003C58CD /* TransBundleUIViewController.m in Sources */,

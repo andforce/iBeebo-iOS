@@ -143,7 +143,7 @@
 
             int size = views.count;
 
-            return views[8];
+            return views[count];
 
         }
 

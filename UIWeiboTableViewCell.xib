@@ -63,7 +63,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="505.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0N-SR-jjJ">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0N-SR-jjJ" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -119,7 +119,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="505.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwD-BO-zzK">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwD-BO-zzK" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -189,7 +189,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="330.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCm-ND-VNN">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCm-ND-VNN" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -272,7 +272,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="799.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xgf-Hx-IAN">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xgf-Hx-IAN" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -369,7 +369,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="526.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrS-e5-f2x">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrS-e5-f2x" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -479,7 +479,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="526.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O81-Md-nvZ">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O81-Md-nvZ" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -603,7 +603,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="722.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nf3-cr-Fpo">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nf3-cr-Fpo" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -737,7 +737,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="722.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAk-z0-mdf">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAk-z0-mdf" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -886,7 +886,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="722.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qmD-8B-jow">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qmD-8B-jow" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1115,7 +1115,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="758.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="md4-WQ-E2o">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="md4-WQ-E2o" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1180,7 +1180,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="505.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ek3-ym-oJ3">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ek3-ym-oJ3" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1259,7 +1259,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="473.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehO-fV-7sk">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehO-fV-7sk" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1351,7 +1351,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="1180.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dND-ZV-5TQ">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dND-ZV-5TQ" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1457,7 +1457,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="649.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66Z-Wh-aPg">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66Z-Wh-aPg" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1576,7 +1576,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="653.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hms-4v-usH">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hms-4v-usH" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1709,7 +1709,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="848.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yd-Cr-Jie">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yd-Cr-Jie" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1852,7 +1852,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="892.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4S-mh-rxL">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4S-mh-rxL" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -2010,7 +2010,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="894.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzs-qJ-CY9">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzs-qJ-CY9" customClass="WeiboUserInfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

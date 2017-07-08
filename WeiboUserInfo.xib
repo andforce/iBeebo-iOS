@@ -15,12 +15,11 @@
                 <outlet property="mainView" destination="VJA-nw-RXl" id="aYr-J3-vyo"/>
                 <outlet property="name" destination="K3L-EF-0Gg" id="v8z-Rw-gfe"/>
                 <outlet property="time" destination="SV9-gF-cCa" id="AqF-Lo-5aG"/>
-                <outlet property="weiboContent" destination="TsX-Iq-RNN" id="brg-ey-yqr"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="VJA-nw-RXl">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pcK-pj-Sz4">
@@ -48,27 +47,19 @@
                     <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="微博内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TsX-Iq-RNN" customClass="UIWeiboTextView">
-                    <rect key="frame" x="0.0" y="52" width="375" height="615"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="TsX-Iq-RNN" firstAttribute="width" secondItem="VJA-nw-RXl" secondAttribute="width" id="4wl-tm-T2n"/>
+                <constraint firstAttribute="bottom" secondItem="pcK-pj-Sz4" secondAttribute="bottom" constant="8" id="Bau-in-j7o"/>
                 <constraint firstItem="K3L-EF-0Gg" firstAttribute="leading" secondItem="pcK-pj-Sz4" secondAttribute="trailing" constant="8" id="CzY-dT-s81"/>
                 <constraint firstItem="K3L-EF-0Gg" firstAttribute="top" secondItem="pcK-pj-Sz4" secondAttribute="top" id="Dg3-ik-kOl"/>
-                <constraint firstItem="TsX-Iq-RNN" firstAttribute="centerX" secondItem="VJA-nw-RXl" secondAttribute="centerX" id="U58-Mv-kG9"/>
                 <constraint firstItem="pcK-pj-Sz4" firstAttribute="leading" secondItem="VJA-nw-RXl" secondAttribute="leading" constant="8" id="cy9-E6-Etd"/>
                 <constraint firstItem="pcK-pj-Sz4" firstAttribute="top" secondItem="VJA-nw-RXl" secondAttribute="top" constant="8" id="dBM-TD-oia"/>
                 <constraint firstItem="SV9-gF-cCa" firstAttribute="bottom" secondItem="pcK-pj-Sz4" secondAttribute="bottom" id="gxt-Oa-s8Y"/>
-                <constraint firstAttribute="bottom" secondItem="TsX-Iq-RNN" secondAttribute="bottom" id="uo1-KU-Twe"/>
-                <constraint firstItem="TsX-Iq-RNN" firstAttribute="top" secondItem="pcK-pj-Sz4" secondAttribute="bottom" constant="4" id="v6T-w9-iN1"/>
                 <constraint firstItem="SV9-gF-cCa" firstAttribute="leading" secondItem="pcK-pj-Sz4" secondAttribute="trailing" constant="8" id="ysY-99-2EL"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="298" y="-162"/>
+            <point key="canvasLocation" x="-141.5" y="-611"/>
         </view>
     </objects>
 </document>

@@ -17,7 +17,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *time;
-@property (weak, nonatomic) IBOutlet UIWeiboTextView *weiboContent;
 @property (strong, nonatomic) IBOutlet UIView *mainView;
 @end
 
@@ -50,7 +49,6 @@
     [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:avatarUrl]];
     _name.text = name;
     _time.text = time;
-    _weiboContent.attributedText = content;
 }
 
 @end

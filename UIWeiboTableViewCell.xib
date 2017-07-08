@@ -2181,5 +2181,126 @@
             </tableViewCellContentView>
             <point key="canvasLocation" x="-1265" y="2201"/>
         </tableViewCell>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pageInfo" rowHeight="749" id="3Ue-oa-kh1" userLabel="p" customClass="UIWeiboTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="506"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Ue-oa-kh1" id="tvY-rj-nBf">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="505.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3m-uB-uZm" customClass="WeiboUserInfo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="56" id="ctc-HE-nAC"/>
+                        </constraints>
+                    </view>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nZw-UT-vj3">
+                        <rect key="frame" x="0.0" y="60" width="600" height="74.5"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.094447544640000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9r-7v-i8U" customClass="BottomView">
+                        <rect key="frame" x="0.0" y="470.5" width="600" height="35"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="yaK-VE-vFo"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UDd-Ph-3SP">
+                        <rect key="frame" x="8" y="138.5" width="584" height="328.5"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.094447544640000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="UDd-Ph-3SP" secondAttribute="height" multiplier="16:9" id="tgn-EC-P5g"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="E9r-7v-i8U" firstAttribute="top" secondItem="UDd-Ph-3SP" secondAttribute="bottom" constant="3.5" id="1bQ-bt-ZD4"/>
+                    <constraint firstItem="UDd-Ph-3SP" firstAttribute="top" secondItem="nZw-UT-vj3" secondAttribute="bottom" constant="4" id="HfV-pI-hHu"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="UDd-Ph-3SP" secondAttribute="trailing" id="JKu-Yu-3Vx"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="E9r-7v-i8U" secondAttribute="bottom" constant="-8" id="KZ9-vt-kFp"/>
+                    <constraint firstItem="nZw-UT-vj3" firstAttribute="centerX" secondItem="tvY-rj-nBf" secondAttribute="centerX" id="NZ5-aF-8Yd"/>
+                    <constraint firstItem="n3m-uB-uZm" firstAttribute="centerX" secondItem="tvY-rj-nBf" secondAttribute="centerX" id="U1y-id-bfa"/>
+                    <constraint firstItem="nZw-UT-vj3" firstAttribute="top" secondItem="n3m-uB-uZm" secondAttribute="bottom" constant="4" id="hjP-zD-vN4"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="UDd-Ph-3SP" secondAttribute="leading" id="hw1-r2-Fcs"/>
+                    <constraint firstItem="E9r-7v-i8U" firstAttribute="centerX" secondItem="tvY-rj-nBf" secondAttribute="centerX" id="joK-0u-Qwb"/>
+                    <constraint firstItem="n3m-uB-uZm" firstAttribute="width" secondItem="tvY-rj-nBf" secondAttribute="width" id="kpA-8m-rov"/>
+                    <constraint firstItem="E9r-7v-i8U" firstAttribute="width" secondItem="tvY-rj-nBf" secondAttribute="width" id="qVf-S7-Q4H"/>
+                    <constraint firstItem="nZw-UT-vj3" firstAttribute="width" secondItem="tvY-rj-nBf" secondAttribute="width" id="swJ-Gl-ETe"/>
+                    <constraint firstItem="n3m-uB-uZm" firstAttribute="top" secondItem="tvY-rj-nBf" secondAttribute="topMargin" constant="-8" id="ui3-oL-cfo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="2440" y="-1233"/>
+        </tableViewCell>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="repostPageInfo" rowHeight="1002" id="ZbH-hK-1Uu" userLabel="rp" customClass="UIWeiboTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="759"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZbH-hK-1Uu" id="Ljd-sG-1fA">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="758.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrr-sI-6BZ" customClass="WeiboUserInfo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="56"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="56" id="ym0-11-GAm"/>
+                        </constraints>
+                    </view>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hxM-Nr-CP0">
+                        <rect key="frame" x="0.0" y="60" width="600" height="286.5"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.094447544640000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQh-iN-hrA" customClass="BottomView">
+                        <rect key="frame" x="0.0" y="723.5" width="600" height="35"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="cbU-kf-AMe"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rUk-VC-cbi">
+                        <rect key="frame" x="8" y="391.5" width="584" height="328.5"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.094447544640000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="rUk-VC-cbi" secondAttribute="height" multiplier="16:9" id="h30-hv-t8E"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="251" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Q8x-8M-x2C">
+                        <rect key="frame" x="8" y="354.5" width="584" height="33"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.094447544640000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vrr-sI-6BZ" firstAttribute="top" secondItem="Ljd-sG-1fA" secondAttribute="topMargin" constant="-8" id="3aq-0N-Re7"/>
+                    <constraint firstItem="hxM-Nr-CP0" firstAttribute="centerX" secondItem="Ljd-sG-1fA" secondAttribute="centerX" id="A5e-Oj-yZd"/>
+                    <constraint firstItem="Q8x-8M-x2C" firstAttribute="top" secondItem="hxM-Nr-CP0" secondAttribute="bottom" constant="8" id="CdI-Cl-asm"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Q8x-8M-x2C" secondAttribute="trailing" id="IvX-fp-Mf9"/>
+                    <constraint firstItem="eQh-iN-hrA" firstAttribute="width" secondItem="Ljd-sG-1fA" secondAttribute="width" id="Jaf-JD-TZq"/>
+                    <constraint firstItem="vrr-sI-6BZ" firstAttribute="width" secondItem="Ljd-sG-1fA" secondAttribute="width" id="KBd-uh-4rc"/>
+                    <constraint firstItem="hxM-Nr-CP0" firstAttribute="width" secondItem="Ljd-sG-1fA" secondAttribute="width" id="LBa-dz-9aB"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="eQh-iN-hrA" secondAttribute="bottom" constant="-8" id="MYP-Xd-flB"/>
+                    <constraint firstItem="rUk-VC-cbi" firstAttribute="top" secondItem="Q8x-8M-x2C" secondAttribute="bottom" constant="4" id="OsN-dq-mx2"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="Q8x-8M-x2C" secondAttribute="leading" id="aCN-eS-hTC"/>
+                    <constraint firstItem="eQh-iN-hrA" firstAttribute="top" secondItem="rUk-VC-cbi" secondAttribute="bottom" constant="3.5" id="b5d-lU-i8G"/>
+                    <constraint firstItem="eQh-iN-hrA" firstAttribute="centerX" secondItem="Ljd-sG-1fA" secondAttribute="centerX" id="fCy-8j-SLb"/>
+                    <constraint firstItem="hxM-Nr-CP0" firstAttribute="top" secondItem="vrr-sI-6BZ" secondAttribute="bottom" constant="4" id="qnp-yw-vvH"/>
+                    <constraint firstItem="vrr-sI-6BZ" firstAttribute="centerX" secondItem="Ljd-sG-1fA" secondAttribute="centerX" id="wjy-Ak-dqL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="rUk-VC-cbi" secondAttribute="trailing" id="z5I-iU-6DH"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="rUk-VC-cbi" secondAttribute="leading" id="zIF-xl-q4j"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="2470" y="-447"/>
+        </tableViewCell>
     </objects>
 </document>

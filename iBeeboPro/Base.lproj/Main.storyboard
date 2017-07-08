@@ -1405,7 +1405,7 @@
             </objects>
             <point key="canvasLocation" x="8878" y="404"/>
         </scene>
-        <!--首页-->
+        <!--热门微博-->
         <scene sceneID="JER-Fu-aII">
             <objects>
                 <tableViewController storyboardIdentifier="HotTableViewController" id="Pk8-Ce-Lnb" customClass="HotTableViewController" sceneMemberID="viewController">
@@ -1693,345 +1693,85 @@
                                     <outlet property="timeLineTime" destination="DDf-xi-pa9" id="JjA-bX-24O"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLine0ImagesCell" rowHeight="250" id="Vx5-yG-IQA" customClass="TimeLineCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="01" rowHeight="250" id="Vx5-yG-IQA" customClass="UIWeiboTableViewCell">
                                 <rect key="frame" x="0.0" y="1205.5" width="600" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vx5-yG-IQA" id="3gq-cv-0YI">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="249.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4l8-VH-gBW" customClass="WeiboView">
-                                            <rect key="frame" x="0.0" y="8" width="600" height="194.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBG-92-5kI" customClass="BottomView">
-                                            <rect key="frame" x="0.0" y="206.5" width="600" height="35"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="BlH-bB-QU3"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="uBG-92-5kI" secondAttribute="bottom" id="C9Z-ZG-2j8"/>
-                                        <constraint firstItem="4l8-VH-gBW" firstAttribute="top" secondItem="3gq-cv-0YI" secondAttribute="topMargin" id="IIX-5f-8v7"/>
-                                        <constraint firstItem="uBG-92-5kI" firstAttribute="top" secondItem="4l8-VH-gBW" secondAttribute="bottom" constant="4" id="Odv-7x-1Uc"/>
-                                        <constraint firstItem="4l8-VH-gBW" firstAttribute="width" secondItem="3gq-cv-0YI" secondAttribute="width" id="cPY-8D-OZ1"/>
-                                        <constraint firstItem="uBG-92-5kI" firstAttribute="width" secondItem="3gq-cv-0YI" secondAttribute="width" id="cnG-dd-sXQ"/>
-                                        <constraint firstItem="uBG-92-5kI" firstAttribute="centerX" secondItem="3gq-cv-0YI" secondAttribute="centerX" id="jmU-lh-HcY"/>
-                                        <constraint firstItem="4l8-VH-gBW" firstAttribute="centerX" secondItem="3gq-cv-0YI" secondAttribute="centerX" id="wdv-ZT-yuM"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="bottomView" destination="uBG-92-5kI" id="0Sm-OP-sNc"/>
-                                    <outlet property="viewView" destination="4l8-VH-gBW" id="vl7-iU-cfN"/>
-                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLine1ImagesCell" rowHeight="250" id="i95-4A-CMT" customClass="TimeLineCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="11" rowHeight="250" id="i95-4A-CMT" customClass="UIWeiboTableViewCell">
                                 <rect key="frame" x="0.0" y="1455.5" width="600" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i95-4A-CMT" id="uq8-Vw-Tg1">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="249.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ruN-5e-GV9" customClass="WeiboView">
-                                            <rect key="frame" x="0.0" y="8" width="600" height="194.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1GA-GS-eUj" customClass="BottomView">
-                                            <rect key="frame" x="0.0" y="206.5" width="600" height="35"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="8Wg-2h-QfM"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="1GA-GS-eUj" firstAttribute="width" secondItem="uq8-Vw-Tg1" secondAttribute="width" id="CFV-nq-J66"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="1GA-GS-eUj" secondAttribute="bottom" id="Jnf-fx-Qz1"/>
-                                        <constraint firstItem="ruN-5e-GV9" firstAttribute="width" secondItem="uq8-Vw-Tg1" secondAttribute="width" id="NeE-Hi-lkb"/>
-                                        <constraint firstItem="ruN-5e-GV9" firstAttribute="top" secondItem="uq8-Vw-Tg1" secondAttribute="topMargin" id="YdA-VO-HTA"/>
-                                        <constraint firstItem="ruN-5e-GV9" firstAttribute="centerX" secondItem="uq8-Vw-Tg1" secondAttribute="centerX" id="kQR-Xa-3nz"/>
-                                        <constraint firstItem="1GA-GS-eUj" firstAttribute="top" secondItem="ruN-5e-GV9" secondAttribute="bottom" constant="4" id="vHz-6V-VYq"/>
-                                        <constraint firstItem="1GA-GS-eUj" firstAttribute="centerX" secondItem="uq8-Vw-Tg1" secondAttribute="centerX" id="zvi-4D-rjT"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="bottomView" destination="1GA-GS-eUj" id="AVn-nY-YAX"/>
-                                    <outlet property="viewView" destination="ruN-5e-GV9" id="btB-lu-njx"/>
-                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLine2ImagesCell" rowHeight="250" id="LeW-Et-kI4" customClass="TimeLineCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="21" rowHeight="250" id="LeW-Et-kI4" customClass="UIWeiboTableViewCell">
                                 <rect key="frame" x="0.0" y="1705.5" width="600" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LeW-Et-kI4" id="IaN-A1-9xW">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="249.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbO-FZ-MSB" customClass="WeiboView">
-                                            <rect key="frame" x="0.0" y="8" width="600" height="194.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qe3-ua-E7c" customClass="BottomView">
-                                            <rect key="frame" x="0.0" y="206.5" width="600" height="35"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="UO6-vC-J41"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="qe3-ua-E7c" firstAttribute="centerX" secondItem="IaN-A1-9xW" secondAttribute="centerX" id="6fS-gv-w8q"/>
-                                        <constraint firstItem="fbO-FZ-MSB" firstAttribute="top" secondItem="IaN-A1-9xW" secondAttribute="topMargin" id="7iY-85-DpB"/>
-                                        <constraint firstItem="qe3-ua-E7c" firstAttribute="top" secondItem="fbO-FZ-MSB" secondAttribute="bottom" constant="4" id="AHb-4W-PWn"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="qe3-ua-E7c" secondAttribute="bottom" id="Wb0-fS-2i5"/>
-                                        <constraint firstItem="fbO-FZ-MSB" firstAttribute="width" secondItem="IaN-A1-9xW" secondAttribute="width" id="WwY-fY-RP5"/>
-                                        <constraint firstItem="fbO-FZ-MSB" firstAttribute="centerX" secondItem="IaN-A1-9xW" secondAttribute="centerX" id="pr5-dG-9VU"/>
-                                        <constraint firstItem="qe3-ua-E7c" firstAttribute="width" secondItem="IaN-A1-9xW" secondAttribute="width" id="qlf-Ww-3k7"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="bottomView" destination="qe3-ua-E7c" id="zzR-IL-ovS"/>
-                                    <outlet property="viewView" destination="fbO-FZ-MSB" id="ajB-tR-xyE"/>
-                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLine3ImagesCell" rowHeight="250" id="633-6j-9VB" customClass="TimeLineCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="31" rowHeight="250" id="633-6j-9VB" customClass="UIWeiboTableViewCell">
                                 <rect key="frame" x="0.0" y="1955.5" width="600" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="633-6j-9VB" id="MCx-gh-Ixk">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="249.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCT-8y-b11" customClass="WeiboView">
-                                            <rect key="frame" x="0.0" y="8" width="600" height="194.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gf9-KD-Mwy" customClass="BottomView">
-                                            <rect key="frame" x="0.0" y="206.5" width="600" height="35"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="sqW-ib-2VN"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="mCT-8y-b11" firstAttribute="centerX" secondItem="MCx-gh-Ixk" secondAttribute="centerX" id="37X-qB-GVQ"/>
-                                        <constraint firstItem="mCT-8y-b11" firstAttribute="top" secondItem="MCx-gh-Ixk" secondAttribute="topMargin" id="CDb-SQ-nHo"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="gf9-KD-Mwy" secondAttribute="bottom" id="Uop-Z4-nez"/>
-                                        <constraint firstItem="gf9-KD-Mwy" firstAttribute="centerX" secondItem="MCx-gh-Ixk" secondAttribute="centerX" id="kwg-7f-Elv"/>
-                                        <constraint firstItem="gf9-KD-Mwy" firstAttribute="top" secondItem="mCT-8y-b11" secondAttribute="bottom" constant="4" id="rZe-RY-Dee"/>
-                                        <constraint firstItem="gf9-KD-Mwy" firstAttribute="width" secondItem="MCx-gh-Ixk" secondAttribute="width" id="xwb-Om-cqk"/>
-                                        <constraint firstItem="mCT-8y-b11" firstAttribute="width" secondItem="MCx-gh-Ixk" secondAttribute="width" id="yfl-ag-2Uw"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="bottomView" destination="gf9-KD-Mwy" id="8cn-N5-YFr"/>
-                                    <outlet property="viewView" destination="mCT-8y-b11" id="Nxg-uV-921"/>
-                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLine4ImagesCell" rowHeight="250" id="4mg-M8-WDr" customClass="TimeLineCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="41" rowHeight="250" id="4mg-M8-WDr" customClass="UIWeiboTableViewCell">
                                 <rect key="frame" x="0.0" y="2205.5" width="600" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4mg-M8-WDr" id="wmw-yP-E5v">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="249.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jL6-KJ-0eN" customClass="WeiboView">
-                                            <rect key="frame" x="0.0" y="8" width="600" height="194.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrx-zP-ray" customClass="BottomView">
-                                            <rect key="frame" x="0.0" y="206.5" width="600" height="35"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="g6O-3h-rqQ"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="hrx-zP-ray" firstAttribute="width" secondItem="wmw-yP-E5v" secondAttribute="width" id="AAB-7H-8DI"/>
-                                        <constraint firstItem="jL6-KJ-0eN" firstAttribute="centerX" secondItem="wmw-yP-E5v" secondAttribute="centerX" id="B8w-vs-o3q"/>
-                                        <constraint firstItem="hrx-zP-ray" firstAttribute="top" secondItem="jL6-KJ-0eN" secondAttribute="bottom" constant="4" id="Baa-r5-U5L"/>
-                                        <constraint firstItem="hrx-zP-ray" firstAttribute="centerX" secondItem="wmw-yP-E5v" secondAttribute="centerX" id="Fl6-5i-XE1"/>
-                                        <constraint firstItem="jL6-KJ-0eN" firstAttribute="width" secondItem="wmw-yP-E5v" secondAttribute="width" id="Hpq-AN-iq2"/>
-                                        <constraint firstItem="jL6-KJ-0eN" firstAttribute="top" secondItem="wmw-yP-E5v" secondAttribute="topMargin" id="dM6-l9-7S8"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="hrx-zP-ray" secondAttribute="bottom" id="mvs-HS-KrK"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="bottomView" destination="hrx-zP-ray" id="a1W-L0-tfi"/>
-                                    <outlet property="viewView" destination="jL6-KJ-0eN" id="0FV-f1-JbS"/>
-                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLine5ImagesCell" rowHeight="250" id="vlJ-Q1-0ia" customClass="TimeLineCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="51" rowHeight="250" id="vlJ-Q1-0ia" customClass="UIWeiboTableViewCell">
                                 <rect key="frame" x="0.0" y="2455.5" width="600" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vlJ-Q1-0ia" id="3Cx-2d-CLM">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="249.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Kg-CE-2oR" customClass="WeiboView">
-                                            <rect key="frame" x="0.0" y="8" width="600" height="194.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3z-8a-RIz" customClass="BottomView">
-                                            <rect key="frame" x="0.0" y="206.5" width="600" height="35"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="0Ih-GS-h86"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="T3z-8a-RIz" secondAttribute="bottom" id="6j7-bZ-fIb"/>
-                                        <constraint firstItem="T3z-8a-RIz" firstAttribute="top" secondItem="0Kg-CE-2oR" secondAttribute="bottom" constant="4" id="KN4-b7-VMO"/>
-                                        <constraint firstItem="0Kg-CE-2oR" firstAttribute="centerX" secondItem="3Cx-2d-CLM" secondAttribute="centerX" id="ZkA-sS-YPo"/>
-                                        <constraint firstItem="T3z-8a-RIz" firstAttribute="centerX" secondItem="3Cx-2d-CLM" secondAttribute="centerX" id="dYk-t8-eWC"/>
-                                        <constraint firstItem="0Kg-CE-2oR" firstAttribute="width" secondItem="3Cx-2d-CLM" secondAttribute="width" id="fx2-Ff-jVN"/>
-                                        <constraint firstItem="0Kg-CE-2oR" firstAttribute="top" secondItem="3Cx-2d-CLM" secondAttribute="topMargin" id="s8j-vC-g9y"/>
-                                        <constraint firstItem="T3z-8a-RIz" firstAttribute="width" secondItem="3Cx-2d-CLM" secondAttribute="width" id="z5f-yr-nbq"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="bottomView" destination="T3z-8a-RIz" id="Kz6-bz-gJC"/>
-                                    <outlet property="viewView" destination="0Kg-CE-2oR" id="RQe-Um-QuP"/>
-                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLine6ImagesCell" rowHeight="250" id="4DT-wn-Jz4" customClass="TimeLineCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="61" rowHeight="250" id="4DT-wn-Jz4" customClass="UIWeiboTableViewCell">
                                 <rect key="frame" x="0.0" y="2705.5" width="600" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4DT-wn-Jz4" id="Cv3-qK-NNd">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="249.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6an-By-UfG" customClass="WeiboView">
-                                            <rect key="frame" x="0.0" y="8" width="600" height="194.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFM-DK-Pk8" customClass="BottomView">
-                                            <rect key="frame" x="0.0" y="206.5" width="600" height="35"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="cof-A2-mjd"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="6an-By-UfG" firstAttribute="width" secondItem="Cv3-qK-NNd" secondAttribute="width" id="2Nn-j2-WwO"/>
-                                        <constraint firstItem="rFM-DK-Pk8" firstAttribute="width" secondItem="Cv3-qK-NNd" secondAttribute="width" id="2h8-ua-VK7"/>
-                                        <constraint firstItem="6an-By-UfG" firstAttribute="top" secondItem="Cv3-qK-NNd" secondAttribute="topMargin" id="4Rc-Ot-02L"/>
-                                        <constraint firstItem="rFM-DK-Pk8" firstAttribute="top" secondItem="6an-By-UfG" secondAttribute="bottom" constant="4" id="L8E-6Z-ah7"/>
-                                        <constraint firstItem="rFM-DK-Pk8" firstAttribute="centerX" secondItem="Cv3-qK-NNd" secondAttribute="centerX" id="br9-4e-yDB"/>
-                                        <constraint firstItem="6an-By-UfG" firstAttribute="centerX" secondItem="Cv3-qK-NNd" secondAttribute="centerX" id="i9w-0H-HV1"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="rFM-DK-Pk8" secondAttribute="bottom" id="koi-Ew-gxx"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="bottomView" destination="rFM-DK-Pk8" id="zQi-j5-Kna"/>
-                                    <outlet property="viewView" destination="6an-By-UfG" id="Lh5-u9-taa"/>
-                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLine7ImagesCell" rowHeight="250" id="sS9-21-37M" customClass="TimeLineCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="71" rowHeight="250" id="sS9-21-37M" customClass="UIWeiboTableViewCell">
                                 <rect key="frame" x="0.0" y="2955.5" width="600" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sS9-21-37M" id="s4J-Fk-Xf2">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="249.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Obf-JP-WzM" customClass="WeiboView">
-                                            <rect key="frame" x="0.0" y="8" width="600" height="194.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scY-os-4jv" customClass="BottomView">
-                                            <rect key="frame" x="0.0" y="206.5" width="600" height="35"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="MFg-Lp-bgy"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="scY-os-4jv" secondAttribute="bottom" id="IVb-hA-GVt"/>
-                                        <constraint firstItem="Obf-JP-WzM" firstAttribute="width" secondItem="s4J-Fk-Xf2" secondAttribute="width" id="L56-b7-Gea"/>
-                                        <constraint firstItem="Obf-JP-WzM" firstAttribute="top" secondItem="s4J-Fk-Xf2" secondAttribute="topMargin" id="Vs3-TI-5dq"/>
-                                        <constraint firstItem="scY-os-4jv" firstAttribute="centerX" secondItem="s4J-Fk-Xf2" secondAttribute="centerX" id="jSI-Lw-GeV"/>
-                                        <constraint firstItem="scY-os-4jv" firstAttribute="top" secondItem="Obf-JP-WzM" secondAttribute="bottom" constant="4" id="pxa-Ze-Lpn"/>
-                                        <constraint firstItem="scY-os-4jv" firstAttribute="width" secondItem="s4J-Fk-Xf2" secondAttribute="width" id="zIC-3x-izg"/>
-                                        <constraint firstItem="Obf-JP-WzM" firstAttribute="centerX" secondItem="s4J-Fk-Xf2" secondAttribute="centerX" id="zVt-PR-M17"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="bottomView" destination="scY-os-4jv" id="x9b-hi-RZR"/>
-                                    <outlet property="viewView" destination="Obf-JP-WzM" id="EKf-4Q-qGA"/>
-                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLine8ImagesCell" rowHeight="250" id="cP6-wM-m1G" customClass="TimeLineCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="81" rowHeight="250" id="cP6-wM-m1G" customClass="UIWeiboTableViewCell">
                                 <rect key="frame" x="0.0" y="3205.5" width="600" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cP6-wM-m1G" id="iao-hR-COK">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="249.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GqM-2e-Tjs" customClass="WeiboView">
-                                            <rect key="frame" x="0.0" y="8" width="600" height="194.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zae-hX-1Z0" customClass="BottomView">
-                                            <rect key="frame" x="0.0" y="206.5" width="600" height="35"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="h0L-ib-Vae"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Zae-hX-1Z0" firstAttribute="centerX" secondItem="iao-hR-COK" secondAttribute="centerX" id="25w-Ev-C4Z"/>
-                                        <constraint firstItem="Zae-hX-1Z0" firstAttribute="top" secondItem="GqM-2e-Tjs" secondAttribute="bottom" constant="4" id="4Rk-cs-lKQ"/>
-                                        <constraint firstItem="Zae-hX-1Z0" firstAttribute="width" secondItem="iao-hR-COK" secondAttribute="width" id="LDF-ZK-D65"/>
-                                        <constraint firstItem="GqM-2e-Tjs" firstAttribute="width" secondItem="iao-hR-COK" secondAttribute="width" id="Rv7-Kf-yyH"/>
-                                        <constraint firstItem="GqM-2e-Tjs" firstAttribute="centerX" secondItem="iao-hR-COK" secondAttribute="centerX" id="i20-YX-n87"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Zae-hX-1Z0" secondAttribute="bottom" id="pkU-2U-3W1"/>
-                                        <constraint firstItem="GqM-2e-Tjs" firstAttribute="top" secondItem="iao-hR-COK" secondAttribute="topMargin" id="s9e-WS-ggP"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="bottomView" destination="Zae-hX-1Z0" id="x5d-26-Yzr"/>
-                                    <outlet property="viewView" destination="GqM-2e-Tjs" id="Wzz-Tl-VFH"/>
-                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeLine9ImagesCell" rowHeight="250" id="M9V-mT-wQg" customClass="TimeLineCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="91" rowHeight="250" id="M9V-mT-wQg" customClass="UIWeiboTableViewCell">
                                 <rect key="frame" x="0.0" y="3455.5" width="600" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M9V-mT-wQg" id="exB-6f-5j4">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="249.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYA-wB-nyt" customClass="WeiboView">
-                                            <rect key="frame" x="0.0" y="8" width="600" height="194.5"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fgw-O7-wZe" customClass="BottomView">
-                                            <rect key="frame" x="0.0" y="206.5" width="600" height="35"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="EgP-9e-tVg"/>
-                                            </constraints>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Fgw-O7-wZe" firstAttribute="width" secondItem="exB-6f-5j4" secondAttribute="width" id="E9d-QJ-Iy3"/>
-                                        <constraint firstItem="mYA-wB-nyt" firstAttribute="width" secondItem="exB-6f-5j4" secondAttribute="width" id="QcJ-9I-whZ"/>
-                                        <constraint firstItem="Fgw-O7-wZe" firstAttribute="centerX" secondItem="exB-6f-5j4" secondAttribute="centerX" id="Rbe-3Y-6wa"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Fgw-O7-wZe" secondAttribute="bottom" id="ZvO-zA-fLz"/>
-                                        <constraint firstItem="mYA-wB-nyt" firstAttribute="centerX" secondItem="exB-6f-5j4" secondAttribute="centerX" id="ffZ-Z0-yo9"/>
-                                        <constraint firstItem="Fgw-O7-wZe" firstAttribute="top" secondItem="mYA-wB-nyt" secondAttribute="bottom" constant="4" id="mJG-1J-aQ5"/>
-                                        <constraint firstItem="mYA-wB-nyt" firstAttribute="top" secondItem="exB-6f-5j4" secondAttribute="topMargin" id="saU-rl-k2r"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="bottomView" destination="Fgw-O7-wZe" id="yfK-M9-AFU"/>
-                                    <outlet property="viewView" destination="mYA-wB-nyt" id="NoV-f2-qdr"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -2039,7 +1779,7 @@
                             <outlet property="delegate" destination="Pk8-Ce-Lnb" id="ImW-gX-6dy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="首页" id="n6n-SI-MQu"/>
+                    <navigationItem key="navigationItem" title="热门微博" id="n6n-SI-MQu"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="4000"/>
                 </tableViewController>

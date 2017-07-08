@@ -18,7 +18,7 @@
 #import "HotMblog.h"
 #import "HotPageInfo.h"
 #import "HotWeibo.h"
-
+#import "UIWeiboTableViewCell.h"
 
 @interface HotTableViewController ()<UITextViewDelegate>{
 
@@ -126,25 +126,42 @@
 
     HotWeibo * hotWeibo = _mblogs[(NSUInteger) indexPath.section];
 
-    TimeLineCell * cell = nil;
+
     NSString * Identifier = nil;
 
     HotPageInfo *pageInfo = hotWeibo.pageInfo;
     if (pageInfo.pageUrl == nil) {
         int count = (int)hotWeibo.pics.count;
-        Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCell", count];
+        Identifier = [NSString stringWithFormat:@"%d", count];
+
+        UIWeiboTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+        if (!cell){
+//            [tableView registerNib:[UINib nibWithNibName:@"" bundle:nil] forCellReuseIdentifier:Identifier];
+//            cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+
+            NSArray * views = [[NSBundle mainBundle] loadNibNamed:@"UIWeiboTableViewCell" owner:self options:nil];
+
+            int size = views.count;
+
+            return views[8];
+
+        }
+
+        cell.fd_enforceFrameLayout = NO;
+
+        return cell;
     } else{
+        TimeLineCell * cell = nil;
         Identifier = @"TimeLinePageInfo";
+        cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+        cell.fd_enforceFrameLayout = NO;
+
+        [cell showHotWeibo:hotWeibo];
+
+        return cell;
     }
 
-    cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
-    cell.fd_enforceFrameLayout = NO;
 
-    [cell showHotWeibo:hotWeibo];
-
-//    [cell setSeparatorInset:UIEdgeInsetsZero];
-//    [cell setLayoutMargins:UIEdgeInsetsZero];
-    return cell;
 }
 
 -(BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange{

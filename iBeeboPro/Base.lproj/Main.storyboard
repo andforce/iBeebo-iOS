@@ -1410,7 +1410,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="HotTableViewController" id="Pk8-Ce-Lnb" customClass="HotTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="154" sectionHeaderHeight="18" sectionFooterHeight="18" id="jtm-OC-ERm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="2000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="4000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -2041,11 +2041,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="首页" id="n6n-SI-MQu"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="2000"/>
+                    <size key="freeformSize" width="600" height="4000"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7Z-Hw-b7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3522" y="-496"/>
+            <point key="canvasLocation" x="3521.5999999999999" y="-496.55172413793105"/>
         </scene>
     </scenes>
     <resources>

@@ -141,7 +141,7 @@
 //            cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
 
             NSArray * views = [[NSBundle mainBundle] loadNibNamed:@"UIWeiboTableViewCell" owner:self options:nil];
-            cell = views[9];
+            cell = views[count];
         }
 
         cell.fd_enforceFrameLayout = NO;

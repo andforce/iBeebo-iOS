@@ -74,7 +74,7 @@
     
     [self addRealView];
     
-    [_repostUserInfo showUserInfo:avatarUrl name:name time:time weiboContent:repostContent];
+    [_repostUserInfo showUserInfo:avatarUrl name:name time:time weiboContent:content];
     _repostWeiboContent2.attributedText = repostContent;
 
     if (pics != nil && pics.count > 0) {

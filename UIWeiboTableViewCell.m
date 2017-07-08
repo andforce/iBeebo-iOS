@@ -7,6 +7,14 @@
 //
 
 #import "UIWeiboTableViewCell.h"
+#import "UIWeiboTextView.h"
+
+@interface UIWeiboTableViewCell(){
+    
+}
+//@property (assign, nonatomic) IBOutlet UIWeiboTextView *content;
+
+@end
 
 @implementation UIWeiboTableViewCell
 
@@ -42,4 +50,7 @@
     return self;
 }
 
+-(void)showContent:(NSAttributedString *)content{
+    //self.content.attributedText = content;
+}
 @end

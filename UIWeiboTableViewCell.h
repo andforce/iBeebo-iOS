@@ -10,4 +10,6 @@
 
 @interface UIWeiboTableViewCell : UITableViewCell
 
+-(void) showContent:(NSAttributedString *)content;
+
 @end

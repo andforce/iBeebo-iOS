@@ -136,19 +136,17 @@
 
         UIWeiboTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
         if (!cell){
+            //加载一个Cell时候用的
 //            [tableView registerNib:[UINib nibWithNibName:@"" bundle:nil] forCellReuseIdentifier:Identifier];
 //            cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
 
             NSArray * views = [[NSBundle mainBundle] loadNibNamed:@"UIWeiboTableViewCell" owner:self options:nil];
-
-            int size = views.count;
-
-            return views[count];
-
+            cell = views[9];
         }
 
         cell.fd_enforceFrameLayout = NO;
 
+        [cell showContent:hotWeibo.text];
         return cell;
     } else{
         TimeLineCell * cell = nil;

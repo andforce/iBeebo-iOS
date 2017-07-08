@@ -1,14 +1,14 @@
 //
-//  UIWeiboTableViewCell0.m
+//  UIWeiboTableViewCell.m
 //  iBeeboPro
 //
 //  Created by 迪远 王 on 2017/7/8.
 //  Copyright © 2017年 andforce. All rights reserved.
 //
 
-#import "UIWeiboTableViewCell0.h"
+#import "UIWeiboTableViewCell.h"
 
-@implementation UIWeiboTableViewCell0
+@implementation UIWeiboTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

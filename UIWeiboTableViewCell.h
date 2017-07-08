@@ -1,5 +1,5 @@
 //
-//  UIWeiboTableViewCell0.h
+//  UIWeiboTableViewCell.h
 //  iBeeboPro
 //
 //  Created by 迪远 王 on 2017/7/8.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIWeiboTableViewCell0 : UITableViewCell
+@interface UIWeiboTableViewCell : UITableViewCell
 
 @end

@@ -24,10 +24,29 @@
 #import "TimeLinePics.h"
 #import "WeiboView.h"
 
+#import "WeiboUserInfo.h"
+
 @interface TimeLineCell()<UITextViewDelegate>{
     HotWeibo *_hotWeibo;
 
 }
+@property (weak, nonatomic) IBOutlet WeiboUserInfo *userInfo;
+@property (weak, nonatomic) IBOutlet UITextView *weiboContent;
+@property (weak, nonatomic) IBOutlet BottomView *bottomAction;
+
+@property (weak, nonatomic) IBOutlet UIImageView *image0;
+@property (weak, nonatomic) IBOutlet UIImageView *image1;
+@property (weak, nonatomic) IBOutlet UIImageView *image2;
+@property (weak, nonatomic) IBOutlet UIImageView *image3;
+@property (weak, nonatomic) IBOutlet UIImageView *image4;
+@property (weak, nonatomic) IBOutlet UIImageView *image5;
+@property (weak, nonatomic) IBOutlet UIImageView *image6;
+@property (weak, nonatomic) IBOutlet UIImageView *image7;
+@property (weak, nonatomic) IBOutlet UIImageView *image8;
+
+
+
+
 
 @property (weak, nonatomic) IBOutlet WeiboView *viewView;
 

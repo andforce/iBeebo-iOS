@@ -38,7 +38,6 @@
 		3A5984701F0E8C1D00F8EACA /* WeiboView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A59846F1F0E8C1D00F8EACA /* WeiboView.xib */; };
 		3A5984731F0EF16400F8EACA /* WeiboUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5984721F0EF16400F8EACA /* WeiboUserInfo.m */; };
 		3A5984751F0EF17800F8EACA /* WeiboUserInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5984741F0EF17800F8EACA /* WeiboUserInfo.xib */; };
-		3A59847E1F10F05800F8EACA /* UIWeiboTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A59847C1F10F05800F8EACA /* UIWeiboTableViewCell.m */; };
 		3A59847F1F10F05800F8EACA /* UIWeiboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A59847D1F10F05800F8EACA /* UIWeiboTableViewCell.xib */; };
 		3A6410761D466C51000651E6 /* MainTimeLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */; };
 		3A6559E41D47B9DD00776797 /* TimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6559E31D47B9DD00776797 /* TimeLineCell.m */; };
@@ -197,8 +196,6 @@
 		3A5984711F0EF16400F8EACA /* WeiboUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUserInfo.h; sourceTree = "<group>"; };
 		3A5984721F0EF16400F8EACA /* WeiboUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboUserInfo.m; sourceTree = "<group>"; };
 		3A5984741F0EF17800F8EACA /* WeiboUserInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeiboUserInfo.xib; sourceTree = "<group>"; };
-		3A59847B1F10F05800F8EACA /* UIWeiboTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWeiboTableViewCell.h; sourceTree = "<group>"; };
-		3A59847C1F10F05800F8EACA /* UIWeiboTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWeiboTableViewCell.m; sourceTree = "<group>"; };
 		3A59847D1F10F05800F8EACA /* UIWeiboTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIWeiboTableViewCell.xib; sourceTree = "<group>"; };
 		3A6410741D466C51000651E6 /* MainTimeLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTimeLineTableViewController.h; sourceTree = "<group>"; };
 		3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTimeLineTableViewController.m; sourceTree = "<group>"; };
@@ -643,8 +640,6 @@
 				3A59846C1F0E8BE500F8EACA /* WeiboView.h */,
 				3A59846D1F0E8BE500F8EACA /* WeiboView.m */,
 				3A59846F1F0E8C1D00F8EACA /* WeiboView.xib */,
-				3A59847B1F10F05800F8EACA /* UIWeiboTableViewCell.h */,
-				3A59847C1F10F05800F8EACA /* UIWeiboTableViewCell.m */,
 				3A59847D1F10F05800F8EACA /* UIWeiboTableViewCell.xib */,
 			);
 			name = Views;
@@ -994,7 +989,6 @@
 				3AC619761F00113F003C58CD /* UIImage+Tint.m in Sources */,
 				3A6A41B71EF9859300FD132F /* CmtUser.m in Sources */,
 				3A7EA6F81EF8298700C6C8CE /* HotGeo.m in Sources */,
-				3A59847E1F10F05800F8EACA /* UIWeiboTableViewCell.m in Sources */,
 				3A6A41A01EF9850D00FD132F /* AtMeAtMePage.m in Sources */,
 				3A6410761D466C51000651E6 /* MainTimeLineTableViewController.m in Sources */,
 				3AC3A7DC1F0D25460061E2AA /* BottomView.m in Sources */,

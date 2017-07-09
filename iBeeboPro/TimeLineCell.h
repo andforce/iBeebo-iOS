@@ -15,23 +15,12 @@
 @class HotWeibo;
 
 @interface TimeLineCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *timeLineAvatar;
-@property (weak, nonatomic) IBOutlet UILabel *timeLineName;
-@property (weak, nonatomic) IBOutlet UILabel *timeLineTime;
 
-@property (weak, nonatomic) IBOutlet UIWeiboTextView *timeLineContent;
-
-
-@property (weak, nonatomic) IBOutlet UIImageView *pageInfoImage;
-@property (weak, nonatomic) IBOutlet UILabel *pageDesc;
 
 -(void) showStatus:(Weibo *)weibo;
 
 -(void) showHotWeibo:(HotWeibo *)hotWeibo;
 
-@property (weak, nonatomic) IBOutlet UIWeiboTextView *timeLineReTweetContent;
-
 - (IBAction)showPageInfo:(id)sender;
-@property (weak, nonatomic) IBOutlet BottomView *bottomView;
 
 @end

@@ -72,7 +72,7 @@
 -(void)showStatus:(Weibo *)weibo {
 
     // PageInfo
-    if (weibo.pageInfo.pageUrl != nil || weibo.retweetedWeibo.pageInfo.pageUrl != nil) {
+    if ((weibo.pageInfo != nil && weibo.pageInfo.type != 0) || (weibo.retweetedWeibo.pageInfo != nil && weibo.retweetedWeibo.pageInfo != 0)) {
 
         RetweetedWeibo * retweet = weibo.retweetedWeibo;
         
@@ -82,12 +82,16 @@
 
             self.weiboContent.attributedText = weibo.text;
             self.orgContent.attributedText = weibo.retweetedWeibo.text;
+            
+            PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:weibo.retweetedWeibo.pageInfo.pagePic];
+            [self showImage:picLargeMiddleSmall.small small:picLargeMiddleSmall.small toImage:self.image0];
         } else {
             self.weiboContent.attributedText = weibo.text;
+            PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:weibo.pageInfo.pagePic];
+            [self showImage:picLargeMiddleSmall.small small:picLargeMiddleSmall.small toImage:self.image0];
         }
 
-        PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:weibo.pageInfo.pagePic];
-        [self showImage:picLargeMiddleSmall.large small:picLargeMiddleSmall.small toImage:self.image0];
+        
     }
     // Weibo
     else {
@@ -132,12 +136,12 @@
             [images addObject:self.image8];
         }
 
-        NSArray<Pics*> * pics = weibo.pics;
+        NSArray<Pics*> * pics = weibo.retweetedWeibo.pics;
 
         for (int i = 0; i < pics.count; i++){
             NSString * imgUrl = pics[(NSUInteger) i].url;
             PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:imgUrl];
-            [self showImage:picLargeMiddleSmall.large small:picLargeMiddleSmall.small toImage:images[(NSUInteger) i]];
+            [self showImage:picLargeMiddleSmall.small small:picLargeMiddleSmall.small toImage:images[(NSUInteger) i]];
         }
     }
 

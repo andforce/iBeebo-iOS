@@ -135,7 +135,7 @@
 
     if (isRetweet){
         PageInfo *retweetPageInfo = weibo.retweetedWeibo.pageInfo;
-        if (retweetPageInfo.pageUrl == nil){
+        if (retweetPageInfo.type == 0){
             int count = (int)weibo.retweetedWeibo.pics.count;
             Identifier = [NSString stringWithFormat:@"r%d", count];
 
@@ -144,7 +144,7 @@
         }
     } else {
         PageInfo *pageInfo = weibo.pageInfo;
-        if (pageInfo.pageUrl == nil) {
+        if (pageInfo.type == 0) {
             int count = (int)weibo.pics.count;
             Identifier = [NSString stringWithFormat:@"%d", count];
         } else{

@@ -75,58 +75,79 @@
 }
 
 -(void)showStatus:(Weibo *)weibo {
-    
+
+    // PageInfo
     if (weibo.pageInfo.pageUrl != nil || weibo.retweetedWeibo.pageInfo.pageUrl != nil) {
-        _timeLineTime.text = weibo.createdAt;
-        
-        _timeLineContent.attributedText = weibo.text;
-        _timeLineContent.delegate = self;
-        
-        _timeLineName.text = weibo.user.screenName;
-        
-        [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:weibo.user.profileImageUrl]];
-        
+
         RetweetedWeibo * retweet = weibo.retweetedWeibo;
         
         BOOL isRetweet = retweet.text != nil;
-        
+
         if (isRetweet){
-            PageInfo *retweetPageInfo = weibo.retweetedWeibo.pageInfo;
-            if (retweetPageInfo.pageUrl == nil){
-                
-                _timeLineReTweetContent.attributedText = weibo.retweetedWeibo.text;
-                
-            } else {
-                _timeLineReTweetContent.attributedText = weibo.retweetedWeibo.text;
-                [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:retweetPageInfo.pagePic]];
-                _pageDesc.text = weibo.pageInfo.pageDesc;
-            }
+
+            self.weiboContent.attributedText = weibo.text;
+            self.orgContent.attributedText = weibo.retweetedWeibo.text;
         } else {
-            PageInfo *pageInfo = weibo.pageInfo;
-            if (pageInfo.pageUrl == nil) {
-                
-            } else{
-                PageInfo *pageInfo = weibo.pageInfo;
-                
-                [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:pageInfo.pagePic]];
-                _pageDesc.text = pageInfo.pageDesc;
-                
-            }
+            self.weiboContent.attributedText = weibo.text;
         }
-    } else {
+
+        PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:weibo.pageInfo.pagePic];
+        [self showImage:picLargeMiddleSmall.large small:picLargeMiddleSmall.small toImage:self.image0];
+    }
+    // Weibo
+    else {
         RetweetedWeibo * retweet = weibo.retweetedWeibo;
         
         BOOL isRetweet = retweet.text != nil;
         
         if (isRetweet){
-            [self.viewView showRepostWeiboContent:weibo.user.profileImageUrl name:weibo.user.screenName time:weibo.createdAt content:weibo.text repostContent:weibo.retweetedWeibo.text pics:weibo.retweetedWeibo.pics];
+
+            self.weiboContent.attributedText = weibo.text;
+            self.orgContent.attributedText = weibo.retweetedWeibo.text;
         } else {
-            [self.viewView showWeiboContent:weibo.user.profileImageUrl name:weibo.user.screenName time:weibo.createdAt content:weibo.text pics:weibo.pics];
+            self.weiboContent.attributedText = weibo.text;
+        }
+
+        images = [NSMutableArray arrayWithCapacity:9];
+        if (self.image0){
+            [images addObject:self.image0];
+        }
+        if (self.image1){
+            [images addObject:self.image1];
+        }
+        if (self.image2){
+            [images addObject:self.image2];
+        }
+        if (self.image3){
+            [images addObject:self.image3];
+        }
+        if (self.image4){
+            [images addObject:self.image4];
+        }
+        if (self.image5){
+            [images addObject:self.image5];
+        }
+        if (self.image6){
+            [images addObject:self.image6];
+        }
+        if (self.image7){
+            [images addObject:self.image7];
+        }
+        if (self.image8){
+            [images addObject:self.image8];
+        }
+
+        NSArray<Pics*> * pics = weibo.pics;
+
+        for (int i = 0; i < pics.count; i++){
+            NSString * imgUrl = pics[(NSUInteger) i].url;
+            PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:imgUrl];
+            [self showImage:picLargeMiddleSmall.large small:picLargeMiddleSmall.small toImage:images[(NSUInteger) i]];
         }
     }
 
 
-    [self.userInfo showUserInfo:weibo.user.profileUrl name:weibo.user.screenName time:weibo.createdAt];
+    [self.userInfo showUserInfo:weibo.user.profileImageUrl name:weibo.user.screenName time:weibo.createdAt];
     [self.bottomAction showBottomInfo:weibo.source repost:(int) weibo.repostsCount comments:(int) weibo.commentsCount like:(int) weibo.attitudesCount];
 }
 
@@ -142,7 +163,6 @@
         PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:pageInfo.pagePic.url];
         [self showImage:picLargeMiddleSmall.large small:picLargeMiddleSmall.small toImage:self.image0];
     } else {
-//        images = @[self.image0,self.image1,self.image2,self.image3,self.image4,self.image5,self.image6,self.image7,self.image8];
 
         images = [NSMutableArray arrayWithCapacity:9];
         if (self.image0){

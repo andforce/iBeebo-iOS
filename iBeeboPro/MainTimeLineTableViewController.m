@@ -137,19 +137,19 @@
         PageInfo *retweetPageInfo = weibo.retweetedWeibo.pageInfo;
         if (retweetPageInfo.pageUrl == nil){
             int count = (int)weibo.retweetedWeibo.pics.count;
-            Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCellRepost", count];
+            Identifier = [NSString stringWithFormat:@"r%d", count];
 
         } else {
-            Identifier = @"TimeLinePageInfoRepost";
+            Identifier = @"repostPageInfo";
         }
     } else {
         PageInfo *pageInfo = weibo.pageInfo;
         if (pageInfo.pageUrl == nil) {
             int count = (int)weibo.pics.count;
-            Identifier = [NSString stringWithFormat:@"TimeLine%dImagesCell", count];
+            Identifier = [NSString stringWithFormat:@"%d", count];
         } else{
 
-            Identifier = @"TimeLinePageInfo";
+            Identifier = @"pageInfo";
         }
     }
 

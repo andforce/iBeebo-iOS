@@ -13,6 +13,7 @@
 		2F34C1A02CAED97E7C3D5D15 /* TimeLineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C5A9CBBEEA0B96D2A53D /* TimeLineButton.m */; };
 		2F34C2492249AD8036CB7E15 /* WeiboPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C7C5FC6537BD962D317F /* WeiboPage.m */; };
 		2F34C290F133FDB5EC583FB1 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C204C7F7573486CEB9B4 /* User.m */; };
+		2F34C2D552C072988DDF2C57 /* PicLargeMiddleSmall.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C278163F0677447F7AEA /* PicLargeMiddleSmall.m */; };
 		2F34C4D8AC32286ACBEDB4FB /* Mblog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C406502D408173799166 /* Mblog.m */; };
 		2F34C576A4F745C978358EE4 /* Visible.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C0932D667BA69A882F68 /* Visible.m */; };
 		2F34C5ABC0980D6276B65E3D /* BaseWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C453F4ECA81B10255FFB /* BaseWeibo.m */; };
@@ -143,6 +144,7 @@
 		2F34C156B568CCEC09C50C73 /* HotWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotWeibo.m; sourceTree = "<group>"; };
 		2F34C1D3F17B6E40E78AF9F8 /* AtMeMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtMeMessage.m; sourceTree = "<group>"; };
 		2F34C204C7F7573486CEB9B4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		2F34C278163F0677447F7AEA /* PicLargeMiddleSmall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicLargeMiddleSmall.m; sourceTree = "<group>"; };
 		2F34C301750500ACA37B40D6 /* NYTExamplePhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTExamplePhoto.h; sourceTree = "<group>"; };
 		2F34C344B0D1B76CE767E37D /* Cards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cards.m; sourceTree = "<group>"; };
 		2F34C406502D408173799166 /* Mblog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mblog.m; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		2F34C97FEF845E6C43EB3A26 /* RetweetedWeibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetweetedWeibo.h; sourceTree = "<group>"; };
 		2F34C99AE4F413370C104AAE /* TimeLineButton+Index.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TimeLineButton+Index.h"; sourceTree = "<group>"; };
 		2F34C99D5C77049B01243924 /* Geo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geo.h; sourceTree = "<group>"; };
+		2F34C9FD849A124C4150ACCA /* PicLargeMiddleSmall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicLargeMiddleSmall.h; sourceTree = "<group>"; };
 		2F34CABC019A6718DFEFD73A /* Cards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cards.h; sourceTree = "<group>"; };
 		2F34CB0C38D63BB5885D6581 /* CardGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardGroup.m; sourceTree = "<group>"; };
 		2F34CB399745230C77DA3504 /* RetweetedStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetweetedStatus.h; sourceTree = "<group>"; };
@@ -511,6 +514,8 @@
 				2F34C63D81F0CE53B4BF29D3 /* TimeLinePageInfo.m */,
 				3A6A41CB1EFAC9E000FD132F /* AtMeTableViewCell.h */,
 				3A6A41CC1EFAC9E000FD132F /* AtMeTableViewCell.m */,
+				2F34C278163F0677447F7AEA /* PicLargeMiddleSmall.m */,
+				2F34C9FD849A124C4150ACCA /* PicLargeMiddleSmall.h */,
 			);
 			name = TableCell;
 			sourceTree = "<group>";
@@ -1069,6 +1074,7 @@
 				2F34C1A02CAED97E7C3D5D15 /* TimeLineButton.m in Sources */,
 				2F34C8B26C55EC8E7CE8C547 /* TimeLineButton+Index.m in Sources */,
 				2F34C8CB95520BD38E61A9FD /* NYTExamplePhoto.m in Sources */,
+				2F34C2D552C072988DDF2C57 /* PicLargeMiddleSmall.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

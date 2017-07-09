@@ -45,7 +45,7 @@
     return self;
 }
 
--(void)showUserInfo:(NSString *)avatarUrl name:(NSString *)name time:(NSString *)time weiboContent:(NSAttributedString *)content{
+-(void)showUserInfo:(NSString *)avatarUrl name:(NSString *)name time:(NSString *)time{
     [_avatarImageView sd_setImageWithURL:[NSURL URLWithString:avatarUrl]];
     _name.text = name;
     _time.text = time;

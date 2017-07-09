@@ -6,6 +6,7 @@
 //  Copyright © 2017年 andforce. All rights reserved.
 //
 
+#import <AFNetworking/AFNetworkReachabilityManager.h>
 #import "HotTableViewController.h"
 
 #import "TimeLineCell.h"
@@ -25,6 +26,8 @@
     WeiboHelper * _weiboHelper;
 
     HotWeiboPage * _currentPage;
+
+    AFNetworkReachabilityManager *_manager;
 }
 
 @end
@@ -34,6 +37,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    _manager = [AFNetworkReachabilityManager sharedManager];
+
+    [_manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+
+        [[NSUserDefaults standardUserDefaults] setValue:@(status) forKey:@"net_work_status"];
+        switch (status) {
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+                break;
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+                break;
+            case AFNetworkReachabilityStatusUnknown:
+            case AFNetworkReachabilityStatusNotReachable:
+                break;
+        }
+
+
+    }];
+    [_manager startMonitoring];
 
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 180.0;
@@ -91,6 +112,12 @@
 
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    if (_manager){
+        [_manager stopMonitoring];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -125,19 +152,20 @@
 
     HotWeibo * hotWeibo = _mblogs[(NSUInteger) indexPath.section];
 
-    HotPageInfo *pageInfo = hotWeibo.pageInfo;
-    
     int count = (int)hotWeibo.pics.count;
     
     NSString * Identifier = [NSString stringWithFormat:@"%d", count];
-    
-    if (pageInfo.pageUrl != nil) {
+
+    HotPageInfo *pageInfo = hotWeibo.pageInfo;
+    if (pageInfo != nil && [pageInfo.type isEqualToString:@"video"]) {
         Identifier = @"pageInfo";
     }
     
     TimeLineCell * cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
     
     cell.fd_enforceFrameLayout = NO;
+
+    [cell showHotWeibo:hotWeibo];
     
     return cell;
 

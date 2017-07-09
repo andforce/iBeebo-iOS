@@ -10,6 +10,6 @@
 
 @interface WeiboUserInfo : UIView
 
--(void)showUserInfo:(NSString*) avatarUrl name:(NSString*)name time:(NSString*)time weiboContent:(NSAttributedString*) content;
+-(void)showUserInfo:(NSString*) avatarUrl name:(NSString*)name time:(NSString*)time;
 
 @end

@@ -21,15 +21,21 @@
 #import "AppDelegate.h"
 #import "AGPlayerViewController.h"
 #import <NYTPhotoViewer/NYTPhoto.h>
+#import <AFNetworking/AFNetworkReachabilityManager.h>
 #import "TimeLinePics.h"
 #import "WeiboView.h"
+#import "PicLargeMiddleSmall.h"
 
 #import "WeiboUserInfo.h"
 
 @interface TimeLineCell()<UITextViewDelegate>{
     HotWeibo *_hotWeibo;
+    
+    NSArray<UIImageView *> * images;
 
 }
+
+
 @property (weak, nonatomic) IBOutlet WeiboUserInfo *userInfo;
 @property (weak, nonatomic) IBOutlet UITextView *weiboContent;
 @property (weak, nonatomic) IBOutlet BottomView *bottomAction;
@@ -57,6 +63,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    //images = @[self.image0,self.image1,self.image2,self.image3,self.image4,self.image5,self.image6,self.image7,self.image8];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -117,34 +124,81 @@
     }
 
 
-    [_bottomView showBottomInfo:weibo.source repost:(int) weibo.repostsCount comments:(int) weibo.commentsCount like:(int) weibo.attitudesCount];
+    [self.userInfo showUserInfo:weibo.user.profileUrl name:weibo.user.screenName time:weibo.createdAt];
+    [self.bottomAction showBottomInfo:weibo.source repost:(int) weibo.repostsCount comments:(int) weibo.commentsCount like:(int) weibo.attitudesCount];
 }
 
-- (void)showHotWeibo:(HotWeibo *)hotWeibo {
-    _hotWeibo = hotWeibo;
+- (void)showHotWeibo:(HotWeibo *)weibo {
+    _hotWeibo = weibo;
     
-    HotPageInfo *pageInfo = hotWeibo.pageInfo;
-    if (pageInfo.pageUrl == nil) {
+    HotPageInfo *pageInfo = weibo.pageInfo;
 
-        [self.viewView showWeiboContent:_hotWeibo.user.profileImageUrl name:_hotWeibo.user.screenName time:_hotWeibo.createdAt content:hotWeibo.text pics:_hotWeibo.pics];
-        
-    } else{
-        _timeLineTime.text = hotWeibo.createdAt;
-        
-        _timeLineContent.attributedText = hotWeibo.text;
-        _timeLineContent.delegate = self;
-        
-        _timeLineName.text = hotWeibo.user.screenName;
-        
-        [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:hotWeibo.user.profileImageUrl]];
-        [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:pageInfo.pagePic.url]];
-        _pageDesc.text = pageInfo.content1;
+    if (pageInfo != nil && [pageInfo.type isEqualToString:@"video"]){
+
+        NSURL * url = [NSURL URLWithString:pageInfo.pagePic.url];
+
+        PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:pageInfo.pagePic.url];
+        [self showImage:picLargeMiddleSmall.large small:picLargeMiddleSmall.small toImage:self.image0];
+    } else {
 
     }
+//    if (pageInfo.pageUrl == nil) {
+//
+//        [self.viewView showWeiboContent:_hotWeibo.user.profileImageUrl name:_hotWeibo.user.screenName time:_hotWeibo.createdAt content:weibo.text pics:_hotWeibo.pics];
+//
+//    } else{
+//        _timeLineTime.text = weibo.createdAt;
+//
+//        _timeLineContent.attributedText = weibo.text;
+//        _timeLineContent.delegate = self;
+//
+//        _timeLineName.text = weibo.user.screenName;
+//
+//        [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:weibo.user.profileImageUrl]];
+//        [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:pageInfo.pagePic.url]];
+//        _pageDesc.text = pageInfo.content1;
+//
+//    }
 
-    [_bottomView showBottomInfo:hotWeibo.source repost:(int) hotWeibo.repostsCount comments:(int) hotWeibo.commentsCount like:(int) hotWeibo.attitudesCount];
+    self.weiboContent.attributedText = weibo.text;
+    [self.userInfo showUserInfo:weibo.user.profileImageUrl name:weibo.user.screenName time:weibo.createdAt];
+    [self.bottomAction showBottomInfo:weibo.source repost:(int) weibo.repostsCount comments:(int) weibo.commentsCount like:(int) weibo.attitudesCount];
 }
 
+- (void)showImage:(NSString *)org small:(NSString *)small toImage:(UIImageView *) img{
+    // 占位图片
+    //UIImage *placeholder = [UIImage imageNamed:@"placeholderImage"];
+    // 从内存\沙盒缓存中获得原图
+    UIImage *originalImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:org];
+    if (originalImage) { // 如果内存\沙盒缓存有原图，那么就直接显示原图（不管现在是什么网络状态）
+        [img sd_setImageWithURL:[NSURL URLWithString:org]];
+    } else { // 内存\沙盒缓存没有原图
+
+        int status = [[[NSUserDefaults standardUserDefaults] valueForKey:@"net_work_status"] intValue];
+
+        if (status == AFNetworkReachabilityStatusReachableViaWiFi) { // 在使用Wifi, 下载原图
+            [img sd_setImageWithURL:[NSURL URLWithString:org]];
+        } else if (status == AFNetworkReachabilityStatusReachableViaWWAN) { // 在使用手机自带网络
+            //     用户的配置项假设利用NSUserDefaults存储到了沙盒中
+            //    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"alwaysDownloadOriginalImage"];
+            //    [[NSUserDefaults standardUserDefaults] synchronize];
+            //      #warning 从沙盒中读取用户的配置项：在3G\4G环境是否仍然下载原图
+            BOOL alwaysDownloadOriginalImage = [[NSUserDefaults standardUserDefaults] boolForKey:@"alwaysDownloadOriginalImage"];
+            if (alwaysDownloadOriginalImage) { // 下载原图
+                [img sd_setImageWithURL:[NSURL URLWithString:org] ];
+            } else { // 下载小图
+                [img sd_setImageWithURL:[NSURL URLWithString:small] ];
+            }
+        } else { // 没有网络
+            UIImage *thumbnailImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:small];
+            if (thumbnailImage) { // 内存\沙盒缓存中有小图
+                [img sd_setImageWithURL:[NSURL URLWithString:small] ];
+            } else {
+                [img sd_setImageWithURL:nil ];
+            }
+        }
+    }
+}
 
 
 - (IBAction)showPageInfo:(id)sender {

@@ -35,8 +35,6 @@
 		3A195A491EF68252006886BE /* UIView+Corner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A195A481EF68252006886BE /* UIView+Corner.m */; };
 		3A2ECEA01F0BAA5400BC54EF /* TimeLinePics.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2ECE9F1F0BAA5400BC54EF /* TimeLinePics.m */; };
 		3A2ECEA21F0BAA6E00BC54EF /* TimeLinePics.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2ECEA11F0BAA6E00BC54EF /* TimeLinePics.xib */; };
-		3A59846E1F0E8BE500F8EACA /* WeiboView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A59846D1F0E8BE500F8EACA /* WeiboView.m */; };
-		3A5984701F0E8C1D00F8EACA /* WeiboView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A59846F1F0E8C1D00F8EACA /* WeiboView.xib */; };
 		3A5984731F0EF16400F8EACA /* WeiboUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5984721F0EF16400F8EACA /* WeiboUserInfo.m */; };
 		3A5984751F0EF17800F8EACA /* WeiboUserInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5984741F0EF17800F8EACA /* WeiboUserInfo.xib */; };
 		3A59847F1F10F05800F8EACA /* UIWeiboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A59847D1F10F05800F8EACA /* UIWeiboTableViewCell.xib */; };
@@ -193,9 +191,6 @@
 		3A2ECE9E1F0BAA5400BC54EF /* TimeLinePics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLinePics.h; sourceTree = "<group>"; };
 		3A2ECE9F1F0BAA5400BC54EF /* TimeLinePics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLinePics.m; sourceTree = "<group>"; };
 		3A2ECEA11F0BAA6E00BC54EF /* TimeLinePics.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeLinePics.xib; sourceTree = "<group>"; };
-		3A59846C1F0E8BE500F8EACA /* WeiboView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboView.h; sourceTree = "<group>"; };
-		3A59846D1F0E8BE500F8EACA /* WeiboView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboView.m; sourceTree = "<group>"; };
-		3A59846F1F0E8C1D00F8EACA /* WeiboView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeiboView.xib; sourceTree = "<group>"; };
 		3A5984711F0EF16400F8EACA /* WeiboUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUserInfo.h; sourceTree = "<group>"; };
 		3A5984721F0EF16400F8EACA /* WeiboUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboUserInfo.m; sourceTree = "<group>"; };
 		3A5984741F0EF17800F8EACA /* WeiboUserInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeiboUserInfo.xib; sourceTree = "<group>"; };
@@ -642,9 +637,6 @@
 				3A5984711F0EF16400F8EACA /* WeiboUserInfo.h */,
 				3A5984721F0EF16400F8EACA /* WeiboUserInfo.m */,
 				3A5984741F0EF17800F8EACA /* WeiboUserInfo.xib */,
-				3A59846C1F0E8BE500F8EACA /* WeiboView.h */,
-				3A59846D1F0E8BE500F8EACA /* WeiboView.m */,
-				3A59846F1F0E8C1D00F8EACA /* WeiboView.xib */,
 				3A59847D1F10F05800F8EACA /* UIWeiboTableViewCell.xib */,
 			);
 			name = Views;
@@ -897,7 +889,6 @@
 				3A6844D41D4A5FF600655A17 /* lxh.plist in Resources */,
 				3A85C2351D44DAD000B0FB8E /* LaunchScreen.storyboard in Resources */,
 				3A59847F1F10F05800F8EACA /* UIWeiboTableViewCell.xib in Resources */,
-				3A5984701F0E8C1D00F8EACA /* WeiboView.xib in Resources */,
 				3AC619421EFE6A80003C58CD /* AGPlayerView.xib in Resources */,
 				3A5984751F0EF17800F8EACA /* WeiboUserInfo.xib in Resources */,
 				3A85C2321D44DAD000B0FB8E /* Assets.xcassets in Resources */,
@@ -1065,7 +1056,6 @@
 				3A6A41B61EF9859300FD132F /* CmtH5icon.m in Sources */,
 				2F34CCE7F114F28FF04AA297 /* RetweetedWeibo.m in Sources */,
 				3A7EA7031EF8298700C6C8CE /* HotWeiboPage.m in Sources */,
-				3A59846E1F0E8BE500F8EACA /* WeiboView.m in Sources */,
 				2F34C5ABC0980D6276B65E3D /* BaseWeibo.m in Sources */,
 				2F34C73E867192B0DAFC411A /* TimeLinePageInfo.m in Sources */,
 				2F34C0073EC0C4A9C15EF97C /* HotWeibo.m in Sources */,

@@ -24,7 +24,6 @@
 #import <AFNetworking/AFNetworkReachabilityManager.h>
 #import <NYTPhotoViewer/NYTPhotosViewController.h>
 #import "TimeLinePics.h"
-#import "WeiboView.h"
 #import "PicLargeMiddleSmall.h"
 
 #import "WeiboUserInfo.h"
@@ -54,10 +53,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *image8;
 
 
-
-
-
-@property (weak, nonatomic) IBOutlet WeiboView *viewView;
 
 @end
 

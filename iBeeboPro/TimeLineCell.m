@@ -41,6 +41,7 @@
 @property (weak, nonatomic) IBOutlet WeiboUserInfo *userInfo;
 @property (weak, nonatomic) IBOutlet UITextView *weiboContent;
 @property (weak, nonatomic) IBOutlet BottomView *bottomAction;
+@property (weak, nonatomic) IBOutlet UITextView *orgContent;
 
 @property (weak, nonatomic) IBOutlet UIImageView *image0;
 @property (weak, nonatomic) IBOutlet UIImageView *image1;

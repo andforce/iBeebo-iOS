@@ -22,16 +22,18 @@
 #import "AGPlayerViewController.h"
 #import <NYTPhotoViewer/NYTPhoto.h>
 #import <AFNetworking/AFNetworkReachabilityManager.h>
+#import <NYTPhotoViewer/NYTPhotosViewController.h>
 #import "TimeLinePics.h"
 #import "WeiboView.h"
 #import "PicLargeMiddleSmall.h"
 
 #import "WeiboUserInfo.h"
+#import "NYTExamplePhoto.h"
 
 @interface TimeLineCell()<UITextViewDelegate>{
     HotWeibo *_hotWeibo;
     
-    NSArray<UIImageView *> * images;
+    NSMutableArray<UIImageView *> * images;
 
 }
 
@@ -63,7 +65,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    //images = @[self.image0,self.image1,self.image2,self.image3,self.image4,self.image5,self.image6,self.image7,self.image8];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -130,7 +131,7 @@
 
 - (void)showHotWeibo:(HotWeibo *)weibo {
     _hotWeibo = weibo;
-    
+
     HotPageInfo *pageInfo = weibo.pageInfo;
 
     if (pageInfo != nil && [pageInfo.type isEqualToString:@"video"]){
@@ -140,30 +141,78 @@
         PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:pageInfo.pagePic.url];
         [self showImage:picLargeMiddleSmall.large small:picLargeMiddleSmall.small toImage:self.image0];
     } else {
+//        images = @[self.image0,self.image1,self.image2,self.image3,self.image4,self.image5,self.image6,self.image7,self.image8];
 
+        images = [NSMutableArray arrayWithCapacity:9];
+        if (self.image0){
+            [images addObject:self.image0];
+        }
+        if (self.image1){
+            [images addObject:self.image1];
+        }
+        if (self.image2){
+            [images addObject:self.image2];
+        }
+        if (self.image3){
+            [images addObject:self.image3];
+        }
+        if (self.image4){
+            [images addObject:self.image4];
+        }
+        if (self.image5){
+            [images addObject:self.image5];
+        }
+        if (self.image6){
+            [images addObject:self.image6];
+        }
+        if (self.image7){
+            [images addObject:self.image7];
+        }
+        if (self.image8){
+            [images addObject:self.image8];
+        }
+
+        NSArray<Pics*> * pics = weibo.pics;
+
+        for (int i = 0; i < pics.count; i++){
+            NSString * imgUrl = pics[(NSUInteger) i].url;
+            PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:imgUrl];
+            [self showImage:picLargeMiddleSmall.large small:picLargeMiddleSmall.small toImage:images[(NSUInteger) i]];
+        }
+//        for (UIImageView *uiv in images) {
+//
+//            uiv.userInteractionEnabled = YES;
+//            // 添加手势识别器
+//            [uiv addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick:)]];
+//        }
     }
-//    if (pageInfo.pageUrl == nil) {
-//
-//        [self.viewView showWeiboContent:_hotWeibo.user.profileImageUrl name:_hotWeibo.user.screenName time:_hotWeibo.createdAt content:weibo.text pics:_hotWeibo.pics];
-//
-//    } else{
-//        _timeLineTime.text = weibo.createdAt;
-//
-//        _timeLineContent.attributedText = weibo.text;
-//        _timeLineContent.delegate = self;
-//
-//        _timeLineName.text = weibo.user.screenName;
-//
-//        [_timeLineAvatar sd_setImageWithURL:[NSURL URLWithString:weibo.user.profileImageUrl]];
-//        [_pageInfoImage sd_setImageWithURL:[NSURL URLWithString:pageInfo.pagePic.url]];
-//        _pageDesc.text = pageInfo.content1;
-//
-//    }
 
     self.weiboContent.attributedText = weibo.text;
     [self.userInfo showUserInfo:weibo.user.profileImageUrl name:weibo.user.screenName time:weibo.createdAt];
     [self.bottomAction showBottomInfo:weibo.source repost:(int) weibo.repostsCount comments:(int) weibo.commentsCount like:(int) weibo.attitudesCount];
 }
+
+//- (IBAction)imageClick:(UITapGestureRecognizer *)sender {
+//    int index = (int)[images indexOfObject:sender.view];
+//    NSLog(@"imageClick %d", index);
+//
+//    [self showImageWithIndex:index];
+//}
+//
+//- (void) showImageWithIndex:(int) index{
+//    NSMutableArray *filterArray = [NSMutableArray array];
+//    for (NYTExamplePhoto * image in _array){
+//        if ([image isKindOfClass:[NYTExamplePhoto class]]){
+//            [filterArray addObject:image];
+//        }
+//    }
+//    NYTExamplePhoto *selectImage = filterArray[(NSUInteger) index];
+//
+//    NYTPhotosViewController *photosViewController = [[NYTPhotosViewController alloc] initWithPhotos:filterArray initialPhoto:selectImage];
+//
+//    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//    [app.window.rootViewController presentViewController:photosViewController animated:YES completion:nil];
+//}
 
 - (void)showImage:(NSString *)org small:(NSString *)small toImage:(UIImageView *) img{
     // 占位图片

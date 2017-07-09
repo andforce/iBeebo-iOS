@@ -72,7 +72,8 @@
 -(void)showStatus:(Weibo *)weibo {
 
     // PageInfo
-    if ((weibo.pageInfo != nil && weibo.pageInfo.type != 0) || (weibo.retweetedWeibo.pageInfo != nil && weibo.retweetedWeibo.pageInfo != 0)) {
+    if ((weibo.pageInfo != nil && [weibo.pageInfo.objectType isEqualToString:@"video"])
+        || (weibo.retweetedWeibo.pageInfo != nil && [weibo.retweetedWeibo.pageInfo.objectType isEqualToString:@"video"])) {
 
         RetweetedWeibo * retweet = weibo.retweetedWeibo;
         
@@ -99,8 +100,10 @@
         
         BOOL isRetweet = retweet.text != nil;
         
+        NSArray<Pics*> * pics = weibo.pics;
+        
         if (isRetweet){
-
+            pics = weibo.retweetedWeibo.pics;
             self.weiboContent.attributedText = weibo.text;
             self.orgContent.attributedText = weibo.retweetedWeibo.text;
         } else {
@@ -136,7 +139,7 @@
             [images addObject:self.image8];
         }
 
-        NSArray<Pics*> * pics = weibo.retweetedWeibo.pics;
+        
 
         for (int i = 0; i < pics.count; i++){
             NSString * imgUrl = pics[(NSUInteger) i].url;

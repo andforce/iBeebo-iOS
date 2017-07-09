@@ -135,21 +135,20 @@
 
     if (isRetweet){
         PageInfo *retweetPageInfo = weibo.retweetedWeibo.pageInfo;
-        if (retweetPageInfo.type == 0){
+        if ([retweetPageInfo.objectType isEqualToString:@"video"]){
+            
+            Identifier = @"repostPageInfo";
+        } else {
             int count = (int)weibo.retweetedWeibo.pics.count;
             Identifier = [NSString stringWithFormat:@"r%d", count];
-
-        } else {
-            Identifier = @"repostPageInfo";
         }
     } else {
         PageInfo *pageInfo = weibo.pageInfo;
-        if (pageInfo.type == 0) {
+        if ([pageInfo.objectType isEqualToString:@"video"]) {
+            Identifier = @"pageInfo";
+        } else{
             int count = (int)weibo.pics.count;
             Identifier = [NSString stringWithFormat:@"%d", count];
-        } else{
-
-            Identifier = @"pageInfo";
         }
     }
 

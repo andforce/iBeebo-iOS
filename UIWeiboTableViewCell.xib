@@ -27,7 +27,7 @@
                             <constraint firstAttribute="height" constant="56" id="zcI-wc-tkc"/>
                         </constraints>
                     </view>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RHS-PH-ZO5">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RHS-PH-ZO5">
                         <rect key="frame" x="0.0" y="60" width="375" height="486.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -163,7 +163,7 @@
                             <constraint firstAttribute="height" constant="56" id="aK1-KG-uRt"/>
                         </constraints>
                     </view>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Wx-r3-AP5">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Wx-r3-AP5">
                         <rect key="frame" x="0.0" y="60" width="375" height="656"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -241,7 +241,7 @@
                             <constraint firstAttribute="height" constant="56" id="jW8-om-3gZ"/>
                         </constraints>
                     </view>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sHs-Jm-4L5">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sHs-Jm-4L5">
                         <rect key="frame" x="0.0" y="60" width="375" height="453"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -575,7 +575,7 @@
                             <constraint firstAttribute="height" constant="56" id="eF1-E8-ZNC"/>
                         </constraints>
                     </view>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oDW-FU-qO0">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oDW-FU-qO0">
                         <rect key="frame" x="0.0" y="60" width="375" height="33"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -774,7 +774,7 @@
                             <constraint firstAttribute="height" constant="56" id="NZB-qx-OMj"/>
                         </constraints>
                     </view>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KD7-xY-URO">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KD7-xY-URO">
                         <rect key="frame" x="0.0" y="60" width="375" height="423.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1137,7 +1137,7 @@
                             <constraint firstAttribute="height" constant="56" id="dQt-14-X4l"/>
                         </constraints>
                     </view>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WWR-8q-cGt">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WWR-8q-cGt">
                         <rect key="frame" x="0.0" y="60" width="375" height="33"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1586,7 +1586,7 @@
                             <constraint firstAttribute="height" constant="56" id="S5v-r2-dii"/>
                         </constraints>
                     </view>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dAg-nR-Idw">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dAg-nR-Idw">
                         <rect key="frame" x="0.0" y="60" width="375" height="33"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1854,7 +1854,7 @@
                             <constraint firstAttribute="height" constant="56" id="Glv-4R-ndZ"/>
                         </constraints>
                     </view>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xR9-gS-GV5">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xR9-gS-GV5">
                         <rect key="frame" x="0.0" y="60" width="375" height="33"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -2032,7 +2032,7 @@
                             <constraint firstAttribute="height" constant="56" id="sEI-6F-D08"/>
                         </constraints>
                     </view>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="251" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nsx-Ab-YHj">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nsx-Ab-YHj">
                         <rect key="frame" x="0.0" y="60" width="375" height="33"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -2096,7 +2096,7 @@
                             <constraint firstAttribute="height" constant="56" id="0fn-5u-CMq"/>
                         </constraints>
                     </view>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="z14-r4-62f">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="z14-r4-62f">
                         <rect key="frame" x="0.0" y="60" width="375" height="33"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

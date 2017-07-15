@@ -30,6 +30,10 @@
 
 @interface TimeLineCell()<UITextViewDelegate>{
     HotWeibo *_hotWeibo;
+
+    NSMutableDictionary *_cacheImages;
+
+    NSArray<Pics*> * _pics;
 }
 
 
@@ -57,6 +61,9 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+
+    _cacheImages = [NSMutableDictionary dictionary];
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -95,19 +102,19 @@
         RetweetedWeibo * retweet = weibo.retweetedWeibo;
         
         BOOL isRetweet = retweet.text != nil;
-        
-        NSArray<Pics*> * pics = weibo.pics;
+
+        _pics = weibo.pics;
         
         if (isRetweet){
-            pics = weibo.retweetedWeibo.pics;
+            _pics = weibo.retweetedWeibo.pics;
             self.weiboContent.attributedText = weibo.text;
             self.orgContent.attributedText = weibo.retweetedWeibo.text;
         } else {
             self.weiboContent.attributedText = weibo.text;
         }
 
-        for (int i = 0; i < pics.count; i++){
-            NSString * imgUrl = pics[(NSUInteger) i].url;
+        for (int i = 0; i < _pics.count; i++){
+            NSString * imgUrl = _pics[(NSUInteger) i].url;
             PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:imgUrl];
 
             UIImageView *uiImageView = [self viewWithTag:i + 100];
@@ -137,10 +144,10 @@
         [self showImage:picLargeMiddleSmall.large small:picLargeMiddleSmall.small toImage:self.image0];
     } else {
 
-        NSArray<Pics*> * pics = weibo.pics;
+        _pics = weibo.pics;
 
-        for (int i = 0; i < pics.count; i++){
-            NSString * imgUrl = pics[(NSUInteger) i].url;
+        for (int i = 0; i < _pics.count; i++){
+            NSString * imgUrl = _pics[(NSUInteger) i].url;
             PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:imgUrl];
             UIImageView *uiImageView = [self viewWithTag:i + 100];
             [self showImage:picLargeMiddleSmall.large small:picLargeMiddleSmall.small toImage:uiImageView];
@@ -158,26 +165,36 @@
 }
 
 - (IBAction)imageClick:(UITapGestureRecognizer *)sender {
-    int index = sender.view.tag;
+    int index = sender.view.tag - 100;
     NSLog(@"imageClick %d", index);
 
-    //[self showImageWithIndex:index];
-}
+    NSMutableArray *allPhotos = [NSMutableArray array];
+    NYTExamplePhoto *selectPhoto;
+    for (int i = 0; i < _pics.count; ++i) {
+        Pics *pic = _pics[i];
 
-//- (void) showImageWithIndex:(int) index{
-//    NSMutableArray *filterArray = [NSMutableArray array];
-//    for (NYTExamplePhoto * image in _array){
-//        if ([image isKindOfClass:[NYTExamplePhoto class]]){
-//            [filterArray addObject:image];
-//        }
-//    }
-//    NYTExamplePhoto *selectImage = filterArray[(NSUInteger) index];
-//
-//    NYTPhotosViewController *photosViewController = [[NYTPhotosViewController alloc] initWithPhotos:filterArray initialPhoto:selectImage];
-//
-//    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
-//    [app.window.rootViewController presentViewController:photosViewController animated:YES completion:nil];
-//}
+        PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:pic.url];
+
+        UIImage *selectImage = [_cacheImages valueForKey:picLargeMiddleSmall.large];
+        if (!selectImage){
+            [_cacheImages objectForKey:picLargeMiddleSmall.small];
+        }
+
+        NYTExamplePhoto *photo = [[NYTExamplePhoto alloc] init];
+        photo.image = selectImage;
+
+        [allPhotos addObject:photo];
+
+        if (index == i){
+            selectPhoto = photo;
+        }
+    }
+
+    NYTPhotosViewController *photosViewController = [[NYTPhotosViewController alloc] initWithPhotos:allPhotos initialPhoto:selectPhoto];
+
+    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [app.window.rootViewController presentViewController:photosViewController animated:YES completion:nil];
+}
 
 - (void)showImage:(NSString *)org small:(NSString *)small toImage:(UIImageView *) img{
     // 占位图片
@@ -185,13 +202,17 @@
     // 从内存\沙盒缓存中获得原图
     UIImage *originalImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:org];
     if (originalImage) { // 如果内存\沙盒缓存有原图，那么就直接显示原图（不管现在是什么网络状态）
-        [img sd_setImageWithURL:[NSURL URLWithString:org]];
+        [img sd_setImageWithURL:[NSURL URLWithString:org] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            [_cacheImages setObject:image forKey:org];
+        }];
     } else { // 内存\沙盒缓存没有原图
 
         int status = [[[NSUserDefaults standardUserDefaults] valueForKey:@"net_work_status"] intValue];
 
         if (status == AFNetworkReachabilityStatusReachableViaWiFi) { // 在使用Wifi, 下载原图
-            [img sd_setImageWithURL:[NSURL URLWithString:org]];
+            [img sd_setImageWithURL:[NSURL URLWithString:org] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                [_cacheImages setObject:image forKey:org];
+            }];
         } else if (status == AFNetworkReachabilityStatusReachableViaWWAN) { // 在使用手机自带网络
             //     用户的配置项假设利用NSUserDefaults存储到了沙盒中
             //    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"alwaysDownloadOriginalImage"];
@@ -199,14 +220,20 @@
             //      #warning 从沙盒中读取用户的配置项：在3G\4G环境是否仍然下载原图
             BOOL alwaysDownloadOriginalImage = [[NSUserDefaults standardUserDefaults] boolForKey:@"alwaysDownloadOriginalImage"];
             if (alwaysDownloadOriginalImage) { // 下载原图
-                [img sd_setImageWithURL:[NSURL URLWithString:org] ];
+                [img sd_setImageWithURL:[NSURL URLWithString:org] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                    [_cacheImages setObject:image forKey:org];
+                }];
             } else { // 下载小图
-                [img sd_setImageWithURL:[NSURL URLWithString:small] ];
+                [img sd_setImageWithURL:[NSURL URLWithString:small] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                    [_cacheImages setObject:image forKey:small];
+                }];
             }
         } else { // 没有网络
             UIImage *thumbnailImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:small];
             if (thumbnailImage) { // 内存\沙盒缓存中有小图
-                [img sd_setImageWithURL:[NSURL URLWithString:small] ];
+                [img sd_setImageWithURL:[NSURL URLWithString:small] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                    [_cacheImages setObject:image forKey:small];
+                }];
             } else {
                 [img sd_setImageWithURL:nil ];
             }

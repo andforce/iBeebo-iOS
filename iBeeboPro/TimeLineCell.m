@@ -30,9 +30,6 @@
 
 @interface TimeLineCell()<UITextViewDelegate>{
     HotWeibo *_hotWeibo;
-    
-    NSMutableArray<UIImageView *> * images;
-
 }
 
 
@@ -109,41 +106,16 @@
             self.weiboContent.attributedText = weibo.text;
         }
 
-        images = [NSMutableArray arrayWithCapacity:9];
-        if (self.image0){
-            [images addObject:self.image0];
-        }
-        if (self.image1){
-            [images addObject:self.image1];
-        }
-        if (self.image2){
-            [images addObject:self.image2];
-        }
-        if (self.image3){
-            [images addObject:self.image3];
-        }
-        if (self.image4){
-            [images addObject:self.image4];
-        }
-        if (self.image5){
-            [images addObject:self.image5];
-        }
-        if (self.image6){
-            [images addObject:self.image6];
-        }
-        if (self.image7){
-            [images addObject:self.image7];
-        }
-        if (self.image8){
-            [images addObject:self.image8];
-        }
-
-        
-
         for (int i = 0; i < pics.count; i++){
             NSString * imgUrl = pics[(NSUInteger) i].url;
             PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:imgUrl];
-            [self showImage:picLargeMiddleSmall.small small:picLargeMiddleSmall.small toImage:images[(NSUInteger) i]];
+
+            UIImageView *uiImageView = [self viewWithTag:i + 100];
+            [self showImage:picLargeMiddleSmall.small small:picLargeMiddleSmall.small toImage:uiImageView];
+
+            uiImageView.userInteractionEnabled = YES;
+            // 添加手势识别器
+            [uiImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick:)]];
         }
     }
 
@@ -165,48 +137,19 @@
         [self showImage:picLargeMiddleSmall.large small:picLargeMiddleSmall.small toImage:self.image0];
     } else {
 
-        images = [NSMutableArray arrayWithCapacity:9];
-        if (self.image0){
-            [images addObject:self.image0];
-        }
-        if (self.image1){
-            [images addObject:self.image1];
-        }
-        if (self.image2){
-            [images addObject:self.image2];
-        }
-        if (self.image3){
-            [images addObject:self.image3];
-        }
-        if (self.image4){
-            [images addObject:self.image4];
-        }
-        if (self.image5){
-            [images addObject:self.image5];
-        }
-        if (self.image6){
-            [images addObject:self.image6];
-        }
-        if (self.image7){
-            [images addObject:self.image7];
-        }
-        if (self.image8){
-            [images addObject:self.image8];
-        }
-
         NSArray<Pics*> * pics = weibo.pics;
 
         for (int i = 0; i < pics.count; i++){
             NSString * imgUrl = pics[(NSUInteger) i].url;
             PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:imgUrl];
-            [self showImage:picLargeMiddleSmall.large small:picLargeMiddleSmall.small toImage:images[(NSUInteger) i]];
+            UIImageView *uiImageView = [self viewWithTag:i + 100];
+            [self showImage:picLargeMiddleSmall.large small:picLargeMiddleSmall.small toImage:uiImageView];
+
+            uiImageView.userInteractionEnabled = YES;
+
+            // 添加手势识别器
+            [uiImageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick:)]];
         }
-//        for (UIImageView *uiv in images) {
-//
-//            uiv.userInteractionEnabled = YES;
-//            // 添加手势识别器
-//            [uiv addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick:)]];
-//        }
     }
 
     self.weiboContent.attributedText = weibo.text;
@@ -214,13 +157,13 @@
     [self.bottomAction showBottomInfo:weibo.source repost:(int) weibo.repostsCount comments:(int) weibo.commentsCount like:(int) weibo.attitudesCount];
 }
 
-//- (IBAction)imageClick:(UITapGestureRecognizer *)sender {
-//    int index = (int)[images indexOfObject:sender.view];
-//    NSLog(@"imageClick %d", index);
-//
-//    [self showImageWithIndex:index];
-//}
-//
+- (IBAction)imageClick:(UITapGestureRecognizer *)sender {
+    int index = sender.view.tag;
+    NSLog(@"imageClick %d", index);
+
+    //[self showImageWithIndex:index];
+}
+
 //- (void) showImageWithIndex:(int) index{
 //    NSMutableArray *filterArray = [NSMutableArray array];
 //    for (NYTExamplePhoto * image in _array){

@@ -23,7 +23,6 @@
 #import <NYTPhotoViewer/NYTPhoto.h>
 #import <AFNetworking/AFNetworkReachabilityManager.h>
 #import <NYTPhotoViewer/NYTPhotosViewController.h>
-#import "TimeLinePics.h"
 #import "PicLargeMiddleSmall.h"
 
 #import "WeiboUserInfo.h"

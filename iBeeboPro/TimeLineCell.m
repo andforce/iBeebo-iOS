@@ -72,6 +72,16 @@
     // Configure the view for the selected state
 }
 
+- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction {
+    NSLog(@"showPageInfo: %@", URL);
+    return NO;
+}
+
+- (BOOL)textView:(UITextView *)textView shouldInteractWithTextAttachment:(NSTextAttachment *)textAttachment inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction {
+    NSLog(@"showPageInfo: %@", textAttachment);
+    return NO;
+}
+
 -(void)showStatus:(Weibo *)weibo {
 
     // PageInfo
@@ -86,6 +96,12 @@
 
             self.weiboContent.attributedText = weibo.text;
             self.orgContent.attributedText = weibo.retweetedWeibo.text;
+            self.orgContent.userInteractionEnabled = YES;
+
+            self.orgContent.delegate = self;
+            [self.orgContent setSelectable: YES];
+            [self.orgContent setEditable:NO];
+            self.orgContent.dataDetectorTypes = UIDataDetectorTypeLink;
             
             PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:weibo.retweetedWeibo.pageInfo.pagePic];
             [self showImage:picLargeMiddleSmall.small small:picLargeMiddleSmall.small toImage:self.image0];
@@ -94,6 +110,17 @@
             PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:weibo.pageInfo.pagePic];
             [self showImage:picLargeMiddleSmall.small small:picLargeMiddleSmall.small toImage:self.image0];
         }
+
+        self.weiboContent.delegate = self;
+        self.weiboContent.userInteractionEnabled = YES;
+        [self.weiboContent setSelectable: YES];
+        [self.weiboContent setEditable:NO];
+        self.weiboContent.dataDetectorTypes = UIDataDetectorTypeLink;
+
+        self.image0.userInteractionEnabled = YES;
+        
+        // 添加手势识别器
+        [self.image0 addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPageInfo:)]];
 
         
     }
@@ -108,10 +135,24 @@
         if (isRetweet){
             _pics = weibo.retweetedWeibo.pics;
             self.weiboContent.attributedText = weibo.text;
+            
+            self.orgContent.userInteractionEnabled = YES;
             self.orgContent.attributedText = weibo.retweetedWeibo.text;
+
+            self.orgContent.delegate = self;
+            [self.orgContent setSelectable: YES];
+            [self.orgContent setEditable:NO];
+            self.orgContent.dataDetectorTypes = UIDataDetectorTypeLink;
+
         } else {
             self.weiboContent.attributedText = weibo.text;
         }
+
+        self.weiboContent.delegate = self;
+        self.weiboContent.userInteractionEnabled = YES;
+        [self.weiboContent setSelectable: YES];
+        [self.weiboContent setEditable:NO];
+        self.weiboContent.dataDetectorTypes = UIDataDetectorTypeLink;
 
         for (int i = 0; i < _pics.count; i++){
             NSString * imgUrl = _pics[(NSUInteger) i].url;
@@ -138,10 +179,14 @@
 
     if (pageInfo != nil && [pageInfo.type isEqualToString:@"video"]){
 
-        NSURL * url = [NSURL URLWithString:pageInfo.pagePic.url];
-
         PicLargeMiddleSmall * picLargeMiddleSmall = [[PicLargeMiddleSmall alloc] initWithUrl:pageInfo.pagePic.url];
         [self showImage:picLargeMiddleSmall.large small:picLargeMiddleSmall.small toImage:self.image0];
+        
+        self.image0.userInteractionEnabled = YES;
+        
+        // 添加手势识别器
+        [self.image0 addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPageInfo:)]];
+        
     } else {
 
         _pics = weibo.pics;
@@ -160,12 +205,18 @@
     }
 
     self.weiboContent.attributedText = weibo.text;
+    self.weiboContent.userInteractionEnabled = YES;
+    self.weiboContent.delegate = self;
+    [self.weiboContent setSelectable: YES];
+    [self.weiboContent setEditable:NO];
+    self.weiboContent.dataDetectorTypes = UIDataDetectorTypeLink;
+
     [self.userInfo showUserInfo:weibo.user.profileImageUrl name:weibo.user.screenName time:weibo.createdAt];
     [self.bottomAction showBottomInfo:weibo.source repost:(int) weibo.repostsCount comments:(int) weibo.commentsCount like:(int) weibo.attitudesCount];
 }
 
-- (IBAction)imageClick:(UITapGestureRecognizer *)sender {
-    int index = sender.view.tag - 100;
+- (void)imageClick:(UITapGestureRecognizer *)sender {
+    int index = (int)sender.view.tag - 100;
     NSLog(@"imageClick %d", index);
 
     NSMutableArray *allPhotos = [NSMutableArray array];
@@ -242,7 +293,7 @@
 }
 
 
-- (IBAction)showPageInfo:(id)sender {
+- (void)showPageInfo:(id)sender {
     //PageInfo *pageInfo = _hotWeibo.pageInfo.type;
     NSLog(@"showPageInfo: %@", _hotWeibo.pageInfo.type);
     if ([_hotWeibo.pageInfo.type isEqualToString:@"video"]){

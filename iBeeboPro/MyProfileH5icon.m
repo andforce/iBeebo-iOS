@@ -1,24 +1,24 @@
 //
-//  MeH5icon.m
+//  MyProfileH5icon.m
 //
-//  Created by   on 2017/6/21
+//  Created by   on 2017/7/16
 //  Copyright (c) 2017 __MyCompanyName__. All rights reserved.
 //
 
-#import "MeH5icon.h"
+#import "MyProfileH5icon.h"
 
 
-NSString *const kMeH5iconOther = @"other";
-NSString *const kMeH5iconMain = @"main";
+NSString *const kMyProfileH5iconOther = @"other";
+NSString *const kMyProfileH5iconMain = @"main";
 
 
-@interface MeH5icon ()
+@interface MyProfileH5icon ()
 
 - (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
 
 @end
 
-@implementation MeH5icon
+@implementation MyProfileH5icon
 
 @synthesize other = _other;
 @synthesize main = _main;
@@ -36,8 +36,8 @@ NSString *const kMeH5iconMain = @"main";
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-            self.other = [self objectOrNilForKey:kMeH5iconOther fromDictionary:dict];
-            self.main = [self objectOrNilForKey:kMeH5iconMain fromDictionary:dict];
+            self.other = [self objectOrNilForKey:kMyProfileH5iconOther fromDictionary:dict];
+            self.main = [self objectOrNilForKey:kMyProfileH5iconMain fromDictionary:dict];
 
     }
     
@@ -58,8 +58,8 @@ NSString *const kMeH5iconMain = @"main";
             [tempArrayForOther addObject:subArrayObject];
         }
     }
-    [mutableDict setValue:[NSArray arrayWithArray:tempArrayForOther] forKey:kMeH5iconOther];
-    [mutableDict setValue:self.main forKey:kMeH5iconMain];
+    [mutableDict setValue:[NSArray arrayWithArray:tempArrayForOther] forKey:kMyProfileH5iconOther];
+    [mutableDict setValue:self.main forKey:kMyProfileH5iconMain];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -83,21 +83,21 @@ NSString *const kMeH5iconMain = @"main";
 {
     self = [super init];
 
-    self.other = [aDecoder decodeObjectForKey:kMeH5iconOther];
-    self.main = [aDecoder decodeObjectForKey:kMeH5iconMain];
+    self.other = [aDecoder decodeObjectForKey:kMyProfileH5iconOther];
+    self.main = [aDecoder decodeObjectForKey:kMyProfileH5iconMain];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 
-    [aCoder encodeObject:_other forKey:kMeH5iconOther];
-    [aCoder encodeObject:_main forKey:kMeH5iconMain];
+    [aCoder encodeObject:_other forKey:kMyProfileH5iconOther];
+    [aCoder encodeObject:_main forKey:kMyProfileH5iconMain];
 }
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    MeH5icon *copy = [[MeH5icon alloc] init];
+    MyProfileH5icon *copy = [[MyProfileH5icon alloc] init];
     
     if (copy) {
 

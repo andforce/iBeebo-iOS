@@ -50,12 +50,6 @@
 		3A6A41761EF9786300FD132F /* MsgCardGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41711EF9786300FD132F /* MsgCardGroup.m */; };
 		3A6A41771EF9786300FD132F /* MsgUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41731EF9786300FD132F /* MsgUser.m */; };
 		3A6A41781EF9786300FD132F /* MsgWeiboMessagePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41751EF9786300FD132F /* MsgWeiboMessagePage.m */; };
-		3A6A41861EF9836200FD132F /* MeApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A417B1EF9836200FD132F /* MeApps.m */; };
-		3A6A41871EF9836200FD132F /* MeBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A417D1EF9836200FD132F /* MeBadge.m */; };
-		3A6A41881EF9836200FD132F /* MeCardGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A417F1EF9836200FD132F /* MeCardGroup.m */; };
-		3A6A41891EF9836200FD132F /* MeH5icon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41811EF9836200FD132F /* MeH5icon.m */; };
-		3A6A418A1EF9836200FD132F /* MeUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41831EF9836200FD132F /* MeUser.m */; };
-		3A6A418B1EF9836200FD132F /* MeWeiboProfilePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41851EF9836200FD132F /* MeWeiboProfilePage.m */; };
 		3A6A419F1EF9850D00FD132F /* AtMeActionlog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A418E1EF9850D00FD132F /* AtMeActionlog.m */; };
 		3A6A41A01EF9850D00FD132F /* AtMeAtMePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41901EF9850D00FD132F /* AtMeAtMePage.m */; };
 		3A6A41A11EF9850D00FD132F /* AtMeCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41921EF9850D00FD132F /* AtMeCard.m */; };
@@ -129,6 +123,12 @@
 		3AC619841F00114E003C58CD /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6197C1F00114E003C58CD /* NSString+Extensions.m */; };
 		3AC619851F00114E003C58CD /* NSString+time.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC6197E1F00114E003C58CD /* NSString+time.m */; };
 		3AC619871F00114E003C58CD /* NSUserDefaults+Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC619821F00114E003C58CD /* NSUserDefaults+Setting.m */; };
+		3AEC20D71F1B62FD00AA980C /* MyProfileApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEC20CC1F1B62FD00AA980C /* MyProfileApps.m */; };
+		3AEC20D81F1B62FD00AA980C /* MyProfileBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEC20CE1F1B62FD00AA980C /* MyProfileBadge.m */; };
+		3AEC20D91F1B62FD00AA980C /* MyProfileCardGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEC20D01F1B62FD00AA980C /* MyProfileCardGroup.m */; };
+		3AEC20DA1F1B62FD00AA980C /* MyProfileH5icon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEC20D21F1B62FD00AA980C /* MyProfileH5icon.m */; };
+		3AEC20DB1F1B62FD00AA980C /* MyProfilePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEC20D41F1B62FD00AA980C /* MyProfilePage.m */; };
+		3AEC20DC1F1B62FD00AA980C /* MyProfileUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEC20D61F1B62FD00AA980C /* MyProfileUser.m */; };
 		542C4D0CDABDA17A79467044 /* libPods-iBeeboPro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C98854ABD08BD7E691A049D /* libPods-iBeeboPro.a */; };
 /* End PBXBuildFile section */
 
@@ -215,18 +215,6 @@
 		3A6A41731EF9786300FD132F /* MsgUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgUser.m; sourceTree = "<group>"; };
 		3A6A41741EF9786300FD132F /* MsgWeiboMessagePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgWeiboMessagePage.h; sourceTree = "<group>"; };
 		3A6A41751EF9786300FD132F /* MsgWeiboMessagePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MsgWeiboMessagePage.m; sourceTree = "<group>"; };
-		3A6A417A1EF9836200FD132F /* MeApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeApps.h; sourceTree = "<group>"; };
-		3A6A417B1EF9836200FD132F /* MeApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeApps.m; sourceTree = "<group>"; };
-		3A6A417C1EF9836200FD132F /* MeBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeBadge.h; sourceTree = "<group>"; };
-		3A6A417D1EF9836200FD132F /* MeBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeBadge.m; sourceTree = "<group>"; };
-		3A6A417E1EF9836200FD132F /* MeCardGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeCardGroup.h; sourceTree = "<group>"; };
-		3A6A417F1EF9836200FD132F /* MeCardGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeCardGroup.m; sourceTree = "<group>"; };
-		3A6A41801EF9836200FD132F /* MeH5icon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeH5icon.h; sourceTree = "<group>"; };
-		3A6A41811EF9836200FD132F /* MeH5icon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeH5icon.m; sourceTree = "<group>"; };
-		3A6A41821EF9836200FD132F /* MeUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeUser.h; sourceTree = "<group>"; };
-		3A6A41831EF9836200FD132F /* MeUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeUser.m; sourceTree = "<group>"; };
-		3A6A41841EF9836200FD132F /* MeWeiboProfilePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeWeiboProfilePage.h; sourceTree = "<group>"; };
-		3A6A41851EF9836200FD132F /* MeWeiboProfilePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeWeiboProfilePage.m; sourceTree = "<group>"; };
 		3A6A418D1EF9850D00FD132F /* AtMeActionlog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtMeActionlog.h; sourceTree = "<group>"; };
 		3A6A418E1EF9850D00FD132F /* AtMeActionlog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtMeActionlog.m; sourceTree = "<group>"; };
 		3A6A418F1EF9850D00FD132F /* AtMeAtMePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtMeAtMePage.h; sourceTree = "<group>"; };
@@ -369,6 +357,18 @@
 		3AC6197E1F00114E003C58CD /* NSString+time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+time.m"; sourceTree = "<group>"; };
 		3AC619811F00114E003C58CD /* NSUserDefaults+Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Setting.h"; sourceTree = "<group>"; };
 		3AC619821F00114E003C58CD /* NSUserDefaults+Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Setting.m"; sourceTree = "<group>"; };
+		3AEC20CB1F1B62FD00AA980C /* MyProfileApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileApps.h; sourceTree = "<group>"; };
+		3AEC20CC1F1B62FD00AA980C /* MyProfileApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileApps.m; sourceTree = "<group>"; };
+		3AEC20CD1F1B62FD00AA980C /* MyProfileBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileBadge.h; sourceTree = "<group>"; };
+		3AEC20CE1F1B62FD00AA980C /* MyProfileBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileBadge.m; sourceTree = "<group>"; };
+		3AEC20CF1F1B62FD00AA980C /* MyProfileCardGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileCardGroup.h; sourceTree = "<group>"; };
+		3AEC20D01F1B62FD00AA980C /* MyProfileCardGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileCardGroup.m; sourceTree = "<group>"; };
+		3AEC20D11F1B62FD00AA980C /* MyProfileH5icon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileH5icon.h; sourceTree = "<group>"; };
+		3AEC20D21F1B62FD00AA980C /* MyProfileH5icon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileH5icon.m; sourceTree = "<group>"; };
+		3AEC20D31F1B62FD00AA980C /* MyProfilePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfilePage.h; sourceTree = "<group>"; };
+		3AEC20D41F1B62FD00AA980C /* MyProfilePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfilePage.m; sourceTree = "<group>"; };
+		3AEC20D51F1B62FD00AA980C /* MyProfileUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileUser.h; sourceTree = "<group>"; };
+		3AEC20D61F1B62FD00AA980C /* MyProfileUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileUser.m; sourceTree = "<group>"; };
 		85848B6C50344BAD3D72FDC4 /* Pods-iBeeboPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBeeboPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-iBeeboPro/Pods-iBeeboPro.release.xcconfig"; sourceTree = "<group>"; };
 		B9B0A1B115C4DC0741FD0865 /* Pods-iBeeboPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBeeboPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iBeeboPro/Pods-iBeeboPro.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -537,18 +537,18 @@
 		3A6A41791EF9835300FD132F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				3A6A417A1EF9836200FD132F /* MeApps.h */,
-				3A6A417B1EF9836200FD132F /* MeApps.m */,
-				3A6A417C1EF9836200FD132F /* MeBadge.h */,
-				3A6A417D1EF9836200FD132F /* MeBadge.m */,
-				3A6A417E1EF9836200FD132F /* MeCardGroup.h */,
-				3A6A417F1EF9836200FD132F /* MeCardGroup.m */,
-				3A6A41801EF9836200FD132F /* MeH5icon.h */,
-				3A6A41811EF9836200FD132F /* MeH5icon.m */,
-				3A6A41821EF9836200FD132F /* MeUser.h */,
-				3A6A41831EF9836200FD132F /* MeUser.m */,
-				3A6A41841EF9836200FD132F /* MeWeiboProfilePage.h */,
-				3A6A41851EF9836200FD132F /* MeWeiboProfilePage.m */,
+				3AEC20CB1F1B62FD00AA980C /* MyProfileApps.h */,
+				3AEC20CC1F1B62FD00AA980C /* MyProfileApps.m */,
+				3AEC20CD1F1B62FD00AA980C /* MyProfileBadge.h */,
+				3AEC20CE1F1B62FD00AA980C /* MyProfileBadge.m */,
+				3AEC20CF1F1B62FD00AA980C /* MyProfileCardGroup.h */,
+				3AEC20D01F1B62FD00AA980C /* MyProfileCardGroup.m */,
+				3AEC20D11F1B62FD00AA980C /* MyProfileH5icon.h */,
+				3AEC20D21F1B62FD00AA980C /* MyProfileH5icon.m */,
+				3AEC20D31F1B62FD00AA980C /* MyProfilePage.h */,
+				3AEC20D41F1B62FD00AA980C /* MyProfilePage.m */,
+				3AEC20D51F1B62FD00AA980C /* MyProfileUser.h */,
+				3AEC20D61F1B62FD00AA980C /* MyProfileUser.m */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -944,11 +944,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A7EA7021EF8298700C6C8CE /* HotVisible.m in Sources */,
+				3AEC20D81F1B62FD00AA980C /* MyProfileBadge.m in Sources */,
 				3AC619411EFE6A80003C58CD /* AGPlayerView.m in Sources */,
 				3A6A41781EF9786300FD132F /* MsgWeiboMessagePage.m in Sources */,
 				3A85C2441D45083700B0FB8E /* UIStoryboard+Extensions.m in Sources */,
 				3AC619681F000ECC003C58CD /* TransBundle.m in Sources */,
-				3A6A418A1EF9836200FD132F /* MeUser.m in Sources */,
 				3A6A41771EF9786300FD132F /* MsgUser.m in Sources */,
 				3A6844DD1D4A60CD00655A17 /* NSString+Emoji.m in Sources */,
 				3AC619871F00114E003C58CD /* NSUserDefaults+Setting.m in Sources */,
@@ -967,12 +967,11 @@
 				3AC619781F00113F003C58CD /* UIView+Corner.m in Sources */,
 				3A6A41A31EF9850D00FD132F /* AtMeH5icon.m in Sources */,
 				3A7EA6A31EF81C3F00C6C8CE /* HotTableViewController.m in Sources */,
-				3A6A41861EF9836200FD132F /* MeApps.m in Sources */,
 				3A6A41CD1EFAC9E000FD132F /* AtMeTableViewCell.m in Sources */,
 				3A85C2501D45213900B0FB8E /* NSString+Extensions.m in Sources */,
 				3A6A419F1EF9850D00FD132F /* AtMeActionlog.m in Sources */,
 				3A7EA6FB1EF8298700C6C8CE /* HotMblogButtons.m in Sources */,
-				3A6A418B1EF9836200FD132F /* MeWeiboProfilePage.m in Sources */,
+				3AEC20D91F1B62FD00AA980C /* MyProfileCardGroup.m in Sources */,
 				3AC619761F00113F003C58CD /* UIImage+Tint.m in Sources */,
 				3A6A41B71EF9859300FD132F /* CmtUser.m in Sources */,
 				3A7EA6F81EF8298700C6C8CE /* HotGeo.m in Sources */,
@@ -983,13 +982,14 @@
 				3A85C2241D44DAD000B0FB8E /* main.m in Sources */,
 				3A7EA6FA1EF8298700C6C8CE /* HotMblog.m in Sources */,
 				3A6A41B51EF9859300FD132F /* CmtCommentPage.m in Sources */,
-				3A6A41871EF9836200FD132F /* MeBadge.m in Sources */,
+				3AEC20DA1F1B62FD00AA980C /* MyProfileH5icon.m in Sources */,
 				3A6844DC1D4A60CD00655A17 /* Emotion.m in Sources */,
 				3A6E21F91D4C8F9C00ED92E6 /* UIWeiboTextView.m in Sources */,
 				3A6844C91D4A59E200655A17 /* LXStatusTextPart.m in Sources */,
 				3A85C2481D4511C700B0FB8E /* WeiboMainTabBarController.m in Sources */,
 				3AC619451EFE6A89003C58CD /* H5_AVInfo.m in Sources */,
 				3A7EA7001EF8298700C6C8CE /* HotPics.m in Sources */,
+				3AEC20D71F1B62FD00AA980C /* MyProfileApps.m in Sources */,
 				3A6A41C51EF985F200FD132F /* LkH5icon.m in Sources */,
 				3A85C2411D44FD7500B0FB8E /* CookiesManager.m in Sources */,
 				3A5984731F0EF16400F8EACA /* WeiboUserInfo.m in Sources */,
@@ -1002,7 +1002,6 @@
 				3A6E21FC1D4C972C00ED92E6 /* WeiboJsonCleanner.m in Sources */,
 				3A6A41C31EF985F200FD132F /* LkCard.m in Sources */,
 				3A6844D71D4A608000655A17 /* EmotionsManager.m in Sources */,
-				3A6A41891EF9836200FD132F /* MeH5icon.m in Sources */,
 				3A6A41761EF9786300FD132F /* MsgCardGroup.m in Sources */,
 				2F34C2492249AD8036CB7E15 /* WeiboPage.m in Sources */,
 				3A7EA6F91EF8298700C6C8CE /* HotLarge.m in Sources */,
@@ -1020,11 +1019,11 @@
 				3AC619401EFE6A80003C58CD /* RotationScreen.m in Sources */,
 				3A7EA7011EF8298700C6C8CE /* HotUser.m in Sources */,
 				2F34CF8F5676D83E49F5BE07 /* Cards.m in Sources */,
-				3A6A41881EF9836200FD132F /* MeCardGroup.m in Sources */,
 				2F34CCCEBDC718751E614E2C /* Large.m in Sources */,
 				2F34C6BCF78948B6DEA82A5D /* Geo.m in Sources */,
 				3A7EA6F71EF8298700C6C8CE /* HotCards.m in Sources */,
 				3A7EA6FF1EF8298700C6C8CE /* HotParams.m in Sources */,
+				3AEC20DC1F1B62FD00AA980C /* MyProfileUser.m in Sources */,
 				2F34CCF63A92515DEE7EB12A /* Author.m in Sources */,
 				3AC619771F00113F003C58CD /* UIStoryboard+Forum.m in Sources */,
 				2F34CE403B8EFCD1FD9097A0 /* PageInfo.m in Sources */,
@@ -1051,6 +1050,7 @@
 				2F34C0073EC0C4A9C15EF97C /* HotWeibo.m in Sources */,
 				3A6A41A61EF9850D00FD132F /* AtMeUser.m in Sources */,
 				2F34C061A0F8FECBF4B622A5 /* AtMeMessage.m in Sources */,
+				3AEC20DB1F1B62FD00AA980C /* MyProfilePage.m in Sources */,
 				2F34C1A02CAED97E7C3D5D15 /* TimeLineButton.m in Sources */,
 				2F34C8B26C55EC8E7CE8C547 /* TimeLineButton+Index.m in Sources */,
 				2F34C8CB95520BD38E61A9FD /* NYTExamplePhoto.m in Sources */,

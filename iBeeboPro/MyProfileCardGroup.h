@@ -1,15 +1,15 @@
 //
-//  MeCardGroup.h
+//  MyProfileCardGroup.h
 //
-//  Created by   on 2017/6/21
+//  Created by   on 2017/7/16
 //  Copyright (c) 2017 __MyCompanyName__. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@class MeUser;
+@class MyProfileUser;
 
-@interface MeCardGroup : NSObject <NSCoding, NSCopying>
+@interface MyProfileCardGroup : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, assign) double displayArrow;
 @property (nonatomic, strong) NSString *desc1;
@@ -25,7 +25,7 @@
 @property (nonatomic, strong) NSString *scheme;
 @property (nonatomic, strong) NSString *itemid;
 @property (nonatomic, strong) NSString *descExtr;
-@property (nonatomic, strong) MeUser *user;
+@property (nonatomic, strong) MyProfileUser *user;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

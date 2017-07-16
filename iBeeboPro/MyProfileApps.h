@@ -1,7 +1,7 @@
 //
-//  MeApps.h
+//  MyProfileApps.h
 //
-//  Created by   on 2017/6/21
+//  Created by   on 2017/7/16
 //  Copyright (c) 2017 __MyCompanyName__. All rights reserved.
 //
 
@@ -9,7 +9,7 @@
 
 
 
-@interface MeApps : NSObject <NSCoding, NSCopying>
+@interface MyProfileApps : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, assign) double count;

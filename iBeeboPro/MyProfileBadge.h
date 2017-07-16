@@ -1,7 +1,7 @@
 //
-//  MeBadge.h
+//  MyProfileBadge.h
 //
-//  Created by   on 2017/6/21
+//  Created by   on 2017/7/16
 //  Copyright (c) 2017 __MyCompanyName__. All rights reserved.
 //
 
@@ -9,14 +9,15 @@
 
 
 
-@interface MeBadge : NSObject <NSCoding, NSCopying>
+@interface MyProfileBadge : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, assign) double gongyi;
 @property (nonatomic, assign) double lolMsi2017;
 @property (nonatomic, assign) double vipActivity1;
+@property (nonatomic, assign) double videoAttention;
 @property (nonatomic, assign) double taobao;
-@property (nonatomic, assign) double olympic2016;
 @property (nonatomic, assign) double superStar2017;
+@property (nonatomic, assign) double olympic2016;
 @property (nonatomic, assign) double unreadPoolExt;
 @property (nonatomic, assign) double bindTaobao;
 @property (nonatomic, assign) double leagueBadge;
@@ -28,9 +29,9 @@
 @property (nonatomic, assign) double ucDomain;
 @property (nonatomic, assign) double uefaEuro2016;
 @property (nonatomic, assign) double daiyan;
-@property (nonatomic, assign) double discount2016;
-@property (nonatomic, assign) double ali1688;
 @property (nonatomic, assign) double dailv;
+@property (nonatomic, assign) double ali1688;
+@property (nonatomic, assign) double discount2016;
 @property (nonatomic, assign) double foolsDay2016;
 @property (nonatomic, assign) double vipActivity2;
 @property (nonatomic, assign) double enterprise;

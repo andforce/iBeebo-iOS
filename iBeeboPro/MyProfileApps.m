@@ -1,26 +1,26 @@
 //
-//  MeApps.m
+//  MyProfileApps.m
 //
-//  Created by   on 2017/6/21
+//  Created by   on 2017/7/16
 //  Copyright (c) 2017 __MyCompanyName__. All rights reserved.
 //
 
-#import "MeApps.h"
+#import "MyProfileApps.h"
 
 
-NSString *const kMeAppsTitle = @"title";
-NSString *const kMeAppsCount = @"count";
-NSString *const kMeAppsIcon = @"icon";
-NSString *const kMeAppsScheme = @"scheme";
+NSString *const kMyProfileAppsTitle = @"title";
+NSString *const kMyProfileAppsCount = @"count";
+NSString *const kMyProfileAppsIcon = @"icon";
+NSString *const kMyProfileAppsScheme = @"scheme";
 
 
-@interface MeApps ()
+@interface MyProfileApps ()
 
 - (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
 
 @end
 
-@implementation MeApps
+@implementation MyProfileApps
 
 @synthesize title = _title;
 @synthesize count = _count;
@@ -40,10 +40,10 @@ NSString *const kMeAppsScheme = @"scheme";
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
-            self.title = [self objectOrNilForKey:kMeAppsTitle fromDictionary:dict];
-            self.count = [[self objectOrNilForKey:kMeAppsCount fromDictionary:dict] doubleValue];
-            self.icon = [self objectOrNilForKey:kMeAppsIcon fromDictionary:dict];
-            self.scheme = [self objectOrNilForKey:kMeAppsScheme fromDictionary:dict];
+            self.title = [self objectOrNilForKey:kMyProfileAppsTitle fromDictionary:dict];
+            self.count = [[self objectOrNilForKey:kMyProfileAppsCount fromDictionary:dict] doubleValue];
+            self.icon = [self objectOrNilForKey:kMyProfileAppsIcon fromDictionary:dict];
+            self.scheme = [self objectOrNilForKey:kMyProfileAppsScheme fromDictionary:dict];
 
     }
     
@@ -54,10 +54,10 @@ NSString *const kMeAppsScheme = @"scheme";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    [mutableDict setValue:self.title forKey:kMeAppsTitle];
-    [mutableDict setValue:[NSNumber numberWithDouble:self.count] forKey:kMeAppsCount];
-    [mutableDict setValue:self.icon forKey:kMeAppsIcon];
-    [mutableDict setValue:self.scheme forKey:kMeAppsScheme];
+    [mutableDict setValue:self.title forKey:kMyProfileAppsTitle];
+    [mutableDict setValue:[NSNumber numberWithDouble:self.count] forKey:kMyProfileAppsCount];
+    [mutableDict setValue:self.icon forKey:kMyProfileAppsIcon];
+    [mutableDict setValue:self.scheme forKey:kMyProfileAppsScheme];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -81,25 +81,25 @@ NSString *const kMeAppsScheme = @"scheme";
 {
     self = [super init];
 
-    self.title = [aDecoder decodeObjectForKey:kMeAppsTitle];
-    self.count = [aDecoder decodeDoubleForKey:kMeAppsCount];
-    self.icon = [aDecoder decodeObjectForKey:kMeAppsIcon];
-    self.scheme = [aDecoder decodeObjectForKey:kMeAppsScheme];
+    self.title = [aDecoder decodeObjectForKey:kMyProfileAppsTitle];
+    self.count = [aDecoder decodeDoubleForKey:kMyProfileAppsCount];
+    self.icon = [aDecoder decodeObjectForKey:kMyProfileAppsIcon];
+    self.scheme = [aDecoder decodeObjectForKey:kMyProfileAppsScheme];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 
-    [aCoder encodeObject:_title forKey:kMeAppsTitle];
-    [aCoder encodeDouble:_count forKey:kMeAppsCount];
-    [aCoder encodeObject:_icon forKey:kMeAppsIcon];
-    [aCoder encodeObject:_scheme forKey:kMeAppsScheme];
+    [aCoder encodeObject:_title forKey:kMyProfileAppsTitle];
+    [aCoder encodeDouble:_count forKey:kMyProfileAppsCount];
+    [aCoder encodeObject:_icon forKey:kMyProfileAppsIcon];
+    [aCoder encodeObject:_scheme forKey:kMyProfileAppsScheme];
 }
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    MeApps *copy = [[MeApps alloc] init];
+    MyProfileApps *copy = [[MyProfileApps alloc] init];
     
     if (copy) {
 

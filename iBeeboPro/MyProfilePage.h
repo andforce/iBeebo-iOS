@@ -1,7 +1,7 @@
 //
-//  MeWeiboProfilePage.h
+//  MyProfilePage.h
 //
-//  Created by   on 2017/6/21
+//  Created by   on 2017/7/16
 //  Copyright (c) 2017 __MyCompanyName__. All rights reserved.
 //
 
@@ -9,7 +9,7 @@
 
 
 
-@interface MeWeiboProfilePage : NSObject <NSCoding, NSCopying>
+@interface MyProfilePage : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, strong) NSString *openurl;
 @property (nonatomic, strong) NSArray *cardGroup;

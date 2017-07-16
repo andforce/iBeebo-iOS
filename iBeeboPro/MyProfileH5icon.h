@@ -1,7 +1,7 @@
 //
-//  MeH5icon.h
+//  MyProfileH5icon.h
 //
-//  Created by   on 2017/6/21
+//  Created by   on 2017/7/16
 //  Copyright (c) 2017 __MyCompanyName__. All rights reserved.
 //
 
@@ -9,7 +9,7 @@
 
 
 
-@interface MeH5icon : NSObject <NSCoding, NSCopying>
+@interface MyProfileH5icon : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, strong) NSArray *other;
 @property (nonatomic, strong) NSString *main;

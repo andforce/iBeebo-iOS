@@ -24,4 +24,9 @@
     return NO;
 }
 
+#pragma overide
+-(void)didAddSubview:(UIView *)subview{
+    self.textContainerInset = UIEdgeInsetsMake(0, 10, 0, 10);
+}
+
 @end

@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="maI-t8-QbP" kind="relationship" relationship="rootViewController" id="F2W-RW-crQ"/>
+                        <segue destination="maI-t8-QbP" kind="relationship" relationship="rootViewController" id="VGd-uf-vqz"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brS-Cd-19t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2991,11 +2991,11 @@
             </objects>
             <point key="canvasLocation" x="1857" y="2262"/>
         </scene>
-        <!--Item-->
+        <!--消息-->
         <scene sceneID="llf-kB-3BO">
             <objects>
                 <navigationController id="cAT-eP-2Fj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="BmF-I4-hVR"/>
+                    <tabBarItem key="tabBarItem" title="消息" id="BmF-I4-hVR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vm9-nS-PRt">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

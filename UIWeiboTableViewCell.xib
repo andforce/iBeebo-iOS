@@ -2236,7 +2236,6 @@
                     </view>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AVO-Go-J5f" customClass="UIWeiboTextView">
                         <rect key="frame" x="0.0" y="64" width="375" height="291"/>
-                        <color key="backgroundColor" red="0.87844228739999997" green="0.87451827530000004" blue="0.87452721600000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
@@ -2398,7 +2397,6 @@
                     </view>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6VZ-Dn-hpz" customClass="UIWeiboTextView">
                         <rect key="frame" x="0.0" y="64" width="375" height="290"/>
-                        <color key="backgroundColor" red="0.87844228739999997" green="0.87451827530000004" blue="0.87452721600000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>

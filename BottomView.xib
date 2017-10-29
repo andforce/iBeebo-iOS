@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiS-eX-yTl" userLabel="source">
-                    <rect key="frame" x="20" y="9" width="44" height="17"/>
+                    <rect key="frame" x="12" y="9" width="44" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
@@ -80,7 +80,7 @@
                 <constraint firstItem="YjK-CB-Qzr" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="MPh-zN-xNQ"/>
                 <constraint firstItem="e6h-iG-q4w" firstAttribute="leading" secondItem="YjK-CB-Qzr" secondAttribute="trailing" constant="8" id="RWN-dh-yAD"/>
                 <constraint firstItem="840-jF-pQm" firstAttribute="leading" secondItem="e6h-iG-q4w" secondAttribute="trailing" constant="4" id="TAy-pt-waB"/>
-                <constraint firstItem="OiS-eX-yTl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="TUz-au-BfB"/>
+                <constraint firstItem="OiS-eX-yTl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="TUz-au-BfB"/>
                 <constraint firstItem="omd-KR-NIR" firstAttribute="centerY" secondItem="YjK-CB-Qzr" secondAttribute="centerY" id="U3b-RJ-sDN"/>
                 <constraint firstItem="axr-80-KhM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UFC-zm-chG"/>
                 <constraint firstItem="e6h-iG-q4w" firstAttribute="centerY" secondItem="840-jF-pQm" secondAttribute="centerY" id="bYh-Mh-d5Y"/>

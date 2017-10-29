@@ -5592,7 +5592,7 @@
             </objects>
             <point key="canvasLocation" x="1156" y="-550"/>
         </scene>
-        <!--热门微博-->
+        <!--热门-->
         <scene sceneID="JER-Fu-aII">
             <objects>
                 <tableViewController storyboardIdentifier="HotTableViewController" id="Pk8-Ce-Lnb" customClass="HotTableViewController" sceneMemberID="viewController">
@@ -8135,7 +8135,7 @@
                             <outlet property="delegate" destination="Pk8-Ce-Lnb" id="ImW-gX-6dy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="热门微博" id="n6n-SI-MQu"/>
+                    <navigationItem key="navigationItem" title="热门" id="n6n-SI-MQu"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7Z-Hw-b7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

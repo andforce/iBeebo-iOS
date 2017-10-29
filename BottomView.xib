@@ -30,10 +30,10 @@
                     <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pU8-VK-ayo">
-                    <rect key="frame" x="501" y="2" width="30" height="30"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_thumb_up_18pt" translatesAutoresizingMaskIntoConstraints="NO" id="pU8-VK-ayo">
+                    <rect key="frame" x="516" y="9.5" width="15" height="15"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="2MI-aR-eeb"/>
+                        <constraint firstAttribute="height" constant="15" id="2MI-aR-eeb"/>
                         <constraint firstAttribute="width" secondItem="pU8-VK-ayo" secondAttribute="height" multiplier="1:1" id="Ekf-9d-qJm"/>
                     </constraints>
                 </imageView>
@@ -44,28 +44,28 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="repost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjK-CB-Qzr" userLabel="repost">
-                    <rect key="frame" x="341.5" y="9" width="41.5" height="17"/>
+                    <rect key="frame" x="366.5" y="9" width="41.5" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e6h-iG-q4w">
-                    <rect key="frame" x="391" y="2" width="30" height="30"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sort_18pt" translatesAutoresizingMaskIntoConstraints="NO" id="e6h-iG-q4w">
+                    <rect key="frame" x="416" y="7" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="e6h-iG-q4w" secondAttribute="height" multiplier="1:1" id="f8h-VD-OT7"/>
-                        <constraint firstAttribute="height" constant="30" id="fwV-37-eAM"/>
+                        <constraint firstAttribute="height" constant="20" id="fwV-37-eAM"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="840-jF-pQm" userLabel="comments">
-                    <rect key="frame" x="425" y="9" width="68" height="17"/>
+                    <rect key="frame" x="440" y="9" width="68" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.61581224199999995" green="0.62729847429999996" blue="0.63926720619999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="omd-KR-NIR">
-                    <rect key="frame" x="307.5" y="2" width="30" height="30"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_reply_18pt" translatesAutoresizingMaskIntoConstraints="NO" id="omd-KR-NIR">
+                    <rect key="frame" x="342.5" y="7" width="20" height="20"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="K6Q-zh-Zi4"/>
+                        <constraint firstAttribute="height" constant="20" id="K6Q-zh-Zi4"/>
                         <constraint firstAttribute="width" secondItem="omd-KR-NIR" secondAttribute="height" multiplier="1:1" id="O3n-js-B19"/>
                     </constraints>
                 </imageView>
@@ -91,4 +91,9 @@
             <point key="canvasLocation" x="-166" y="-66"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_reply_18pt" width="18" height="18"/>
+        <image name="ic_sort_18pt" width="18" height="18"/>
+        <image name="ic_thumb_up_18pt" width="18" height="18"/>
+    </resources>
 </document>

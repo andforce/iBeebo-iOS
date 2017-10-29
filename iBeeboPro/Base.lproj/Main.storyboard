@@ -15,7 +15,7 @@
         <scene sceneID="IKC-RP-tFK">
             <objects>
                 <navigationController id="HRx-jV-Y6y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" id="L17-6W-RNb"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="ic_account_balance_18pt" id="L17-6W-RNb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oQM-hv-0hr">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -111,7 +111,7 @@
         <scene sceneID="jth-pS-VRN">
             <objects>
                 <navigationController id="wqK-l1-BP4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="热门" id="h0J-l9-sw3"/>
+                    <tabBarItem key="tabBarItem" title="热门" image="ic_whatshot_white_18pt" id="h0J-l9-sw3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="U6S-xL-b6i">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -157,7 +157,7 @@
         <scene sceneID="D5o-Qu-FO7">
             <objects>
                 <navigationController id="ydr-go-NWh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="搜索" id="UKK-Na-v0g"/>
+                    <tabBarItem key="tabBarItem" title="搜索" image="ic_search_white_18pt" id="UKK-Na-v0g"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HRs-7h-Ce7">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2823,7 +2823,7 @@
         <scene sceneID="3cI-0G-ih7">
             <objects>
                 <navigationController id="UQ2-x5-6fv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="自己" id="vlS-vD-4TE"/>
+                    <tabBarItem key="tabBarItem" title="自己" image="ic_person_outline_18pt" id="vlS-vD-4TE"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="36e-1a-czN">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2995,7 +2995,7 @@
         <scene sceneID="llf-kB-3BO">
             <objects>
                 <navigationController id="cAT-eP-2Fj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="消息" id="BmF-I4-hVR"/>
+                    <tabBarItem key="tabBarItem" title="消息" image="ic_notifications_none_18pt" id="BmF-I4-hVR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vm9-nS-PRt">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -8143,6 +8143,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_account_balance_18pt" width="18" height="18"/>
         <image name="ic_clear_white_36pt" width="36" height="36"/>
+        <image name="ic_notifications_none_18pt" width="18" height="18"/>
+        <image name="ic_person_outline_18pt" width="18" height="18"/>
+        <image name="ic_search_white_18pt" width="18" height="18"/>
+        <image name="ic_whatshot_white_18pt" width="18" height="18"/>
     </resources>
 </document>

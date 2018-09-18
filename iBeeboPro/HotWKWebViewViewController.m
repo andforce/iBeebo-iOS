@@ -23,7 +23,10 @@
     
     WKWebViewConfiguration *webViewConfiguration = [[WKWebViewConfiguration alloc] init];
     WKUserContentController *contentController = [[WKUserContentController alloc] init];
-    
+    NSString *js = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"hot" ofType:@"js"]
+                                             encoding:NSUTF8StringEncoding error:nil];
+    WKUserScript * userScript = [[WKUserScript alloc] initWithSource:js injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
+    [contentController addUserScript:userScript];
     webViewConfiguration.userContentController = contentController;
     
     
@@ -49,8 +52,11 @@
     [self.view addSubview:_webView];
     
     [self.view sendSubviewToBack:_webView];
-    
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://m.weibo.cn"]];
+
+    NSDate *date = [NSDate date];
+    NSInteger timeStamp = (NSInteger) [date timeIntervalSince1970];
+    NSString *url = [NSString stringWithFormat:@"https://m.weibo.cn?time=%i", timeStamp];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://m.weibo.cn/?t=1537298566837"]];
     [_webView loadRequest:request];
 }
 

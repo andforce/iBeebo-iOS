@@ -39,6 +39,11 @@
 		3A48EF9A215167F10025CE2D /* AtMeWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A48EF99215167F10025CE2D /* AtMeWKWebViewController.m */; };
 		3A48EF9D21516B3D0025CE2D /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A48EF9C21516B3D0025CE2D /* SettingViewController.m */; };
 		3A48EFA021516C790025CE2D /* MainTimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A48EF9F21516C790025CE2D /* MainTimeLineViewController.m */; };
+		3A48EFA2215177110025CE2D /* hot.js in Resources */ = {isa = PBXBuildFile; fileRef = 3A48EFA1215177110025CE2D /* hot.js */; };
+		3A48EFA721517FDA0025CE2D /* search.js in Resources */ = {isa = PBXBuildFile; fileRef = 3A48EFA321517FD90025CE2D /* search.js */; };
+		3A48EFA821517FDA0025CE2D /* timeline.js in Resources */ = {isa = PBXBuildFile; fileRef = 3A48EFA421517FD90025CE2D /* timeline.js */; };
+		3A48EFA921517FDA0025CE2D /* atme.js in Resources */ = {isa = PBXBuildFile; fileRef = 3A48EFA521517FDA0025CE2D /* atme.js */; };
+		3A48EFAA21517FDA0025CE2D /* setting.js in Resources */ = {isa = PBXBuildFile; fileRef = 3A48EFA621517FDA0025CE2D /* setting.js */; };
 		3A5984731F0EF16400F8EACA /* WeiboUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5984721F0EF16400F8EACA /* WeiboUserInfo.m */; };
 		3A5984751F0EF17800F8EACA /* WeiboUserInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5984741F0EF17800F8EACA /* WeiboUserInfo.xib */; };
 		3A59847F1F10F05800F8EACA /* UIWeiboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A59847D1F10F05800F8EACA /* UIWeiboTableViewCell.xib */; };
@@ -200,6 +205,11 @@
 		3A48EF9C21516B3D0025CE2D /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		3A48EF9E21516C790025CE2D /* MainTimeLineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTimeLineViewController.h; sourceTree = "<group>"; };
 		3A48EF9F21516C790025CE2D /* MainTimeLineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTimeLineViewController.m; sourceTree = "<group>"; };
+		3A48EFA1215177110025CE2D /* hot.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = hot.js; sourceTree = "<group>"; };
+		3A48EFA321517FD90025CE2D /* search.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = search.js; sourceTree = "<group>"; };
+		3A48EFA421517FD90025CE2D /* timeline.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = timeline.js; sourceTree = "<group>"; };
+		3A48EFA521517FDA0025CE2D /* atme.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = atme.js; sourceTree = "<group>"; };
+		3A48EFA621517FDA0025CE2D /* setting.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = setting.js; sourceTree = "<group>"; };
 		3A5984711F0EF16400F8EACA /* WeiboUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUserInfo.h; sourceTree = "<group>"; };
 		3A5984721F0EF16400F8EACA /* WeiboUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboUserInfo.m; sourceTree = "<group>"; };
 		3A5984741F0EF17800F8EACA /* WeiboUserInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeiboUserInfo.xib; sourceTree = "<group>"; };
@@ -655,6 +665,11 @@
 		3A85C2161D44DAD000B0FB8E = {
 			isa = PBXGroup;
 			children = (
+				3A48EFA1215177110025CE2D /* hot.js */,
+				3A48EFA521517FDA0025CE2D /* atme.js */,
+				3A48EFA321517FD90025CE2D /* search.js */,
+				3A48EFA621517FDA0025CE2D /* setting.js */,
+				3A48EFA421517FD90025CE2D /* timeline.js */,
 				3A85C2211D44DAD000B0FB8E /* iBeeboPro */,
 				3AC6196C1F00107F003C58CD /* Extension */,
 				3AC6195B1F000EB3003C58CD /* TransBundle */,
@@ -889,7 +904,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A6844D31D4A5FF600655A17 /* emoji.plist in Resources */,
+				3A48EFA921517FDA0025CE2D /* atme.js in Resources */,
 				3A6844D21D4A5FF600655A17 /* default.plist in Resources */,
+				3A48EFA2215177110025CE2D /* hot.js in Resources */,
 				3AC3A7DE1F0D255B0061E2AA /* BottomView.xib in Resources */,
 				3A6844D41D4A5FF600655A17 /* lxh.plist in Resources */,
 				3A85C2351D44DAD000B0FB8E /* LaunchScreen.storyboard in Resources */,
@@ -897,6 +914,9 @@
 				3AC619421EFE6A80003C58CD /* AGPlayerView.xib in Resources */,
 				3A5984751F0EF17800F8EACA /* WeiboUserInfo.xib in Resources */,
 				3A85C2321D44DAD000B0FB8E /* Assets.xcassets in Resources */,
+				3A48EFA821517FDA0025CE2D /* timeline.js in Resources */,
+				3A48EFA721517FDA0025CE2D /* search.js in Resources */,
+				3A48EFAA21517FDA0025CE2D /* setting.js in Resources */,
 				3A85C22D1D44DAD000B0FB8E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

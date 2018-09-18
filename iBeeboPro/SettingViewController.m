@@ -24,7 +24,10 @@
     
     WKWebViewConfiguration *webViewConfiguration = [[WKWebViewConfiguration alloc] init];
     WKUserContentController *contentController = [[WKUserContentController alloc] init];
-    
+    NSString *js = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"setting" ofType:@"js"]
+                                             encoding:NSUTF8StringEncoding error:nil];
+    WKUserScript * userScript = [[WKUserScript alloc] initWithSource:js injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
+    [contentController addUserScript:userScript];
     webViewConfiguration.userContentController = contentController;
     
     

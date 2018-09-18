@@ -33,10 +33,15 @@
 		2F34CF4254CCF9E02F82529A /* CardGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34CB0C38D63BB5885D6581 /* CardGroup.m */; };
 		2F34CF8F5676D83E49F5BE07 /* Cards.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F34C344B0D1B76CE767E37D /* Cards.m */; };
 		3A195A491EF68252006886BE /* UIView+Corner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A195A481EF68252006886BE /* UIView+Corner.m */; };
+		3A48EF92215163A60025CE2D /* HotWKWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A48EF91215163A60025CE2D /* HotWKWebViewViewController.m */; };
+		3A48EF94215163D80025CE2D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A48EF93215163D80025CE2D /* WebKit.framework */; };
+		3A48EF97215166910025CE2D /* SearchWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A48EF96215166910025CE2D /* SearchWKWebViewController.m */; };
+		3A48EF9A215167F10025CE2D /* AtMeWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A48EF99215167F10025CE2D /* AtMeWKWebViewController.m */; };
+		3A48EF9D21516B3D0025CE2D /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A48EF9C21516B3D0025CE2D /* SettingViewController.m */; };
+		3A48EFA021516C790025CE2D /* MainTimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A48EF9F21516C790025CE2D /* MainTimeLineViewController.m */; };
 		3A5984731F0EF16400F8EACA /* WeiboUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5984721F0EF16400F8EACA /* WeiboUserInfo.m */; };
 		3A5984751F0EF17800F8EACA /* WeiboUserInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5984741F0EF17800F8EACA /* WeiboUserInfo.xib */; };
 		3A59847F1F10F05800F8EACA /* UIWeiboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A59847D1F10F05800F8EACA /* UIWeiboTableViewCell.xib */; };
-		3A6410761D466C51000651E6 /* MainTimeLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */; };
 		3A6559E41D47B9DD00776797 /* TimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6559E31D47B9DD00776797 /* TimeLineCell.m */; };
 		3A6844C91D4A59E200655A17 /* LXStatusTextPart.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6844C61D4A59E200655A17 /* LXStatusTextPart.m */; };
 		3A6844CA1D4A59E200655A17 /* LXStatusTextLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6844C81D4A59E200655A17 /* LXStatusTextLink.m */; };
@@ -69,12 +74,10 @@
 		3A6A41C51EF985F200FD132F /* LkH5icon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41BE1EF985F200FD132F /* LkH5icon.m */; };
 		3A6A41C61EF985F200FD132F /* LkLikePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41C01EF985F200FD132F /* LkLikePage.m */; };
 		3A6A41C71EF985F200FD132F /* LkUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41C21EF985F200FD132F /* LkUser.m */; };
-		3A6A41CA1EFAC43E00FD132F /* AtMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41C91EFAC43E00FD132F /* AtMeTableViewController.m */; };
 		3A6A41CD1EFAC9E000FD132F /* AtMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A41CC1EFAC9E000FD132F /* AtMeTableViewCell.m */; };
 		3A6E21F91D4C8F9C00ED92E6 /* UIWeiboTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E21F81D4C8F9C00ED92E6 /* UIWeiboTextView.m */; };
 		3A6E21FC1D4C972C00ED92E6 /* WeiboJsonCleanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E21FB1D4C972C00ED92E6 /* WeiboJsonCleanner.m */; };
 		3A78B4E41E9A45C00053DFA9 /* WeiboHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A78B4E31E9A45C00053DFA9 /* WeiboHelper.m */; };
-		3A7EA6A31EF81C3F00C6C8CE /* HotTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6A21EF81C3F00C6C8CE /* HotTableViewController.m */; };
 		3A7EA6F41EF8298700C6C8CE /* HotActionlog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6D51EF8298600C6C8CE /* HotActionlog.m */; };
 		3A7EA6F51EF8298700C6C8CE /* HotButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6D71EF8298600C6C8CE /* HotButtons.m */; };
 		3A7EA6F61EF8298700C6C8CE /* HotCardlistInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7EA6D91EF8298600C6C8CE /* HotCardlistInfo.m */; };
@@ -186,12 +189,21 @@
 		2F34CFFC2E9A81EDA8CB09BC /* Mblog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mblog.h; sourceTree = "<group>"; };
 		3A195A471EF68252006886BE /* UIView+Corner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Corner.h"; sourceTree = "<group>"; };
 		3A195A481EF68252006886BE /* UIView+Corner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Corner.m"; sourceTree = "<group>"; };
+		3A48EF90215163A60025CE2D /* HotWKWebViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotWKWebViewViewController.h; sourceTree = "<group>"; };
+		3A48EF91215163A60025CE2D /* HotWKWebViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotWKWebViewViewController.m; sourceTree = "<group>"; };
+		3A48EF93215163D80025CE2D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		3A48EF95215166910025CE2D /* SearchWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchWKWebViewController.h; sourceTree = "<group>"; };
+		3A48EF96215166910025CE2D /* SearchWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchWKWebViewController.m; sourceTree = "<group>"; };
+		3A48EF98215167F10025CE2D /* AtMeWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AtMeWKWebViewController.h; sourceTree = "<group>"; };
+		3A48EF99215167F10025CE2D /* AtMeWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AtMeWKWebViewController.m; sourceTree = "<group>"; };
+		3A48EF9B21516B3D0025CE2D /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		3A48EF9C21516B3D0025CE2D /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		3A48EF9E21516C790025CE2D /* MainTimeLineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTimeLineViewController.h; sourceTree = "<group>"; };
+		3A48EF9F21516C790025CE2D /* MainTimeLineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTimeLineViewController.m; sourceTree = "<group>"; };
 		3A5984711F0EF16400F8EACA /* WeiboUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboUserInfo.h; sourceTree = "<group>"; };
 		3A5984721F0EF16400F8EACA /* WeiboUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboUserInfo.m; sourceTree = "<group>"; };
 		3A5984741F0EF17800F8EACA /* WeiboUserInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeiboUserInfo.xib; sourceTree = "<group>"; };
 		3A59847D1F10F05800F8EACA /* UIWeiboTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIWeiboTableViewCell.xib; sourceTree = "<group>"; };
-		3A6410741D466C51000651E6 /* MainTimeLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTimeLineTableViewController.h; sourceTree = "<group>"; };
-		3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTimeLineTableViewController.m; sourceTree = "<group>"; };
 		3A6559E21D47B9DD00776797 /* TimeLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeLineCell.h; sourceTree = "<group>"; };
 		3A6559E31D47B9DD00776797 /* TimeLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeLineCell.m; sourceTree = "<group>"; };
 		3A6844C51D4A59E200655A17 /* LXStatusTextPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXStatusTextPart.h; sourceTree = "<group>"; };
@@ -253,8 +265,6 @@
 		3A6A41C01EF985F200FD132F /* LkLikePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LkLikePage.m; sourceTree = "<group>"; };
 		3A6A41C11EF985F200FD132F /* LkUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LkUser.h; sourceTree = "<group>"; };
 		3A6A41C21EF985F200FD132F /* LkUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LkUser.m; sourceTree = "<group>"; };
-		3A6A41C81EFAC43E00FD132F /* AtMeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtMeTableViewController.h; sourceTree = "<group>"; };
-		3A6A41C91EFAC43E00FD132F /* AtMeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtMeTableViewController.m; sourceTree = "<group>"; };
 		3A6A41CB1EFAC9E000FD132F /* AtMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtMeTableViewCell.h; sourceTree = "<group>"; };
 		3A6A41CC1EFAC9E000FD132F /* AtMeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtMeTableViewCell.m; sourceTree = "<group>"; };
 		3A6E21F71D4C8F9C00ED92E6 /* UIWeiboTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWeiboTextView.h; sourceTree = "<group>"; };
@@ -263,8 +273,6 @@
 		3A6E21FB1D4C972C00ED92E6 /* WeiboJsonCleanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboJsonCleanner.m; sourceTree = "<group>"; };
 		3A78B4E21E9A45C00053DFA9 /* WeiboHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboHelper.h; sourceTree = "<group>"; };
 		3A78B4E31E9A45C00053DFA9 /* WeiboHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboHelper.m; sourceTree = "<group>"; };
-		3A7EA6A11EF81C3F00C6C8CE /* HotTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotTableViewController.h; sourceTree = "<group>"; };
-		3A7EA6A21EF81C3F00C6C8CE /* HotTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotTableViewController.m; sourceTree = "<group>"; };
 		3A7EA6D41EF8298600C6C8CE /* HotActionlog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotActionlog.h; sourceTree = "<group>"; };
 		3A7EA6D51EF8298600C6C8CE /* HotActionlog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotActionlog.m; sourceTree = "<group>"; };
 		3A7EA6D61EF8298600C6C8CE /* HotButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotButtons.h; sourceTree = "<group>"; };
@@ -378,6 +386,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A48EF94215163D80025CE2D /* WebKit.framework in Frameworks */,
 				542C4D0CDABDA17A79467044 /* libPods-iBeeboPro.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -729,12 +738,16 @@
 				3A6559E11D47B9AC00776797 /* TableCell */,
 				3A85C2461D4511C700B0FB8E /* WeiboMainTabBarController.h */,
 				3A85C2471D4511C700B0FB8E /* WeiboMainTabBarController.m */,
-				3A6410741D466C51000651E6 /* MainTimeLineTableViewController.h */,
-				3A6410751D466C51000651E6 /* MainTimeLineTableViewController.m */,
-				3A7EA6A11EF81C3F00C6C8CE /* HotTableViewController.h */,
-				3A7EA6A21EF81C3F00C6C8CE /* HotTableViewController.m */,
-				3A6A41C81EFAC43E00FD132F /* AtMeTableViewController.h */,
-				3A6A41C91EFAC43E00FD132F /* AtMeTableViewController.m */,
+				3A48EF90215163A60025CE2D /* HotWKWebViewViewController.h */,
+				3A48EF91215163A60025CE2D /* HotWKWebViewViewController.m */,
+				3A48EF95215166910025CE2D /* SearchWKWebViewController.h */,
+				3A48EF96215166910025CE2D /* SearchWKWebViewController.m */,
+				3A48EF98215167F10025CE2D /* AtMeWKWebViewController.h */,
+				3A48EF99215167F10025CE2D /* AtMeWKWebViewController.m */,
+				3A48EF9B21516B3D0025CE2D /* SettingViewController.h */,
+				3A48EF9C21516B3D0025CE2D /* SettingViewController.m */,
+				3A48EF9E21516C790025CE2D /* MainTimeLineViewController.h */,
+				3A48EF9F21516C790025CE2D /* MainTimeLineViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -799,6 +812,7 @@
 		78AB65A05FBC3C6399B84737 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A48EF93215163D80025CE2D /* WebKit.framework */,
 				1C98854ABD08BD7E691A049D /* libPods-iBeeboPro.a */,
 			);
 			name = Frameworks;
@@ -824,7 +838,6 @@
 				3A85C21B1D44DAD000B0FB8E /* Sources */,
 				3A85C21C1D44DAD000B0FB8E /* Frameworks */,
 				3A85C21D1D44DAD000B0FB8E /* Resources */,
-				F88AAA8E663433ED69FA451D /* [CP] Embed Pods Frameworks */,
 				AE0AFFBB9D8C97DC5879AC01 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -897,13 +910,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iBeeboPro-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AE0AFFBB9D8C97DC5879AC01 /* [CP] Copy Pods Resources */ = {
@@ -912,28 +928,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iBeeboPro/Pods-iBeeboPro-resources.sh",
+				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
+				"${PODS_ROOT}/CSSSelectorConverter/CSSSelectorConverter/CSSSelectorGrammar.txt",
+				"${PODS_ROOT}/CSSSelectorConverter/CSSSelectorConverter/CSSSelectorParser.plist",
+				"${PODS_ROOT}/LCActionSheet/LCActionSheet/LCActionSheet.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/NYTPhotoViewer/NYTPhotoViewer.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AVOSCloud_Art.inc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CSSSelectorGrammar.txt",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CSSSelectorParser.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCActionSheet.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NYTPhotoViewer.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iBeeboPro/Pods-iBeeboPro-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F88AAA8E663433ED69FA451D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iBeeboPro/Pods-iBeeboPro-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -944,6 +960,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A7EA7021EF8298700C6C8CE /* HotVisible.m in Sources */,
+				3A48EF97215166910025CE2D /* SearchWKWebViewController.m in Sources */,
 				3AEC20D81F1B62FD00AA980C /* MyProfileBadge.m in Sources */,
 				3AC619411EFE6A80003C58CD /* AGPlayerView.m in Sources */,
 				3A6A41781EF9786300FD132F /* MsgWeiboMessagePage.m in Sources */,
@@ -966,7 +983,6 @@
 				3A85C2301D44DAD000B0FB8E /* iBeeboPro.xcdatamodeld in Sources */,
 				3AC619781F00113F003C58CD /* UIView+Corner.m in Sources */,
 				3A6A41A31EF9850D00FD132F /* AtMeH5icon.m in Sources */,
-				3A7EA6A31EF81C3F00C6C8CE /* HotTableViewController.m in Sources */,
 				3A6A41CD1EFAC9E000FD132F /* AtMeTableViewCell.m in Sources */,
 				3A85C2501D45213900B0FB8E /* NSString+Extensions.m in Sources */,
 				3A6A419F1EF9850D00FD132F /* AtMeActionlog.m in Sources */,
@@ -976,7 +992,6 @@
 				3A6A41B71EF9859300FD132F /* CmtUser.m in Sources */,
 				3A7EA6F81EF8298700C6C8CE /* HotGeo.m in Sources */,
 				3A6A41A01EF9850D00FD132F /* AtMeAtMePage.m in Sources */,
-				3A6410761D466C51000651E6 /* MainTimeLineTableViewController.m in Sources */,
 				3AC3A7DC1F0D25460061E2AA /* BottomView.m in Sources */,
 				3A85C2271D44DAD000B0FB8E /* AppDelegate.m in Sources */,
 				3A85C2241D44DAD000B0FB8E /* main.m in Sources */,
@@ -1008,6 +1023,7 @@
 				2F34C9BD99E2AC9F17E96F7D /* PicInfo.m in Sources */,
 				3AC619671F000ECC003C58CD /* TranBundleUITableViewController.m in Sources */,
 				2F34C290F133FDB5EC583FB1 /* User.m in Sources */,
+				3A48EF9D21516B3D0025CE2D /* SettingViewController.m in Sources */,
 				2F34C1559967EC1C2793FC0D /* MediaInfo.m in Sources */,
 				2F34C7DA79B40B6FE64F754B /* RetweetedStatus.m in Sources */,
 				3AC619751F00113F003C58CD /* UIColor+MyColor.m in Sources */,
@@ -1015,7 +1031,6 @@
 				3AC619851F00114E003C58CD /* NSString+time.m in Sources */,
 				3AC6195A1F000E0C003C58CD /* AGPlayerViewController.m in Sources */,
 				2F34C4D8AC32286ACBEDB4FB /* Mblog.m in Sources */,
-				3A6A41CA1EFAC43E00FD132F /* AtMeTableViewController.m in Sources */,
 				3AC619401EFE6A80003C58CD /* RotationScreen.m in Sources */,
 				3A7EA7011EF8298700C6C8CE /* HotUser.m in Sources */,
 				2F34CF8F5676D83E49F5BE07 /* Cards.m in Sources */,
@@ -1035,6 +1050,7 @@
 				2F34CF4254CCF9E02F82529A /* CardGroup.m in Sources */,
 				3A6A41A71EF9850D00FD132F /* AtMeVisible.m in Sources */,
 				3A6A41B31EF9859300FD132F /* CmtCard.m in Sources */,
+				3A48EF92215163A60025CE2D /* HotWKWebViewViewController.m in Sources */,
 				3A7EA6FC1EF8298700C6C8CE /* HotMediaInfo.m in Sources */,
 				3A6A41A21EF9850D00FD132F /* AtMeCardGroup.m in Sources */,
 				2F34C5B96CF6C3F28FFEA9FC /* PicBig.m in Sources */,
@@ -1042,6 +1058,8 @@
 				3AC6193F1EFE6A80003C58CD /* NSString+time.m in Sources */,
 				3A6A41A41EF9850D00FD132F /* AtMeTopicStruct.m in Sources */,
 				2F34CEC299A112CEC5EC6893 /* Weibo.m in Sources */,
+				3A48EF9A215167F10025CE2D /* AtMeWKWebViewController.m in Sources */,
+				3A48EFA021516C790025CE2D /* MainTimeLineViewController.m in Sources */,
 				3A6A41B61EF9859300FD132F /* CmtH5icon.m in Sources */,
 				2F34CCE7F114F28FF04AA297 /* RetweetedWeibo.m in Sources */,
 				3A7EA7031EF8298700C6C8CE /* HotWeiboPage.m in Sources */,
